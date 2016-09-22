@@ -1,0 +1,29 @@
+[2016-08-27 14:39:21] local.INFO: The new account #5 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-27 14:39:20',
+  'verify_token' => 'rVOZWw22dyZooa3mY4G9NTWQeYrliLXvLYjTsyMRo5k9bLoFar',
+)}.  
+[2016-08-27 14:51:33] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-27 14:52:24] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  

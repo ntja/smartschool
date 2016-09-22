@@ -1,0 +1,111 @@
+[2016-08-21 16:00:40] local.INFO: The new account #4 has just been created. Request inputs:  #{array (
+  'email' => 'admin@domain.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'PARENT',
+  'phone' => '987654321',
+  'photo' => NULL,
+  'date_created' => '2016-08-21 16:00:40',
+  'verify_token' => 'cfaVo2VWhJIq2YC9hm6Kfu1i0sV761Ysy02BQeqsmjWwNe1dmS',
+)}.  
+[2016-08-21 16:01:30] local.INFO: Successful verification of account #{{"id":4,"first_name":"David","last_name":"Palmer","role":"PARENT","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-21 16:00:40","date_updated":"2016-08-21 16:01:30","last_login":null,"honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}}.  
+[2016-08-21 16:02:03] local.INFO: Successful authentication of account #{"id":4,"first_name":"David","last_name":"Palmer","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-21 16:00:40","date_updated":"2016-08-21 16:02:03","last_login":"2016-08-21 16:02:03","honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}. {"user_id":4} 
+[2016-08-21 16:02:32] local.INFO: The new country #1 has just been created. Request inputs:  #{array (
+  'name' => 'United States of America',
+  'is_active' => '1',
+  'date_created' => '2016-08-21 16:02:32',
+)}. {"user_id":4} 
+[2016-08-21 16:03:02] local.ERROR: Invalid attempt to create a new country with a name taken {United States of America}. Returned code: 400. Request inputs  #array (
+  'name' => 'United States of America',
+  'is_active' => '1',
+). {"user_id":4} 
+[2016-08-21 16:06:11] local.ERROR: Undefined variable: shortname {"user_id":4} 
+[2016-08-21 16:06:36] local.INFO: The new country #1 has just been created. Request inputs:  #{array (
+  'name' => 'United States of America',
+  'shortname' => 'USA',
+  'is_active' => '1',
+  'date_created' => '2016-08-21 16:06:36',
+)}. {"user_id":4} 
+[2016-08-21 16:08:01] local.INFO: The new city #1 has just been created. Request inputs:  #{array (
+  'name' => 'New Jersey',
+  'country' => '1',
+  'date_created' => '2016-08-21 16:08:01',
+)}. {"user_id":4} 
+[2016-08-21 16:40:12] local.ERROR: Invalid country ID {2}. Returned code: 400. Request inputs :array (
+  'name' => 'Massachussets Institue of Technologies',
+  'shortname' => 'MIT',
+  'logo' => 'Company logo',
+  'address' => NULL,
+  'description' => NULL,
+  'banner' => NULL,
+  'homelink' => NULL,
+  'location' => NULL,
+  'location_city' => '1',
+  'location_country' => '2',
+  'location_lon' => NULL,
+  'location_lat' => NULL,
+  'website' => NULL,
+  'webtwitter' => NULL,
+  'webfacebook' => NULL,
+  'webyoutube' => NULL,
+  'pagebanner' => NULL,
+). {"user_id":4} 
+[2016-08-21 16:40:55] local.ERROR: Invalid city ID {2}. Returned code: 400. Request inputs :array (
+  'name' => 'Massachussets Institue of Technologies',
+  'shortname' => 'MIT',
+  'logo' => 'Company logo',
+  'address' => NULL,
+  'description' => NULL,
+  'banner' => NULL,
+  'homelink' => NULL,
+  'location' => NULL,
+  'location_city' => '2',
+  'location_country' => '1',
+  'location_lon' => NULL,
+  'location_lat' => NULL,
+  'website' => NULL,
+  'webtwitter' => NULL,
+  'webfacebook' => NULL,
+  'webyoutube' => NULL,
+  'pagebanner' => NULL,
+). {"user_id":4} 
+[2016-08-21 16:41:20] local.ERROR: Invalid city ID {2}. Returned code: 400. Request inputs :array (
+  'name' => 'Massachussets Institue of Technologies',
+  'shortname' => 'MIT',
+  'logo' => 'Company logo',
+  'address' => NULL,
+  'description' => NULL,
+  'banner' => NULL,
+  'homelink' => NULL,
+  'location' => NULL,
+  'location_city' => '2',
+  'location_country' => '1',
+  'location_lon' => NULL,
+  'location_lat' => NULL,
+  'website' => NULL,
+  'webtwitter' => NULL,
+  'webfacebook' => NULL,
+  'webyoutube' => NULL,
+  'pagebanner' => NULL,
+). {"user_id":4} 
+[2016-08-21 16:41:29] local.INFO: The new school #1 has just been created. Request inputs:  #{array (
+  'name' => 'Massachussets Institue of Technologies',
+  'shortname' => 'MIT',
+  'logo' => 'Company logo',
+  'address' => NULL,
+  'description' => NULL,
+  'banner' => NULL,
+  'homelink' => NULL,
+  'location' => NULL,
+  'location_city' => '1',
+  'location_country' => '1',
+  'location_lon' => NULL,
+  'location_lat' => NULL,
+  'website' => NULL,
+  'webtwitter' => NULL,
+  'webfacebook' => NULL,
+  'webyoutube' => NULL,
+  'pagebanner' => NULL,
+  'date_created' => '2016-08-21 16:41:29',
+)}. {"user_id":4} 

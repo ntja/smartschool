@@ -1,0 +1,44 @@
+[2016-08-28 09:08:18] local.INFO: The new account #9 has just been created. Request inputs:  #{array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 09:08:18',
+  'verify_token' => 'Y7Pl1pFm0KgPGvGiyZaBGaKlEvmYLvWEX6nhouo3YmardtZaqv',
+)}.  
+[2016-08-28 09:34:47] local.INFO: The new account #10 has just been created. Request inputs:  #{array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckenan',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 09:34:47',
+  'verify_token' => 'FaLMTPuxzhvKtl0UP3J0f4m6ROunWJnT03fecsm0PnVRmkb1Jz',
+)}.  
+[2016-08-28 09:35:28] local.INFO: The new account #11 has just been created. Request inputs:  #{array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 09:35:27',
+  'verify_token' => 'yHZxYQhDAExlItoIH81oASCSol1Mt5xn4C8dHdhzLcsNagzVYZ',
+)}.  
+[2016-08-28 09:37:10] local.INFO: The new account #12 has just been created. Request inputs:  #{array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 09:37:10',
+  'verify_token' => 'JvdIN4dN7WMeWO6moVmjpOk8ILg1REsQsiSmfjQMfn0aI2OsyC',
+)}.  

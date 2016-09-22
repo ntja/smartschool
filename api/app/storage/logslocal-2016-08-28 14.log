@@ -1,0 +1,120 @@
+[2016-08-28 14:33:18] local.INFO: The new account #15 has just been created. Request inputs:  #{array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 14:33:18',
+  'verify_token' => 'MFbJs2CXsnLDHaAVv2gMdpHohMbbjQPF4XcdeKvCEdr4WBF5B2',
+)}.  
+[2016-08-28 14:33:38] local.ERROR: Invalid attempt to create a new account with an email taken {donald@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 14:33:51] local.ERROR: Invalid attempt to create a new account with an email taken {donald@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 14:33:59] local.ERROR: Invalid attempt to create a new account with an email taken {donald@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 14:40:43] local.INFO: The new account #16 has just been created. Request inputs:  #{array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 14:40:43',
+  'verify_token' => 'mQyHRx13wgop2Q2E511JZMAHFSU694lc9XLMk3OQsM9RPcydqT',
+)}.  
+[2016-08-28 14:45:40] local.ERROR: Invalid attempt to create a new account with an email taken {donald@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 14:46:02] local.ERROR: Invalid attempt to create a new account with an email taken {donald@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 14:46:11] local.INFO: The new account #17 has just been created. Request inputs:  #{array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 14:46:11',
+  'verify_token' => 'BJkasbIOHf5QWcRzsnDGaH54mVdQXItZHFhs4wGpwkVwQZOz9S',
+)}.  
+[2016-08-28 14:47:05] local.INFO: The new account #18 has just been created. Request inputs:  #{array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 14:47:05',
+  'verify_token' => 'hdCJhwZ7QKJXMLLIthQitT05N7C4ZZfNAAlz9N6qMqlfvP9ihg',
+)}.  
+[2016-08-28 14:47:53] local.ERROR: Invalid attempt to create a new account with an email taken {donald@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 14:48:03] local.INFO: The new account #19 has just been created. Request inputs:  #{array (
+  'email' => 'donald@domain.com',
+  'first_name' => 'Donald ',
+  'last_name' => 'Trump',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 14:48:02',
+  'verify_token' => 'BFvnU2lQ9PTIRBGVhiSleeuorzaYiSZwzAAh5Pag0rXjSLm2am',
+)}.  
+[2016-08-28 14:53:41] local.INFO: The new account #20 has just been created. Request inputs:  #{array (
+  'email' => 'james@domain.com',
+  'first_name' => 'James',
+  'last_name' => 'Bond',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 14:53:41',
+  'verify_token' => 'DRm2s7W2cVaJsdz4Amtj0LidubpSHLBI6lcD4Sj53eAXmNRBvn',
+)}.  

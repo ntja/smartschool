@@ -1,0 +1,73 @@
+[2016-09-14 05:02:42] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:08:53] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:15:19] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:15:55] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:17:50] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:17:54] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'phone' => '',
+) {"user_id":13} 
+[2016-09-14 05:19:49] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'Billy',
+  'last_name' => 'Buckanan',
+  'phone' => '',
+) {"user_id":13} 
+[2016-09-14 05:19:53] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:20:08] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:21:45] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => '11111111111111111111',
+  'last_name' => 'Buckanan',
+  'phone' => '',
+) {"user_id":13} 
+[2016-09-14 05:21:53] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'bill',
+  'last_name' => 'Buckanan',
+  'phone' => '',
+) {"user_id":13} 
+[2016-09-14 05:22:06] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'bill',
+  'last_name' => 'Buckanan',
+  'phone' => '',
+  'password' => 'password1',
+) {"user_id":13} 
+[2016-09-14 05:22:19] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'bill@domain.com',
+  'password' => 'password',
+)}.  
+[2016-09-14 05:23:07] local.INFO: Successful authentication of account {"id":13,"first_name":"bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-14 05:23:07","last_login":"2016-09-14 05:23:07","honorific":"Mr","phone":"","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-14 05:23:09] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:26:00] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'bill@domain.com',
+  'password' => 'password',
+)}.  
+[2016-09-14 05:28:23] local.INFO: Successful authentication of account {"id":13,"first_name":"bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-14 05:28:23","last_login":"2016-09-14 05:28:23","honorific":"Mr","phone":"","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-14 05:28:25] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:28:48] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:30:50] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:31:08] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:31:52] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:36:32] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:37:48] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:38:19] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:42:54] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:45:58] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'bill@domain.com',
+  'password' => 'password',
+)}.  
+[2016-09-14 05:46:04] local.INFO: Successful authentication of account {"id":13,"first_name":"bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-14 05:46:04","last_login":"2016-09-14 05:46:04","honorific":"Mr","phone":"","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-14 05:46:05] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:46:19] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:55:52] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:56:41] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'billy',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Ms',
+) {"user_id":13} 
+[2016-09-14 05:56:42] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 05:57:02] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+) {"user_id":13} 
+[2016-09-14 05:57:03] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 

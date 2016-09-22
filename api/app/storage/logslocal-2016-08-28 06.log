@@ -1,0 +1,9 @@
+[2016-08-28 06:58:26] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  

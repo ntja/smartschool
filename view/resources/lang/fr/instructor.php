@@ -1,0 +1,36 @@
+<?php
+
+return [   
+
+    'dashboard-1' => 'Mes Cours',
+    'dashboard-2' => 'Mes El&egrave;ves',
+    'dashboard-3' => 'Discussions R&eacute;centes',
+    'dashboard-4' => 'Rep&eacute;titeur en Ligne',
+    'dashboard-5' => 'Param&egrave;tres',
+    'dashboard-6' => 'Quiz / Examen Final',
+    'dashboard-7' => 'Panneau de Contr&ocirc;le enseignant',
+    'dashboard-8' => 'Nombre d\'&eacute;l&egrave;ves',
+    'dashboard-9' => 'En Ligne',
+    'dashboard-10' => 'Sur SmartSchool',
+    'dashboard-11' => 'Inscrits aux cours',
+    'settings-1' => 'Accueil',
+    'settings-2' => 'Param&egrave;tres',
+    'settings-3' => 'File de Q&R',
+    'settings-4' => 'Chat',
+    'settings-5' => 'Profil',
+    'settings-6' => 'Subscriptions',
+    'settings-7' => 'Activit&eacute;s',
+    'settings-8' => 'Mes Cours',
+    'settings-9' => 'Groupes d\'&eacute;tude',
+    'settings-10' => 'Amis',
+    'settings-11' => 'Titre',
+    'settings-12' => 'Addresse Email',
+    'settings-13' => 'Nouveau mot de Passe',
+    'settings-14' => 'Confirmation Nouveau mot de Passe',
+    'settings-15' => 'Pr&eacute;nom',
+    'settings-16' => 'Nom de Fammille',
+    'settings-17' => 'T&eacute;l&eacute;phone',
+    'settings-18' => 'Photo',
+    'settings-19' => 'Sauvegarder',
+
+];

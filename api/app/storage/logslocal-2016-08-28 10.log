@@ -1,0 +1,55 @@
+[2016-08-28 10:17:44] local.ERROR: Invalid attempt to create a new account with an email taken {bill@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 10:17:55] local.ERROR: Invalid attempt to create a new account with an email taken {bill@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 10:17:59] local.ERROR: Invalid attempt to create a new account with an email taken {bill@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 10:18:36] local.ERROR: Invalid attempt to create a new account with an email taken {bill@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 10:18:52] local.INFO: The new account #13 has just been created. Request inputs:  #{array (
+  'email' => 'bill@domain.com',
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 10:18:51',
+  'verify_token' => 'vJXW9Q7z05DnHhq2SBNKhCK4PfG5mWB0dHq3pyHIbDRfTGjoKu',
+)}.  
+[2016-08-28 10:57:55] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  
+[2016-08-28 10:58:53] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  

@@ -1,0 +1,10 @@
+[2016-09-11 22:26:19] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-11 22:26:18","last_login":"2016-09-11 22:26:18","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-11 22:26:22] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:26:32] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:28:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:30:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:32:52] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:33:40] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:34:12] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:36:31] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-11 22:38:21] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 

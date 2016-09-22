@@ -1,0 +1,14 @@
+[2016-09-15 19:54:03] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'bill@domain.com',
+  'password' => 'qqqqqqqqqqqqqqq',
+)}.  
+[2016-09-15 19:54:16] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-15 19:54:16","last_login":"2016-09-15 19:54:16","honorific":"Ms","phone":"655134681","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-15 19:54:18] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-15 19:54:53] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-15 19:55:04] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'phone' => '655134682',
+) {"user_id":13} 
+[2016-09-15 19:55:05] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 

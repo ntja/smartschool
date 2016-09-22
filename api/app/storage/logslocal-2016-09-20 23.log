@@ -1,0 +1,13 @@
+[2016-09-20 23:28:26] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-20 23:29:56] local.INFO: All courses has been retrieve by user1. Request inputs:  #{array (
+  'limit' => '20',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-20 23:30:50] local.INFO: All courses has been retrieve by user #1. Request inputs:  #{array (
+  'limit' => '20',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-20 23:41:25] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 

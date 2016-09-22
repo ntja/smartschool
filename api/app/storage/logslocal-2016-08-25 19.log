@@ -1,0 +1,27 @@
+[2016-08-25 19:33:14] local.ERROR: Invalid attempt join a course with an invalid course ID {2}. Returned code: 400. Request inputs  #array (
+  'account' => 3,
+  'status' => 'ACCEPTED',
+  'course' => '2',
+  'requestedby' => 'INSTRUCTOR',
+  'date_requested' => '2016-08-25 19:08:33',
+  'date_joined' => '2016-08-25 19:08:33',
+). {"user_id":1} 
+[2016-08-25 19:38:23] local.INFO: Successful authentication of account #{"id":3,"first_name":"Albert","last_name":"Einstein","role":"LEARNER","email":"albert@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:39:09","date_updated":"2016-08-25 19:38:23","last_login":"2016-08-25 19:38:23","honorific":"Mr","phone":"123456789","photo":null,"subscription":"UNPAID"}. {"user_id":3} 
+[2016-08-25 19:38:30] local.INFO: Successful authentication of account #{"id":3,"first_name":"Albert","last_name":"Einstein","role":"LEARNER","email":"albert@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:39:09","date_updated":"2016-08-25 19:38:30","last_login":"2016-08-25 19:38:30","honorific":"Mr","phone":"123456789","photo":null,"subscription":"UNPAID"}. {"user_id":3} 
+[2016-08-25 19:45:51] local.ERROR: Undefined property: App\Repositories\Custom\AccountsCustom::$id {"user_id":3} 
+[2016-08-25 19:48:20] local.ERROR: Invalid attempt join a course with an invalid course ID {2}. Returned code: 400. Request inputs  #array (
+  'account' => 3,
+  'status' => 'PENDING',
+  'course' => '2',
+  'requestedby' => 'LEARNER',
+  'date_requested' => '2016-08-25 19:08:48',
+  'date_joined' => NULL,
+). {"user_id":3} 
+[2016-08-25 19:59:43] local.INFO: The new application of user #3 to join course #1 has just been saved. Request inputs:  #{array (
+  'account' => 3,
+  'status' => 'PENDING',
+  'course' => '1',
+  'requestedby' => 'LEARNER',
+  'date_requested' => '2016-08-25 19:08:59',
+  'date_joined' => NULL,
+)}. {"user_id":3} 

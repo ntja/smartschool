@@ -1,0 +1,20 @@
+[2016-09-01 20:09:22] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:09:32] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:09:56] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:21:23] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:22:46] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-01 20:22:45","last_login":"2016-09-01 20:22:45","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-01 20:23:19] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-01 20:23:19","last_login":"2016-09-01 20:23:19","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-01 20:23:24] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:27:19] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:27:54] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:30:17] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:31:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:31:21] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:32:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:35:44] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:37:23] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:37:32] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:37:39] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:44:03] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:44:23] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-01 20:56:56] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 

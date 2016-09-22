@@ -1,0 +1,34 @@
+[2016-08-15 14:03:30] local.ERROR: Undefined property: App\Repositories\Custom\AccountsCustom::$role {"user_id":4} 
+[2016-08-15 14:04:10] local.ERROR: Undefined property: App\Repositories\Custom\AccountsCustom::$role {"user_id":4} 
+[2016-08-15 14:07:04] local.ERROR: Invalid attempt to create a course category with the roleLEARNER {"user_id":4} 
+[2016-08-15 14:12:05] local.INFO: The new category #1 has just been created. Request inputs:  #{array (
+  'name' => 'Computer Science',
+  'shortname' => 'CS',
+  'description' => 'This category is for every course related to Information Technology',
+  'date_created' => '2016-08-15 14:12:05',
+)}. {"user_id":4} 
+[2016-08-15 14:18:44] local.ERROR: Expected String for key (description), NULL found. {"user_id":4} 
+[2016-08-15 14:20:42] local.ERROR: Undefined variable: param {"user_id":4} 
+[2016-08-15 14:21:08] local.ERROR: Undefined variable: param {"user_id":4} 
+[2016-08-15 14:21:45] local.INFO: The new category #2 has just been created. Request inputs:  #{array (
+  'name' => 'Mathematics',
+  'shortname' => 'Math',
+  'description' => NULL,
+  'date_created' => '2016-08-15 14:21:45',
+)}. {"user_id":4} 
+[2016-08-15 14:26:11] local.ERROR: Invalid attempt to create a new course category with a name taken {Mathematics}. Returned code: 400. Request inputs  #array (
+  'name' => 'Mathematics',
+  'shortname' => 'Math',
+  'description' => NULL,
+). {"user_id":4} 
+[2016-08-15 14:27:28] local.INFO: The new category #3 has just been created. Request inputs:  #{array (
+  'name' => 'Physics',
+  'shortname' => 'phys',
+  'description' => NULL,
+  'date_created' => '2016-08-15 14:27:28',
+)}. {"user_id":4} 
+[2016-08-15 14:57:27] local.INFO: The new country #1 has just been created. Request inputs:  #{array (
+  'name' => 'Cameroon',
+  'is_active' => '0',
+  'date_created' => '2016-08-15 14:57:26',
+)}. {"user_id":4} 

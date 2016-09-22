@@ -1,0 +1,2 @@
+[2016-09-04 15:15:43] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-04 15:15:42","last_login":"2016-09-04 15:15:42","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-04 15:18:02] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 

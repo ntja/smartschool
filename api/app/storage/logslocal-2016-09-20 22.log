@@ -1,0 +1,5 @@
+[2016-09-20 22:42:32] local.ERROR: Use of undefined constant data - assumed 'data' {"user_id":1} 
+[2016-09-20 22:43:03] local.ERROR: Undefined variable: status {"user_id":1} 
+[2016-09-20 22:43:03] local.ERROR: Undefined variable: result {"user_id":1} 
+[2016-09-20 22:43:03] local.ERROR: Undefined variable: result {"user_id":1} 
+[2016-09-20 22:46:40] local.ERROR: Undefined variable: status {"user_id":1} 

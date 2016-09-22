@@ -1,0 +1,5 @@
+[2016-08-21 15:58:36] local.INFO: Successful authentication of account #{"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-08-21 15:58:36","last_login":"2016-08-21 15:58:36","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-08-21 15:59:32] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  

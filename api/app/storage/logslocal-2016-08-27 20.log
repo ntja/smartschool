@@ -1,0 +1,29 @@
+[2016-08-27 20:06:33] local.INFO: The new account #6 has just been created. Request inputs:  #{array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-27 20:06:32',
+  'verify_token' => 'qFlCISoPXvucFqdTShegsCHsiS6gQGOUxbPlACl2qrbId0C9hf',
+)}.  
+[2016-08-27 20:07:46] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-27 20:08:23] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  

@@ -1,0 +1,29 @@
+[2016-08-22 06:21:58] local.INFO: Successful authentication of account #{"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-08-22 06:21:57","last_login":"2016-08-22 06:21:57","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-08-22 06:29:00] local.ERROR: Undefined property: App\Repositories\Custom\CoursesCustom::$_schoolsCustom {"user_id":1} 
+[2016-08-22 06:33:31] local.ERROR: Expected String for key (targetaudience), integer found. {"user_id":1} 
+[2016-08-22 06:34:51] local.ERROR: Expected String for key (coursesyllabus), NULL found. {"user_id":1} 
+[2016-08-22 06:36:39] local.INFO: The new school #1 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to algorithmic',
+  'shortname' => 'introalgo',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '1',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => '1',
+  'category' => 1,
+  'date_created' => '2016-08-22 06:36:38',
+)}. {"user_id":1} 

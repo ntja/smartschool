@@ -1,0 +1,317 @@
+[2016-09-19 20:13:00] local.INFO: The new course #6 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Chemistry',
+  'shortname' => 'Chemistry 101',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.                 
+                                                             
+                                                             
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+  'date_created' => '2016-09-19 20:13:00',
+)}. {"user_id":1} 
+[2016-09-19 20:14:23] local.ERROR: Invalid attempt  to create a new course with a taken shortname {Chemistry 101}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry',
+  'shortname' => 'Chemistry 101',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.                 
+                                                             
+                                                             
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 
+[2016-09-19 20:17:25] local.ERROR: Invalid attempt  to create a new course with a taken shortname {Chemistry 101}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry',
+  'shortname' => 'Chemistry 101',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 
+[2016-09-19 20:19:54] local.ERROR: Invalid attempt  to create a new course with a taken shortname {Chemistry 101}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry',
+  'shortname' => 'Chemistry 101',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 
+[2016-09-19 20:22:05] local.ERROR: Invalid attempt  to create a new course with a taken shortname {Chemistry 101}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry2',
+  'shortname' => 'Chemistry 101',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 
+[2016-09-19 20:22:25] local.INFO: The new course #7 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Chemistry2',
+  'shortname' => 'Chemistry 102',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+  'date_created' => '2016-09-19 20:22:25',
+)}. {"user_id":1} 
+[2016-09-19 20:24:04] local.ERROR: Invalid attempt for an instructor to create a new course with a duplicate name {Introduction to Chemistry2}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry2',
+  'shortname' => 'Chemistry 103',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.                 
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 
+[2016-09-19 20:51:57] local.ERROR: Invalid attempt for an instructor to create a new course with a duplicate name {Introduction to Chemistry2}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry2',
+  'shortname' => 'Chemistry 103',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.                 
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 
+[2016-09-19 20:54:59] local.ERROR: Invalid attempt for an instructor to create a new course with a duplicate name {Introduction to Chemistry2}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Chemistry2',
+  'shortname' => 'Chemistry 103',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => 'A <a href="https://en.wikipedia.org/wiki/Chemical_reaction" title="Chemical reaction">chemical reaction</a> is a transformation of some substances into one or more different substances.<sup id="cite_ref-39" class="reference"><a href="https://en.wikipedia.org/wiki/Chemistry#cite_note-39">[39]</a></sup>
+ The basis of such a chemical transformation is the rearrangement of 
+electrons in the chemical bonds between atoms. It can be symbolically 
+depicted through a <a href="https://en.wikipedia.org/wiki/Chemical_equation" title="Chemical equation">chemical equation</a>,
+ which usually involves atoms as subjects. The number of atoms on the 
+left and the right in the equation for a chemical transformation is 
+equal. (When the number of atoms on either side is unequal, the 
+transformation is referred to as a <a href="https://en.wikipedia.org/wiki/Nuclear_reaction" title="Nuclear reaction">nuclear reaction</a> or <a href="https://en.wikipedia.org/wiki/Radioactive_decay" title="Radioactive decay">radioactive decay</a>.)
+ The type of chemical reactions a substance may undergo and the energy 
+changes that may accompany it are constrained by certain basic rules, 
+known as chemical laws.                 
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '4',
+). {"user_id":1} 

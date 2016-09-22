@@ -1,0 +1,103 @@
+[2016-08-28 08:16:43] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:16:53] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:18:14] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:19:19] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:20:49] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:26:23] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:42:22] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:42:47] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:44:11] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-08-28 08:45:35] local.INFO: The new account #7 has just been created. Request inputs:  #{array (
+  'email' => 'david@domain.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 08:45:34',
+  'verify_token' => '1Ii3M2P1wazqaJn7Mz83IUfnccz5kAEdilsd2yYDZ8MjM926AA',
+)}.  
+[2016-08-28 08:59:49] local.INFO: The new account #8 has just been created. Request inputs:  #{array (
+  'email' => 'david@domain.com',
+  'first_name' => 'David',
+  'last_name' => 'Palmer',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 08:59:49',
+  'verify_token' => 'LfSXLT2F4pSNKxv1mWF0PXv0CziVGoRCW1fhUf0ZBUmwCXK3IX',
+)}.  

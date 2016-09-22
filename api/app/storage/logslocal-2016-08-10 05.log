@@ -1,0 +1,37 @@
+[2016-08-10 05:12:00] local.ERROR: Invalid attempt to create a new account with an email taken {monalisa@domain.com}. Returned code: 400. Request inputs  #{array (
+  'email' => 'monalisa@domain.com',
+  'first_name' => 'Mona',
+  'last_name' => 'Lisa',
+  'honorific' => 'Ms',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+)}.  
+[2016-08-10 05:12:53] local.ERROR: Invalid attempt to create a new account with an email taken {monalisa@domain.com}. Returned code: 400. Request inputs  #{array (
+  'email' => 'monalisa@domain.com',
+  'first_name' => 'Mona',
+  'last_name' => 'Lisa',
+  'honorific' => 'Ms',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+)}.  
+[2016-08-10 05:26:40] local.INFO: The new account #1 has just been created. Request inputs:  #{array (
+  'email' => 'jack@domain.com',
+  'first_name' => 'Jack',
+  'last_name' => 'Bauer',
+  'honorific' => 'Ms',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-10 05:26:39',
+  'verify_token' => 'mq6ATeRKREjtAkHChtGDTfxuwNP3hIabXHXieKMh2zgIV0jYWT',
+)}.  
+[2016-08-10 05:29:15] local.INFO: Successful verification of account #{{"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-08-10 05:29:15","last_login":null,"honorific":"Ms","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2016-08-10 05:33:29] local.INFO: Successful authentication of account #{"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-08-10 05:33:29","last_login":"2016-08-10 05:33:29","honorific":"Ms","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-08-10 05:34:56] local.INFO: Successful authentication of account #{"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-08-10 05:34:56","last_login":"2016-08-10 05:34:56","honorific":"Ms","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-08-10 05:35:13] local.INFO: Invalid attempt to read account #{1}. Returned code: 4004. {"user_id":1} 
+[2016-08-10 05:38:37] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-08-10 05:40:16] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-08-10 05:40:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-08-10 05:44:03] local.INFO: password of account #{1} has been successfully reset  

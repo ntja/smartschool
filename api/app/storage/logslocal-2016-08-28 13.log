@@ -1,0 +1,18 @@
+[2016-08-28 13:33:32] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-08-28 13:33:31","last_login":"2016-08-28 13:33:31","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-08-28 13:34:45] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'bill@domain.com',
+  'password' => 'passwordd',
+)}.  
+[2016-08-28 13:34:51] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-08-28 13:34:51","last_login":"2016-08-28 13:34:51","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-08-28 13:37:58] local.INFO: The new account #14 has just been created. Request inputs:  #{array (
+  'email' => 'john@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Connor',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 13:37:58',
+  'verify_token' => 'qHJ4Kg5lXZkbQa3HCCijmt5BPxTHReDcirwgzw6YVz2tUPcJvY',
+)}.  
+[2016-08-28 13:38:40] local.ERROR: Invalid attempt to authenticate a non verified account {"id":14,"first_name":"John","last_name":"Connor","role":"LEARNER","email":"john@domain.com","verified_status":"PENDING","date_created":"2016-08-28 13:37:58","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  

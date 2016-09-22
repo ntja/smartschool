@@ -1,0 +1,28 @@
+[2016-09-14 06:01:42] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'password' => 'password',
+  'phone' => '655134682',
+) {"user_id":13} 
+[2016-09-14 06:01:43] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:04:33] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'billy',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'password' => 'password',
+  'phone' => '655134680',
+) {"user_id":13} 
+[2016-09-14 06:04:34] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:05:35] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:05:55] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:05:58] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:06:52] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:07:14] local.INFO: Successful authentication of account {"id":13,"first_name":"billy","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-14 06:07:14","last_login":"2016-09-14 06:07:14","honorific":"Mr","phone":"655134680","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-14 06:07:16] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:11:35] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-14 06:41:07] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-14 06:41:06","last_login":"2016-09-14 06:41:06","honorific":"Mr","phone":"655144122","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-14 06:41:19] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-14 06:41:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-14 06:42:04] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-14 06:44:01] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

@@ -1,0 +1,28 @@
+[2016-08-14 11:30:44] local.INFO: The new account #2 has just been created. Request inputs:  #{array (
+  'email' => 'chloe@domain.com',
+  'first_name' => 'Chloe',
+  'last_name' => 'O\'bryan',
+  'honorific' => 'Ms',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-14 11:30:42',
+  'verify_token' => 'MZZoYQ3MFC9y99QUjLmGBPbZ5GwQRmA4cVxzvcj8nXbvYGIFBm',
+)}.  
+[2016-08-14 11:33:26] local.INFO: Successful verification of account #{{"id":2,"first_name":"Chloe","last_name":"O'bryan","role":"INSTRUCTOR","email":"chloe@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:30:42","date_updated":"2016-08-14 11:33:26","last_login":null,"honorific":"Ms","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2016-08-14 11:35:49] local.INFO: Successful authentication of account #{"id":2,"first_name":"Chloe","last_name":"O'bryan","role":"INSTRUCTOR","email":"chloe@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:30:42","date_updated":"2016-08-14 11:35:49","last_login":"2016-08-14 11:35:49","honorific":"Ms","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":2} 
+[2016-08-14 11:37:11] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-08-14 11:37:47] local.INFO: Invalid attempt to read account #{1}. Returned code: 4004. {"user_id":2} 
+[2016-08-14 11:37:53] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-08-14 11:39:11] local.INFO: The new account #3 has just been created. Request inputs:  #{array (
+  'email' => 'albert@domain.com',
+  'first_name' => 'Albert',
+  'last_name' => 'Einstein',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => '123456789',
+  'photo' => NULL,
+  'date_created' => '2016-08-14 11:39:09',
+  'verify_token' => '9IcZGyPTZzce3AdbPeLiq54jI6xv74wZSu7C1lznNjMk2CwyU0',
+)}.  
+[2016-08-14 11:40:28] local.INFO: Successful verification of account #{{"id":3,"first_name":"Albert","last_name":"Einstein","role":"LEARNER","email":"albert@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:39:09","date_updated":"2016-08-14 11:40:28","last_login":null,"honorific":"Mr","phone":"123456789","photo":null,"subscription":"UNPAID"}}.  

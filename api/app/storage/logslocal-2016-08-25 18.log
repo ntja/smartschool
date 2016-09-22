@@ -1,0 +1,40 @@
+[2016-08-25 18:10:00] local.ERROR: Undefined index: email {"user_id":1} 
+[2016-08-25 18:10:58] local.ERROR: Invalid attempt join a course with an invalid account ID {2}. Returned code: 400. Request inputs  #array (
+  'account' => 2,
+  'status' => 'ACCEPTED',
+  'course' => '1',
+  'requestedby' => 'INSTRUCTOR',
+  'date_requested' => '2016-08-25 18:08:10',
+  'date_joined' => '2016-08-25 18:08:10',
+). {"user_id":1} 
+[2016-08-25 18:12:29] local.ERROR: Invalid attempt join a course with an account ID {2} that does not correspond to a LEARNER user. Returned code: 400. Request inputs  #array (
+  'account' => 2,
+  'status' => 'ACCEPTED',
+  'course' => '1',
+  'requestedby' => 'INSTRUCTOR',
+  'date_requested' => '2016-08-25 18:08:12',
+  'date_joined' => '2016-08-25 18:08:12',
+). {"user_id":1} 
+[2016-08-25 18:19:29] local.ERROR: Invalid attempt join a course with an account ID {2} that does not correspond to a LEARNER user. Returned code: 400. Request inputs  #array (
+  'account' => 2,
+  'status' => 'ACCEPTED',
+  'course' => '3',
+  'requestedby' => 'INSTRUCTOR',
+  'date_requested' => '2016-08-25 18:08:19',
+  'date_joined' => '2016-08-25 18:08:19',
+). {"user_id":1} 
+[2016-08-25 18:29:46] local.ERROR: Undefined variable: param {"user_id":1} 
+[2016-08-25 18:29:53] local.ERROR: Undefined variable: param {"user_id":1} 
+[2016-08-25 18:30:34] local.ERROR: Undefined variable: param {"user_id":1} 
+[2016-08-25 18:33:25] local.INFO: The new application of user #3 to join course #3 has just been saved. Request inputs:  #{array (
+  'account' => 3,
+  'status' => 'ACCEPTED',
+  'course' => '3',
+  'requestedby' => 'INSTRUCTOR',
+  'date_requested' => '2016-08-25 18:08:33',
+  'date_joined' => '2016-08-25 18:08:33',
+)}. {"user_id":1} 
+[2016-08-25 18:34:32] local.ERROR: Use of undefined constant result - assumed 'result' {"user_id":1} 
+[2016-08-25 18:35:07] local.ERROR: Use of undefined constant result - assumed 'result' {"user_id":1} 
+[2016-08-25 18:36:35] local.ERROR: Use of undefined constant result - assumed 'result' {"user_id":1} 
+[2016-08-25 18:53:14] local.ERROR: Use of undefined constant result - assumed 'result' {"user_id":1} 

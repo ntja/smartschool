@@ -1,0 +1,13 @@
+[2016-08-15 13:49:30] local.INFO: The new account #4 has just been created. Request inputs:  #{array (
+  'email' => 'admin@domain.com',
+  'first_name' => 'Jephte',
+  'last_name' => 'Armand',
+  'honorific' => 'Mr',
+  'role' => 'PARENT',
+  'phone' => '987654321',
+  'photo' => NULL,
+  'date_created' => '2016-08-15 13:49:29',
+  'verify_token' => 'kluYbTNd1BaMzMkghrOCEBA0VWW3lUwOfdGwUumHCY1SUj6EFz',
+)}.  
+[2016-08-15 13:55:55] local.INFO: Successful verification of account #{{"id":4,"first_name":"Jephte","last_name":"Armand","role":"PARENT","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-15 13:49:29","date_updated":"2016-08-15 13:55:55","last_login":null,"honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}}.  
+[2016-08-15 13:57:14] local.INFO: Successful authentication of account #{"id":4,"first_name":"Jephte","last_name":"Armand","role":"PARENT","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-15 13:49:29","date_updated":"2016-08-15 13:57:14","last_login":"2016-08-15 13:57:14","honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}. {"user_id":4} 

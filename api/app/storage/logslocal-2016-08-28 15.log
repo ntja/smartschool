@@ -1,0 +1,12 @@
+[2016-08-28 15:06:44] local.INFO: The new account #21 has just been created. Request inputs:  #{array (
+  'email' => 'james@domain.com',
+  'first_name' => 'James',
+  'last_name' => 'Bond',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2016-08-28 15:06:43',
+  'verify_token' => 'bJICQSS6AeVMTwngUYXIsjcc8LLUI4pCGq5iwtG82QB5ulbHr4',
+)}.  
+[2016-08-28 15:10:43] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-08-28 15:10:43","last_login":"2016-08-28 15:10:43","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":13} 

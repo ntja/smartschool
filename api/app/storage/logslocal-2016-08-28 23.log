@@ -1,0 +1,10 @@
+[2016-08-28 23:43:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'david@domain.com',
+  'password' => 'password',
+)}  
+[2016-08-28 23:43:16] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'david@domain.com',
+  'password' => 'password',
+)}  
+[2016-08-28 23:43:29] local.ERROR: Invalid attempt to authenticate a non verified account {"id":14,"first_name":"John","last_name":"Connor","role":"LEARNER","email":"john@domain.com","verified_status":"PENDING","date_created":"2016-08-28 13:37:58","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2016-08-28 23:44:27] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-08-28 23:44:27","last_login":"2016-08-28 23:44:27","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":13} 
