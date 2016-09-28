@@ -45,3 +45,6 @@
 .page-container{
   background: #EFEFEE;
 }
+.hide{
+  display: none !important;
+}

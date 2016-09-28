@@ -1,7 +1,7 @@
 <?php
 
 return [   
-
+	'user-1' => 'Nom de l\'utilisateur',
     'logout-1' => 'D&eacute;connexion',
     'logout-2' => 'Voulez-vous vous d&eacute;connecter ?',
     'logout-3' => 'Cliquez sur Non si vous d&eacute;sirez continuer votre travail. Cliquez sur Oui pour vous d&eacute;connecter.',

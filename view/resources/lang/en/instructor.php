@@ -32,4 +32,9 @@ return [
     'settings-17' => 'Telephone',
     'settings-18' => 'Photo',
     'settings-19' => 'Save Changes',
+    'all-1' => 'My Courses',
+    'all-2' => 'Published',
+    'all-3' => 'Unpublished',
+    'all-4' => 'Create New Course',
+    'all-5' => 'Dashboard',
 ];

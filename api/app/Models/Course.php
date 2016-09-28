@@ -252,7 +252,7 @@ class Course extends Authenticatable{
         }
     }
 
-    public function getCourses($params, $account) {
+    public function getCourses($params, $role, $account=null) {
         try {
             //var_dump($params);die();
             if (!is_array($params)){
@@ -268,26 +268,40 @@ class Course extends Authenticatable{
             }
 
             $result = null;          
-            $limit = intval($params['limit']);
-            if($account->getRole() == "LEARNER" || $account->getRole() == "PARENT"){
+            $limit = intval($params['limit']);            
+            if($role == "LEARNER" || $role == "PARENT"){
                 $select = DB::table('courses')
-                    ->skip(0)
-                     ->where('delete_status', '=', 0)->where('status', '=', "PUBLISHED")
-                    ->take($limit);   
+                    ->join('course_categories', 'course_categories.id', '=', 'courses.category')
+                    ->select('courses.*', 'course_categories.name as category_name')
+                    ->skip(0)                        
+                    ->where('delete_status', '=', '0')->where('status', '=', "PUBLISHED"); 
+                    //->take($limit);   
             }else{
                 $status = $params['status'];
                 $select = DB::table('courses')
+                        ->join('course_categories', 'course_categories.id', '=', 'courses.category')
+                        ->select('courses.*', 'course_categories.name as category_name')
                         ->skip(0)
-                         ->where('delete_status', '=', 0)
-                        ->take($limit);
+                        ->where('delete_status', '=', '0');
+                        //->take($limit);
                 if ($status) {
                     $select = $select
                             ->where('status', '=', $status);
                 }                        
-            }     
+            }             
+            if($account){                
+                $select = $select
+                ->where('instructor', '=', $account)
+                ->take($limit);    
+            }else{
+                $select = $select                              
+                ->take($limit);    
+            }
+            
             //var_dump($select);die();       
 
-            $rows = $select->simplePaginate($limit);
+            $rows = $select->orderBy('id','DESC')->simplePaginate($limit);
+            //var_dump($rows);die();       
             if (!count($rows)) {
                 return false;
             }

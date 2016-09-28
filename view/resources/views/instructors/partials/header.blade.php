@@ -20,7 +20,7 @@
                     <!-- END SIGN OUT --> 
 
                     <li class="xn-openable pull-right">
-                        <a href="#"><span class="fa fa-indent"></span> <span class="xn-text user-name">User name</span></a>
+                        <a href="#"><span class="fa fa-indent"></span> <span class="xn-text user-name">{{trans('user.user-1')}}</span></a>
                         <ul class="animated zoomIn">   
                             <li><a href="{{url('/instructors/courses/all')}}"><span class="fa fa-folder-open-o"></span>{{trans('instructor.dashboard-1')}}</a></li>
                             <li><a href="javascript:void(0)"><span class="fa fa-certificate"></span>{{trans('instructor.dashboard-6')}}</a></li>

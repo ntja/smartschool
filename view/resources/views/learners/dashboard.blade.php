@@ -27,7 +27,7 @@ SmartSchool :: learner dashboard
                     <!-- START WIDGETS -->                    
                     <div class="row">                            
                         <div class="col-md-4">                        
-                            <a href="#" class="tile tile-primary tile-valign">Courses Catalog
+                            <a href="{{url('/courses/catalog')}}" class="tile tile-primary tile-valign">Courses Catalog
                                 <div class="informer informer-default dir-tr"><span class="glyphicon glyphicon-search"></span></div>                                
                             </a>                                                    
                         </div>

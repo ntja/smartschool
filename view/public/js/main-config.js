@@ -5,12 +5,12 @@ settings = {
             api_url: 'http://127.0.0.1/smartschool/api/public'
         },
         staging: {
-            api_url: 'http://127.0.0.1/smartschool/api/public'
+            api_url: 'http://api.smartskul.com/api/public'
         }
     }
 };
 
-environment = 'development';
+environment = 'staging';
 config = settings.environments[environment];
 
 (function($) {

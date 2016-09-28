@@ -154,7 +154,7 @@ SmartSchool :: learner settings
                                             </div>
                                         </div>
                                         <div class="panel-footer">
-                                            <button class="btn btn-primary pull-left" id="submit">{{trans('instructor.settings-19')}}<span class="fa fa-floppy-o fa-right"></span></button>
+                                            <button class="btn btn-success pull-left" id="submit"><span class="fa fa-floppy-o fa-right"></span> {{trans('instructor.settings-19')}}</button>
                                             <div class="col-md-3 loader">
                                                 <img src="{{asset('img/loaders/default.gif')}}">
                                             </div>
