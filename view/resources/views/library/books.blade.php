@@ -17,7 +17,7 @@ SmartSchool :: learner dashboard
             <!-- START BREADCRUMB -->
                 <ul class="breadcrumb push-down-0">
                     <li><a href="{{url('/learners/dashboard')}}">{{trans('instructor.settings-1')}}</a></li>                    
-                    <li class="active">Catalog</li>
+                    <li class="active">Books</li>
                 </ul>
                 <!-- END BREADCRUMB -->                
                 
@@ -27,7 +27,7 @@ SmartSchool :: learner dashboard
                     <!-- START CONTENT FRAME TOP -->
                     <div class="content-frame-top">                        
                         <div class="page-title">                    
-                            <h2><span class="fa fa-search"></span> Courses Catalog</h2>
+                            <h2><span class="fa fa-book"></span> Books</h2>
                         </div>                                      
                         <div class="pull-right">
                             <button class="btn btn-default content-frame-left-toggle"><span class="fa fa-bars"></span></button>
@@ -48,7 +48,7 @@ SmartSchool :: learner dashboard
                                         <div class="form-group">
                                         <div class="col-md-3"></div>
                                             <div class="col-md-6">
-                                                <p>Use search to find courses or lessons. You can search by: course name, course category or lesson title </p>
+                                                <p>Use search to find books. You can search by: book name, book category </p>
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
                                                         <span class="fa fa-search"></span>
@@ -68,7 +68,7 @@ SmartSchool :: learner dashboard
                         <div class="col-md-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading ui-draggable-handle">
-                                    <h3 class="panel-title"><span class="fa fa-filter"></span> <i>Subjects</i></h3>                                
+                                    <h3 class="panel-title"><span class="fa fa-filter"></span> <i>Categories</i></h3>                                
                                     <ul class="panel-controls">
                                         <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>                                        
                                     </ul>                                   
@@ -122,5 +122,5 @@ SmartSchool :: learner dashboard
 @section('scripts')
 <script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/actions.js')}}"></script>
-<script src="{{asset('js/courses/catalog.js')}}"></script
+<script src="{{asset('js/library/boos.js')}}"></script
 @stop

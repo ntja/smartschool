@@ -38,7 +38,7 @@ SmartSchool :: learner dashboard
                             </a>                                                    
                         </div>
                         <div class="col-md-4">                        
-                            <a href="#" class="tile tile-danger tile-valign">E-books Library
+                            <a href="{{url('/library/books')}}" class="tile tile-danger tile-valign">E-books Library
                                 <div class="informer informer-default dir-tr"><span class="glyphicon glyphicon-book"></span></div>
                             </a>                                                    
                         </div>                        

@@ -44,5 +44,11 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/instructors/courses/all', function () {
 		return view('instructors.courses.all');
 	});	
+	Route::get('/courses/catalog', function () {
+		return view('courses.catalog');
+	});	
+	Route::get('/library/books', function () {
+		return view('library.books');
+	});
     //
 });
