@@ -1,0 +1,36 @@
+[2016-10-31 21:09:28] local.ERROR: Invalid attempt to create a new account with an email taken {jason@doain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jason@doain.com',
+  'first_name' => 'Jason',
+  'last_name' => 'Bond',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-31 21:12:06] local.ERROR: Invalid attempt to create a new account with an email taken {jason@doain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jason@doain.com',
+  'first_name' => 'Jason',
+  'last_name' => 'Bond',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-31 21:20:34] local.ERROR: Invalid attempt to create a new account with an email taken {jason@doain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jason@doain.com',
+  'first_name' => 'Jason',
+  'last_name' => 'Bond',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-31 21:22:06] local.ERROR: Connection could not be established with host mail.smartskul.com [php_network_getaddresses: getaddrinfo failed: No such host is known.  #0]  
+[2016-10-31 21:24:39] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-31 21:24:39","last_login":"2016-10-31 21:24:39","honorific":"Ms","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-31 21:24:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-31 21:25:07] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-31 21:51:21] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-31 21:51:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

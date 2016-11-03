@@ -1,0 +1,33 @@
+[2016-10-08 11:10:36] local.INFO: Successful authentication of account {"id":4,"first_name":"David","last_name":"Palmer","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-21 16:00:40","date_updated":"2016-10-08 11:10:36","last_login":"2016-10-08 11:10:36","honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}. {"user_id":4} 
+[2016-10-08 11:20:50] local.INFO: The new category #1 has just been created. Request inputs:  #{array (
+  'name' => 'Mathematics',
+  'date_created' => '2016-10-08 11:20:50',
+)}. {"user_id":4} 
+[2016-10-08 11:21:31] local.ERROR: Invalid attempt to create a new book category with a name taken {Mathematics}. Returned code: 400. Request inputs  #array (
+  'name' => 'Mathematics',
+). {"user_id":4} 
+[2016-10-08 11:29:58] local.INFO: The new category #2 has just been created. Request inputs:  #{array (
+  'name' => 'Physics',
+  'date_created' => '2016-10-08 11:29:58',
+)}. {"user_id":4} 
+[2016-10-08 11:45:23] local.ERROR: Undefined index: limit {"user_id":4} 
+[2016-10-08 11:45:48] local.ERROR: Undefined index: limit {"user_id":4} 
+[2016-10-08 11:47:03] local.ERROR: Expected key (before) in parameter array. {"user_id":4} 
+[2016-10-08 11:47:03] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => 12,
+)}. {"user_id":4} 
+[2016-10-08 11:48:17] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => 12,
+)}. {"user_id":4} 
+[2016-10-08 11:49:08] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => 12,
+)}. {"user_id":4} 
+[2016-10-08 11:57:33] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => 12,
+)}. {"user_id":4} 
+[2016-10-08 11:58:02] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => '1',
+)}. {"user_id":4} 
+[2016-10-08 11:59:48] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => '1',
+)}. {"user_id":4} 

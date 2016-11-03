@@ -1,0 +1,36 @@
+.success{
+	display: inline-block;
+	background : url("../img/icons/checkmark.png") no-repeat right center transparent;
+	padding-right : 26px;
+}
+
+.fail{
+	display: inline-block;
+	background : url("../img/icons/cross.png") no-repeat right center transparent;
+	padding-right : 26px;
+}
+
+.loading{
+	display: inline-block;
+	background : url("../img/icons/loader.gif") no-repeat right center transparent;
+	padding-right : 26px;
+}
+
+div.box-footer{
+	text-align:right;
+}
+
+
+#selectNetwork{
+	width:90%;
+	display: inline-block;
+}
+
+#logoNetwork{
+	float:left;
+}
+
+select.error, textarea.error, input.error, .error {
+    color:#FF0000;
+}
+

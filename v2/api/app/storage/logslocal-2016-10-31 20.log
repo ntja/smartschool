@@ -1,0 +1,6 @@
+[2016-10-31 20:42:06] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-31 20:49:44] local.ERROR: Connection could not be established with host mail.smartskul.com [php_network_getaddresses: getaddrinfo failed: No such host is known.  #0]  
+[2016-10-31 20:50:35] local.ERROR: Connection could not be established with host mail.smartskul.com [php_network_getaddresses: getaddrinfo failed: No such host is known.  #0]  

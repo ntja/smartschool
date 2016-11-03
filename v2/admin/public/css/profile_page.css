@@ -1,0 +1,23 @@
+.datepicker.dropdown-menu{
+  z-index: 1051 !important;
+}
+
+#role_employer, #role_administrator, #status_verified, #status_declined, #role_candidate,
+#status_pending, #status_cancelled, #status_paid, #status_shipped, #state_disabled, #state_active,
+#operateur_mtn, #operateur_orange, #operateur_nexttel, #operateur_camtel, #status_active,#status_failed,
+#status_pending_renew,#status_disapproved,#status_approved,#status_opened,#status_closed,#subs_paid,#subs_unpaid{
+	cursor:pointer;
+}
+
+.filter-item{
+  font-weight:normal;
+}
+
+.filter-item.selected{
+  font-weight: 700;
+}
+
+#error401, #error400, #success{
+	margin-left:10px;
+	margin-right:10px;
+}

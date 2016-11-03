@@ -1,0 +1,4 @@
+[2016-10-16 21:52:59] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 

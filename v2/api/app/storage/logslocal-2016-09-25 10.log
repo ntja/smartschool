@@ -1,0 +1,9 @@
+[2016-09-25 10:03:15] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-25 10:03:45] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-25 10:15:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-25 10:15:35] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-25 10:35:52] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-25 10:35:52","last_login":"2016-09-25 10:35:52","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-25 10:36:17] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}. {"user_id":1} 

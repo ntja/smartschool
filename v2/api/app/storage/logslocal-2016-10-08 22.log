@@ -1,0 +1,45 @@
+[2016-10-08 22:11:08] local.ERROR: Expected key (status) in parameter  array. {"user_id":1} 
+[2016-10-08 22:11:08] local.INFO: All books have been retrieve by user #1. Request inputs: {array (
+  'limit' => 12,
+  'category' => NULL,
+)}. {"user_id":1} 
+[2016-10-08 22:30:13] local.INFO: The new category #3 has just been created. Request inputs:  #{array (
+  'name' => 'Computer Science',
+  'date_created' => '2016-10-08 22:30:13',
+)}. {"user_id":4} 
+[2016-10-08 22:30:55] local.ERROR: Expected key (status) in parameter  array. {"user_id":1} 
+[2016-10-08 22:30:55] local.INFO: All books have been retrieve by user #1. Request inputs: {array (
+  'limit' => 12,
+  'category' => NULL,
+)}. {"user_id":1} 
+[2016-10-08 22:31:01] local.ERROR: Expected key (status) in parameter  array. {"user_id":1} 
+[2016-10-08 22:31:01] local.INFO: All books have been retrieve by user #1. Request inputs: {array (
+  'limit' => 12,
+  'category' => NULL,
+)}. {"user_id":1} 
+[2016-10-08 22:31:53] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'delete_status' in where clause is ambiguous (SQL: select `books`.*, `book_categories`.`name` as `category_name` from `books` inner join `book_categories` on `book_categories`.`id` = `books`.`category` where `delete_status` = 0 order by `id` desc limit 13 offset 0) {"user_id":1} 
+[2016-10-08 22:31:53] local.INFO: All books have been retrieve by user #1. Request inputs: {array (
+  'limit' => 12,
+  'category' => NULL,
+)}. {"user_id":1} 
+[2016-10-08 22:32:27] local.INFO: All books have been retrieve by user #1. Request inputs: {array (
+  'limit' => 12,
+  'category' => NULL,
+)}. {"user_id":1} 
+[2016-10-08 22:38:19] local.ERROR: Expected String for key (language), NULL found. {"user_id":4} 
+[2016-10-08 22:40:16] local.INFO: The new book #2 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Database',
+  'author' => NULL,
+  'language' => NULL,
+  'size' => NULL,
+  'description' => NULL,
+  'cover' => NULL,
+  'filepath' => 'path of book',
+  'format' => NULL,
+  'category' => 3,
+  'date_created' => '2016-10-08 22:40:16',
+)}. {"user_id":4} 
+[2016-10-08 22:40:42] local.INFO: All books have been retrieve by user #1. Request inputs: {array (
+  'limit' => 12,
+  'category' => NULL,
+)}. {"user_id":1} 

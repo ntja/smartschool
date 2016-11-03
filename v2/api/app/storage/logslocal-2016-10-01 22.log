@@ -1,0 +1,52 @@
+[2016-10-01 22:35:34] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-10-01 22:35:33","last_login":"2016-10-01 22:35:33","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-10-01 22:35:40] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:35:46] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:35:50] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 22:36:48] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:37:01] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:38:34] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:38:48] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:39:01] local.INFO: Information of account #{13} has just been updated. Request inputs: array (
+  'first_name' => 'Bill',
+  'last_name' => 'Buckanan',
+  'honorific' => 'Mr',
+  'phone' => '655134682',
+) {"user_id":13} 
+[2016-10-01 22:39:03] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:39:12] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:39:19] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:45:33] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 22:47:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:47:16] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:47:37] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:48:47] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 22:52:09] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:52:21] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:52:22] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 22:54:17] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:54:29] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 22:55:18] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 22:57:39] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:58:33] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 22:58:33] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 

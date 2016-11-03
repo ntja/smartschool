@@ -1,0 +1,2 @@
+[2016-10-27 05:17:12] production.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-27 05:25:51] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

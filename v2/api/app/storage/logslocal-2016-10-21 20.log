@@ -1,0 +1,44 @@
+[2016-10-21 20:27:12] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-21 20:27:46] local.INFO: Successful authentication of account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"VERIFIED","date_created":"2016-10-17 23:33:23","date_updated":"2016-10-21 20:27:46","last_login":"2016-10-21 20:27:46","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":40} 
+[2016-10-21 20:27:49] local.INFO: Account #40 information have just been fetched by account #{40}. {"user_id":40} 
+[2016-10-21 20:28:56] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-21 20:28:56","last_login":"2016-10-21 20:28:56","honorific":"Ms","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-21 20:29:17] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:29:26] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:30:09] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-21 20:30:30] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:31:15] local.INFO: Successful authentication of account {"id":2,"first_name":"Chloe","last_name":"O'bryan","role":"INSTRUCTOR","email":"chloe@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:30:42","date_updated":"2016-10-21 20:31:15","last_login":"2016-10-21 20:31:15","honorific":"Ms","phone":"655155266","photo":null,"subscription":"UNPAID"}. {"user_id":2} 
+[2016-10-21 20:31:18] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-10-21 20:31:24] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-10-21 20:31:51] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-10-21 20:31:51","last_login":"2016-10-21 20:31:51","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-10-21 20:31:54] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-21 20:32:10] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-21 20:34:35] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-21 20:34:52] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-21 20:34:52","last_login":"2016-10-21 20:34:52","honorific":"Ms","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-21 20:34:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:34:59] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-21 20:34:59] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:36:42] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-21 20:36:42] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:37:06] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:39:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:39:52] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:51:20] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-10-21 20:51:20","last_login":"2016-10-21 20:51:20","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-10-21 20:51:23] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-21 20:51:49] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-21 20:51:49","last_login":"2016-10-21 20:51:49","honorific":"Ms","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-21 20:51:52] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-21 20:52:01] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

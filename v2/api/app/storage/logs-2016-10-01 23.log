@@ -1,0 +1,7 @@
+[2016-10-01 23:01:07] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '12',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-01 23:01:34] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 23:03:08] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-10-01 23:04:28] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 

@@ -1,0 +1,4 @@
+[2016-10-26 21:40:57] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 

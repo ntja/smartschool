@@ -1,0 +1,1 @@
+[2016-10-26 23:53:49] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'shortname' in where clause is ambiguous (SQL: select * from `courses` inner join `accounts` on `accounts`.`id` = `courses`.`instructor` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` where `shortname` = algo101 limit 1) {"user_id":1} 

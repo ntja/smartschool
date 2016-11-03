@@ -1,0 +1,42 @@
+[2016-10-11 19:26:21] local.ERROR: Expected key (requestedby) in parameter  array. {"user_id":13} 
+[2016-10-11 19:26:21] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => 12,
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:30:59] local.ERROR: Expected key (requestedby) in parameter  array. {"user_id":13} 
+[2016-10-11 19:30:59] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => 12,
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:35:43] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in order clause is ambiguous (SQL: select `accounts`.*, `join_courses`.`status`, `join_courses`.`requestedby`, `courses`.* from `join_courses` inner join `accounts` on `accounts`.`id` = `join_courses`.`account` inner join `courses` on `courses`.`id` = `join_courses`.`course` where `accounts`.`delete_status` = 0 and `account` = 13 order by `id` desc limit 13 offset 0) {"user_id":13} 
+[2016-10-11 19:35:43] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => 12,
+  'status' => NULL,
+  'requestedby' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:36:40] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'join_courses.id' in 'order clause' (SQL: select `accounts`.*, `join_courses`.`status`, `join_courses`.`requestedby`, `courses`.* from `join_courses` inner join `accounts` on `accounts`.`id` = `join_courses`.`account` inner join `courses` on `courses`.`id` = `join_courses`.`course` where `accounts`.`delete_status` = 0 and `account` = 13 order by `join_courses`.`id` desc limit 13 offset 0) {"user_id":13} 
+[2016-10-11 19:36:40] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => 12,
+  'status' => NULL,
+  'requestedby' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:37:52] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => 12,
+  'status' => NULL,
+  'requestedby' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:38:18] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+  'requestedby' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:53:27] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+  'requestedby' => NULL,
+)}. {"user_id":13} 
+[2016-10-11 19:54:06] local.INFO: All courses have been retrieve by user #13. Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+  'requestedby' => NULL,
+)}. {"user_id":13} 

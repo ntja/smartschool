@@ -1,0 +1,127 @@
+/******************************************
+    File Name: custom.css
+    Template Name: Teach Me
+    Created By: Show WP Team
+    Envato Profile: http://themeforest.net/user/wordpressshowcase
+    Website: https://showwp.com
+    Version: 1.0
+    Support: wordpressshowcasecom@gmail.com
+/******************************************/
+
+.course-table table a,
+.portfolio-filter ul li:hover a,
+.portfolio-filter ul li:focus a,
+.portfolio-filter ul li:active a,
+.drop-caps p:first-child:first-letter,
+.pricingbox.whitebg h4,
+.stat-module i,
+.nobgwithicon i,
+blockquote cite::before,
+blockquote cite,
+.latest-tweets a,
+.boxes h3 span,
+a:hover,
+a:focus,
+.navbar-brand span {
+    color: #3ca1db;
+}
+
+.darkheader,
+.button--pipaluk,
+.button--wayra,
+.button--rayen,
+.button--ujarak,
+#bbpress-forums li.bbp-header,
+.wbc .large-post-meta,
+.progress-bar span,
+.progress-bar-striped,
+.checkbox-warning input[type="checkbox"]:checked + label::before,
+.checkbox-warning input[type="radio"]:checked + label::before,
+.welcomebox-wrapper,
+.welcomebox,
+.ribbon-green,
+.shop-bottom i,
+.cartmenu sup,
+.revtp-searchform input[type="submit"],
+.revtp-form input[type="submit"],
+.Feature-Tour,
+.btn-primary {
+    background-color: #3ca1db !important;
+    border-color: #3ca1db !important;
+}
+
+.member-desc li:hover,
+.member-desc li.active,
+#vertical .navbar-nav > li:hover,
+.section-title-2 hr,
+.dmtop,
+.related-title span,
+.btn-trans {
+    border-color: #3ca1db !important;
+}
+
+.topbar {
+    border-top-color: #3ca1db;
+}
+
+.custom-widget,
+.navbar-nav > li:hover > a,
+.navbar-nav > li.active > a {
+    border-bottom-color: #3ca1db !important;
+}
+
+.Feature-Examples:focus,
+.Feature-Examples:hover {
+    border-color: #3ca1db !important;
+    color: #3ca1db !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: #3ca1db !important;
+}
+
+/* HOVER */
+
+.course-table .fa,
+.member-desc li span,
+.member-desc li:hover a,
+.member-desc li:focus a,
+.member-desc li.active a,
+.bgw .owl-nav [class*="owl-"]:hover,
+.bgw .owl-nav [class*="owl-"]:focus,
+.darkheader .navbar-nav > li:hover,
+.darkheader .navbar-default .navbar-nav > .active > a,
+.darkheader .navbar-default .navbar-nav > .active > a:hover,
+.darkheader .navbar-default .navbar-nav > .active > a:focus,
+.first-accordion .panel-default > .panel-heading i,
+.first-accordion .panel-default > .panel-heading,
+.customtab .nav-pills > li:hover a,
+.customtab .nav-pills > li:focus a,
+.customtab .nav-pills > li.active > a,
+.customtab .nav-pills > li.active > a:hover,
+.customtab .nav-pills > li.active > a:focus,
+.tab-first .nav-tabs > li:hover a,
+.tab-first .nav-tabs > li:focus a,
+.tab-first .nav-tabs > li.active > a,
+.tab-first .nav-tabs > li.active > a:hover,
+.tab-first .nav-tabs > li.active > a:focus,
+.statscounts i,
+.withcircle i,
+.section.bgd .nav-center .owl-nav [class*="owl-"],
+#owl-courses.nav-center .owl-nav [class*="owl-"],
+mark,
+.tags a,
+.revtp-searchform input[type="submit"]:hover,
+.revtp-form input[type="submit"]:hover,
+.Feature-Tour:hover,
+.Feature-Tour:focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #46abe5 !important;
+    border-color: #46abe5 !important;
+}

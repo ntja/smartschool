@@ -1,0 +1,236 @@
+[2016-09-27 19:00:59] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:01:23] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:01:28] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:02:27] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:02:27] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:02:31] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:02:37] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:03:20] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:03:26] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:03:32] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:03:34] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:03:40] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:03:48] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '5',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:03:53] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '5',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:04:02] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:04:02] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:06:24] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:06:42] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:06:48] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:08:39] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:17:00] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-27 19:17:00","last_login":"2016-09-27 19:17:00","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-27 19:17:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:17:37] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:18:04] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:19:15] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:19:15] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:19:41] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:19:41] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:19:54] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:19:54] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:20:53] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:21:06] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:21:53] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:24:06] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:25:42] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:26:18] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:26:42] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:27:26] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:27:39] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:28:08] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:28:08] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:28:21] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:30:15] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:30:15] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:30:40] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:31:59] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 19:32:14] local.INFO: Successful authentication of account {"id":2,"first_name":"Chloe","last_name":"O'bryan","role":"INSTRUCTOR","email":"chloe@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:30:42","date_updated":"2016-09-27 19:32:14","last_login":"2016-09-27 19:32:14","honorific":"Ms","phone":"655155266","photo":null,"subscription":"UNPAID"}. {"user_id":2} 
+[2016-09-27 19:32:17] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:32:20] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:32:20] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:34:01] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:34:01] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:34:14] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:34:14] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:35:46] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:38:18] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:40:27] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:40:48] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:40:48] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:41:08] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-27 19:41:08","last_login":"2016-09-27 19:41:08","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-27 19:41:11] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:41:15] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:41:15] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:41:32] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-27 19:41:32","last_login":"2016-09-27 19:41:32","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-27 19:41:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:41:39] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:43:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 19:43:40] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-27 19:43:40","last_login":"2016-09-27 19:43:40","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-27 19:43:42] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:43:46] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:43:46] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:45:36] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:45:41] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:45:48] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:46:12] local.INFO: Successful authentication of account {"id":2,"first_name":"Chloe","last_name":"O'bryan","role":"INSTRUCTOR","email":"chloe@domain.com","verified_status":"VERIFIED","date_created":"2016-08-14 11:30:42","date_updated":"2016-09-27 19:46:12","last_login":"2016-09-27 19:46:12","honorific":"Ms","phone":"655155266","photo":null,"subscription":"UNPAID"}. {"user_id":2} 
+[2016-09-27 19:46:14] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:46:16] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 19:48:51] local.INFO: The new course #21 has just been created. Request inputs:  #{array (
+  'name' => 'Fundamentals of Actuarial Mathematics',
+  'shortname' => 'actuariat',
+  'language' => 'en',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<span style="font-family: TimesLTStd-Roman; color: rgb(0, 0, 0);"><span style="font-size: 18px;">In this book we deal with certain mathematical models. This opening chapter, however, is a<br>nontechnical introduction, designed to provide background and motivation. In particular, we<br>are concerned with models used by actuaries, so we might first try to describe exactly what it<br>is that actuaries do. This can be difficult, because a typical actuary is concerned with many<br>issues, but we can identify two major themes dealt with by this profession.<br>The first is </span><span style="font-family: TimesLTStd-Italic;"><span style="font-size: 18px;"><i>risk</i><span style="font-family: TimesLTStd-Roman;">, a word that itself can be defined in different ways. A commonly accepted<br>definition in our context is that risk is the possibility that <span style="font-family: TimesLTStd-Italic;"><i>something bad </i><span style="font-family: TimesLTStd-Roman;">happens. Of course,<br>many bad things can happen, but in particular we are interested in occurrences that result<br>in <span style="font-family: TimesLTStd-Italic;"><i>financial loss</i><span style="font-family: TimesLTStd-Roman;">. A person dies, depriving family of earned income or business partners of<br>expertise. Someone becomes ill, necessitating large medical expenses. A home is destroyed<br>by fire or an automobile is damaged in an accident. No matter what precautions you take,<br>you cannot rid yourself completely of the possibility of such unfortunate events, but what you<br>can do is take steps to mitigate the financial loss involved. One of the most commonly used<br>measures is to purchase insurance.<br>Insurance involves a sharing or pooling of risks among a large group of people. The origins<br>go back many years and can be traced to members of a community helping out others who<br>suffered loss in some form or other. For example, people would help out neighbours who had<br>suffered a death or illness in the family. While such aid was in many cases no doubt due to<br>altruistic feelings, there was also a motivation of self-interest. You should be prepared to help<br>out a neighbour who suffered some calamity, since you or your family could similarly be<br>aided by others when you required such assistance. This eventually became more formalized,<br>giving rise to the insurance companies we know today.</span></span></span></span></span></span><br style="line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2;"></span></span>                 
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 2,
+  'school' => NULL,
+  'category' => '2',
+  'date_created' => '2016-09-27 19:48:51',
+)}. {"user_id":2} 
+[2016-09-27 19:48:52] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 19:49:22] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:52:01] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:52:01] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:55:54] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 19:55:54] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 19:56:09] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 

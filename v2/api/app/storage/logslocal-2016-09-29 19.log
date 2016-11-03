@@ -1,0 +1,13 @@
+[2016-09-29 19:56:47] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-29 19:57:15] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-29 19:59:33] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-29 19:59:33","last_login":"2016-09-29 19:59:33","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-29 19:59:56] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":13} 

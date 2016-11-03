@@ -1,0 +1,6 @@
+[2016-10-26 22:23:15] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-26 22:37:13] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-26 22:40:14] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-26 22:53:15] local.ERROR: Missing argument 2 for Illuminate\Database\Query\Builder::join() {"user_id":1} 
+[2016-10-26 22:54:37] local.ERROR: Missing argument 2 for Illuminate\Database\Query\Builder::join() {"user_id":1} 
+[2016-10-26 22:57:38] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'shortname' in where clause is ambiguous (SQL: select * from `courses` inner join `accounts` on `accounts`.`id` = `courses`.`account` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` where `shortname` = discretemath101 limit 1) {"user_id":1} 

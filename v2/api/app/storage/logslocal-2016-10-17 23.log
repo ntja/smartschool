@@ -1,0 +1,131 @@
+[2016-10-17 23:04:39] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwordd',
+)}.  
+[2016-10-17 23:04:40] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwordd',
+)}.  
+[2016-10-17 23:04:53] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-17 23:04:53","last_login":"2016-10-17 23:04:53","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-17 23:04:59] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-17 23:08:08] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-10-17 23:08:17] local.ERROR: Invalid attempt to create a new account with an email taken {abram@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'abram@domain.com',
+  'first_name' => 'Abraham',
+  'last_name' => 'Lincoln',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:10:20] local.ERROR: Invalid attempt to create a new account with an email taken {abram@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'abram@domain.com',
+  'first_name' => 'Abraham',
+  'last_name' => 'Lincoln',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:10:55] local.ERROR: Invalid attempt to create a new account with an email taken {abram@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'abram@domain.com',
+  'first_name' => 'Abraham',
+  'last_name' => 'Lincoln',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:11:36] local.ERROR: Invalid attempt to authenticate a non verified account {"id":37,"first_name":"Abraham","last_name":"Lincoln","role":"LEARNER","email":"abram@domain.com","verified_status":"PENDING","date_created":"2016-10-17 23:08:07","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2016-10-17 23:21:59] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-10-17 23:22:31] local.ERROR: Invalid attempt to create a new account with an email taken {johnkennedy@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'johnkennedy@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Kennedy',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:22:40] local.ERROR: Invalid attempt to create a new account with an email taken {johnkennedy@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'johnkennedy@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Kennedy',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:22:42] local.ERROR: Invalid attempt to create a new account with an email taken {johnkennedy@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'johnkennedy@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Kennedy',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:22:44] local.ERROR: Invalid attempt to create a new account with an email taken {johnkennedy@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'johnkennedy@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Kennedy',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:22:52] local.ERROR: Invalid attempt to create a new account with an email taken {johnkennedy@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'johnkennedy@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Kennedy',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-10-17 23:28:29] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-10-17 23:33:23] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-10-17 23:37:45] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-17 23:37:45","last_login":"2016-10-17 23:37:45","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-17 23:37:49] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-17 23:38:10] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'password',
+)}  
+[2016-10-17 23:38:46] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'passworddd',
+)}  
+[2016-10-17 23:38:53] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'passworddd',
+)}  
+[2016-10-17 23:38:56] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'passwordd',
+)}  
+[2016-10-17 23:39:00] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'password',
+)}  
+[2016-10-17 23:39:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'password',
+)}  
+[2016-10-17 23:39:24] local.ERROR: Invalid attempt to authenticate a non verified account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"PENDING","date_created":"2016-10-17 23:33:23","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2016-10-17 23:39:34] local.ERROR: Invalid attempt to authenticate a non verified account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"PENDING","date_created":"2016-10-17 23:33:23","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2016-10-17 23:39:39] local.ERROR: Invalid attempt to authenticate a non verified account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"PENDING","date_created":"2016-10-17 23:33:23","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2016-10-17 23:39:58] local.INFO: Successful authentication of account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"VERIFIED","date_created":"2016-10-17 23:33:23","date_updated":"2016-10-17 23:39:58","last_login":"2016-10-17 23:39:58","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":40} 
+[2016-10-17 23:40:08] local.INFO: Account #40 information have just been fetched by account #{40}. {"user_id":40} 
+[2016-10-17 23:40:21] local.INFO: Account #40 information have just been fetched by account #{40}. {"user_id":40} 
+[2016-10-17 23:40:38] local.INFO: Successful authentication of account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"VERIFIED","date_created":"2016-10-17 23:33:23","date_updated":"2016-10-17 23:40:38","last_login":"2016-10-17 23:40:38","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":40} 
+[2016-10-17 23:40:41] local.INFO: Account #40 information have just been fetched by account #{40}. {"user_id":40} 
+[2016-10-17 23:51:14] local.INFO: Successful authentication of account {"id":40,"first_name":"Jacky","last_name":"Chan","role":"LEARNER","email":"jacky@domain.com","verified_status":"VERIFIED","date_created":"2016-10-17 23:33:23","date_updated":"2016-10-17 23:51:14","last_login":"2016-10-17 23:51:14","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":40} 
+[2016-10-17 23:51:17] local.INFO: Account #40 information have just been fetched by account #{40}. {"user_id":40} 
+[2016-10-17 23:51:29] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'passwordd',
+)}.  
+[2016-10-17 23:51:39] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jacky@domain.com',
+  'password' => 'passwordd',
+)}.  

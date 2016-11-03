@@ -1,0 +1,52 @@
+[2016-09-24 20:23:16] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:24:20] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:25:14] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:25:39] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:25:44] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:30:23] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:31:18] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:31:31] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:53:50] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:54:48] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:55:10] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:58:00] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 20:58:36] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 

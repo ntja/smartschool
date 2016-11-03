@@ -1,0 +1,6 @@
+.table-responsive {
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: hidden !important;
+}

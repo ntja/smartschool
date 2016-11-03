@@ -1,0 +1,14 @@
+[2016-09-24 07:08:02] local.ERROR: Invalid attempt to create a new account with an email taken {paul8@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'paul8@domain.com',
+  'first_name' => 'Jephte',
+  'last_name' => 'Einstein',
+  'honorific' => 'Mr',
+  'role' => 'INSTRUCTOR',
+  'phone' => '987654321',
+  'photo' => NULL,
+).  
+[2016-09-24 07:08:24] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::notify()  
+[2016-09-24 07:08:31] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::notify()  
+[2016-09-24 07:08:35] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::notify()  
+[2016-09-24 07:10:11] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::notify()  
+[2016-09-24 07:10:16] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::notify()  

@@ -1,0 +1,17 @@
+[2016-10-10 20:42:28] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-10-10 20:42:27","last_login":"2016-10-10 20:42:27","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-10-10 20:44:08] local.INFO: The courses of instructor #'13' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-10 20:50:36] local.INFO: The courses of instructor #'13' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-10 20:51:59] local.INFO: The courses of instructor #'13' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-10 20:55:08] local.INFO: The courses of instructor #'13' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 

@@ -1,0 +1,42 @@
+/* 
+    Created on : Apr 12, 2016, 9:53:47 AM
+    Author     : jephte ndongmou
+*/
+
+// login form classes for validation
+
+.success{
+	display: inline-block;
+	background : url("../img/icons/checkmark.png") no-repeat right center transparent;
+	padding-right : 26px;
+}
+
+.fail{
+	display: inline-block;
+	background : url("../img/icons/cross.png") no-repeat right center transparent;
+	padding-right : 26px;
+}
+
+.loading{
+	display: inline-block;
+	background : url("../img/icons/loader.gif") no-repeat right center transparent;
+	padding-right : 26px;
+}
+select.error, textarea.error, input.error, .error {
+    color:#FF0000!important;
+}
+
+// Overwrite html tags styles and some classes and Ids styles
+body{
+    background-color: #d4d4d4!important;
+}
+.wrapper{
+    background-color: #d4d4d4 !important;
+    margin: 0 auto !important;   
+    padding-top: 140px;
+}
+.main{
+    min-height: 630px;
+    background-color: #d4d4d4;
+    width: 100%;
+}

@@ -1,0 +1,75 @@
+[2016-10-30 11:08:15] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:11:06] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:11:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:19:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:19:59] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:22:16] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:25:12] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:26:56] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:27:52] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'delete_status' in where clause is ambiguous (SQL: select `courses`.*, `course_categories`.`name` as `category_name` from `courses` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` inner join `accounts` on `accounts`.`id` = `courses`.`instructor` where `delete_status` = 0 and `status` = PUBLISHED order by `id` desc limit 21 offset 0)  
+[2016-10-30 11:27:52] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:28:16] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'delete_status' in where clause is ambiguous (SQL: select `courses`.*, `course_categories`.`name` as `category_name` from `courses` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` inner join `accounts` on `accounts`.`id` = `courses`.`instructor` where `delete_status` = 0 and `status` = PUBLISHED order by `id` desc limit 21 offset 0)  
+[2016-10-30 11:28:16] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:29:12] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'delete_status' in where clause is ambiguous (SQL: select `courses`.*, `course_categories`.`name` as `category_name`, `accounts`.`first_name`, `accounts`.`last_name` from `courses` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` inner join `accounts` on `accounts`.`id` = `courses`.`instructor` where `delete_status` = 0 and `status` = PUBLISHED order by `id` desc limit 21 offset 0)  
+[2016-10-30 11:29:12] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:30:02] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:30:54] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:34:30] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:35:23] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:36:08] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:37:37] local.ERROR: Invalid attempt to authenticate a non verified account {"id":14,"first_name":"John","last_name":"Connor","role":"LEARNER","email":"john@domain.com","verified_status":"PENDING","date_created":"2016-08-28 13:37:58","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2016-10-30 11:37:44] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'johny@domain.com',
+  'password' => 'password',
+)}  
+[2016-10-30 11:37:49] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'joedoe@domain.com',
+  'password' => 'password',
+)}  
+[2016-10-30 11:37:56] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-10-30 11:37:56","last_login":"2016-10-30 11:37:56","honorific":"Ms","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-10-30 11:38:00] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:38:12] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:38:19] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:39:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:39:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-10-30 11:39:45] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-10-30 11:57:00] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  

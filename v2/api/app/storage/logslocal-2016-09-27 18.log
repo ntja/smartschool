@@ -1,0 +1,146 @@
+[2016-09-27 18:27:25] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:27:45] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":2} 
+[2016-09-27 18:30:00] local.INFO: Account #2 information have just been fetched by account #{2}. {"user_id":2} 
+[2016-09-27 18:30:15] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-27 18:30:14","last_login":"2016-09-27 18:30:14","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-27 18:30:21] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:30:45] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-27 18:30:45","last_login":"2016-09-27 18:30:45","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-27 18:30:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-27 18:30:52] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:32:43] local.INFO: The new course #19 has just been created. Request inputs:  #{array (
+  'name' => 'OPTIMIZATION IN PRACTICE WITH MATLAB',
+  'shortname' => 'optmatlab',
+  'language' => 'en',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<span style="font-family: LiberationSerif; font-size: 15pt; color: rgb(0, 0, 0);">Optimization can be viewed as a process that searches methodically for better answers,<br><span style="font-size: 15pt;">better solutions, or better designs that a human being may not be able to find through<br><span style="font-size: 15pt;">experience, intuition, or courageous trial-and-error. Optimization can be defined as the art<br><span style="font-size: 15pt;">of making things better. Interestingly, optimization very often does not simply allow us to<br><span style="font-size: 15pt;">do something better, but it may also make it possible to do something that we did not<br><span style="font-size: 15pt;">otherwise know how to do. To take full advantage of the power of optimization in<br><span style="font-size: 15pt;">practice, there is no choice but to use a computer.<br><span style="font-size: 15pt;">The study of optimization typically takes a theoretical and/or computational approach.<br><span style="font-size: 15pt;">The theoretical approach is highly useful when the objective is to develop new<br><span style="font-size: 15pt;">optimization methods or to assess how the current methods work [<span style="font-size: 15pt; color: rgb(0, 0, 238);">1<span style="font-size: 15pt; color: rgb(0, 0, 0);">]. Additionally, the<br><span style="font-size: 15pt;">study of optimization often focuses on the understanding of various search algorithms for<br><span style="font-size: 15pt;">optimization. A book by Reklaitis and co-authors [<span style="font-size: 15pt; color: rgb(0, 0, 238);">2<span style="font-size: 15pt; color: rgb(0, 0, 0);">] is an example of methods-based<br><span style="font-size: 15pt;">optimization presentation. While these books play an important role in the general study<br><span style="font-size: 15pt;">of optimization, we pursue a different approach. The objective of this book takes on a<br><span style="font-size: 15pt;">practical perspective. The current interest is in the immediate ability to apply optimization<br><span style="font-size: 15pt;">in practice. In order to reach this objective, and to have the ability to apply optimization to<br><span style="font-size: 15pt;">real world problems, we use the approach that is almost always required in the application<br><span style="font-size: 15pt;">of optimization. We use the power of the computer, in conjunction with the study of<br><span style="font-size: 15pt;">different important practical aspects of optimization.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br style="line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2;"></span></span></span></span></span>                 
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '2',
+  'date_created' => '2016-09-27 18:32:43',
+)}. {"user_id":1} 
+[2016-09-27 18:33:05] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:33:50] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:34:02] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:37:02] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:41:51] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:42:14] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:42:34] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:47:47] local.INFO: The new course #20 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Discrete Mathematics',
+  'shortname' => 'discretemath101',
+  'language' => 'fr',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<span style="font-family: Times-Roman; color: rgb(35, 31, 32);"><span style="font-size: 18px;">Discrete mathematics describes processes that consist of a sequence of individual steps.<br>This contrasts with calculus, which describes processes that change in a continuous fashion. Whereas the ideas of calculus were fundamental to the science and technology of the<br>industrial revolution, the ideas of discrete mathematics underlie the science and technology of the computer age. The main themes of a first course in discrete mathematics are<br>logic and proof, induction and recursion, discrete structures, combinatorics and discrete<br>probability, algorithms and their analysis, and applications and modeling.</span><br style="line-height: normal; orphans: 2; text-align: -webkit-auto; widows: 2;"></span>                 
+                                            ',
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => 0,
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => NULL,
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '2',
+  'date_created' => '2016-09-27 18:47:47',
+)}. {"user_id":1} 
+[2016-09-27 18:47:48] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-27 18:50:15] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:50:15] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:51:15] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:51:15] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:51:52] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:51:52] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:52:36] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:53:41] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:54:25] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'bill@domain.com',
+  'password' => 'passwordd',
+)}.  
+[2016-09-27 18:54:29] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2016-09-27 18:54:29","last_login":"2016-09-27 18:54:29","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2016-09-27 18:54:30] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:54:56] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:54:56] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:58:05] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:58:05] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-27 18:58:32] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:59:45] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-27 18:59:53] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":13} 

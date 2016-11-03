@@ -1,0 +1,71 @@
+[2016-09-22 07:20:56] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:21:11] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:21:19] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:21:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:21:44] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:21:52] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:21:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:22:20] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:23:05] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:23:09] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:23:20] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:24:01] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:26:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:26:25] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:26:36] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:26:52] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:27:28] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:28:02] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:28:20] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-22 07:28:20","last_login":"2016-09-22 07:28:20","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-22 07:28:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:28:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:29:30] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:30:18] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:30:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:30:36] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:38:38] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:38:48] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:39:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:39:45] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:41:25] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:41:44] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:42:32] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:43:39] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:43:53] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:44:02] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:45:51] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:46:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:46:10] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:46:31] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:46:53] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:47:08] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:47:25] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:47:44] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:48:21] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-22 07:48:36] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:48:49] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-22 07:49:18] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

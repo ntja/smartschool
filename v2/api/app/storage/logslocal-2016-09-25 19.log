@@ -1,0 +1,33 @@
+[2016-09-25 19:14:53] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:16:50] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:18:51] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:19:29] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:20:17] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:20:47] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:33:46] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 
+[2016-09-25 19:50:50] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2016-09-25 19:50:58] local.INFO: All courses has been retrieve by user #13. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":13} 

@@ -1,0 +1,8 @@
+[2016-09-24 09:02:57] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-09-24 09:08:25] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-09-24 09:31:17] local.ERROR: Target [Illuminate\Contracts\Notifications\Dispatcher] is not instantiable.  
+[2016-09-24 09:47:46] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 09:47:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 09:48:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 09:48:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 09:48:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

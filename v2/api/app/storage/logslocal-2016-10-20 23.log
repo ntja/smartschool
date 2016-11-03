@@ -1,0 +1,78 @@
+[2016-10-20 23:03:49] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'delete_status' in where clause is ambiguous (SQL: select `courses`.*, `course_categories`.`name` as `category_name`, `accounts`.`first_name`, `accounts`.`last_name` from `courses` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` inner join `accounts` on `account`.`id` = `courses`.`instructor` where `delete_status` = 0 order by `id` desc limit 11 offset 0)  
+[2016-10-20 23:03:49] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2016-10-20 23:05:04] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'account.id' in 'on clause' (SQL: select `courses`.*, `course_categories`.`name` as `category_name`, `accounts`.`first_name`, `accounts`.`last_name` from `courses` inner join `course_categories` on `course_categories`.`id` = `courses`.`category` inner join `accounts` on `account`.`id` = `courses`.`instructor` where `courses`.`delete_status` = 0 order by `id` desc limit 11 offset 0)  
+[2016-10-20 23:05:04] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2016-10-20 23:05:37] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2016-10-20 23:07:42] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:24:50] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:26:16] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:27:07] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:27:30] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:28:15] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:28:27] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:29:14] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:29:46] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:30:01] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:30:41] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:31:47] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:32:22] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:33:32] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:41:22] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 23:42:24] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  

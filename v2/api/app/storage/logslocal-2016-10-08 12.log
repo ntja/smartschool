@@ -1,0 +1,11 @@
+[2016-10-08 12:00:16] local.INFO: All books categories has been retrieve by user #4. Request inputs: {array (
+  'limit' => 12,
+)}. {"user_id":4} 
+[2016-10-08 12:05:05] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-08 12:08:17] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '3',
+  'status' => NULL,
+)}. {"user_id":1} 

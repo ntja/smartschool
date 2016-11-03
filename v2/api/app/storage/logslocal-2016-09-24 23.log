@@ -1,0 +1,136 @@
+[2016-09-24 23:00:49] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:03:44] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:04:03] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:04:29] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:04:43] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:06:01] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:06:14] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:09:19] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:09:32] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:09:45] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:10:06] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:10:29] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:11:11] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:12:06] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:12:42] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:13:13] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:14:54] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:15:15] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:15:53] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:16:05] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:16:17] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:16:27] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:16:53] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:17:02] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:17:30] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:18:20] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:18:52] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:21:27] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:24:20] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:24:46] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:25:25] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:25:41] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:25:57] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 23:26:44] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '4',
+  'status' => NULL,
+)}. {"user_id":1} 

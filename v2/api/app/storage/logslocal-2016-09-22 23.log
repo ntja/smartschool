@@ -1,0 +1,9 @@
+[2016-09-22 23:58:33] local.ERROR: Invalid attempt to create a new account with an email taken {admin@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'admin@domain.com',
+  'first_name' => 'Jephte',
+  'last_name' => 'Einstein',
+  'honorific' => 'Mr',
+  'role' => 'ADMINISTRATOR',
+  'phone' => '987654321',
+  'photo' => NULL,
+).  

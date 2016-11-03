@@ -1,0 +1,93 @@
+[2016-09-24 10:08:03] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:11:21] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:12:03] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:13:28] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:13:33] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:15:14] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:15:29] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:15:49] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:15:54] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:17:45] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:17:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 10:17:52] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:19:05] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:19:44] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:23:16] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:24:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 10:27:45] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2016-09-24 10:27:44","last_login":"2016-09-24 10:27:44","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2016-09-24 10:28:10] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:37:59] local.ERROR: Argument 1 passed to Illuminate\Database\Grammar::columnize() must be of the type array, integer given, called in C:\Program Files (x86)\Ampps\www\smartschool\api\vendor\laravel\framework\src\Illuminate\Database\Query\Grammars\Grammar.php on line 122 and defined {"user_id":1} 
+[2016-09-24 10:37:59] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:42:25] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:42:43] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:42:58] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:43:19] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:43:29] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 10:44:52] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-09-24 10:45:02] local.INFO: All courses has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 

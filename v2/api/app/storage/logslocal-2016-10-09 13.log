@@ -1,0 +1,23 @@
+[2016-10-09 13:14:17] local.INFO: The new book #3 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Database',
+  'author' => NULL,
+  'language' => NULL,
+  'size' => NULL,
+  'description' => NULL,
+  'cover' => NULL,
+  'filepath' => 'path of book',
+  'format' => NULL,
+  'category' => 7,
+  'date_created' => '2016-10-09 13:14:17',
+)}. {"user_id":4} 
+[2016-10-09 13:18:00] local.ERROR: Invalid category ID {7}. Returned code: 400. Request inputs :array (
+  'name' => 'Introduction to Database',
+  'author' => NULL,
+  'language' => NULL,
+  'size' => NULL,
+  'description' => NULL,
+  'cover' => NULL,
+  'filepath' => 'path of book',
+  'format' => NULL,
+  'category' => 7,
+). {"user_id":4} 

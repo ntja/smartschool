@@ -1,0 +1,123 @@
+[2016-09-24 22:00:19] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:00:19] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:00:44] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:00:44] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:00:45] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:00:45] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:00:55] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:00:55] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:04:37] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:04:37] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:13:08] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:13:08] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:15:03] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:15:03] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:15:05] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:15:05] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:24:03] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:24:03] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:24:05] local.ERROR: Object of class App\Repositories\Custom\AccountsCustom could not be converted to string {"user_id":1} 
+[2016-09-24 22:24:05] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:29:04] local.ERROR: Undefined property: App\Repositories\Custom\AccountsCustom::$id {"user_id":1} 
+[2016-09-24 22:29:04] local.INFO: The courses of instructor #1 has been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:31:42] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:32:37] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:35:56] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:36:54] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:37:50] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => '2',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:38:14] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:40:59] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:42:10] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:42:46] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:43:06] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => 'PUBLISHED',
+)}. {"user_id":1} 
+[2016-09-24 22:43:11] local.INFO: The courses of instructor #2 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => 'UNPUBLISHED',
+)}. {"user_id":1} 
+[2016-09-24 22:45:03] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:46:15] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:46:56] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:47:23] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:48:44] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-09-24 22:49:05] local.INFO: The courses of instructor #1 has been retrieve by user # Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 

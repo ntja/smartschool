@@ -1,0 +1,44 @@
+[2016-10-20 22:06:52] local.INFO: All courses have been retrieve by user #1. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":1} 
+[2016-10-20 22:11:04] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:31:39] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:33:25] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:38:20] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:38:54] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:39:19] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:40:06] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:40:19] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:41:40] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
+[2016-10-20 22:43:05] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}.  
