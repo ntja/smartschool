@@ -62,6 +62,9 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/courses', function () {
 		return view('courses');
 	});
+	Route::get('/search', function () {
+		return view('search');
+	});
 	Route::get('/courses/catalog', function () {
 		return view('courses.catalog');
 	});

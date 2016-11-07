@@ -1,0 +1,16 @@
+[2016-11-05 20:46:36] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)  
+[2016-11-05 20:46:36] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-11-05 20:48:48] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)  
+[2016-11-05 20:48:48] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-11-05 20:49:35] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => '20',
+  'status' => NULL,
+)}.  
+[2016-11-05 20:51:28] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2016-11-05 20:56:57] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

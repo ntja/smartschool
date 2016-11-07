@@ -1,0 +1,25 @@
+[2016-11-06 13:01:27] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in order clause is ambiguous (SQL: select * from `courses` inner join `course_categories` on `course_categories`.`id` = `Courses`.`category` where `courses`.`delete_status` = 0 and (`courses`.`name` like %mat% or `courses`.`shortname` like %mat% or `courses`.`shortdescription` like %mat% or `courses`.`aboutthecourse` like %mat% or `courses`.`faq` like %mat% or `courses`.`coursesyllabus` like %mat% or `courses`.`suggestedreadings` like %mat% or `courses`.`recommendedbackground` like %mat% or `course_categories`.`name` like %mat% or `course_categories`.`shortname` like %mat% or `course_categories`.`description` like %mat%) order by `id` desc limit 11 offset 0) {"user_id":1} 
+[2016-11-06 13:15:32] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as `category_name` like ? or `course_categories`.`shortname` as `category_shortn' at line 1 (SQL: select count(*) as aggregate from `courses` inner join `course_categories` on `course_categories`.`id` = `Courses`.`category` where `courses`.`delete_status` = 0 and (`courses`.`name` like %intro% or `courses`.`shortname` like %intro% or `courses`.`shortdescription` like %intro% or `courses`.`aboutthecourse` like %intro% or `courses`.`faq` like %intro% or `courses`.`coursesyllabus` like %intro% or `courses`.`suggestedreadings` like %intro% or `courses`.`recommendedbackground` like %intro% or `course_categories`.`name` as `category_name` like %intro% or `course_categories`.`shortname` as `category_shortname` like %intro% or `course_categories`.`description` as `category_description` like %intro%)) {"user_id":1} 
+[2016-11-06 13:33:16] local.INFO: user searched for word :intro {"user_id":1} 
+[2016-11-06 13:33:43] local.INFO: user searched for word :math {"user_id":1} 
+[2016-11-06 13:34:20] local.INFO: user searched for word :math {"user_id":1} 
+[2016-11-06 13:35:09] local.INFO: user searched for word :math {"user_id":1} 
+[2016-11-06 13:35:15] local.INFO: user searched for word :math {"user_id":1} 
+[2016-11-06 13:35:19] local.INFO: user searched for word :math {"user_id":1} 
+[2016-11-06 13:37:51] local.INFO: user searched for word :science {"user_id":1} 
+[2016-11-06 13:38:04] local.INFO: user searched for word :calculus {"user_id":1} 
+[2016-11-06 13:38:15] local.INFO: user searched for word :computer {"user_id":1} 
+[2016-11-06 13:42:50] local.ERROR: Use of undefined constant total - assumed 'total' {"user_id":1} 
+[2016-11-06 13:44:41] local.INFO: user searched for word :science Number of rows found: 4 {"user_id":1} 
+[2016-11-06 13:44:48] local.INFO: user searched for word :sciencec Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:45:11] local.INFO: user searched for word :sciencec Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:45:15] local.INFO: user searched for word :science Number of rows found: 4 {"user_id":1} 
+[2016-11-06 13:49:42] local.INFO: user searched for word : % java % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:51:04] local.INFO: user searched courses. Query : % java % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:53:10] local.INFO: user searched Books. Query : % java % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:56:26] local.INFO: user searched Books. Query : % Java % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:58:00] local.INFO: user searched Books. Query : % Java % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:58:31] local.INFO: user searched Books. Query :% Java % Number of rows found: 1 {"user_id":1} 
+[2016-11-06 13:58:58] local.INFO: user searched Books. Query : % Java progrqm % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:59:01] local.INFO: user searched Books. Query : % Java progrqam % Number of rows found: 0 {"user_id":1} 
+[2016-11-06 13:59:03] local.INFO: user searched Books. Query :% Java program % Number of rows found: 1 {"user_id":1} 

@@ -302,7 +302,7 @@ class Course extends Authenticatable{
                 //->take($limit);    
             }
             
-            $rows = $select->orderBy('id','DESC')->simplePaginate($limit);
+            $rows = $select->orderBy('id','DESC')->paginate($limit);
             //var_dump($rows);die();       
             if (!count($rows)) {
                 return false;
@@ -312,6 +312,54 @@ class Course extends Authenticatable{
             return $result;
         } catch (Exception $ex) {
 
+            LogRepository::printLog('error', $ex->getMessage());
+        }
+    }
+
+    public function search($params){        
+        try{
+            if (!is_array($params)){
+                throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
+            }
+            
+            if (!array_key_exists("query", $params)){
+                throw new Exception("Expected key (query) in parameter array.");
+            }
+            
+            if (!array_key_exists("limit", $params)){
+                throw new Exception("Expected key (limit) in parameter array.");
+            }
+
+            $result = null;            
+            $limit = intval($params['limit']);
+            $query = '%'.$params['query'].'%';
+            $select = DB::table('courses')
+				->join('course_categories','course_categories.id','=','courses.category')
+				->join('accounts', 'accounts.id', '=', 'courses.instructor')
+                ->select('courses.*', 'course_categories.name as category_name','course_categories.shortname as category_shortname','course_categories.description as category_description','accounts.first_name', 'accounts.last_name')
+                ->where('courses.delete_status', '=', '0')
+                ->where(function ($q) use ($query) {
+                    $q->where('courses.name', 'like', $query)
+                            ->orWhere('courses.shortname', 'like', $query)
+                            ->orWhere('courses.shortdescription', 'like',  $query)
+                            ->orWhere('courses.aboutthecourse', 'like',  $query)
+                            ->orWhere('courses.faq', 'like',  $query)
+                            ->orWhere('courses.coursesyllabus', 'like',  $query)
+                            ->orWhere('courses.suggestedreadings', 'like',  $query)
+                            ->orWhere('courses.recommendedbackground', 'like',  $query)
+                            ->orWhere('course_categories.name', 'like',  $query)
+                            ->orWhere('course_categories.shortname', 'like',  $query)
+                            ->orWhere('course_categories.description', 'like',  $query);
+                });
+                    
+            $rows = $select->orderBy('courses.id','DESC')->paginate($limit);
+            if (!count($rows)) {
+                return false;
+            }
+            $result = $rows;
+
+            return $result;            
+        }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }
     }

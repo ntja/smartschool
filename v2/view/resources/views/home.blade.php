@@ -106,7 +106,7 @@
                             <i class="fa fa-graduation-cap fa-3x"></i>
                             <h3>Unlimited Free Courses</h3>
                             <p>Professional responsive and retina ready template for online learning websites!</p>
-                            <a href="<?php echo URL::to('/courses'); ?>" class="btn btn-primary btn-trans btn-radius">View all Courses</a>
+                            <a href="<?php echo URL::to('/courses'); ?>" class="btn btn-primary btn-trans btn-radius">View all Courses	</a>
                         </div><!-- end box -->
                     </div><!-- end col -->
 

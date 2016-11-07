@@ -24,9 +24,9 @@
                 <div class="col-md-7 col-sm-12">
                     <div id="custom-search-input">
                         <div class="input-group col-md-10">
-                            <input type="text" class="form-control input-lg" placeholder="What are you looking ?" />
+                            <input type="text" class="form-control input-lg query" placeholder="What are you looking ?" />
                             <span class="input-group-btn">
-                                <button class="btn btn-primary btn-lg" type="button">
+                                <button class="btn btn-primary btn-lg" type="submit" id="search">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>

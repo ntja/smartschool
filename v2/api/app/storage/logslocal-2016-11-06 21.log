@@ -1,0 +1,12 @@
+[2016-11-06 21:05:26] local.INFO: user searched courses. Query :% math % Number of rows found: 4  
+[2016-11-06 21:06:10] local.INFO: user searched courses. Query :% math % Number of rows found: 4  
+[2016-11-06 21:18:47] local.ERROR: Invalid attempt to create a new account with an email taken {admin@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'admin@domain.com',
+  'first_name' => 'Paul',
+  'last_name' => 'Allen',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2016-11-06 21:21:53] local.INFO: Successful authentication of account {"id":4,"first_name":"David","last_name":"Palmer","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-21 16:00:40","date_updated":"2016-11-06 21:21:53","last_login":"2016-11-06 21:21:53","honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}. {"user_id":4} 

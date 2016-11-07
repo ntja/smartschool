@@ -2,15 +2,15 @@ var settings, config, environment;
 settings = {
     environments: {
         development: {
-            api_url: 'http://192.168.254.254/jobsd8/api'
+            api_url: 'http://127.0.0.1/smartschool/v2/api/public'
         },
         staging: {
-            api_url: 'http://sw.ai/staging/squirrel/public'
+            api_url: 'http://api.smartskul.com/v2/api/public'
         }
     }
 };
 
-environment = 'staging';
+environment = 'development';
 config = settings.environments[environment];
 
 (function($) {

@@ -33,7 +33,7 @@ SmartSchool :: Course details
                         <div class="course-single-desc clearfix">
                             <div class="big-title">
                                 <h2 class="related-title">
-                                    <span>Course Description</span>
+                                    <span>About the Course</span>
                                 </h2>
                             </div><!-- end big-title -->
 
@@ -46,7 +46,7 @@ SmartSchool :: Course details
                         <div class="course-table clearfix">
                             <div class="big-title">
                                 <h2 class="related-title">
-                                    <span>Course Lessons</span>
+                                    <span>What you will learn</span>
                                 </h2>
                             </div><!-- end big-title -->
                             <table class="table">
@@ -110,8 +110,8 @@ SmartSchool :: Course details
                         <div class="widget custom-widget course-pricing clearfix">
                             <div class="customwidget text-left w40">    
                                 <div class="course-meta clearfix">
-                                    <p class="course-category">Category : <span id="category"></span></p>
-                                    <hr>
+                                    <p class="course-category">Subject : <span id="category"></span></p>
+                                    <hr>                                    
                                     <div class="rating">
                                         <p>Reviews : &nbsp;
                                         <i class="fa fa-star"></i>
@@ -124,6 +124,14 @@ SmartSchool :: Course details
                                     <p class="course-time">Start Date : <span></span></p>
                                     <hr>
                                     <p class="course-instructors">Instructor : <a href="#" title=""><img src="upload/student_01.png" class="img-circle" alt=""><span id="instructor"></span></a></p>
+                                    <hr>
+                                    <p class="course-length">Length : <span id="duration"></span></p>
+                                    <hr>
+                                    <p class="course-effort">Effort : <span id="effort"></span></p>
+                                    <hr>
+                                    <p class="course-lang">Languages : <span id="language"></span></p>
+                                    <hr>
+                                    <p class="course-level">Level : <span id="level"></span></p>
                                     <hr>
                                     <form>                                    
                                     <input type="submit" value="Join Course" class="btn btn-primary btn-block" />

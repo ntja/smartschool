@@ -53,6 +53,7 @@
             $('#course-description').empty().html(data.shortdescription);
             $('#instructor').empty().html(data.first_name+'  '+data.last_name);
             $('#category').html(data.category_name);
+            $('#language').html(data.language);
             $('.course-time span').text(data.start_date?data.start_date:'');
         })
         .fail(function(jqXHR, textStatus, errorThrown) {

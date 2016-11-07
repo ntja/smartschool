@@ -16,6 +16,22 @@ function alertNotify(message, type){
 	$('.response-message').empty().html(html);
 }
 
+$('#search').on('click', function(){
+	query = $('.query').val();
+	uri = $('body').attr('data-base-url')+'/search?query='+encodeURIComponent(query);
+	window.location.assign(uri);
+});
+
+function get_query(){
+	var url = location.search;
+	var qs = url.substring(url.indexOf('?') + 1).split('&');
+	for(var i = 0, result = {}; i < qs.length; i++){
+		qs[i] = qs[i].split('=');
+		result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+	}
+	return result;
+}
+
 function logout(){
 	var uri;
 	Cookies.remove('token');

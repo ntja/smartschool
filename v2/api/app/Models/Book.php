@@ -28,7 +28,7 @@ class Book extends Authenticatable{
      * @var array
      */
     protected $hidden = [
-        
+        'delete_status'
     ];
 
     public function __construct() {           
@@ -177,6 +177,45 @@ class Book extends Authenticatable{
             return $result;
         } catch (Exception $ex) {
 
+            LogRepository::printLog('error', $ex->getMessage());
+        }
+    }
+
+    public function search($params){        
+        try{
+            if (!is_array($params)){
+                throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
+            }
+            
+            if (!array_key_exists("query", $params)){
+                throw new Exception("Expected key (query) in parameter array.");
+            }
+            
+            if (!array_key_exists("limit", $params)){
+                throw new Exception("Expected key (limit) in parameter array.");
+            }
+
+            $result = null;            
+            $limit = intval($params['limit']);
+            $query = '%'.$params['query'].'%';
+            $select = DB::table('books')->join('book_categories','book_categories.id','=','books.category')
+                    ->select('books.*', 'book_categories.name as category_name')
+                    ->where('books.delete_status', '=', '0')
+                    ->where(function ($q) use ($query) {
+                        $q->where('books.name', 'like', $query)                                
+                                ->orWhere('books.description', 'like',  $query)
+                                ->orWhere('books.author', 'like',  $query)                                
+                                ->orWhere('book_categories.name', 'like',  $query);                               
+                    });                             
+                    
+            $rows = $select->paginate($limit);
+            if (!count($rows)) {
+                return false;
+            }
+            $result = $rows;
+
+            return $result;            
+        }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }
     }

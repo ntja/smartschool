@@ -25,11 +25,13 @@ class AclPolicy {
     const RESOURCE_CITY = "App\Repositories\Custom\Resource\City";
     const RESOURCE_SCHOOL = "App\Repositories\Custom\Resource\School";
     const RESOURCE_COURSE = "App\Repositories\Custom\Resource\Course";
+    const RESOURCE_COURSE_SEARCH = "App\Repositories\Custom\Resource\Courses\Search";
     const RESOURCE_COURSE_COURSE = "App\Repositories\Custom\Resource\Courses\Course";
     const RESOURCE_COURSE_CATEGORY = "App\Repositories\Custom\Resource\Courses\Category";
     const RESOURCE_COURSE_COURSE_JOIN = "App\Repositories\Custom\Resource\Courses\Course\Join";    
     const RESOURCE_COURSE_COURSE_APPLICATION = "App\Repositories\Custom\Resource\Courses\Course\Application";
     const RESOURCE_BOOK = "App\Repositories\Custom\Resource\Book";
+    const RESOURCE_BOOK_SEARCH = "App\Repositories\Custom\Resource\Books\Search";
     const RESOURCE_BOOK_CATEGORY = "App\Repositories\Custom\Resource\Books\Category";
 	
 	/*
@@ -177,6 +179,7 @@ class AclPolicy {
 
 	public function get($user, $resource, $owner = false) {
         if (is_object($resource)) {
+            //var_dump($resource);die();
             if (!strcasecmp(get_class($resource), self::RESOURCE_ACCOUNT)) {
                 $role = ["ADMINISTRATOR"];
                 if (in_array($user->getRole(), $role)) {
@@ -272,6 +275,23 @@ class AclPolicy {
                 }
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_BOOK_CATEGORY)) {
                 $role = ["ADMINISTRATOR","INSTRUCTOR","LEARNER"];
+                if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_SEARCH)) {
+                $role = ["ADMINISTRATOR","INSTRUCTOR","LEARNER","GUEST"];
+                //var_dump($user->getRole());die();
+                if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            elseif (!strcasecmp(get_class($resource), self::RESOURCE_BOOK_SEARCH)) {
+                $role = ["ADMINISTRATOR","INSTRUCTOR","LEARNER","GUEST"];
                 if (in_array($user->getRole(), $role)) {                    
                     return true;
                 } else {
