@@ -48,7 +48,7 @@
     <![endif]-->
 
 </head>
-<body>
+<body data-base-url="<?php echo URL::to('/'); ?>">
 
 	<!-- PRELOADER -->
         <div id="loader">
@@ -174,7 +174,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/plugins.js"></script>
-
+	<script src="{{asset('js/custom.js')}}"></script>
+	
     <!-- REVOLUTION JS FILES 
     <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>

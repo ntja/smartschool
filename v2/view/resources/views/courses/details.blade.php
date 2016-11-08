@@ -109,7 +109,7 @@ SmartSchool :: Course details
                         </div><!-- end post-media -->
                         <div class="widget custom-widget course-pricing clearfix">
                             <div class="customwidget text-left w40">    
-                                <div class="course-meta clearfix">
+                                <div>
                                     <p class="course-category">Subject : <span id="category"></span></p>
                                     <hr>                                    
                                     <div class="rating">

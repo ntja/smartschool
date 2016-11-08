@@ -18,8 +18,22 @@ function alertNotify(message, type){
 
 $('#search').on('click', function(){
 	query = $('.query').val();
-	uri = $('body').attr('data-base-url')+'/search?query='+encodeURIComponent(query);
-	window.location.assign(uri);
+	uri = $('body').attr('data-base-url')+'/search?query='+query;
+	window.location.assign(encodeURI(uri));
+	console.info(encodeURIComponent(query));
+});
+
+$('#custom-search-input').keypress(function(e) {	
+	var key = e.which;
+	if (key == 13) {
+		if ($('.query').val() != '') {
+			e.preventDefault();
+			query = $('.query').val();
+			uri = $('body').attr('data-base-url')+'/search?query='+query;
+			window.location.assign(encodeURI(uri));
+			console.info(encodeURI(query));
+		}
+	}
 });
 
 function get_query(){

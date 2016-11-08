@@ -36,6 +36,7 @@
             url: url,
             type: "GET",
             crossDomain: true,
+			async:true,
             dataType: "json",
             headers: {
                 "x-client-id": "0000"
@@ -78,7 +79,7 @@
                 html+= '</div><!-- end shop-bottom -->';
 
                 html+= '<div class="large-post-meta">';
-                html+= '<span class="avatar"><a href="member-profile.html"><img src="images/icons/education/teacher.png" alt="" class="img-circle"> '+data.data[i].first_name+' '+data.data[i].last_name+'</a></span>';
+                html+= '<span class="avatar"><a href="instructors"><img src="images/icons/education/teacher.png" alt="" class="img-circle"> '+data.data[i].first_name+' '+data.data[i].last_name+'</a></span>';
                 html+= '<small>&#124;</small>';
                 html+= '<span class="hidden-xs"><a href="#"><i class="fa fa-graduation-cap"></i> 0 Students</a></span>';
                 html+= '</div><!-- end meta -->';
@@ -106,10 +107,11 @@
                 html+= '</div><!-- end carousel-item -->';                   
             }            
             $(".number-items").html(data.total+" item(s) found");
-            $("#catalog").empty().append(html);
+            $("#catalog").empty().append(html);			
             }else{
                 $(".number-items").html(data.total+" item(s) found");
             }
+			$(".criteria i").html('"'+query_params.query+'"');
             //$('#catalog .panel').css('min-height','360px');
         })
         .fail(function(jqXHR, textStatus, errorThrown) {

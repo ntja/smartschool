@@ -15,7 +15,7 @@
          <div class="page-title bgg">
             <div class="container clearfix">
                 <div class="title-area pull-left">
-                    <h2>Search Result(s)</h2>
+                    <h2>You Searched for &nbsp; <span class='criteria'><i></i></span></h2>
                     <h4 class="number-items"></h4>
                 </div><!-- /.pull-right -->
                 <div class="pull-right hidden-xs">
@@ -32,7 +32,7 @@
         <section class="section bgg">
             <div class="container">
                 <div class="row">
-                    <div id="post-content" class="col-md-8 col-sm-12">
+                    <div id="post-content" class="col-md-9 col-sm-12">
                         <div class="row course-grid" id="catalog">
                             
                         </div><!-- end row -->
@@ -55,42 +55,59 @@
 
                     </div>                    
 
-                    <div id="sidebar" class="col-md-4 col-sm-12">
-                        <div class="widget custom-widget clearfix">
-                            <div class="ribbon-wrapper-green"><div class="ribbon-green">Search</div></div>
+                    <div id="sidebar" class="col-md-3 col-sm-12">
+                        <div class="widget custom-widget clearfix course-pricing">
                             <div class="customwidget text-left w40">
-                                <h3 class="widget-title">What are You Looking?</h3>
-                                <h4>90 Days Money Back Guarantee</h4>
-                                <form>
-                                    <div class="checkbox checkbox-warning">
-                                        <input id="checkbox1" type="checkbox" class="styled" checked>
-                                        <label for="checkbox1">
-                                            HTML5 & CSS Video Course
-                                        </label>
-                                    </div>
+                                <h4 class="widget-title">Filters</h4>								
+								<hr>
+								<h4>
+									Subjects
+								</h4>
+								<div class="checkbox checkbox-warning">
+									<input id="checkbox1" type="checkbox" class="styled">
+									<label for="checkbox1">
+										Mathematics
+									</label>
+								</div>
 
-                                    <div class="checkbox checkbox-warning">
-                                        <input id="checkbox2" type="checkbox" class="styled" checked>
-                                        <label for="checkbox2">
-                                            HTML to WordPress Converting
-                                        </label>
-                                    </div>
+								<div class="checkbox checkbox-warning">
+									<input id="checkbox2" type="checkbox" class="styled">
+									<label for="checkbox2">
+										Computer Science
+									</label>
+								</div>
 
-                                    <div class="checkbox checkbox-warning">
-                                        <input id="checkbox3" type="checkbox" class="styled">
-                                        <label for="checkbox3">
-                                            Search Engine Optimization
-                                        </label>
-                                    </div>
+								<div class="checkbox checkbox-warning">
+									<input id="checkbox3" type="checkbox" class="styled">
+									<label for="checkbox3">
+										Physics
+									</label>
+								</div>
+								<div class="checkbox checkbox-warning">
+									<input id="checkbox4" type="checkbox" class="styled">
+									<label for="checkbox4">
+										Chemistry
+									</label>
+								</div>
+								
+								<hr>
+								
+								<h4>
+									Languages
+								</h4>
+								<div class="checkbox checkbox-warning">
+									<input id="checkbox1" type="checkbox" class="styled" checked>
+									<label for="checkbox1">
+										French
+									</label>
+								</div>
 
-                                    <div class="checkbox checkbox-warning">
-                                        <input id="checkbox4" type="checkbox" class="styled">
-                                        <label for="checkbox4">
-                                            Video Tutorials & Audio Files
-                                        </label>
-                                    </div>
-                                    <input type="submit" value="Start Here" class="btn btn-primary btn-block" />
-                                </form>     
+								<div class="checkbox checkbox-warning">
+									<input id="checkbox2" type="checkbox" class="styled" checked>
+									<label for="checkbox2">
+										English
+									</label>
+								</div>
                             </div><!-- end newsletter -->
                         </div><!-- end widget -->
                        
