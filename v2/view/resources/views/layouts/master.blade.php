@@ -16,6 +16,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		
+		<meta name="google-signin-client_id" content="680136808075-kfu3182cvsjutul22gqako40n3in04ct.apps.googleusercontent.com">
         <!-- END META SECTION -->
 		@yield('meta')
         <!-- FAVICONS -->
@@ -51,7 +53,21 @@
             </div>
         </div>
     <!-- END PRELOADER -->
-		@yield('content')                        
+		@yield('content')               
+		<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+		<script>		
+		  function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+			  console.log('User signed out.');
+			});
+		  }
+		   function onLoad() {
+			  gapi.load('auth2', function() {
+				gapi.auth2.init();
+			  });
+			}	
+		</script>		
         <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('plugins/bootstrap/bootstrap.min.js')}}"></script>
         <script src="{{asset('plugins/js-cookie/js.cookie.js')}}"></script>

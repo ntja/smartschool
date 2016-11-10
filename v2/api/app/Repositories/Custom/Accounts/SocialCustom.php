@@ -4,21 +4,28 @@ namespace App\Repositories\Custom\Accounts;
 
 use Exception;
 use App\Repositories\Util\LogRepository;
-use Validator;
+use App\Repositories\Custom\AccountsCustom;
 use App\Models\Account;
 use Hash;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
 
-//require_once __DIR__.'/../../google-api-php-client/vendor/autoload.php';
-
 class SocialCustom {
 
+	const NETWORK_FACEBOOK = "facebook";
+    const NETWORK_GOOGLE = "google";
+	
     protected $_model;
+	protected $_accountsCustom;
 
-    public function __construct() {
+    public function __construct($id=null) {
         $this->_model = $this->model();
+		 if($id){
+            $this->_accountsCustom = new AccountsCustom($id);			
+        }else{
+            $this->_accountsCustom = new AccountsCustom();			
+        }
         return $this;
     }
 
@@ -43,22 +50,18 @@ class SocialCustom {
 
             if (!array_key_exists("network", $params)){
                 throw new Exception("Expected key (network) in parameter array.");
-            }
-
-            if (!array_key_exists("network_token", $params)){
-                throw new Exception("Expected key (network_token) in parameter array.");
-            }            
+            }                      
             if (!is_string($params['network'])) {
                 $result = array("code" => 400, "description" => "network is a string");
                 echo json_encode($result, JSON_UNESCAPED_SLASHES);
                 return false;
-            }
-
-            if (!is_string($params['network_token'])) {
-                $result = array("code" => 400, "description" => "network_token is a string");
-                echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                return false;
-            }            
+            }    
+			if(!in_array($param['network'],[self::NETWORK_FACEBOOK, self::NETWORK_GOOGLE])){
+				$result = array("code" => 4000, "description" => "Expected 'facebook' or 'google' for key (network)");
+				echo json_encode($result, JSON_UNESCAPED_SLASHES);
+				return false;
+			}
+			
             return TRUE;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -74,46 +77,9 @@ class SocialCustom {
             }
             //var_dump($params);die();
             $network = $params['network'];
-            $network_token = $params['network_token'];
-
-            $facebook_client_id = config('app.facebook_client_id'); 
-            $facebook_client_secret = config('app.facebook_client_secret');
-            $facebook_redirect_url = config('app.facebook_redirect_url');
-
+			
             if ($network == 'facebook') {                 
-                if ($network_token) {                    
-                    $url = 'https://graph.facebook.com/v2.6/me?access_token=' . $network_token . '&fields=email,id,first_name,last_name,third_party_id';
-
-                    // Get cURL resource
-                    $curl = curl_init();
-                    // Set some options - we are passing in a useragent too here
-                    curl_setopt_array($curl, array(
-                        CURLOPT_RETURNTRANSFER => 1,
-                        CURLOPT_URL => $url,
-                    ));
-                    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-                    // Send the request & save response to $resp
-                    $resp = curl_exec($curl);
-                    // Close request to clear up some resources
-                    curl_close($curl);                    
-                    $user = json_decode($resp,TRUE);
-                    //var_dump($user);die();
-                    if (isset($user['error'])) {
-                        $result = array(
-                            'code' => 400,
-                            'error' =>$user['error']
-                        );
-
-                    return $result;
-                    }
-                    /* 
-                    if(!array_key_exists('email', $user)){
-                        $result = array("code" => 4000, "description" => "Missing Facebook permission for reading account email");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        http_response_code(400);
-                        die();
-                    }
-                    */
+                if ($network_token) {                                       
                     if(!array_key_exists('third_party_id', $user)){
                         $result = array("code" => 4000, "description" => "third_party_id is required");
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
@@ -186,96 +152,33 @@ class SocialCustom {
                     );
                     return $result;
                 }
-            } else if ($network == 'google') {
-                
-                $client_id = config('app.google_client_id');
-                $client_secret = config('app.google_client_secret');
-                $redirect_uri = config('app.google_redirect_uri');
-                $simple_api_key = config('app.google_simple_api_key');
-
-                $client = new \Google_Client();
-
-                $client->setApplicationName("PHP Google OAuth Login Example");
-                $client->setClientId($client_id);
-                $client->setClientSecret($client_secret);
-                $client->setRedirectUri($redirect_uri);
-                $client->setDeveloperKey($simple_api_key);
-                $client->addScope("https://www.googleapis.com/auth/plus.profile.emails.read+https://www.googleapis.com/auth/plus.login+https://www.googleapis.com/auth/plus.me");
-
-                $objOAuthService = new \Google_Service_Oauth2($client);
-
-                if (isset($network_token)) {                
-                    $client->authenticate($network_token);
-                    $google_token = $client->getAccessToken();
-                     if (!$google_token) {
-                        $result = array(
-                            'code' => 400,
-                            'error' =>'invalid google access token'
-                        );
-                        
-                        LogRepository::printLog('error', "Invalid google access token {" . var_export($google_token, true) . "}");
-                    return $result;
-                    }
-
-                    $client->setAccessToken($google_token);
-                    $userData = $objOAuthService->userinfo->get();
-                    //var_dump($userData);die();
-                    if (!empty($userData)) {
-                        $email = $userData->email?$userData->email:'';                        
-                        $first_name = $userData->given_name;
-                        $last_name = $userData->family_name;
-                        $google_id = $userData->id;
-                        $google_link = $userData->link;
-
-                        $account = new Account();
-                        $user = $account::where('google_id', '=', $google_id)->first();
-                        //var_dump($user);die();
-                        if($user){
-                            if($user->email){
-                                $informations = array(
-                                    'email' => $user->email,
-                                    'password' => $google_id
-                                );
-                                $token = JWTAuth::attempt($informations);
-                                $result = array(
-                                    'code' => 200,
-                                    'token' => $token,
-                                    'account_id' => $user->id,
-                                    'logged' => true
-                                );
-                                LogRepository::printLog('info', "Successful authentication of account #{" . $user . "} through Google.");
-                                return $result;
-                            } else {             
-                                $result = array(
-                                    'email' => $email,
-                                    'social_id' => $google_id,
-                                    'first_name' => $first_name,
-                                    'last_name' => $last_name,
-                                    'logged' => false
-                                );                        
-                                return $result;
-                            }
-                        }else{
-                            $result = array(
-                                'code' => 200,
-                                'email' => $email,
-                                'social_id' => $google_id,
-                                'first_name' => $first_name,
-                                'last_name' => $last_name,
-                                'google_id' => $google_id,
-                                'logged' => false
-                            );
-                            return $result;
-                        }                                                                        
-                    }else {
-                        $result = array(
-                            'code' => 400,
-                            'error' =>  $google_token
-                         );
-                    
-                        return $result;
-                    }
-                }
+            } else if ($network == 'google') {                              
+				$account = $this->_accountsCustom->checkUser($params["email"]);
+				if($account){
+					if($account->verified_status !== "VERIFIED"){
+						LogRepository::printLog('error', "Invalid attempt to authenticate a non verified account " .$account);
+							$result = array("code" => 4004, "description" => 'We have sent you a verification email. Please verify your email address so we know that it\'s really you !');
+							return response()->json($result, 400);
+					}
+					if (!$token = JWTAuth::fromUser($account)) {
+						LogRepository::printLog('error', "Invalid attempt to authenticate an account with inputs {" . var_export($params,true) . "}.");
+						$result = array("code" => 4002, "description" => 'Authentication failed. Invalid email address or password');
+						return response()->json($result, 400);
+					}
+					$account->is_active = 1;
+					$account->date_updated = date('Y-m-d H:i:s');
+					$account->last_login = date('Y-m-d H:i:s');
+					$account->update();
+					LogRepository::printLog('info', "Successful authentication of account " . $account . ".");
+					$result = $this->prepareReponseAuthentication($account, $token);
+					return $result;				
+				}else{
+					unset($params["network"]);
+					//var_dump($params);die();
+					$result = $this->_accountsCustom->dbSave($params);
+					//var_dump($result);die();
+					return $result;
+				}
             }
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -288,13 +191,18 @@ class SocialCustom {
      * @param array $param
      * @return array
      */
-    public function prepare_reponse_after_post($param) {
+    public function prepareReponseAuthentication($account, $token) {
+//        dd($token);
         try {
-
+            $result = array();
+            $validity = config('jwt.ttl');
             $result = array(
-                'code' => 200
+                'code' => 200,
+                'account_id' => $account->id,
+                'role' => $account->role,
+                'token' => $token,
+                'validity' => $validity,
             );
-
             return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());

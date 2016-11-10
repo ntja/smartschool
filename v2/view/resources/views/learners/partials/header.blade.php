@@ -59,7 +59,7 @@
                     </div>
                     <div class="mb-footer">
                         <div class="pull-right">
-                            <a href="javascript:void(0)" class="btn btn-success btn-lg" id="logout">Yes</a>
+                            <a href="javascript:void(0)" class="btn btn-success btn-lg" id="logout" onclick="signOut();">Yes</a>
                             <button class="btn btn-default btn-lg mb-control-close">No</button>
                         </div>
                     </div>

@@ -301,7 +301,7 @@ class AccountsCustom {
                 $account_id = $this->_model->id;                
                 $result = $this->prepareResponseAfterPost($params,$account_id);
                 //$x = new EmailVerification($this->_model);
-                //var_dump($x);die();
+                //var_dump($result);die();
                 //send verification email to the user
                 //Notification::send($this->_row, new EmailVerification($this->_row));
                 //var_dump($this->_model);die();                
@@ -312,12 +312,13 @@ class AccountsCustom {
 						  $m->to($email)
 							->subject('Activate your account on SmartSchool');
 				});
-				LogRepository::printLog('warning', $send);
-                if (!$send) {
-                    LogRepository::printLog('warning', "Verification email could not be sent.");
+				//var_dump($send);die();
+				//LogRepository::printLog('warning', $send);
+                if(count(Mail::failures()) > 0){
+                    LogRepository::printLog('warning', "An error occured. Verification email could not be sent.");
                       $result=array(
                         'code'=>'4000',
-                        'description'=>'Verification email could not be sent'
+                        'description'=>'An error occured. Verification email could not be sent.'
                         );
                     return response()->json($result, 400);
                 }
@@ -349,12 +350,6 @@ class AccountsCustom {
                             'rel' => 'retrieve',
                             'requestTypes' => array("GET"),
                             'responseTypes' => array("application/json")
-                        ],
-                        [                           
-                            'href' => "/accounts/verify?email={$param['email']}&verify_token={$param['verify_token']}",
-                            'rel' => 'verify',
-                            'requestTypes' => array("GET"),
-                            'responseTypes' => array("application/json")                        
                         ]
                     ]
                 );

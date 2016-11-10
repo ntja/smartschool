@@ -95,7 +95,7 @@ class AclPolicy {
                     return false;
                 }
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_ACCOUNT_SOCIAL)) {
-                $role = ["GUEST"];
+               $role = ["GUEST"];
                 if (in_array($user->getRole(), $role)) {                    
                     return true;
                 } else {

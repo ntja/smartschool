@@ -89,9 +89,10 @@
                     } else if (data.role == "LEARNER"){
                         uri = base_url + '/learners/dashboard';
                     }
+					//$('#signin')[0].reset();
                     setTimeout(function(){
                         window.location.assign(uri);
-                    },1500);                    
+                    },1000);  
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
                     $('#loader').fadeOut();
@@ -108,7 +109,20 @@
             }else{
                 $('#loader').fadeOut();
             }
-        })		
+        });
+		
+		/*
+		function googleSignIn(googleUser){
+			var profile = googleUser.getBasicProfile();
+			var id_token = googleUser.getAuthResponse().id_token;
+			console.log('Token: ' + id_token);
+			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			console.log('Given Name: ' + profile.getGivenName());
+			console.log('Family Name: ' + profile.getFamilyName());
+			console.log('Image URL: ' + profile.getImageUrl());
+			console.log('Email: ' + profile.getEmail());
+		}
+		*/
 
     });
 })(jQuery);

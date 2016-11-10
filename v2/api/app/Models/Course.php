@@ -338,6 +338,7 @@ class Course extends Authenticatable{
 				->join('accounts', 'accounts.id', '=', 'courses.instructor')
                 ->select('courses.*', 'course_categories.name as category_name','course_categories.shortname as category_shortname','course_categories.description as category_description','accounts.first_name', 'accounts.last_name')
                 ->where('courses.delete_status', '=', '0')
+				->where('courses.status', '=', 'PUBLISHED')
                 ->where(function ($q) use ($query) {
                     $q->where('courses.name', 'like', $query)
                             ->orWhere('courses.shortname', 'like', $query)

@@ -6,9 +6,7 @@
 @section('header-styles')
     <link rel="stylesheet" type="text/css" href="{{asset('style.css')}}">        
 @stop
-@section('meta')
-	<meta name="google-signin-client_id" content="680136808075-kfu3182cvsjutul22gqako40n3in04ct.apps.googleusercontent.com">
-@stop
+
 @section('content')
 	
 	<div id="fb-root"></div>
@@ -152,7 +150,7 @@
                                             <button class="btn btn-info btn-block btn-google"><span class="fa fa-google-plus"></span> Google</button>
                                         </div>
 										-->
-										<div class="g-signin2 col-md-6"  data-width="180" data-height="40" data-onsuccess="onSignIn"></div>
+										<div class="g-signin2 col-md-6"  data-width="180" data-height="40" data-onsuccess="googleSignIn"></div>
 										<div class="fb-login-button col-md-6" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>										
                                     </div>
                                     <p>
@@ -171,22 +169,79 @@
     <div class="dmtop">Scroll to Top</div>
     <!-- END SITE -->
 @stop    
-    @section('scripts')    
-	<script src="https://apis.google.com/js/platform.js" async defer></script>	
+    @section('scripts')	
     <script src="{{asset('js/plugins.js')}}"></script>
     <script src="{{asset('plugins/jquery-validation/jquery.validate.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
     <script src="{{asset('js/user/login.js')}}"></script>
 	<script>
-		function onSignIn(googleUser) {
+		function googleSignIn(googleUser) {
+		  var base_url = $('body').attr('data-base-url'), uri;
 		  var profile = googleUser.getBasicProfile();
 		  var id_token = googleUser.getAuthResponse().id_token;
+		  console.info(googleUser.getAuthResponse());
 		  console.log('Token: ' + id_token);
 		  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 		  console.log('Given Name: ' + profile.getGivenName());
 		  console.log('Family Name: ' + profile.getFamilyName());
 		  console.log('Image URL: ' + profile.getImageUrl());
 		  console.log('Email: ' + profile.getEmail());
+		  var url, email, password, data = {};
+		  data.first_name = profile.getGivenName();
+		  data.last_name = profile.getFamilyName();
+		  data.email = profile.getEmail();
+		  data.photo = profile.getImageUrl();
+		  data.password = googleUser.getAuthResponse().id_token;
+		  data.role = "LEARNER";
+          url = config.api_url + '/accounts/social?network=google';
+		  $.ajax({
+                    url: url,
+                    type: "POST",
+                    contentType: "application/json",
+                    crossDomain: true,
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    headers: {
+                        "x-client-id": "0000",
+                        "Content-Type": "application/json"
+                    }
+                })
+                // if everything is ok
+                .done(function(data, textStatus, jqXHR) {
+                    //var uri;
+                    $('#loader').fadeOut();
+					if(data.code == 201){
+						alertNotify("Well done ! You have been successfully registered. Please check your email to activate your SmartSchool account", 'success');
+					}else if(data.code == 200){
+						alertNotify("Well done ! Successful authentication", 'success');
+						console.log(data);   
+						Cookies.set("account_id", data.account_id, {expires: 15});
+						Cookies.set("token", data.token, {expires: 15});
+						window.localStorage.setItem('role', data.role);
+						if (data.role == "INSTRUCTOR") {                        
+							uri = base_url + '/instructors/dashboard';
+						} else if (data.role == "LEARNER"){
+							uri = base_url + '/learners/dashboard';
+						}
+						//$('#signin')[0].reset();
+						setTimeout(function(){
+							window.location.assign(uri);
+						},1000); 
+					}
+                     
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    $('#loader').fadeOut();
+                    var response = JSON.parse(jqXHR.responseText);
+                    console.info(response.code);
+                    if(response.code == 4000 || response.code == 4002 || response.code == 4003 || response.code == 4004){
+                        alertNotify(response.description, 'error');
+                    }else{
+                        alertNotify("An error occurred. Please try again later", 'error');
+                    }
+                    console.info(response.description);
+                    //console.error(jqXHR);
+                });
 		}
 	</script>
     @stop

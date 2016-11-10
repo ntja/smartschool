@@ -51,6 +51,11 @@ function logout(){
 	Cookies.remove('token');
 	Cookies.remove('account_id');
 	window.localStorage.removeItem('role');
+	var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+
 	uri = $('body').attr('data-base-url')+'/login';
 	window.location.assign(uri);
 }
