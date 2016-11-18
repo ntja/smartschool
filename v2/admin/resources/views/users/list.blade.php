@@ -1,7 +1,7 @@
 @extends('layouts.master')
  
 @section('header-title')
-    Users
+    SmartSchool | Users
 @stop
 
 @section('stylesheets')
@@ -36,7 +36,7 @@
                                     <div class="col-sm-12">
 										<!--<a class="btn btn-primary btn-sm" id="ajouter" href="#" >Ajouter</a><br>-->
                                         <ul class="list-unstyled">
-                                            <li><b class="fa fa-filter"></b> <span><span class="filter-item label label-default" id="role_administrator">ADMINISTRATOR</span></span>&nbsp;<span><span class="filter-item label label-default" id="role_employer">EMPLOYER</span></span>&nbsp;<span><span class="filter-item label label-default" id="role_candidate">CANDIDATE</span></span></li>
+                                            <li><b class="fa fa-filter"></b> <span><span class="filter-item label label-default" id="role_administrator">ADMINISTRATOR</span></span>&nbsp;<span><span class="filter-item label label-default" id="role_instructor">INSTRUCTORS</span></span>&nbsp;<span><span class="filter-item label label-default" id="role_learner">LEARNERS</span></span></li>
 											<li><b class="fa fa-filter"></b> <span><span class="filter-item label label-default" id="subs_paid">PAID</span></span>&nbsp;<span><span class="filter-item label label-default" id="subs_unpaid">UNPAID</span></span></li>
 											<li><b class="fa fa-filter"></b> <span><span class="filter-item label label-default" id="state_disabled">DISABLED</span></span>&nbsp;<span><span class="filter-item label label-default" id="state_active">ACTIVE</span></span></li>
                                         </ul>
@@ -61,7 +61,7 @@
                                                     <th>Lastname</th>
                                                     <th>Role</th>
                                                     <th>Subscription</th>
-                                                    <th>Active Status</th>
+                                                    <th>Verified Status</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
@@ -70,23 +70,6 @@
                                         </table>
                                     </div>
                                 </div>
-<!--                                <div class="row">
-                                    <div class="col-sm-5">
-
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div id="listUsers_paginate" class="dataTables_paginate paging_simple_numbers">
-                                            <ul class="pagination">
-                                                <li id="listUsers_previous" class="paginate_button previous">
-                                                    <a href="#" id="previous"  hidden="hidden">Previous</a>
-                                                </li>
-                                                <li id="listUsers_next" class="paginate_button next">
-                                                    <a href="#" id="next"  hidden="hidden">Next</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -134,7 +117,7 @@
 		<td><span data-content="honorific"></span>&nbsp; <b data-content="last_name"></b></td>
         <td data-content="role"></td>
 		<td data-content="subscription"></td>
-		<td data-content="active_status"></td>
+		<td data-content="verified_status"></td>
         <td>
             <div class="btn-group" style="display:block;" id="action_detail">
                 <button class="btn btn-default" type="button">Actions</button>

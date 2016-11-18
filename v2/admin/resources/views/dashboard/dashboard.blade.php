@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('header-title')
-Dashboard
+SmartSchool :: Dashboard
 @stop
 
 @section('stylesheets')
@@ -37,21 +37,21 @@ Dashboard
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3 id="total_companies"></h3>
-                        <p>Companies</p>
+                        <h3 id="total_courses"></h3>
+                        <p>Courses</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-speakerphone"></i>
                     </div>
-                    <a href="{{url('/companies')}}" class="small-box-footer">List <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('/courses')}}" class="small-box-footer">List <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div><!-- ./col -->  
             <div class="col-lg-4 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3 id="total_jobs"></h3>
-                        <p>Jobs</p>
+                        <h3 id="total_books"></h3>
+                        <p>Books</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -67,7 +67,7 @@ Dashboard
                 <!-- Custom table -->            
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Pending companies</h3>
+                        <h3 class="box-title">Unpublished Courses</h3>
                     </div>
                     <div class="box-body">
                         <div class="table table-responsive">
@@ -92,7 +92,7 @@ Dashboard
 
                             </div>
                             <div class="box-footer clearfix">
-                                <a href="{{ url('/companies') }}" class="btn btn-sm btn-default btn-flat pull-right" id="allAds">See All</a>
+                                <a href="{{ url('/courses') }}" class="btn btn-sm btn-default btn-flat pull-right" id="allAds">See All</a>
                             </div>
                         </div>
                     </div>
@@ -108,16 +108,16 @@ Dashboard
                     <div class="box-body">
                         <ul class="nav nav-stacked">
                             <li>
-                                <a class="pending_task_link" href="{{ url('/settings/skills') }}">Skills <span class="pull-right badge bg-aqua" id="totalSkills"></span></a>
+                                <a class="pending_task_link" href="{{ url('/settings/cities') }}">Cities <span class="pull-right badge bg-aqua" id="totalCities"></span></a>
                             </li>
                             <li>
-                                <a class="pending_task_link" href="{{ url('/settings/job-titles') }}">Job titles <span class="pull-right badge bg-aqua" id="totalJobTitles"></span></a>
+                                <a class="pending_task_link" href="{{ url('/settings/countries') }}">countries <span class="pull-right badge bg-aqua" id="totalCountries"></span></a>
                             </li>
                             <li>
-                                <a class="pending_task_link" href="{{ url('/settings/institution-names') }}">Institution names <span class="pull-right badge bg-aqua" id="totalIN"></span></a>
+                                <a class="pending_task_link" href="{{ url('/settings/course-categories') }}">Course Categories <span class="pull-right badge bg-aqua" id="totalCourseCat"></span></a>
                             </li>
                             <li>
-                                <a class="pending_task_link" href="{{ url('/settings/industry') }}">Industries <span class="pull-right badge bg-aqua" id="totalIndustry"></span></a>
+                                <a class="pending_task_link" href="{{ url('/settings/industry') }}">Book Categories <span class="pull-right badge bg-aqua" id="totalBookCat"></span></a>
                             </li>
                             <li>
                                 <a class="pending_task_link" href="{{ url('/settings/honors') }}">Honors <span class="pull-right badge bg-aqua" id="totalHonors"></span></a>

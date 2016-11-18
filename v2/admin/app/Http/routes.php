@@ -32,8 +32,8 @@ Route::get('/users/{id}/edit', function(){
 	return view('users.edit');
 })->where('id', '[0-9]+');
 
-Route::get('/companies', function(){
-	return view('companies.list');
+Route::get('/courses', function(){
+	return view('courses.list');
 });
 
 Route::get('/companies/{id}/jobs', function(){

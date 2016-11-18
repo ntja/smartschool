@@ -9,16 +9,17 @@
         if (localStorage.admin_token) {
             //console.log(localStorage.role);
             number_of_users(); // retrieve number of all users
-            number_of_companies(); // list 
-            number_of_jobs();
-            list_companies(10);
+            number_of_courses(); // list 
+            number_of_books();
+            list_courses(10);
+            
+            cities();
+            countries();
+            course_categories();            
+            book_categories();
 
-            certification_titles();
-            skills();
-            job_titles();
-            institution_names();
             industry();
-            honors();
+            certification_titles();
             job_types();
             education_majors();
             course_names();
@@ -63,7 +64,7 @@
             })
                     .done(function(data, textStatus, jqXHR) {
                         console.log(data);
-                        $("#total_users").text(data.count);
+                        $("#total_users").text(data.total);
                         //console.log(data);                    
                     })
 
@@ -81,10 +82,10 @@
     }
 
 
-    function number_of_companies() {
+    function number_of_courses() {
         try {
             var url, number_of_ads;
-            url = config.api_url + '/companies';
+            url = config.api_url + '/courses';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -98,7 +99,7 @@
             })
                     .done(function(data, textStatus, jqXHR) {
                         console.log(data);
-                        $("#total_companies").text(data.count);
+                        $("#total_courses").text(data.total);
                         //console.log(data);                    
                     })
 
@@ -115,14 +116,10 @@
         }
     }
 
-
-
-
-
-    function number_of_jobs() {
+    function number_of_books() {
         try {
             var url, number_of_ads;
-            url = config.api_url + '/companies/jobs';
+            url = config.api_url + '/books';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -135,8 +132,8 @@
                 crossDomain: true
             })
                     .done(function(data, textStatus, jqXHR) {
-                        console.log(data);
-                        $("#total_jobs").text(data.count);
+                        //console.log(data);
+                        $("#total_books").text(data.total);
                         //console.log(data);                    
                     })
 
@@ -155,10 +152,10 @@
 
 
 
-    function list_companies(limit) {
+    function list_courses(limit) {
         try {
             var url, number_of_ads;
-            url = config.api_url + '/companies';
+            url = config.api_url + '/courses';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -233,44 +230,6 @@
         }
     }
 
-
-    function approve_company(id, line) {
-        try {
-            var uri;
-
-            uri = config.api_url + '/companies/' + id + '/approve';
-            console.log(uri);
-            $.ajax({
-                url: uri,
-                method: "POST",
-                headers: {
-                    "x-client-id": "0000",
-                    "Content-Type": "application/json",
-                    "cache-control": "no-cache",
-                    "x-access-token": localStorage.admin_token
-                },
-                crossDomain: true
-            })
-
-                    .done(function(data, textStatus, jqXHR) {
-                        console.log(data);
-
-
-                        if (data.code == 200) {                           
-
-                            list_companies(10);
-                        }
-                    })
-                    .fail(function(jqXHR, textStatus, errorThrown) {
-                        console.log(jqXHR);
-                        console.log(textStatus);
-                        console.log(errorThrown);
-                    })
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
     function certification_titles() {
         try {
             var url, number_of_ads;
@@ -308,10 +267,10 @@
     }
 
 
-    function skills() {
+    function cities() {
         try {
             var url;
-            url = config.api_url + '/skills';
+            url = config.api_url + '/cities';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -326,7 +285,7 @@
             })
                     .done(function(data, textStatus, jqXHR) {
                         if (data.total > 0)
-                            $("#totalSkills").text(data.total);
+                            $("#totalCities").text(data.total);
                         //console.log(data);                    
                     })
 
@@ -344,10 +303,10 @@
     }
 
 
-    function job_titles() {
+    function countries() {
         try {
             var url;
-            url = config.api_url + '/job-titles';
+            url = config.api_url + '/countries';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -363,7 +322,7 @@
                     .done(function(data, textStatus, jqXHR) {
                         var pending_count;
                         if (data.total > 0)
-                            $("#totalJobTitles").text(data.total);
+                            $("#totalCountries").text(data.total);
                         //console.log(data);                    
                     })
 
@@ -380,10 +339,10 @@
         }
     }
 
-    function institution_names() {
+    function course_categories() {
         try {
             var url;
-            url = config.api_url + '/institution-names';
+            url = config.api_url + '/courses/categories';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -398,7 +357,7 @@
             })
                     .done(function(data, textStatus, jqXHR) {
                         if (data.total > 0)
-                            $("#totalIN").text(data.total);
+                            $("#totalCourseCat").text(data.total);
                         //console.log(data);                    
                     })
 
@@ -416,10 +375,10 @@
     }
 
 
-    function honors() {
+    function book_categories() {
         try {
             var url;
-            url = config.api_url + '/honors';
+            url = config.api_url + '/books/categories';
             $.ajax({
                 url: url,
                 method: "GET",
@@ -435,7 +394,7 @@
                     .done(function(data, textStatus, jqXHR) {
                         var pending_count;
                         if (data.total > 0)
-                            $("#totalHonors").text(data.total);
+                            $("#totalBookCat").text(data.total);
                         //console.log(data);                    
                     })
 

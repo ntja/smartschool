@@ -44,7 +44,7 @@ $columns = array(
     ),    
     array( 'db' => 'role','dt' => 3, 'field' => 'role' ),
     array( 'db' => 'subscription','dt' => 4, 'field' => 'subscription' ),
-    array( 'db' => 'active_status','dt' => 5, 'field' => 'active_status' ),
+    array( 'db' => 'verified_status','dt' => 5, 'field' => 'active_status' ),
     array( 'db' => 'id','dt' => 6, 'field' => 'id' ),       
 );
  

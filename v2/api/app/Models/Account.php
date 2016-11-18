@@ -150,13 +150,7 @@ class Account extends Authenticatable{
             if (!is_array($params)){
                 throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
             }
-
-            if (!array_key_exists("before", $params)){
-                throw new Exception("Expected key (before) in parameter array.");
-            }
-            if (!array_key_exists("after", $params)){
-                throw new Exceptionn("Expected key (after) in parameter array.");
-            }
+           
             if (!array_key_exists("limit", $params)){
                 throw new Exception("Expected key (limit) in parameter array.");
             }
@@ -168,15 +162,12 @@ class Account extends Authenticatable{
                 throw new Exception("Expected key (verified_status) in parameter  array.");
             }
             $result = null;
-            $after = $params['after'];
-            $before = $params['before'];
             $role = $params['role'];
             $verified_status = $params['verified_status'];
             $limit = intval($params['limit']);
             $select = DB::table('accounts')
                     ->skip(0)
-					 ->where('delete_status', '=', 0)
-                    ->take($limit);            
+					 ->where('delete_status', '=', '0');
             if ($verified_status) {
                 $select = $select
                         ->where('verified_status', '=', $verified_status);
@@ -185,166 +176,15 @@ class Account extends Authenticatable{
                 $select = $select
                         ->where('role', '=', $role);
             }
-            if ($after) {
-                $select = $select
-                        ->where('id', '<', base64_decode($after))
-                        ->orderBy('id', 'desc');
-            }
-            if ($before) {
-                $select = $select
-                        ->where('id', '>', base64_decode($before))
-                        ->orderBy('id', 'asc');
-            }
-            if ((!$before) && (!$after)) {
-                $select = $select
-                        ->orderBy('id', 'desc');
-            }
-            $rows = $select->get();
+           
+            $rows = $select->orderBy('id','DESC')->paginate($limit);
             if (!count($rows)) {
                 return false;
             }
-            $result = $rows;
-
-            return $result;
+            return $rows;
         } catch (Exception $ex) {
 
             LogRepository::printLog('error', $ex->getMessage());
         }
-    }
-    
-    public function hasNext($after, $limit,$role,$verified_status) {
-        try {
-            if (!is_numeric($after))
-                throw new Exception("Expected Int for value after , " . (is_object($after) ? get_class($after) : gettype($after)) . " found.");
-
-            if (!is_numeric($limit))
-                throw new Exception("Expected Int for value limit , " . (is_object($limit) ? get_class($limit) : gettype($limit)) . " found.");
-            
-            $result = false;
-            $select = DB::table('accounts')
-                    ->where('id', '<', $after)
-                    ->skip(0)
-					 ->where('delete_status', '=', 0)
-                    ->take($limit)
-                    ->orderBy('id', 'desc');                 
-            if ($role) { 
-                $select = $select
-                        ->where('role', '=', $role);
-            }
-            if ($verified_status) { 
-                $select = $select
-                        ->where('verified_status', '=', $verified_status);
-            }            
-            $row = $select->get();
-            if ($row) {
-                $result = true;
-            }
-
-            return $result;
-        } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
-        }
-    }
-    
-    public function hasPrevious($before, $limit, $role, $verified_status) {
-        try {
-            if (!is_numeric($before))
-                throw new Exception("Expected Int for value before , " . (is_object($before) ? get_class($before) : gettype($before)) . " found.");
-
-            if (!is_numeric($limit))
-                throw new Exception("Expected Int for value limit , " . (is_object($limit) ? get_class($limit) : gettype($limit)) . " found.");
-
-            $result = false;
-            $select = DB::table('accounts')
-                    ->where('id', '>', $before)
-                    ->skip(0)
-					 ->where('delete_status', '=', 0)
-                    ->take($limit)
-                    ->orderBy('id', 'desc');                    
-            if ($role) { 
-                $select = $select
-                        ->where('role', '=', $role);
-            }            
-            if ($verified_status) { 
-                $select = $select
-                        ->where('verified_status', '=', $verified_status);
-            }
-
-            $row = $select->get();
-            if ($row) {
-                $result = true;
-            }
-
-            return $result;
-        } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
-        }
-    }
-	
-	public function getAll($params) {
-        try {
-            if (!is_array($params)){
-                throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
-            }
-
-            if (!array_key_exists("before", $params)){
-                throw new Exception("Expected key (before) in parameter array.");
-            }
-            if (!array_key_exists("after", $params)){
-                throw new Exceptionn("Expected key (after) in parameter array.");
-            }                        
-            if (!array_key_exists("role", $params)){
-                throw new Exception("Expected key (role) in parameter  array.");
-            }
-            if (!array_key_exists("verified_status", $params)){
-                throw new Exception("Expected key (verified_status) in parameter  array.");
-            }           
-
-            $result = null;
-            $after = $params['after'];
-            $before = $params['before'];
-            $role = $params['role'];
-            $verified_status = $params['verified_status'];
-            
-			$count = Account::count();
-			$skip = 0;
-			$limit = $count - $skip;
-            $select = DB::table('accounts')
-                    ->skip($skip)
-					 ->where('delete_status', '=', 0)
-					->limit($limit);            
-            if ($role) {
-                $select = $select
-                        ->where('role', '=', $role);
-            }
-            if ($verified_status) {
-                $select = $select
-                        ->where('verified_status', '=', $verified_status);
-            }
-            if ($after) {
-                $select = $select
-                        ->where('id', '<', base64_decode($after))
-                        ->orderBy('id', 'desc');
-            }
-            if ($before) {
-                $select = $select
-                        ->where('id', '>', base64_decode($before))
-                        ->orderBy('id', 'asc');
-            }
-            if ((!$before) && (!$after)) {
-                $select = $select
-                        ->orderBy('id', 'desc');
-            }
-            $rows = $select->get();
-            if (!count($rows)) {
-                return false;
-            }
-            $result = $rows;
-
-            return $result;
-        } catch (Exception $ex) {
-
-            LogRepository::printLog('error', $ex->getMessage());
-        }
-    }
+    }        
 }

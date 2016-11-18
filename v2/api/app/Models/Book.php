@@ -167,7 +167,7 @@ class Book extends Authenticatable{
             }                                                
             //var_dump($select);die();       
 
-            $rows = $select->orderBy('id','DESC')->simplePaginate($limit);
+            $rows = $select->orderBy('id','DESC')->paginate($limit);
             //var_dump($rows);die();       
             if (!count($rows)) {
                 return false;

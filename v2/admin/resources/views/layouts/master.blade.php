@@ -32,9 +32,9 @@
                 <!-- Logo -->
                 <a href="{{url('dashboard')}}" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>JD8</b></span>
+                    <span class="logo-mini"><b>SM</b></span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Jobs D8</b></span>
+                    <span class="logo-lg"><b>SmartSchool</b></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top" role="navigation">
@@ -85,16 +85,16 @@
                             </a>
                         </li>
                         <li class="treeview" id="l3">
-                            <a href="{{url('companies')}}">
+                            <a href="{{url('courses')}}">
                                 <i class="fa fa-building"></i>
-                                <span>Scouts</span>
+                                <span>Courses</span>
                                 <span class="label label-primary pull-right"></span>
                             </a>
                         </li>
                         <li class="treeview" id="l4">
-                            <a href="{{url('jobs')}}">
+                            <a href="{{url('books')}}">
                                 <i class="fa fa-suitcase"></i>
-                                <span>Jobs</span>
+                                <span>Books</span>
                                 <span class="label label-primary pull-right"></span>
                             </a>
                         </li>

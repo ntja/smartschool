@@ -32,11 +32,11 @@
                     param.active_status = "ACTIVE";
                 }
                 $(this).toggleClass('filter-role selected');
-                $('#role_employer').removeClass('filter-role selected');
-                $('#role_candidate').removeClass('filter-role selected');
+                $('#role_instructor').removeClass('filter-role selected');
+                $('#role_learner').removeClass('filter-role selected');
 
-                $('#role_employer').parent().removeAttr('class');
-                $('#role_candidate').parent().removeAttr('class');
+                $('#role_instructor').parent().removeAttr('class');
+                $('#role_learner').parent().removeAttr('class');
                 $(this).parent().addClass('loading');
                 
                 getUsers(param);
@@ -55,8 +55,8 @@
             });
 
 
-            $('#role_employer').click(function() {
-                param.role = "EMPLOYER";
+            $('#role_learner').click(function() {
+                param.role = "LEARNER";
                 if ($('#subs_paid').hasClass('filter-subs')) {
                      param.subscription = "PAID";
                 }
@@ -71,10 +71,10 @@
                 }
                 $(this).toggleClass('filter-role selected');
                 $('#role_administrator').removeClass('filter-role selected');
-                $('#role_candidate').removeClass('filter-role selected');
+                $('#role_instructor').removeClass('filter-role selected');
 
                 $('#role_administrator').parent().removeAttr('class');
-                $('#role_candidate').parent().removeAttr('class');
+                $('#role_instructor').parent().removeAttr('class');
 
                 $(this).parent().addClass('loading');
                 getUsers(param);
@@ -91,7 +91,7 @@
             });
 
 
-            $('#role_candidate').click(function() {
+            $('#role_instructor').click(function() {
                 param.role = "CANDIDATE";
                 if ($('#subs_paid').hasClass('filter-subs')) {
                     param.subscription = "PAID";
@@ -110,10 +110,10 @@
                 }
                 $(this).toggleClass('filter-role selected');
                 $('#role_administrator').removeClass('filter-role selected');
-                $('#role_employer').removeClass('filter-role selected');
+                $('#role_learner').removeClass('filter-role selected');
 
                 $('#role_administrator').parent().removeAttr('class');
-                $('#role_employer').parent().removeAttr('class');
+                $('#role_learner').parent().removeAttr('class');
 
                 $(this).parent().addClass('loading');
                 getUsers(param);
@@ -141,11 +141,11 @@
                 if ($('#role_administrator').hasClass('filter-role')) {
                     param.role = "ADMINISTRATOR";
                 }
-                if ($('#role_employer').hasClass('filter-role')) {
-                    param.role = "EMPLOYER";
+                if ($('#role_instructor').hasClass('filter-role')) {
+                    param.role = "INSTRUCTOR";
                 }
-                if ($('#role_candidate').hasClass('filter-role')) {
-                    param.role = "CANDIDATE";
+                if ($('#role_learner').hasClass('filter-role')) {
+                    param.role = "LEARNER";
                 }
                 
                 $(this).toggleClass('filter-subs selected');
@@ -180,11 +180,11 @@
                 if ($('#role_administrator').hasClass('filter-role')) {
                     param.role = "ADMINISTRATOR";
                 }
-                if ($('#role_employer').hasClass('filter-role')) {
-                    param.role = "EMPLOYER";
+                if ($('#role_instructor').hasClass('filter-role')) {
+                    param.role = "INSTRUCTOR";
                 }
-                if ($('#role_candidate').hasClass('filter-role')) {
-                    param.role = "CANDIDATE";
+                if ($('#role_learner').hasClass('filter-role')) {
+                    param.role = "LEARNER";
                 }
                 $(this).toggleClass('filter-subs selected');
                 $('#subs_paid').removeClass('filter-subs selected');
@@ -212,11 +212,11 @@
                 if ($('#role_administrator').hasClass('filter-role')) {
                     param.role = "ADMINISTRATOR";
                 }
-                if ($('#role_employer').hasClass('filter-role')) {
-                    param.role = "EMPLOYER";
+                if ($('#role_instructor').hasClass('filter-role')) {
+                    param.role = "INSTRUCTOR";
                 }
-                if ($('#role_candidate').hasClass('filter-role')) {
-                    param.role = "CANDIDATE";
+                if ($('#role_learner').hasClass('filter-role')) {
+                    param.role = "LEARNER";
                 }
                 if ($('#subs_paid').hasClass('filter-subs')) {
                     param.subscription = "PAID";
@@ -250,11 +250,11 @@
                 if ($('#role_administrator').hasClass('filter-role')) {
                     param.role = "ADMINISTRATOR";
                 }
-                if ($('#role_employer').hasClass('filter-role')) {
-                    param.role = "EMPLOYER";
+                if ($('#role_instructor').hasClass('filter-role')) {
+                    param.role = "INSTRUCTOR";
                 }
-                if ($('#role_candidate').hasClass('filter-role')) {
-                    param.role = "CANDIDATE";
+                if ($('#role_learner').hasClass('filter-role')) {
+                    param.role = "LEARNER";
                 }
                 if ($('#subs_paid').hasClass('filter-subs')) {
                     param.subscription = "PAID";
@@ -383,9 +383,9 @@
                     // `data` option, which defaults to the column being worked with, in
                     // this case `data: 0`.
                     "render": function ( data, type, row ) {
-                        if(row[3] == "CANDIDATE"){
+                        if(row[3] == "LEARNER"){
                             return '<span class="label label-success">' + row[3] + '</span>';
-                        }else if(row[3] == "EMPLOYER"){
+                        }else if(row[3] == "INSTRUCTOR"){
                             return '<span class="label label-warning">' + row[3] + '</span>';
                         }else if(row[3] == "ADMINISTRATOR"){
                             return '<span class="label label-danger">' + row[3] + '</span>';
@@ -413,7 +413,7 @@
                     // `data` option, which defaults to the column being worked with, in
                     // this case `data: 0`.
                     "render": function ( data, type, row ) {
-                        if(row[5] == "ACTIVE"){
+                        if(row[5] == "VERIFIED"){
                             return '<span class="label label-success">' + row[5] + '</span>';
                         }else{
                             return '<span class="label label-default">' + row[5] + '</span>';
@@ -427,7 +427,7 @@
                     // this case `data: 0`.
                     "render": function ( data, type, row ) { 
                         var html = "<div class='btn-group' style='display:block;' id='action_detail'>";
-                        html += "<button class='btn btn-default' type='button'>Actions</button>";
+                        html += "<button class='btn btn-primary' type='button'>Actions</button>";
                         html += "<button class='btn btn-default btn-flat dropdown-toggle' data-toggle='dropdown' type='button' aria-expanded='false'>";
                         html += "<span class='caret'></span>";
                         html +="<span class='sr-only'>Toggle Dropdown</span></button>";

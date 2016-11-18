@@ -80,7 +80,7 @@ class AccountsController extends Controller {
     public function get(Request $request) {
          try {                                       
              //retrieving user ID based on its token
-            $data = $request->only('limit', 'before', 'after', 'account_id','role','verified_status');
+            $data = $request->only('limit', 'account_id','role','verified_status');
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);			
             //checking user permission,
@@ -93,14 +93,10 @@ class AccountsController extends Controller {
                 $data['limit'] = 10; //set default value of limit param 
             }           
             $limit = $data['limit'];
-            $before = $data["before"];
-            $after = $data["after"];
             $role = $data["role"];
             $verified_status = $data["verified_status"];
             
             $informations = array(
-                'after' => $after,
-                'before' => $before,
                 'limit' => $limit,                
                 'role' => $role,
                 'verified_status' => $verified_status,
