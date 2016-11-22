@@ -11,8 +11,7 @@ SmartSchool :: Instructor All Courses
 
 @section('content')
         <!-- START PAGE CONTAINER -->
-        <div class="page-container page-navigation-top">                
-            
+        <div class="page-container page-navigation-top">            
             <!-- PAGE CONTENT -->
             <div class="page-content">                                
                 @include('instructors/partials.header')
