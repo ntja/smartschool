@@ -1,0 +1,12 @@
+[2017-02-09 18:33:48] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Maximum execution time of 30 seconds exceeded' in C:\Program Files\Ampps\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Hashing\HashServiceProvider.php:8
+Stack trace:
+#0 {main}  
+[2017-02-09 18:34:03] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY admin@domain.com limit 1)  
+[2017-02-09 18:34:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-09 18:34:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  

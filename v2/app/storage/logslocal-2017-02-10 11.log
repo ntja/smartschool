@@ -1,0 +1,14 @@
+[2017-02-10 11:03:10] local.ERROR: Account{"id":63,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-10 10:49:54","date_updated":"2017-02-10 10:58:24","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'token' => 'MYOiZzRARKGftWP0MEhbiNC7WVgIdS7z9l3fx1IAJEBpUR42eH',
+)}  
+[2017-02-10 11:07:02] local.INFO: Successful authentication of account {"id":6,"first_name":"Thomas Einreich","last_name":"Eddison","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-10-20 13:46:45","date_updated":"2017-02-10 11:07:02","last_login":"2017-02-10 11:07:02","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":6} 
+[2017-02-10 11:34:49] local.ERROR: Argument 2 passed to Illuminate\Database\Query\Builder::chunk() must be callable, none given, called in C:\Program Files\Ampps\www\smartschool\v2\app\Models\Account.php on line 183 and defined {"user_id":6} 
+[2017-02-10 11:39:05] local.INFO: Account #2 information have just been fetched by account #{6}. {"user_id":6} 
+[2017-02-10 11:39:42] local.INFO: Account #6 information have just been fetched by account #{6}. {"user_id":6} 
+[2017-02-10 11:39:48] local.ERROR: account #64 not found {"user_id":6} 
+[2017-02-10 11:39:56] local.INFO: Account #2 information have just been fetched by account #{6}. {"user_id":6} 
+[2017-02-10 11:40:01] local.INFO: Account #1 information have just been fetched by account #{6}. {"user_id":6} 
+[2017-02-10 11:49:07] local.INFO: Invalid attempt to read account #{6}. Returned code: 4004. {"user_id":6} 
+[2017-02-10 11:50:05] local.WARNING:  the email could not be sent.  
+[2017-02-10 11:55:47] local.WARNING:  the email could not be sent.  

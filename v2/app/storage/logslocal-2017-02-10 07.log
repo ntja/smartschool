@@ -1,0 +1,42 @@
+[2017-02-10 07:09:40] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from `accounts` where `email` LIKE BINARY admin@domain.com limit 1)  
+[2017-02-10 07:09:40] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-10 07:09:40] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-10 07:10:19] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from `accounts` where `email` LIKE BINARY admin@domain.com limit 1)  
+[2017-02-10 07:10:19] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-10 07:10:19] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'admin@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-10 07:11:53] local.INFO: Successful authentication of account {"id":6,"first_name":"Thomas Einreich","last_name":"Eddison","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-10-20 13:46:45","date_updated":"2017-02-10 07:11:52","last_login":"2017-02-10 07:11:52","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":6} 
+[2017-02-10 07:39:17] local.ERROR: View [mails.verification] not found.  
+[2017-02-10 07:41:56] local.ERROR: Invalid attempt to create a new account with an email taken {joe.doe@example.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'joe.doe@example.com',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-10 07:42:24] local.ERROR: Process could not be started [Le chemin d'accŠs sp‚cifi‚ est introuvable.
+]  
+[2017-02-10 07:44:12] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-10 07:44:41] local.ERROR: Process could not be started [Le chemin d'accŠs sp‚cifi‚ est introuvable.
+]  

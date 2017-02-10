@@ -1,0 +1,94 @@
+[2017-02-10 10:24:09] local.INFO: The new account #56 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:23:56',
+  'verify_token' => 'VPpD7r2iwVJwxixcandIRCnwu42zTN6AFblBYqhDiE6l1oEohW',
+)}.  
+[2017-02-10 10:29:46] local.INFO: The new account #57 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:29:38',
+  'verify_token' => 'PMiFZKexoCkfEFdKWUuAC3hwGWaHrDbOMZu4WUPhEUY3WI1nAA',
+)}.  
+[2017-02-10 10:35:57] local.INFO: The new account #58 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:35:45',
+  'verify_token' => 'jSdGsXYSkL6f4AtubmCjTLDDHjQ1Egrkt8Hc6HgCeu0xh31nFR',
+)}.  
+[2017-02-10 10:39:01] local.INFO: The new account #59 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:38:54',
+  'verify_token' => 'sD6Vv8n2eYN6RD1Dkq1uCq8Yb9n3AILC9ssz3a5S5Q1oBWMxUb',
+)}.  
+[2017-02-10 10:41:18] local.INFO: The new account #60 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:41:12',
+  'verify_token' => 'k7tzBdTIgVyw3NFMAon4Uxmh1OYV4zizMYsglhfUZ1rdpIa11r',
+)}.  
+[2017-02-10 10:43:23] local.INFO: The new account #61 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:43:13',
+  'verify_token' => 'Fnlw3kmFP3plYOqWrmTu5Zxe2nFsWN9dr6D0oOP0URKnslYf5y',
+)}.  
+[2017-02-10 10:47:58] local.INFO: The new account #62 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:47:50',
+  'verify_token' => 'BpHEbmUjZMfrK0PojYVkxaBH59wEUFwaCL4oFfDLZ5exYj4IoO',
+)}.  
+[2017-02-10 10:50:00] local.INFO: The new account #63 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 10:49:54',
+  'verify_token' => 'MYOiZzRARKGftWP0MEhbiNC7WVgIdS7z9l3fx1IAJEBpUR42eH',
+)}.  
+[2017-02-10 10:52:10] local.ERROR: Expected String for key (email) in parameter array , NULL found.  
+[2017-02-10 10:58:24] local.INFO: Successful activation of account #{{"id":63,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-10 10:49:54","date_updated":"2017-02-10 10:58:24","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-10 10:59:54] local.ERROR: Invalid verification attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'token' => 'MYOiZzRARKGftWP0MEhbiNC7WVgIdS7z9l3fx1IAJEBpUR42eH',
+)}  

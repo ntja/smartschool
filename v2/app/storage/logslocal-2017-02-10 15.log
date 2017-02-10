@@ -1,0 +1,11 @@
+[2017-02-10 15:01:56] local.INFO: password of account #{63} has been successfully reset  
+[2017-02-10 15:07:49] local.INFO: password of account #{63} has been successfully reset  
+[2017-02-10 15:09:40] local.INFO: password of account #{63} has been successfully reset  
+[2017-02-10 15:12:09] local.INFO: Successful authentication of account {"id":6,"first_name":"Thomas Einreich","last_name":"Eddison","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-10-20 13:46:45","date_updated":"2017-02-10 15:12:09","last_login":"2017-02-10 15:12:09","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":6} 
+[2017-02-10 15:12:44] local.INFO: Successful authentication of account {"id":63,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-10 10:49:54","date_updated":"2017-02-10 15:12:44","last_login":"2017-02-10 15:12:44","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":63} 
+[2017-02-10 15:13:13] local.INFO: Invalid attempt to update informations of another account #{63}. Returned code: 4007. {"user_id":6} 
+[2017-02-10 15:13:29] local.INFO: Successful authentication of account {"id":63,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-10 10:49:54","date_updated":"2017-02-10 15:13:28","last_login":"2017-02-10 15:13:28","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":63} 
+[2017-02-10 15:22:02] local.INFO: Information of account #{63} has just been updated. Request inputs: array (
+  'first_name' => 'Joe',
+  'last_name' => 'Doe',
+) {"user_id":63} 

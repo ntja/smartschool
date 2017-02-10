@@ -1,0 +1,43 @@
+[2017-02-10 08:26:25] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-10 08:26:47] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials g71sm377086wmc.9 - gsmtp
+"  
+[2017-02-10 08:39:56] local.ERROR: Invalid attempt to create a new account with an email taken {jephte.ndongmou@gmail.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-10 08:40:22] local.INFO: The new account #39 has just been created. Request inputs:  #{array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 08:40:15',
+  'verify_token' => 'ly2hNSXZt9yru1VeYWjg596QboRbA0oMLIOI7wrr8YCejft9Ip',
+)}.  
+[2017-02-10 08:44:03] local.INFO: The new account #40 has just been created. Request inputs:  #{array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'joe',
+  'last_name' => 'doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 08:43:44',
+  'verify_token' => 'wPrMsUNQDo4U7dkYy5FNCCWpmGokzmzyzCIm2JaVvexf7P9WtC',
+)}.  

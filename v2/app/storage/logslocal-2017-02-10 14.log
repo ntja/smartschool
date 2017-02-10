@@ -1,0 +1,18 @@
+[2017-02-10 14:12:45] local.INFO: The new account #64 has just been created. Request inputs:  #{array (
+  'email' => 'jephte.ndongmou@gmail.com',
+  'first_name' => 'Paul Jephte',
+  'last_name' => 'Allen',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-10 14:12:35',
+  'verify_token' => 'qTnPsn7mwGxlgvz8KFmEcZz0fBBayH106OZMgBIEYpSxLBAkUr',
+)}.  
+[2017-02-10 14:38:35] local.ERROR: The payload is invalid.  
+[2017-02-10 14:39:50] local.ERROR: The payload is invalid.  
+[2017-02-10 14:40:49] local.ERROR: The payload is invalid.  
+[2017-02-10 14:41:56] local.ERROR: The payload is invalid.  
+[2017-02-10 14:42:22] local.ERROR: The payload is invalid.  
+[2017-02-10 14:43:15] local.ERROR: The payload is invalid.  
+[2017-02-10 14:54:25] local.INFO: password of account #{63} has been successfully reset  
