@@ -27,14 +27,14 @@ class JoinCourse extends Pivot{
      * @var array
      */
     protected $hidden = [
-        
+        'delete_status', 'date_requested', 'date_joined', 'date_left'
     ];
 	
-	public function user() {
+	public function account() {
         return $this->belongsTo('App\Models\Account', 'account');
     }
 
-    public function group() {
+    public function course() {
         return $this->belongsTo('App\Models\Course', 'course');
     }
 	
@@ -134,15 +134,16 @@ class JoinCourse extends Pivot{
 			
 			$select = JoinCourse::with(['account'=> function ($query) {
 						$query->select('id','first_name','last_name');
-					},'course'])->where('join_courses.delete_status', '=', '0')->get();
-			var_dump($select);die();		
-			
+					},'course'])->where('join_courses.delete_status', '=', '0');
+			//var_dump($select);die();		
+			/*
             $select = DB::table('join_courses')
                     ->join('accounts', 'accounts.id', '=', 'join_courses.account')
                     ->join('courses', 'courses.id', '=', 'join_courses.course')
                     ->select('accounts.first_name','accounts.last_name', 'join_courses.status','join_courses.requestedby','courses.*')
-                    ->where('accounts.delete_status', '=', '0');
-            if($account){
+                    ->where('join_courses.delete_status', '=', '0');
+            */
+			if($account){
                 $select = $select
                         ->where('account', '=', $account);
             }
@@ -160,7 +161,7 @@ class JoinCourse extends Pivot{
             }                                                
             //var_dump($select);die();       
 
-            $rows = $select->orderBy('join_courses.date_requested','DESC')->simplePaginate($limit);
+            $rows = $select->orderBy('join_courses.date_requested','DESC')->paginate($limit);
             //var_dump($rows);die();       
             if (!count($rows)) {
                 return false;

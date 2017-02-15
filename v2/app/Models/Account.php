@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model as Eloquent;
+//use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use Exception;
@@ -57,19 +57,20 @@ class Account extends Authenticatable{
 	public function courses(){
         return $this->hasMany('App\Models\Course');
     }
-	
+	/*
 	//many 2 many relationship with course table
 	public function manyCourses(){
-        return $this->belongsToMany('App\Models\Course','join_courses', 'account', 'course')->using('App\Models\JoinCourse');
+        return $this->belongsToMany('App\Models\Course','join_courses', 'account', 'course')->withPivot('status', 'requestedBy');
     }
-	
+	*/
+	/*
 	public function newPivot(Eloquent $parent, array $attributes, $table, $exists) {
         if ($parent instanceof App\Models\Course) {
             return new App\Models\JoinCourse($parent, $attributes, $table, $exists);
         }
         return parent::newPivot($parent, $attributes, $table, $exists);
     }
-	
+	*/
     public function dbSave($params) {
 		//var_dump($params);die();
         try {            

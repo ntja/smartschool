@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model as Eloquent;
+//use Illuminate\Database\Eloquent\Model as Eloquent;
 use DB;
 use Exception;
 use App\Repositories\Util\LogRepository;
@@ -45,18 +45,20 @@ class Course extends Authenticatable{
 	public function account(){
         return $this->belongsTo('App\Models\Account', 'instructor');
     }
-	
+	/*
 	//many 2 many relationship with Account table
 	public function manyAccounts(){
         return $this->belongsToMany('App\Models\Account','join_courses', 'course', 'account')->using('App\Models\JoinCourse');
     }
-	
+	*/
+	/*
 	public function newPivot(Eloquent $parent, array $attributes, $table, $exists) {
         if ($parent instanceof App\Models\Account) {
             return new App\Models\JoinCourse($parent, $attributes, $table, $exists);
         }
         return parent::newPivot($parent, $attributes, $table, $exists);
     }
+	*/
     public function dbSave($params) {
 		//var_dump($params);die();
         try {            

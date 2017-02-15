@@ -30,8 +30,8 @@ class CourseController extends Controller {
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);
             //var_dump($account->getRole());die();
-            $ressource_course = new ResourceCourse();
-            if (Gate::forUser($account)->denies('get', $ressource_course)) {
+            $resource_course = new ResourceCourse();
+            if (Gate::forUser($account)->denies('get', $resource_course)) {
                 LogRepo::printLog('error', "Invalid attempt to rerieve course #".$id." by user ".var_export($account,true));
                 $result = array("code" => 403, "description" => "You do not have permissions for that request.");
                 return response()->json($result, 400);

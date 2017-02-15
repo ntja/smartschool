@@ -154,8 +154,16 @@ class AclPolicy {
                 }
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE_JOIN)) {
                 $role = ["LEARNER","INSTRUCTOR"];
-                if (in_array($user->getRole(), $role)) {                    
-                    return true;
+				//var_dump($user->isCourseOwner($resource));die();
+                if (in_array($user->getRole(), $role)) { 
+					if($user->getRole() === "LEARNER"){
+						return true;
+					}else
+						if ($user->isCourseOwner($resource)) {
+							return true;
+						} else {
+							return false;
+						}
                 } else {
                     return false;
                 }

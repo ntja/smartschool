@@ -28,8 +28,8 @@ class JoinController extends Controller {
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);
             //var_dump($account->getRole());die();
-            $ressource_join = new ResourceJoin();
-            if (Gate::forUser($account)->denies('post', $ressource_join)) {
+            $resource_join = new ResourceJoin($id);
+            if (Gate::forUser($account)->denies('post', [$resource_join,false])) {
                 LogRepo::printLog('error', "Invalid attempt to apply to a course with the role ".$account->getRole());
                 $result = array("code" => 403, "description" => "You do not have permissions for that request..");
                 return response()->json($result, 400);

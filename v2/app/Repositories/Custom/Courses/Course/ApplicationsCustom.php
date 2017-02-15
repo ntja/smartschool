@@ -51,7 +51,14 @@ class ApplicationsCustom {
             if ($validate) {                         
                 //Retrieve a list of item paginated by after and before params
                 $rows = $this->_joinCoursesCustom->model()->getApplication($params, null, $id);  
-                //LogRepository::printLog('info', "All courses have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
+				if(!$rows){
+					$result = [
+                        'code' => 200,
+                        'data' => [],
+                        'total' => 0,
+                    ];
+                    return $result;
+				}
                 return $rows;
             }            
         }catch(Exception $ex){
