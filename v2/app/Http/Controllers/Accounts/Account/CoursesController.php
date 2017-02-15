@@ -22,8 +22,9 @@ class CoursesController extends Controller {
             $data = $request->only('account_id','limit','status');
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);
+			//die('here');
             $ressource_course = new ResourceCourse();
-            if (Gate::forUser($account)->denies('get', $ressource_course)) {
+            if (Gate::forUser($account)->denies('get', [$ressource_course,false])) {
                 $result = array("code" => 403, "description" => "You do not have permissions for that request..");
                 return response()->json($result);
             }

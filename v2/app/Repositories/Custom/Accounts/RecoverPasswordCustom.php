@@ -110,23 +110,25 @@ class RecoverPasswordCustom {
            die(); 
         }
 		//var_dump($id_request);die();
-        $custom_account = new AccountsCustom($id_request);
+        $account_obj = new AccountsCustom(); 
+		$custom_account = $account_obj->getAccountByID($id_request);
+		//var_dump($custom_account);die();
 		if($custom_account){
-			$id = $custom_account->getPropertyValue('id');
-			$logged_account = $custom_account->getPropertyValue('model')->find($id);
+			//$id = $custom_account->getPropertyValue('id');
+			//$logged_account = $custom_account->getPropertyValue('model')->find($id);
 			//var_dump($custom_account);die();
 			//var_dump($params);die();
-			$logged_account->password = Hash::make($new_password); 
-			$logged_account->date_updated = date("Y-m-d H:m:i");
-			$logged_account->update();
+			$custom_account->password = Hash::make($new_password); 
+			$custom_account->date_updated = date("Y-m-d H:m:i");
+			$custom_account->update();
 			
 			//send notification to user
-			$logged_account->notify(new RecoverPassword($logged_account));
+			$custom_account->notify(new RecoverPassword($custom_account));
 			$result = array(
 				'code' => 200,
-				'account_id' => $id              
+				'account_id' => $id_request              
 			);
-			LogRepository::printLog('info', "password of account #{".$logged_account->id."} has been successfully reset");
+			LogRepository::printLog('info', "password of account #{".$custom_account->id."} has been successfully reset");
 			return $result;
 		} else{
 			http_response_code(400);

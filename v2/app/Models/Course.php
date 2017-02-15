@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use DB;
 use Exception;
 use App\Repositories\Util\LogRepository;
@@ -27,7 +27,7 @@ class Course extends Authenticatable{
      * @var array
      */
     protected $hidden = [
-        
+        'delete_status','instructor','school','category'
     ];
 
     public function __construct() {           
@@ -35,12 +35,28 @@ class Course extends Authenticatable{
     }
         
     public function courseCategory(){
-        return $this->belongsTo('App\Models\Course','CourseCategory');
+        return $this->belongsTo('App\Models\CourseCategory','category');
     }
     public function school(){
-        return $this->belongsTo('App\Models\School','CourseCategory');
+        return $this->belongsTo('App\Models\School');
     }
-
+	
+	// 1 to * relationship with account table
+	public function account(){
+        return $this->belongsTo('App\Models\Account', 'instructor');
+    }
+	
+	//many 2 many relationship with Account table
+	public function manyAccounts(){
+        return $this->belongsToMany('App\Models\Account','join_courses', 'course', 'account')->using('App\Models\JoinCourse');
+    }
+	
+	public function newPivot(Eloquent $parent, array $attributes, $table, $exists) {
+        if ($parent instanceof App\Models\Account) {
+            return new App\Models\JoinCourse($parent, $attributes, $table, $exists);
+        }
+        return parent::newPivot($parent, $attributes, $table, $exists);
+    }
     public function dbSave($params) {
 		//var_dump($params);die();
         try {            
@@ -49,14 +65,12 @@ class Course extends Authenticatable{
 			}                
 
             if (array_key_exists("name", $params)) {
-                //throw new Exception("Expected key (name) in parameter array.");
                 if (!is_string($params['name'])) {
                     throw new Exception("Expected String for key (name), " . (is_object($params['name']) ? get_class($params['name']) : gettype($params['name'])) . ' found.');
                 }
                 $this->name = $params['name'];
             }
             if (array_key_exists("shortname", $params)) {
-                //throw new Exception("Expected key (shortname) in parameter array.");
                 if (!is_string($params['shortname'])) {
                     throw new Exception("Expected String for key (shortname), " . (is_object($params['shortname']) ? get_class($params['shortname']) : gettype($params['shortname'])) . ' found.');
                 }
@@ -64,14 +78,12 @@ class Course extends Authenticatable{
             }
 
             if (array_key_exists("language", $params)) {
-                //throw new Exception("Expected key (language) in parameter array.");
                 if (!is_string($params['language'])) {
                     throw new Exception("Expected String for key (language), " . (is_object($params['language']) ? get_class($params['language']) : gettype($params['language'])) . ' found.');
                 }
                 $this->language = $params['language'];
             }
             if (array_key_exists("largeicon", $params)) {
-                //throw new Exception("Expected key (largeicon) in parameter array.");
                 if (!is_null($params['largeicon'])) {
                     if (!is_string($params['largeicon'])) {
                         throw new Exception("Expected String for key (largeicon), " . (is_object($params['largeicon']) ? get_class($params['largeicon']) : gettype($params['largeicon'])) . ' found.');
@@ -80,7 +92,6 @@ class Course extends Authenticatable{
                 $this->largeicon = $params['largeicon'];
             }
             if (array_key_exists("photo", $params)) {
-                //throw new Exception("Expected key (photo) in parameter array.");
                 if (!is_null($params['photo'])) {
                     if (!is_string($params['photo'])) {
                         throw new Exception("Expected String for key (photo), " . (is_object($params['photo']) ? get_class($params['photo']) : gettype($params['photo'])) . ' found.');
@@ -89,7 +100,6 @@ class Course extends Authenticatable{
                 $this->photo = $params['photo'];
             }
             if (array_key_exists("previewlink", $params)) {
-                //throw new Exception("Expected key (previewlink) in parameter array.");
                 if (!is_null($params['previewlink'])) {
                     if (!is_string($params['previewlink'])) {
                         throw new Exception("Expected String for key (previewlink), " . (is_object($params['previewlink']) ? get_class($params['previewlink']) : gettype($params['previewlink'])) . ' found.');
@@ -130,14 +140,12 @@ class Course extends Authenticatable{
             }            
 
             if (array_key_exists("istranslate", $params)) {
-                //throw new Exception("Expected key (istranslate) in parameter array.");
                 if (!is_numeric($params['istranslate'])) {
                     throw new Exception("Expected Numeric for key (istranslate), " . (is_object($params['istranslate']) ? get_class($params['istranslate']) : gettype($params['istranslate'])) . ' found.');
                 }
                 $this->istranslate = $params['istranslate'];
             }
             if (array_key_exists("directorypath", $params)) {
-                //throw new Exception("Expected key (directorypath) in parameter array.");
                 if (!is_null($params['directorypath'])) {
                     if (!is_string($params['directorypath'])) {
                         throw new Exception("Expected String for key (directorypath), " . (is_object($params['directorypath']) ? get_class($params['directorypath']) : gettype($params['directorypath'])) . ' found.');
@@ -146,7 +154,6 @@ class Course extends Authenticatable{
                 $this->directorypath = $params['directorypath'];
             }
             if (array_key_exists("aboutthecourse", $params)) {
-                //throw new Exception("Expected key (aboutthecourse) in parameter array.");
                 if (!is_null($params['aboutthecourse'])) {
                     if (!is_string($params['aboutthecourse'])) {
                         throw new Exception("Expected String for key (aboutthecourse), " . (is_object($params['aboutthecourse']) ? get_class($params['aboutthecourse']) : gettype($params['aboutthecourse'])) . ' found.');
@@ -155,7 +162,6 @@ class Course extends Authenticatable{
                 $this->aboutthecourse = $params['aboutthecourse'];
             }
             if (array_key_exists("targetaudience", $params)) {
-                //throw new Exception("Expected key (targetaudience) in parameter array.");
                 if (!is_null($params['targetaudience'])) {
                     if (!is_string($params['targetaudience'])) {
                         throw new Exception("Expected String for key (targetaudience), " . (is_object($params['targetaudience']) ? get_class($params['targetaudience']) : gettype($params['targetaudience'])) . ' found.');
@@ -164,7 +170,6 @@ class Course extends Authenticatable{
                 $this->targetaudience = $params['targetaudience'];
             }
             if (array_key_exists("faq", $params)) {
-                //throw new Exception("Expected key (faq) in parameter array.");
                 if (!is_null($params['faq'])) {
                     if (!is_string($params['faq'])) {
                         throw new Exception("Expected String for key (faq), " . (is_object($params['faq']) ? get_class($params['faq']) : gettype($params['faq'])) . ' found.');
@@ -173,7 +178,6 @@ class Course extends Authenticatable{
                 $this->faq = $params['faq'];
             }
             if (array_key_exists("coursesyllabus", $params)) {
-                //throw new Exception("Expected key (coursesyllabus) in parameter array.");
                 if (!is_null($params['coursesyllabus'])) {
                     if (!is_string($params['coursesyllabus'])) {
                         throw new Exception("Expected String for key (coursesyllabus), " . (is_object($params['coursesyllabus']) ? get_class($params['coursesyllabus']) : gettype($params['coursesyllabus'])) . ' found.');
@@ -182,7 +186,6 @@ class Course extends Authenticatable{
                 $this->coursesyllabus = $params['coursesyllabus'];
             }
             if (array_key_exists("courseformat", $params)) {
-                //throw new Exception("Expected key (courseformat) in parameter array.");
                 if (!is_null($params['courseformat'])) {
                     if (!is_string($params['courseformat'])) {
                         throw new Exception("Expected String for key (courseformat), " . (is_object($params['courseformat']) ? get_class($params['courseformat']) : gettype($params['courseformat'])) . ' found.');
@@ -191,7 +194,6 @@ class Course extends Authenticatable{
                 $this->courseformat = $params['courseformat'];
             }
             if (array_key_exists("suggestedreadings", $params)) {
-                //throw new Exception("Expected key (suggestedreadings) in parameter array.");
                 if (!is_null($params['suggestedreadings'])) {
                     if (!is_string($params['suggestedreadings'])) {
                         throw new Exception("Expected String for key (suggestedreadings), " . (is_object($params['suggestedreadings']) ? get_class($params['suggestedreadings']) : gettype($params['suggestedreadings'])) . ' found.');
@@ -200,7 +202,6 @@ class Course extends Authenticatable{
                 $this->suggestedreadings = $params['suggestedreadings'];
             }
             if (array_key_exists("estimatedclassworkload", $params)) {
-                //throw new Exception("Expected key (estimatedclassworkload) in parameter array.");
                 if (!is_null($params['estimatedclassworkload'])) {
                     if (!is_string($params['estimatedclassworkload'])) {
                         throw new Exception("Expected String for key (estimatedclassworkload), " . (is_object($params['estimatedclassworkload']) ? get_class($params['estimatedclassworkload']) : gettype($params['estimatedclassworkload'])) . ' found.');
@@ -209,7 +210,6 @@ class Course extends Authenticatable{
                 $this->estimatedclassworkload = $params['estimatedclassworkload'];
             }
             if (array_key_exists("recommendedbackground", $params)) {
-                //throw new Exception("Expected key (recommendedbackground) in parameter array.");
                 if (!is_null($params['recommendedbackground'])) {
                     if (!is_string($params['recommendedbackground'])) {
                         throw new Exception("Expected String for key (recommendedbackground), " . (is_object($params['recommendedbackground']) ? get_class($params['recommendedbackground']) : gettype($params['recommendedbackground'])) . ' found.');
@@ -218,7 +218,6 @@ class Course extends Authenticatable{
                 $this->recommendedbackground = $params['recommendedbackground'];
             }
             if (array_key_exists("date_created", $params)) {
-                //throw new Exception("Expected key (date_created) in parameter array.");
                 if (!is_string($params['date_created'])) {
                     throw new Exception("Expected String for key (date_created), " . (is_object($params['date_created']) ? get_class($params['date_created']) : gettype($params['date_created'])) . ' found.');
                 }
@@ -232,7 +231,6 @@ class Course extends Authenticatable{
             }
 
             if (array_key_exists("school", $params)) {
-                //throw new Exception("Expected key (school) in parameter array.");
                 if (!is_null($params['school'])) {
                     if (!is_numeric($params['school'])) {
                         throw new Exception("Expected Numeric for key (school), " . (is_object($params['school']) ? get_class($params['school']) : gettype($params['school'])) . ' found.');
@@ -241,15 +239,12 @@ class Course extends Authenticatable{
                 $this->school = $params['school'];
             }
             if (array_key_exists("category", $params)) {
-                //throw new Exception("Expected key (category) in parameter array.");
                 if (!is_numeric($params['category'])) {
                     throw new Exception("Expected Numeric for key (category), " . (is_object($params['category']) ? get_class($params['category']) : gettype($params['category'])) . ' found.');
                 }
                 $this->category = $params['category'];
             }            
-						
-			//var_dump($params);
-			//die();
+			//var_dump($params);die();
             return $this->save();
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -272,18 +267,26 @@ class Course extends Authenticatable{
             }
 
             $result = null;          
-            $limit = intval($params['limit']);        
-            //var_dump($role);die();    
+            $limit = intval($params['limit']);
+            //var_dump($role);die();  
+			
             if($connected_user->getRole() == "LEARNER" || $connected_user->getRole() == "PARENT"|| $connected_user->getRole() == "GUEST"){
-                $select = DB::table('courses')
+                /*
+				$select = DB::table('courses')
                     ->join('course_categories', 'course_categories.id', '=', 'courses.category')
                     ->join('accounts', 'accounts.id', '=', 'courses.instructor')
                     ->select('courses.*', 'course_categories.name as category_name','accounts.first_name','accounts.last_name')
                     //->skip(0)                        
                     ->where('courses.delete_status', '=', '0')->where('status', '=', "PUBLISHED"); 
-                    //->take($limit);   
+                    //->take($limit); 
+				*/
+				$select = Course::with(['account'=> function ($query) {
+						$query->select('id','first_name','last_name');
+					},'courseCategory'])->where('courses.delete_status', '=', '0')->where('courses.status', '=', "PUBLISHED");
             }else{
+				//die('here');
                 $status = $params['status'];
+				/*
                 $select = DB::table('courses')
                         ->join('course_categories', 'course_categories.id', '=', 'courses.category')
                         ->join('accounts', 'accounts.id', '=', 'courses.instructor')
@@ -291,6 +294,10 @@ class Course extends Authenticatable{
                         //->skip(0)
                         ->where('courses.delete_status', '=', '0');
                         //->take($limit);
+					*/
+				$select = Course::with(['account'=> function ($query) {
+					$query->select('id','first_name','last_name');
+				},'courseCategory'])->where('courses.delete_status', '=', '0');
                 if ($status) {
                     $select = $select
                             ->where('status', '=', $status);
@@ -333,6 +340,25 @@ class Course extends Authenticatable{
             $result = null;            
             $limit = intval($params['limit']);
             $query = '%'.$params['query'].'%';
+			$select = Course::with(['account'=> function ($query) {
+					$query->select('id','first_name','last_name');
+				},'courseCategory'])
+				->where('courses.delete_status', '=', '0')
+				->where('courses.status', '=', "PUBLISHED")
+				->where(function ($q) use ($query) {
+                    $q->where('courses.name', 'like', $query)
+                            ->orWhere('courses.shortname', 'like', $query)
+                            ->orWhere('courses.shortdescription', 'like',  $query)
+                            ->orWhere('courses.aboutthecourse', 'like',  $query)
+                            ->orWhere('courses.faq', 'like',  $query)
+                            ->orWhere('courses.coursesyllabus', 'like',  $query)
+                            ->orWhere('courses.suggestedreadings', 'like',  $query)
+                            ->orWhere('courses.recommendedbackground', 'like',  $query)
+                            ->orWhere('course_categories.name', 'like',  $query)
+                            ->orWhere('course_categories.shortname', 'like',  $query)
+                            ->orWhere('course_categories.description', 'like',  $query);
+                });
+			/*
             $select = DB::table('courses')
 				->join('course_categories','course_categories.id','=','courses.category')
 				->join('accounts', 'accounts.id', '=', 'courses.instructor')
@@ -352,7 +378,7 @@ class Course extends Authenticatable{
                             ->orWhere('course_categories.shortname', 'like',  $query)
                             ->orWhere('course_categories.description', 'like',  $query);
                 });
-                    
+            */     
             $rows = $select->orderBy('courses.id','DESC')->paginate($limit);
             if (!count($rows)) {
                 return false;

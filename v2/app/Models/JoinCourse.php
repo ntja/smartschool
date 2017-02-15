@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Database\Eloquent\Model;
 use Exception;
 use App\Repositories\Util\LogRepository;
 use DB;
 
-class JoinCourse extends Authenticatable{
+class JoinCourse extends Pivot{
     /**
      * The attributes that are mass assignable.
      *
@@ -29,7 +29,15 @@ class JoinCourse extends Authenticatable{
     protected $hidden = [
         
     ];
+	
+	public function user() {
+        return $this->belongsTo('App\Models\Account', 'account');
+    }
 
+    public function group() {
+        return $this->belongsTo('App\Models\Course', 'course');
+    }
+	
     public function __construct() {           
         return $this;
     }
@@ -42,7 +50,6 @@ class JoinCourse extends Authenticatable{
 			}                
 
             if (array_key_exists("account", $params)) {
-                //throw new Exception("Expected key (account) in parameter array.");
                 if (!is_numeric($params['account'])) {
                     throw new Exception("Expected Numeric for key (account), " . (is_object($params['account']) ? get_class($params['account']) : gettype($params['account'])) . ' found.');
                 }
@@ -50,7 +57,6 @@ class JoinCourse extends Authenticatable{
             }
 
             if (array_key_exists("course", $params)) {
-                //throw new Exception("Expected key (course) in parameter array.");
                 if (!is_numeric($params['course'])) {
                     throw new Exception("Expected Numeric for key (course), " . (is_object($params['course']) ? get_class($params['course']) : gettype($params['course'])) . ' found.');
                 }
@@ -58,7 +64,6 @@ class JoinCourse extends Authenticatable{
             }
 
             if (array_key_exists("status", $params)) {
-                //throw new Exception("Expected key (status) in parameter array.");
                 if (!is_string($params['status'])) {
                     throw new Exception("Expected String for key (status), " . (is_object($params['status']) ? get_class($params['status']) : gettype($params['status'])) . ' found.');
                 }
@@ -66,7 +71,6 @@ class JoinCourse extends Authenticatable{
             }
 
             if (array_key_exists("requestedby", $params)) {
-                //throw new Exception("Expected key (requestedby) in parameter array.");
                 if (!is_string($params['requestedby'])) {
                     throw new Exception("Expected String for key (requestedby), " . (is_object($params['requestedby']) ? get_class($params['requestedby']) : gettype($params['requestedby'])) . ' found.');
                 }
@@ -74,7 +78,6 @@ class JoinCourse extends Authenticatable{
             }
 
             if (array_key_exists("date_joined", $params)) {
-                //throw new Exception("Expected key (date_joined) in parameter array.");
                 if (!is_null($params['date_joined'])) {
                     if (!is_string($params['date_joined'])) {
                         throw new Exception("Expected String for key (date_joined), " . (is_object($params['date_joined']) ? get_class($params['date_joined']) : gettype($params['date_joined'])) . ' found.');
@@ -84,7 +87,6 @@ class JoinCourse extends Authenticatable{
             }
 
             if (array_key_exists("date_left", $params)) {
-                //throw new Exception("Expected key (date_left) in parameter array.");
                 if (!is_null($params['date_left'])) {
                     if (!is_string($params['date_left'])) {
                         throw new Exception("Expected String for key (date_left), " . (is_object($params['date_left']) ? get_class($params['date_left']) : gettype($params['date_left'])) . ' found.');
@@ -94,14 +96,11 @@ class JoinCourse extends Authenticatable{
             }
 
             if (array_key_exists("date_requested", $params)) {
-                //throw new Exception("Expected key (date_requested) in parameter array.");
                 if (!is_string($params['date_requested'])) {
                     throw new Exception("Expected String for key (date_requested), " . (is_object($params['date_requested']) ? get_class($params['date_requested']) : gettype($params['date_requested'])) . ' found.');
                 }
                 $this->date_requested = $params['date_requested'];
             }            
-						
-			//var_dump($params);die();			
             return $this->save();
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -132,7 +131,12 @@ class JoinCourse extends Authenticatable{
 
             $status = $params['status'];
             $requestedby = $params['requestedby'];
-
+			
+			$select = JoinCourse::with(['account'=> function ($query) {
+						$query->select('id','first_name','last_name');
+					},'course'])->where('join_courses.delete_status', '=', '0')->get();
+			var_dump($select);die();		
+			
             $select = DB::table('join_courses')
                     ->join('accounts', 'accounts.id', '=', 'join_courses.account')
                     ->join('courses', 'courses.id', '=', 'join_courses.course')

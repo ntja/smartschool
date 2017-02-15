@@ -539,22 +539,29 @@ class CoursesCustom {
 
     public function getCourseByID($id){
         try{
-            $course = new Course();
-            $row = $course::where('id', '=', $id)->first();
+            $course = $this->model();
+            $row = $course::with(['account'=> function ($query) {
+					$query->select('id','first_name','last_name');
+				},'courseCategory'])->where('id', '=', $id)->first();
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }
     }
 
-    public function getCourseByShortname($id){
+    public function getCourseByShortname($short_name){
         try{
-            $course = new Course();
+            $course = $this->model();
+			$row = $course::with(['account'=> function ($query) {
+					$query->select('id','first_name','last_name');
+				},'courseCategory'])->where('courses.shortname', '=', $short_name)->first();
+			/*
             $row = $course::join('accounts', 'accounts.id', '=', 'courses.instructor')
                 ->join('course_categories', 'course_categories.id', '=', 'courses.category')
                 ->where('courses.shortname', '=', $id)
                 ->select('courses.*', 'course_categories.name as category_name','accounts.first_name','accounts.last_name')->first();
             //$row = $course::where('shortname', '=', $id)->first();
+			*/
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -563,7 +570,7 @@ class CoursesCustom {
 
     public function uniqueCourse($course_name, $instructor){
         try{
-            $course = new Course();
+            $course = $this->model();
             $row = $course::where('instructor', '=', $instructor)
                             ->where('name','LIKE',$course_name)->first();
             return $row;
@@ -578,9 +585,19 @@ class CoursesCustom {
             $validate = $this->validate($params,true);            
             if ($validate) {                         
                 //Retrieve a list of item paginated by after and before params
-                $rows = $this->_model->getCourses($params, $account);  
-                LogRepository::printLog('info', "All courses have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
-                return $rows;
+				
+                $rows = $this->_model->getCourses($params, $account);
+				if($rows){
+					LogRepository::printLog('info', "All courses have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
+					return $rows;
+				}else{
+					$result = [
+                        'code' => 200,
+                        'data' => [],
+                        'total' => 0,
+                    ];
+                    return $result;
+				}
             }            
         }catch(Exception $ex){
             LogRepository::printLog('error', $ex->getMessage());

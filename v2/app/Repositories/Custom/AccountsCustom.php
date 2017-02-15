@@ -297,17 +297,9 @@ class AccountsCustom {
             $params['verify_token'] = str_random(50);            
             $saved = $this->_model->dbSave($params);
             if($saved){             
-                $account_id = $this->_model->id; 
-				//$user = Account::where('id',$this->_model->id)->first();
-				//var_dump($this->_model);
-				//var_dump($user);die();
+                $account_id = $this->_model->id; 				
                 $result = $this->prepareResponseAfterPost($params,$account_id);
-                //$x = new EmailVerification($this->_model);
-                //var_dump($result);die();
-                //send verification email to the user
-                //Notification::send($this->_model, new AccountVerification($this->_model));
-                //var_dump($this->_model);die();                
-                /**/
+                
 				$this->_model->notify(new AccountVerification($this->_model));
 				/*
 				$email = $params['email'];
@@ -327,7 +319,6 @@ class AccountsCustom {
                     return response()->json($result, 400);
                 }
                */
-                //$this->_model->notify(new EmailVerification($this->_model));
                 unset($params['password']);
                 LogRepository::printLog('info', "The new account #".$account_id." has just been created. Request inputs:  #{" . var_export($params,true) . "}.");
             }else{
@@ -383,7 +374,7 @@ class AccountsCustom {
                 if (!$rows) {
                     $result = [
                         'code' => 200,
-                        'items' => [],
+                        'data' => [],
                         'total' => 0,
                     ];
                     return $result;

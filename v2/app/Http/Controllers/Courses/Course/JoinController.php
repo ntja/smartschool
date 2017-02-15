@@ -54,10 +54,10 @@ class JoinController extends Controller {
                 $date_joined = date("Y-m-d H:m:i");
             }elseif($account->getRole() ==="LEARNER"){
                 $learner_account = $account->getPropertyValue('id');
-                $status = "PENDING"; // if invitation is sent by INSTRUCTOR, the status is pending
+                $status = "ACCEPTED"; // if invitation is sent by LEARNER, the status is accepted
                 $requestedby = $account->getRole();
                 $date_requested = date("Y-m-d H:m:i");
-                //date_joined = date("Y-m-d H:m:i");
+                $date_joined = date("Y-m-d H:m:i");
             }
             $informations = array(
                 'account' => $learner_account,                

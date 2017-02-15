@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Util\LogRepository as LogRepo;
 use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\CoursesCustom;
+use App\Repositories\Custom\courses\CourseCustom;
 use App\Repositories\Custom\Resource\Courses\Course as ResourceCourse;
 use Exception;
 
@@ -36,12 +37,15 @@ class CourseController extends Controller {
                 return response()->json($result, 400);
             }            
 			//var_dump($informations);die();
-            $custom_courses = new CoursesCustom();          
+            $custom_courses = new CourseCustom();    
+			$result = $custom_courses->getcourse($id);
+			/*
             if(is_numeric($id)){
-                $result = $custom_courses->getCourseByID($id);
+                $result = $custom_courses->getcourse($id);
             }else{
                 $result = $custom_courses->getCourseByShortname($id);
             }
+			*/
             return response()->json($result);
         } catch (Exception $ex) {
             LogRepo::printLog('error', $ex->getMessage());

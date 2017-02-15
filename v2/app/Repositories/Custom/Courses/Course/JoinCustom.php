@@ -235,8 +235,14 @@ class JoinCustom {
             }            
             $application = $this->uniqueApplication($params['account'],$params['course']);
             //var_dump($application);die();
+			// if user already applied to a course
             if($application){
-                $result = array(
+				$result = array("code" => 4000, "description" => "The user #". $params['account'] ." already applied to course #".$params['course']);
+                echo json_encode($result, JSON_UNESCAPED_SLASHES);
+				http_response_code(400);
+                die(); 
+                /*
+				$result = array(
                         "code" => 200, 
                         "account" => $application->account,
                         "course" => $application->course,
@@ -245,6 +251,8 @@ class JoinCustom {
                         "status" => $application->status,
                     );              
                 return $result;
+				
+				*/
             }else{
                 $saved = $this->_model->dbSave($params);
                 if($saved){             
@@ -299,7 +307,8 @@ class JoinCustom {
             LogRepository::printLog('error', $ex->getMessage());
         }
     }    
-
+	
+	//verifies if a couple (account, course) already exists
     public function uniqueApplication($account, $course) {
         try {
             $result = null;            

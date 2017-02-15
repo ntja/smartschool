@@ -253,8 +253,8 @@ class AclPolicy {
                     return false;
                 }
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_ACCOUNT_ACCOUNT_COURSE)) {
-                $role = ["ADMINISTRATOR", "INSTRUCTOR", "LEARNER","PARENT"];
-                if (in_array($user->getRole(), $role)) {
+                $role = ["ADMINISTRATOR", "INSTRUCTOR", "LEARNER","PARENT"];				
+                if (in_array($user->getRole(), $role)) {					
                     return true;
                 } else {
                     return false;
