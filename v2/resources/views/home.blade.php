@@ -1,101 +1,12 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<html lang="en">
+@extends('layouts.master')
 
-<head>
-  	<meta charset="utf-8">
-    <title>SmartSchool - Courses, Education</title>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-    <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
-    
-    <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/superfish.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="fontello/css/fontello.css" rel="stylesheet">
-     <!-- color scheme css -->
-    <link href="css/color_scheme.css" rel="stylesheet">
-    <!-- custom css -->
-    <link href="css/custom.css" rel="stylesheet">
-	<!-- font awesome-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--[if lt IE 9]>
-      <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+@section('header-title')
+    SmartSchool | {{__('Courses, Education')}}
+@stop
 
-  </head>
-  
-  <body data-base-url="<?php echo URL::to('/'); ?>">
-    <header>
-  	<div class="container">
-	<div class="row">
-		<div class="col-md-3 col-sm-3 col-xs-4">
-			<a href="<?php echo URL::to('/'); ?>" id="logo">SmartSchool</a>
-		</div>
-		<div class="col-md-5 col-sm-6 hidden-xs">
-			<div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="{{__('What are you looking for ?')}}" />
-                <div class="input-group-btn">
-                    <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                    <label for="filter">{{__('Filter by')}}</label>
-                                    <select class="form-control">
-										<option value="" selected></option>
-                                        <option value="0" selected>{{__('Books')}}</option>
-                                        <option value="1">{{__('Courses')}}</option>
-                                    </select>
-                                  </div>
-								  <!--
-                                  <div class="form-group">
-                                    <label for="contain">Author</label>
-                                    <input class="form-control" type="text" />
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="contain">Contains the words</label>
-                                    <input class="form-control" type="text" />
-                                  </div>  -->
-                                </form>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    </div>
-                </div>
-            </div>
-		</div>
-		<div class="col-md-4 col-sm-3 col-xs-8">
-			<div class="pull-right"><a href="<?php echo URL::to('/register'); ?>"><i class="fa fa-pencil-square-o"></i> {{__('Register')}}</a>&nbsp;&nbsp;<a href="<?php echo URL::to('/login'); ?>" class="button_top"><i class="fa fa-lock"></i> {{__('Log in')}}</a></div>            
-			<ul id="top_nav" class="hidden-xs">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						{{ Config::get('languages')[App::getLocale()] }}
-					</a>
-					<ul class="dropdown-menu">
-						@foreach (Config::get('languages') as $lang => $language)
-							@if ($lang != App::getLocale())
-								<li>
-									<a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
-								</li>
-							@endif
-						@endforeach
-					</ul>
-				</li>
-            </ul>			
-		</div>
-	</div>
-</div>
-</header><!-- End header -->
+@section('content')
+
+@include('partials/header')
 
 <section id="sub-header" >
   	<div class="container">
@@ -133,7 +44,7 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
-							<input type="password" id="password" name="password" class="form-control style_2" placeholder="{{__('password')}}">
+							<input type="password" id="password" name="password" class="form-control style_2" placeholder="{{__('Password')}}">
                             <span class="input-icon"><i class="icon-lock"></i></span>
 						</div>
 					</div>
@@ -152,8 +63,8 @@
 				</div>
 				 {{ csrf_field() }}
                 <div class="col-md-6">
-						<div class="form-group pull-right">
-							<input type="submit" value="{{__('Register')}}" class=" button_subscribe" id="submit-contact-home"/>
+					<div class="form-group pull-right">
+						<input type="submit" value="{{__('Register')}}" class=" button_subscribe" id="submit-contact-home"/>
 					</div>
 				</div>
                 </div>
@@ -402,20 +313,4 @@
 
 <div id="toTop">{{__('Back to top')}}</div>
 
-<!-- JQUERY -->
-<script src="js/jquery-1.10.2.min.js"></script>
-
-<!-- OTHER JS --> 
-<script src="js/superfish.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="assets/validate.js"></script>
-<script src="js/jquery.placeholder.js"></script>
-<script src="js/functions.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/uisearch.js"></script>
-<script>new UISearch( document.getElementById( 'sb-search' ) );</script>
-
-
-  </body>
-</html>
+@stop 
