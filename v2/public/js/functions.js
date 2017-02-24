@@ -1,3 +1,4 @@
+(function($) {
 // MENU  UPDATED V 1.5=============== //
 if ( $(window).width() > 767) {     
    jQuery('ul.sf-menu').superfish({
@@ -157,6 +158,5 @@ $(document).ready(function() {
 $('input, textarea').placeholder();
 
 	
-	
-
+})(jQuery);
 

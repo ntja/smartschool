@@ -1,3 +1,4 @@
+(function($) {
 /**
  * uisearch.js v1.0.0
  * http://www.codrops.com
@@ -133,3 +134,4 @@
 	window.UISearch = UISearch;
 
 } )( window );
+})(jQuery);

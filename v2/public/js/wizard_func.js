@@ -41,7 +41,7 @@ jQuery(function($) {
    	    radioClass: 'iradio_square-aero'
   		});
 		
-			//Pace holder
+		//Pace holder
 		$('input, textarea').placeholder();
     });
 	

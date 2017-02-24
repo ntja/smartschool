@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<html lang="en">
+
+<head>
+  	<meta charset="utf-8">
+    <title>LEARN - Courses, Education site template</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+    
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/superfish.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="fontello/css/fontello.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+      <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  
+  <body>
+  <header>
+  	<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<a href="index.html" id="logo">Learn</a>
+		</div>
+		<div class="col-md-9 col-sm-9 col-xs-9">
+			<div class="pull-right"><a href="login.html" class="button_top" id="login_top">Sign in</a> <a href="apply_2.html" class="button_top hidden-xs" id="apply">Apply now</a></div>
+            <ul id="top_nav" class="hidden-xs">
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="apply.html">Wizard Apply</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+		</div>
+	</div>
+</div>
+</header><!-- End header -->
+
+<nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="mobnav-btn"></div>
+			<ul class="sf-menu">
+				<li class="normal_drop_down">
+				<a href="#">Home</a>
+				<div class="mobnav-subarrow"></div>
+				<ul>
+					<li><a href="index.html">Revolution version</a></li>
+					<li><a href="index_2.html">Subscription version</a></li>
+					<li><a href="index_3.html">With Ajax Search bar</a></li>
+                    <li><a href="index_4.html">With Video</a></li>
+				</ul>
+				</li>
+				<li class="normal_drop_down">
+				<a href="#">Course</a>
+				<div class="mobnav-subarrow"></div>
+				<ul>
+                	<li><a href="courses_grid.html">Courses grid</a></li>
+                    <li><a href="courses_list.html">Courses list</a></li>
+                    <li><a href="course_detail_page_txt.html ">Course page Txt</a></li>
+                    <li><a href="course_detail_page_video.html ">Course page Video</a></li>
+                    <li><a href="course_details_4.html">Course details v1</a></li>
+                    <li><a href="course_details_5.html">Course details v2</a></li>
+                    <li><a href="course_details_2.html">Course details v3</a></li>
+					<li><a href="course_details_1.html">Course details v4</a></li>
+                    <li><a href="course_details_3.html">Course details v5</a></li>
+                    <li><a href="course_timeline.html">Seminar timeline</a></li>
+				</ul>
+				</li>
+				<li><a href="prices_plans.html">Prices &amp; Plans</a></li>
+				<li><a href="blog.html">Blog</a></li>
+                <li class="mega_drop_down">
+				<a href="#">Pages (Megamenu)</a>
+                <div class="mobnav-subarrow"></div>
+                <div class="sf-mega">
+                	<div class="col-md-4 col-sm-6">
+                    	<h5>Communicate</h5>
+                            <ul class="mega_submenu">
+                            	<li><a href="about_us.html">About us</a></li>
+								<li><a href="teachers.html">Teachers</a></li>
+                                <li><a href="teacher_profile.html">Teacher profile</a></li>
+                                <li><a href="member_profile.html">Member profile</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="events_news_list.html">News &amp; Events</a></li>
+                            </ul>
+                    </div>
+                  <div class="col-md-4 col-sm-6">
+                   <h5>Other pages</h5>
+                          <ul class="mega_submenu">
+                           	  <li><a href="apply.html">PHP working wizard apply</a></li>
+                              <li><a href="apply_2.html">PHP working apply</a></li>
+                              <li><a href="login.html">Login</a></li>
+                              <li><a href="register.html">Register</a></li>
+                              <li><a href="shortcodes.html">Shortcodes</a></li>
+                              <li><a href="gallery.html">Photo &amp; video gallery <img src="img/new.png" alt=""></a></li>
+                          </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                    <h5>Submenu with icons</h5>
+                            <ul class="mega_submenu icons">
+                            	<li><a href="#"> Downloads<i class="icon-download"></i></a></li>
+                                <li><a href="#">Video files <i class="icon-video"></i></a></li>
+                                <li><a href="#">Audio files <i class="icon-mic"></i></a></li>
+                                <li><a href="#">Members <i class="icon-user"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                </li>
+				<li><a href="contacts.html">Contacts</a></li>
+			</ul>
+            
+            <div class="col-md-3 pull-right hidden-sm hidden-xs">
+                    <div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+              </div><!-- End search -->
+              
+		</div>
+	</div><!-- End row -->
+</div><!-- End container -->
+</nav>
+
+    <section id="sub-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <h1>Inside Learn</h1>
+                <p class="lead boxed ">Ex utamur fierent tacimates duis choro an</p>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+                </p>
+            </div>
+        </div><!-- End row -->
+    </div><!-- End container -->
+    <div class="divider_top"></div>
+    </section><!-- End sub-header -->
+    
+    
+    <section id="main_content">
+    	<div class="container">
+        	
+        
+        <div class="row">
+        
+        <aside class="col-lg-3 col-md-4 col-sm-4">
+            <div class="box_style_1">
+            	<h4>Categories</h4>
+            <ul class="submenu-col">
+                <li><a href="#" id="active">All Courses</a></li>
+                <li><a href="course_details_2.html">Administration (10)</a></li>
+                <li><a href="course_details_2.html">Business (08)</a></li>
+                <li><a href="course_details_2.html">Communication (05) <img src="img/new.png" alt="New" class="hidden-"></a></li>
+                <li><a href="course_details_2.html">Computing (08) </a></li>
+                <li><a href="course_details_2.html">Counseling (04)</a></li>
+                <li><a href="course_details_2.html">Education (06)</a></li>
+                <li><a href="course_details_2.html">Engineering (08)</a></li>
+            </ul>
+            
+            <hr>
+            
+            <h5>Upcoming Courses</h5>
+            <p>Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.</p>
+            </div>
+        </aside>
+        
+        <div class="col-lg-9 col-md-8 col-sm-8">
+        
+       			 <div class="row">
+                  <div class="col-md-12">
+                  
+                <!-- Headings & Paragraph Copy -->         
+                  <h1>h1. Heading 1</h1>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <h2>h2. Heading 2</h2>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <h3>h3. Heading 3</h3>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <h4>h4. Heading 4</h4>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <h5>h5. Heading 5</h5>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <h6>h6. Heading 6</h6>
+                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <br>
+                  
+                  </div>
+                  </div><!-- Edn row -->
+                  
+                  <hr>
+                  
+                  <div class="row">
+                  <div class="col-md-12">
+                  <h3>CSS3 flat shadow</h3>
+                  <p>CSS3 flat shadow to any text or icons, just place to a div container this<code>class="circ-wrapper"</code> or <code>class="circ-wrapper red"</code> or <code>class="circ-wrapper blue"</code>.</p>
+                  <div class="circ-wrapper pull-left"><h3>15<br>July</h3></div>
+                  <div class="circ-wrapper red pull-left" style="margin-left:10px;"><h3>15<br>July</h3></div>
+                  <div class="circ-wrapper blue pull-left" style="margin-left:10px;"><h3>15<br>July</h3></div>
+                  
+                   </div>
+                  </div><!-- Edn row -->
+                  <hr>
+                  <div class="row">
+                  <div class="col-md-12">
+                  
+                  <!-- Blockquotes -->
+                  <h3>Blockquotes</h3>
+                        <p>To include a blockquote, wrap <code>&lt;blockquote class="styled"&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.
+                    Include an optional <code>&lt;small&gt;</code> element to cite your source and you'll get an em dash <code>&amp;mdash;</code> before it for styling purposes.</p>
+                          <blockquote class="styled">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            <small>Someone famous in <cite title="">Body of work</cite></small>
+                          </blockquote>
+                  <br>
+                  
+                   <p>To float your blockquote to the right, add <code>class="styled pull-right"</code>:</p>
+                   <blockquote class="styled pull-right">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            <small>Someone famous in <cite title="">Body of work</cite></small>
+                  </blockquote>
+                  
+                  </div>
+                  </div><!-- Edn row -->
+                  
+                  <hr>
+                  
+                  <div class="row">
+                  	<div class="col-md-12 add_bottom_30">
+                          <h3>Buttons</h3>
+                       		<a href="#" class="button_red_small">Button</a>  <a href="#" class="button_medium">Button</a> <a href="#" class=" button_medium_outline">Button</a> 
+                            <a href="#" class=" button_outline">Button</a> <a href="#" class="button_subscribe">Button</a> <a href="#" class="button_subscribe_green">Button</a> <br>
+                            <a href="#" class="button_fullwidth">Button</a>  <a href="#" class="button_fullwidth-2">Button</a>  <a href="#" class=" button_fullwidth-3">Button</a> 
+                    </div>
+      				</div>
+                    
+                  <hr>
+                  
+                  <div class="row">
+                  	<div class="col-md-6 add_bottom_30 clearfix">
+                  <h3>Your list</h3>
+                    <ul class="list_ok">
+                        <li><strong>Certified</strong> and expert teachers</li>
+                        <li><strong>Extensive</strong> doumentation provided</li>
+                        <li><strong>Money back</strong> garantee</li>
+                        <li><strong>Became an exeprt</strong> in only 6 days</li>
+                    </ul>
+                    </div>
+                    
+                    <div class="col-md-6">
+                    <h3>Your list with links</h3>
+                    <ul class="list_1">
+                      <li><a href="#">Ceteros mediocritatem</a></li>
+                      <li><a href="#">Labore nostrum</a></li>
+                      <li><a href="#">Primis bonorum</a></li>
+                 </ul>
+                 
+                 </div>
+                 </div><!-- End row-->
+                 
+                 <hr>
+                 
+                 <!-- Containers -->
+    			<h3>Containers</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                  
+                  			<div class=" box_style_3">
+                            	<p><img src="img/teacher_2_small.jpg" alt="Teacher" class="img-circle styled"></p>
+                                <h4 class="p-title">Megan Fox <small>Engineer</small></h4>
+                                <p>Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.</p>    
+                                <ul class="social_team">
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class=" icon-google"></i></a></li>
+							   </ul> 
+                               <hr>
+                              <a href="#" class=" button_medium_outline">View cousres</a>                              
+                            </div>
+                  
+                  </div><!-- End col-md-6-->
+                  <div class="col-md-6">
+                  
+                  <div class="thumbnail">
+                    <div class="project-item-image-container">
+                        <img src="img/team_2.jpg" alt=""/>
+                    </div>
+                    <div class="caption">
+                        <div class="transit-to-top">
+                            <h4 class="p-title">Megan Fox <small>MANAGER</small></h4>
+                            <div class="widget_nav_menu">
+                                <ul class="social_team">
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class=" icon-google"></i></a></li>
+                                </ul>
+                                <div class="phone-info">
+                                    <i class=" icon-phone"></i> + 4 (123) 456-7890
+                                </div><!-- End phone info -->
+                            </div><!-- End widget_nav_menu -->
+                        </div><!-- transition top -->
+                    </div><!-- caption -->
+                    </div><!-- End thumbnail -->
+                  
+                  </div><!-- End col-md-6-->
+                 </div><!-- End row-->
+                 
+                 <hr>
+                 
+                 
+                 <div class="row">
+                  <div class="col-md-12">
+                  <h3 >Tables</h3>
+                  <p>Tables are automatically styled with only a few borders to ensure readability and maintain structure. With 2.0, the <code>class="table"</code> class is required.</p>
+                  <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                    <p>Get a little fancy with your tables by adding zebra-striping&mdash;just add the <code>class="table table-striped"</code> class.
+                    <br><strong>Note:</strong> Striped tables use the <code>:nth-child</code> CSS selector and is not available in IE7-IE8.</p>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                      <p>Add borders around the entire table and rounded corners for aesthetic purposes <code>class="table table-bordered"</code>.</p>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td rowspan="2">1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@TwBootstrap</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                          <p>Make your tables more compact by adding the <code>class="table table-condensed"</code> class to cut table cell padding in half.</p>
+                          <table class="table table-condensed">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                          <p>Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally up to small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
+                          <div class=" table-responsive">
+                          <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              </div>
+                          
+                          <p>Feel free to combine any of the table classes to achieve different looks by utilizing any of the available classes .</p>
+                          
+                          <table class="table table-striped table-bordered table-condensed">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                  </div><!-- End col-md-12-->
+                  </div><!-- End row-->
+                  <hr>
+                  
+                  <div class="row">
+                  <div class="col-md-12">
+                  <h3>Html Tabs</h3>
+            
+                    <!--  Tabs -->   
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                        <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                        <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                        <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane" id="home">
+                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Nullam mollis.. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapiPhasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapi
+                        </div>
+                        <div class="tab-pane" id="profile">
+                            Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapi
+                        </div>
+                        <div class="tab-pane" id="messages">
+                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Nullam mollis. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapi
+                        </div>
+                        <div class="tab-pane active" id="settings">
+                             Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapi
+                        </div>
+                    </div>
+                          
+                  </div><!-- End col-md-12-->
+                  </div><!-- End row-->
+                  
+                  <hr>
+                  
+                  <div class="row">
+                  <div class="col-md-12">
+                  
+                    <h3>Tool tips with four directions</h3>
+                        <ul>
+                            <li><a href="#" class="tooltip-1" data-placement="top" title="Default tooltip">Tooltip on top</a></li>
+                            <li><a href="#" class="tooltip-1" data-placement="right" title="Default tooltip">Tooltip on right</a></li>
+                            <li><a href="#" class="tooltip-1" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a></li>
+                            <li><a href="#" class="tooltip-1" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</a></li>
+                        </ul>
+
+                  </div><!-- End col-md-12-->
+                  </div><!-- End row-->
+                  
+                  <hr>
+                  
+                  <div class="row">
+                  <div class="col-md-12">
+                  
+                    <!--  Modal -->     
+                      <h3>Modals bootstrap</h3>         
+                      <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+                      
+                      <!-- Button trigger modal -->
+                        <button class="button_medium" data-toggle="modal" data-target="#myModal">
+                          Launch demo modal
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                              </div>
+                              <div class="modal-body">
+                                  <h4>Overflowing text to show optional scrollbar</h4>
+                                  <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+                                  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                  <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class=" button_medium_outline" data-dismiss="modal">Close</button>
+                                <button type="button" class="button_medium">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                         <h3>Modals bootstrap optional size</h3>
+                         <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
+                         
+                         <!-- Large modal -->
+                            <button class="button_medium" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+                            
+                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                              </div>
+                              <div class="modal-body">
+                                 <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- Small modal -->
+                            <button class="button_medium" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+                            
+                            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                              </div>
+                              <div class="modal-body">
+                                 <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                        
+                  </div><!-- End col-md-12-->
+                  </div><!-- End row-->
+                  
+                  <hr>
+                  
+                  <div class="row">
+                  <div class="col-md-12">
+                  <h3>Collapse</h3>
+                  <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Anim pariatur cliche reprehenderit?<i class="indicator icon-plus pull-right"></i></a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Parsnip lotus root celery?<i class="indicator icon-plus pull-right"></i></a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Beet greens peanut salad?<i class="indicator icon-plus pull-right"></i></a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                </div><!-- End col-md-12-->
+               </div><!-- End row-->
+                                 
+        </div><!-- End col-lg-9-->
+        </div><!-- End row -->
+        
+        <hr>
+        <div class="row">
+        	<div class="col-md-12 text-center">
+            	<ul class="pagination">
+                  <li><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+            	
+        </div><!-- End container -->
+    </section><!-- End main_content -->
+
+<footer>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h3>Subscribe to our Newsletter for latest news.</h3>
+			<div id="message-newsletter">
+			</div>
+			<form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
+				<input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Your Email" class="form-control">
+				<button id="submit-newsletter" class=" button_outline"> Subscribe</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="container" id="nav-footer">
+	<div class="row text-left">
+		<div class="col-md-3 col-sm-3">
+			<h4>Browse</h4>
+			<ul>
+				<li><a href="prices_plans.html">Prices</a></li>
+				<li><a href="courses_grid.html">Courses</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contacts.html">Contacts</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+		<div class="col-md-3 col-sm-3">
+			<h4>Next Courses</h4>
+			<ul>
+				<li><a href="course_details_1.html">Biology</a></li>
+				<li><a href="course_details_2.html">Management</a></li>
+				<li><a href="course_details_2.html">History</a></li>
+				<li><a href="course_details_3.html">Litterature</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+		<div class="col-md-3 col-sm-3">
+			<h4>About Learn</h4>
+			<ul>
+				<li><a href="about_us.html">About Us</a></li>
+				<li><a href="apply_2.html">Apply</a></li>
+				<li><a href="#">Terms and conditions</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+		<div class="col-md-3 col-sm-3">
+			<ul id="follow_us">
+				<li><a href="#"><i class="icon-facebook"></i></a></li>
+				<li><a href="#"><i class="icon-twitter"></i></a></li>
+				<li><a href="#"><i class=" icon-google"></i></a></li>
+			</ul>
+			<ul>
+				<li><strong class="phone">+0034 43244 44</strong><br><small>Mon - Fri / 9.00AM - 06.00PM</small></li>
+				<li>Questions? <a href="#">questions@domain.com</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+	</div><!-- End row -->
+</div>
+<div id="copy_right">© 1998-2014</div>
+</footer>
+
+<div id="toTop">Back to top</div>
+
+<!-- JQUERY -->
+<script src="js/jquery-1.10.2.min.js"></script>
+
+
+<!-- OTHER JS --> 
+<script src="js/superfish.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="assets/validate.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/uisearch.js"></script>
+<script>new UISearch( document.getElementById( 'sb-search' ) );</script>
+
+
+  </body>
+</html>
