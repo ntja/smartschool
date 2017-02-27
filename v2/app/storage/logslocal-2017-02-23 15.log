@@ -1,0 +1,69 @@
+[2017-02-23 15:00:03] local.ERROR: Invalid attempt to create a new account with an email taken {francklin@domain.com}. Returned code: 400. Request inputs  #array (
+  'email' => 'francklin@domain.com',
+  'first_name' => 'Francklin',
+  'last_name' => 'Roosevelt',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 15:00:32] local.INFO: The new account #78 has just been created. Request inputs:  #{array (
+  'email' => 'joe@domain.com',
+  'first_name' => 'John',
+  'last_name' => 'Doe',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-23 15:00:26',
+  'verify_token' => 'IU0Mebjm3aahsaNUTt5TbYFwpsk1y7dnZd6qKiLEwOjXSWCqFv',
+)}.  
+[2017-02-23 15:01:50] local.INFO: The new account #79 has just been created. Request inputs:  #{array (
+  'email' => 'obama@domain.com',
+  'first_name' => 'Obama Hussain',
+  'last_name' => 'Barack',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-23 15:01:43',
+  'verify_token' => 'MDB8NW2hjccCJlVidfuSh3ACps1MDlLCmsmef5lS3TNJPer91h',
+)}.  
+[2017-02-23 15:03:36] local.INFO: The new account #80 has just been created. Request inputs:  #{array (
+  'email' => 'paul@domain.com',
+  'first_name' => 'Paul',
+  'last_name' => 'Biya',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-23 15:03:30',
+  'verify_token' => 'Uv9TyatgAY9CF4EkAJiW1hskpxW6wGpaMKkzjwXcBSgFton5YQ',
+)}.  
+[2017-02-23 15:05:19] local.INFO: The new account #81 has just been created. Request inputs:  #{array (
+  'email' => 'hussain@domain.com',
+  'first_name' => 'Hussain',
+  'last_name' => 'Bolt',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-23 15:05:12',
+  'verify_token' => 'woBIVvVIc7MFj1jKeoGkKoKa2A9oMGuZvKnEmfz1zTZgPDTojB',
+)}.  
+[2017-02-23 15:06:15] local.INFO: The new account #82 has just been created. Request inputs:  #{array (
+  'email' => 'celine@domain.com',
+  'first_name' => 'Eline Celine',
+  'last_name' => 'Dion',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-23 15:06:06',
+  'verify_token' => 'j4ltYyNWB6TChbGquHPcJzhaVXCZNn39ugeh2og8BorxYBL5Tn',
+)}.  
+[2017-02-23 15:40:06] local.INFO: password of account #{74} has been successfully reset  
+[2017-02-23 15:41:49] local.ERROR: The payload is invalid.  
+[2017-02-23 15:43:27] local.ERROR: The payload is invalid.  
+[2017-02-23 15:43:56] local.INFO: password of account #{74} has been successfully reset  
+[2017-02-23 15:46:35] local.INFO: password of account #{74} has been successfully reset  

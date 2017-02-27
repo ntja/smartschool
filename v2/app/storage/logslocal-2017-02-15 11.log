@@ -1,0 +1,2 @@
+[2017-02-15 11:32:19] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-15 11:32:19","last_login":"2017-02-15 11:32:19","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-15 11:32:34] local.INFO: The information of course #22 has been retrieve. {"user_id":66} 

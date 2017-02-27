@@ -1,0 +1,10 @@
+[2017-02-13 12:52:07] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::account() {"user_id":66} 
+[2017-02-13 12:52:07] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 12:52:24] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Builder::$account {"user_id":66} 
+[2017-02-13 12:52:24] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 

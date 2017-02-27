@@ -114,7 +114,6 @@ class Account extends Authenticatable{
                         throw new Exception("Expected String for key (honorific), " . (is_object($params['honorific']) ? get_class($params['honorific']) : gettype($params['honorific'])) . ' found.');
                     }
                 }                
-                
                 $this->honorific = $params['honorific'];
             }
 			
@@ -125,7 +124,7 @@ class Account extends Authenticatable{
                 }
                 $this->password = Hash::make($params['password']);
             }     
-                        
+			
             if (array_key_exists("phone", $params)) {
                 //throw new Exception("Expected key (phone) in parameter array."); 
 				if(!is_null($params['phone'])){

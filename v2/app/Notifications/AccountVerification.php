@@ -45,11 +45,11 @@ class AccountVerification extends Notification
     {
         return (new MailMessage)
 			->subject('Account Verification')
-			->greeting("Dear {$this->user->first_name},")			
-			->line('Thank you for creating an account on SmartSchool !')
-			->line("There's just one more step before you can have access to all SmartSchool resources: You need to activate your account.")
-			->line('After you activate your account, you will have full access to SmartSchool resources. You will receive occasional email from SmartSchool about some information.')					
+			->greeting("Hello {$this->user->first_name},")			
+			->line("Thank you for joining ! We're glad to have you as a community member and we're stocked for you to start exploring our resources.")
+			->line('All you need to do is activate your account.')					
 			->action('Activate your Account', config('app.url').'activate?email='.$this->user->email.'&verify_token='.$this->user->verify_token)
+			->line('You will receive occasional emails from SmartSchool.')
 			->line('We hope you will enjoy using SmartSchool !');					
     }
 

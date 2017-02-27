@@ -1,0 +1,2 @@
+[2017-02-15 14:16:17] local.INFO: Successful authentication of account {"id":7,"first_name":"David","last_name":"Palmer","role":"INSTRUCTOR","email":"david@domain.com","verified_status":"VERIFIED","date_created":"2016-10-21 09:36:15","date_updated":"2017-02-15 14:16:13","last_login":"2017-02-15 14:16:13","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":7} 
+[2017-02-15 14:16:54] local.ERROR: Call to undefined relationship [account] on model [App\Models\JoinCourse]. {"user_id":7} 

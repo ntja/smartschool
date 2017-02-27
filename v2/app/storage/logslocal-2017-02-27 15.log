@@ -1,0 +1,33 @@
+[2017-02-27 15:01:53] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:04:09] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:05:23] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:06:18] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:51:18] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:51:27] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:51:38] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 15:52:59] local.INFO: The information of course #frenchliterature has been retrieve.  
+[2017-02-27 15:53:34] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  

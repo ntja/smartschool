@@ -59,7 +59,7 @@ class RecoverPasswordController extends Controller{
             }catch(DecryptException $e){
                 LogRepo::printLog('error', $e->getMessage());
                 http_response_code(400);
-				$result = array("code" => 4000, "description" => "'key' parameter is invalid");
+				$result = array("code" => 4000, "description" => "key parameter is invalid");
 				echo json_encode($result, JSON_UNESCAPED_SLASHES);
 				die();
             }			

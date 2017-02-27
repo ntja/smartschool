@@ -1,0 +1,46 @@
+[2017-02-23 09:07:55] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'fdfd',
+)}.  
+[2017-02-23 09:08:03] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'fdfd',
+)}.  
+[2017-02-23 09:10:26] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'ds',
+)}.  
+[2017-02-23 09:10:54] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'ds',
+)}.  
+[2017-02-23 09:11:40] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'dsd',
+)}.  
+[2017-02-23 09:14:42] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'sq',
+)}.  
+[2017-02-23 09:17:44] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'sq',
+)}.  
+[2017-02-23 09:18:54] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'fds',
+)}.  
+[2017-02-23 09:19:17] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'fds',
+)}.  
+[2017-02-23 09:19:31] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'fds',
+)}.  
+[2017-02-23 09:21:21] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'fds',
+)}.  
+[2017-02-23 09:22:08] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-23 09:22:08","last_login":"2017-02-23 09:22:08","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-23 09:23:01] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-23 09:23:01","last_login":"2017-02-23 09:23:01","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 

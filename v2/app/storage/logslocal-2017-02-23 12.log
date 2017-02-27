@@ -1,0 +1,37 @@
+[2017-02-23 12:10:50] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:10:48","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:12:14] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:10:48","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:12:58] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:10:48","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:13:47] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:13:47","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:14:48] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:13:47","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:15:19] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:15:19","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:16:33] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:16:33","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:16:42] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:16:33","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:17:34] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:17:34","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:20:35] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:17:34","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:27:36] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:17:34","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:31:06] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:31:06","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:32:23] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:32:22","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:32:40] local.ERROR: Account{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:32:22","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte1@sw.ai',
+  'token' => 't3Zhzxnaoov21PEaCm8uD9xivnVpzyYf5PPIacnS19Z6jkZmfi',
+)}  
+[2017-02-23 12:33:08] local.INFO: Successful activation of account #{{"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:33:08","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-23 12:33:36] local.INFO: Successful authentication of account {"id":74,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte1@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-23 11:38:57","date_updated":"2017-02-23 12:33:36","last_login":"2017-02-23 12:33:36","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":74} 

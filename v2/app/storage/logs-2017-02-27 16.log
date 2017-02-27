@@ -1,0 +1,8 @@
+[2017-02-27 16:20:04] production.ERROR: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'forge' (SQL: select * from `courses` where `courses`.`shortname` = networkhacks limit 1)  
+[2017-02-27 16:20:34] local.INFO: The information of course #networkhacks has been retrieve.  
+[2017-02-27 16:20:43] local.INFO: The information of course #networkhacks has been retrieve.  
+[2017-02-27 16:21:54] production.ERROR: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'forge' (SQL: select * from `courses` where `courses`.`shortname` = objdetect limit 1)  
+[2017-02-27 16:22:04] production.ERROR: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'forge' (SQL: select * from `courses` where `courses`.`shortname` = objdetect limit 1)  
+[2017-02-27 16:28:53] local.INFO: The information of course #objdetect has been retrieve.  
+[2017-02-27 16:31:54] local.INFO: The information of course #networkhacks has been retrieve.  
+[2017-02-27 16:32:21] local.INFO: The information of course #intprojmgn has been retrieve.  

@@ -1,0 +1,36 @@
+[2017-02-13 10:05:04] local.ERROR: Invalid verification attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'token' => 'MYOiZzRARKGftWP0MEhbiNC7WVgIdS7z9l3fx1IAJEBpUR42eH',
+)}  
+[2017-02-13 10:05:29] local.INFO: Successful activation of account #{{"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-13 10:05:29","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-02-13 10:05:53] local.ERROR: Account{"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-13 10:05:29","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"} already verified. inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'token' => 'j8x6dagxZnmlV0kkw8QewlE7Fz63mve1Av8PxoC43C1RexciRl',
+)}  
+[2017-02-13 10:06:42] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-13 10:06:41","last_login":"2017-02-13 10:06:41","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-13 10:06:58] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 10:07:36] local.INFO: The courses of instructor #'2' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 10:15:21] local.ERROR: Undefined variable: params {"user_id":66} 
+[2017-02-13 10:19:56] local.INFO: The courses of instructor #'2' has been retrieve. Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 10:27:53] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '1',
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 10:36:43] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '1',
+  'status' => 'UNPUBLISHED',
+)}. {"user_id":66} 
+[2017-02-13 10:36:55] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '4',
+  'status' => 'UNPUBLISHED',
+)}. {"user_id":66} 
+[2017-02-13 10:54:11] local.INFO: password of account #{66} has been successfully reset  

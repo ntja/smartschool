@@ -40,22 +40,9 @@
 		</div>
 		<div class="col-md-4 col-sm-3 col-xs-8">
 			<div class="pull-right"><a href="<?php echo URL::to('/register'); ?>"><i class="fa fa-pencil-square-o"></i> {{__('Register')}}</a>&nbsp;&nbsp;<a href="<?php echo URL::to('/login'); ?>" class="button_top"><i class="fa fa-lock"></i> {{__('Log in')}}</a></div>            
-			<ul id="top_nav" class="hidden-xs">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						{{ Config::get('languages')[App::getLocale()] }}
-					</a>
-					<ul class="dropdown-menu">
-						@foreach (Config::get('languages') as $lang => $language)
-							@if ($lang != App::getLocale())
-								<li>
-									<a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
-								</li>
-							@endif
-						@endforeach
-					</ul>
-				</li>
-            </ul>			
+			 
+			@include('partials/language')			
+			 
 		</div>
 	</div>
 </div>

@@ -90,7 +90,7 @@ class ForgotPasswordCustom {
             return $secret;
         }else{
             http_response_code(400);
-            $result = array("code" => 4000, "description" => "email you provide does not exist in the system");
+            $result = array("code" => 4000, "description" => "Email address you provide does not exist in the system");
             echo json_encode($result, JSON_UNESCAPED_SLASHES);            
            die(); 
         }        

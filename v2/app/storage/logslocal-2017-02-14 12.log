@@ -1,0 +1,14 @@
+[2017-02-14 12:01:36] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-14 12:01:36","last_login":"2017-02-14 12:01:36","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-14 12:01:55] local.INFO: The courses of instructor #'7' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 12:05:33] local.INFO: The courses of instructor #'7' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 12:42:56] local.ERROR: Undefined variable: params {"user_id":66} 
+[2017-02-14 12:44:03] local.INFO: The information of course #frenchliterature has been retrieve. {"user_id":66} 
+[2017-02-14 12:46:26] local.INFO: The information of course #22 has been retrieve. {"user_id":66} 
+[2017-02-14 12:49:51] local.INFO: The information of course #22 has been retrieve. {"user_id":66} 
+[2017-02-14 12:51:02] local.INFO: The information of course #linuxcmd has been retrieve. {"user_id":66} 

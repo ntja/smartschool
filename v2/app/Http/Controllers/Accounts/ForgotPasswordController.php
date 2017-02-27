@@ -32,14 +32,14 @@ class ForgotPasswordController extends Controller{
             if (Gate::forUser($current_account)->denies('post', [$resource_forgot_password,false])) {
                  LogRepo::printLog('info', "Invalid attempt to read account #{" .$account_token_id. "}. Returned code: 4004.");
                 $result = array("code" => 4003, "description" => "You do not have permissions for that request..");
-                return $result;
+                return response()->json($result, 400);
             }  
 
             $recover_password_info = file_get_contents('php://input');
             $data = json_decode($recover_password_info, TRUE);
             if (!is_array($data)) {
                 $result = array("code" => 4000, "description" => "invalid request body");
-                return $result;
+                return response()->json($result, 400);
             }
 
             //retrieve user inputs

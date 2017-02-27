@@ -1,0 +1,2 @@
+[2017-02-15 13:18:18] local.ERROR: Call to undefined relationship [manyCourses] on model [App\Models\JoinCourse]. {"user_id":7} 
+[2017-02-15 13:18:42] local.ERROR: Call to undefined relationship [account] on model [App\Models\JoinCourse]. {"user_id":7} 

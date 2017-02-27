@@ -1,0 +1,45 @@
+[2017-02-14 10:26:56] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"INSTRUCTOR","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-14 10:26:56","last_login":"2017-02-14 10:26:56","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-14 10:29:20] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::account() {"user_id":66} 
+[2017-02-14 10:29:20] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:30:57] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::account() {"user_id":66} 
+[2017-02-14 10:30:57] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:46:51] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:49:59] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:52:11] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:55:01] local.ERROR: Call to undefined relationship [category] on model [App\Models\Course]. {"user_id":66} 
+[2017-02-14 10:55:01] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:55:25] local.ERROR: Call to undefined relationship [category] on model [App\Models\Course]. {"user_id":66} 
+[2017-02-14 10:55:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:55:44] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:56:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-14 10:56:47] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 

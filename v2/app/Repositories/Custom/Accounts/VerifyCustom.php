@@ -89,7 +89,7 @@ class VerifyCustom {
 				//http_response_code(400);
 				//$result = array("code" => 400,"description" => 'Account already verified');
 				http_response_code(400);
-				$result = array("code" => 4000, "description" => "Account already activated. Please Login");
+				$result = array("code" => 4010, "description" => "Account already activated. Please Login");
 				LogRepository::printLog('error', "Account".$account." already verified. inputs:  {". var_export($params,true)."}");
 				echo json_encode($result, JSON_UNESCAPED_SLASHES);
 				die(); 				

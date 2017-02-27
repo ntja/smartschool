@@ -89,14 +89,112 @@ function check_token_validity(token){
 		
 function logout(){
 	var uri;
-	Cookies.remove('token');
-	Cookies.remove('account_id');
-	window.localStorage.removeItem('role');
-	var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-
+	window.localStorage.removeItem('sm_user_token');
+	window.localStorage.removeItem('sm_user_id');
+	window.localStorage.removeItem('sm_user_role');
+	
 	uri = $('body').attr('data-base-url')+'/login';
 	window.location.assign(uri);
+}
+
+//get user information
+function get_user_details(id,token){		
+	var result = null;
+	$.ajax({
+		url: config.api_url + "/accounts/"+id,
+		method: "GET",
+		headers: {
+			"x-client-id": "0000",
+			"Content-Type": "application/json",
+			"cache-control": "no-cache",
+			"x-access-token" : token
+		},
+		crossDomain:true,
+		async:false
+	})
+	.done(function (data, textStatus, jqXHR) {
+		console.log(data);
+		//console.log(data.valid == false);
+		if(data.code == 200){			
+			result = data.account;
+		}
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		console.log('request failed !');
+	});
+	return  result;
+}
+
+//get courses
+function get_courses(){		
+	var result = null;
+	$.ajax({
+		url: config.api_url + "/courses",
+		method: "GET",
+		headers: {
+			"x-client-id": "0000",
+			"Content-Type": "application/json",
+			"cache-control": "no-cache"
+		},
+		crossDomain:true,
+		async:false,
+		dataType:"json"
+	})
+	.done(function (data, textStatus, jqXHR) {
+		//console.log(data);
+		result = data;
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		console.log('request failed !');
+	});
+	return  result;
+}
+
+//get course information
+function get_course_details(id){		
+	var result = null;
+	$.ajax({
+		url: config.api_url + "/courses/"+id,
+		method: "GET",
+		headers: {
+			"x-client-id": "0000",
+			"Content-Type": "application/json",
+			"cache-control": "no-cache"
+		},
+		crossDomain:true,
+		async:false
+	})
+	.done(function (data, textStatus, jqXHR) {
+		console.log(data);
+		result = data;		
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		console.log('request failed !');
+	});
+	return  result;
+}
+
+//get instructor's courses
+function get_instructor_courses(id,token, uri){		
+	var result = null;
+	$.ajax({
+		url: uri,
+		method: "GET",
+		headers: {
+			"x-client-id": "0000",
+			"Content-Type": "application/json",
+			"cache-control": "no-cache",
+			"x-access-token" : token
+		},
+		crossDomain:true,
+		async:false
+	})
+	.done(function (data, textStatus, jqXHR) {
+		console.log(data);
+		result = data;
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		console.log('request failed !');
+	});
+	return  result;
 }

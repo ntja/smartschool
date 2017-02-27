@@ -1,0 +1,21 @@
+[2017-02-10 16:06:00] local.INFO: The courses of instructor #'63' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":63} 
+[2017-02-10 16:14:09] local.INFO: Successful authentication of account {"id":63,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-10 10:49:54","date_updated":"2017-02-10 16:14:09","last_login":"2017-02-10 16:14:09","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":63} 
+[2017-02-10 16:14:21] local.INFO: The courses of instructor #'63' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":63} 
+[2017-02-10 16:16:09] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":63} 
+[2017-02-10 16:16:52] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => 'PUBLISHED',
+)}. {"user_id":63} 
+[2017-02-10 16:17:06] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => 'UNPUBLISHED',
+)}. {"user_id":63} 

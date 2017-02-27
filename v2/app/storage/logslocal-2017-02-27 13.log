@@ -1,0 +1,48 @@
+[2017-02-27 13:10:29] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-02-27 13:10:28","last_login":"2017-02-27 13:10:28","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-02-27 13:10:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-27 13:11:48] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:13:30] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:18:18] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:26:04] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:27:22] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 13:28:18] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:28:28] local.INFO: The information of course #objdetect has been retrieve.  
+[2017-02-27 13:34:27] local.INFO: The information of course #objdetect has been retrieve.  
+[2017-02-27 13:34:58] local.INFO: The information of course #objdetect has been retrieve.  
+[2017-02-27 13:35:22] local.INFO: The information of course #objdetect has been retrieve.  
+[2017-02-27 13:36:04] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:36:15] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 13:36:25] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 13:36:37] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 13:40:47] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 13:42:53] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 13:43:09] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:44:01] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 13:46:36] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  

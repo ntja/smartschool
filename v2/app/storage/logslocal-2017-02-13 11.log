@@ -1,0 +1,18 @@
+[2017-02-13 11:01:51] local.INFO: password of account #{66} has been successfully reset  
+[2017-02-13 11:02:12] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 11:02:51] local.ERROR: Trying to get property of non-object {"user_id":66} 
+[2017-02-13 11:04:57] local.ERROR: Trying to get property of non-object {"user_id":66} 
+[2017-02-13 11:05:23] local.ERROR: Trying to get property of non-object {"user_id":66} 
+[2017-02-13 11:10:10] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"INSTRUCTOR","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-13 11:10:10","last_login":"2017-02-13 11:10:10","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-13 11:10:23] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 
+[2017-02-13 11:43:22] local.ERROR: Call to undefined method Illuminate\Database\Query\Builder::with() {"user_id":66} 
+[2017-02-13 11:43:22] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}. {"user_id":66} 

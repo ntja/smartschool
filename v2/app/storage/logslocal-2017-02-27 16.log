@@ -1,0 +1,72 @@
+[2017-02-27 16:19:19] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:19:38] local.INFO: The information of course #networkhacks has been retrieve.  
+[2017-02-27 16:20:48] local.INFO: The information of course #networkhacks has been retrieve.  
+[2017-02-27 16:20:54] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:21:51] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:22:14] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:22:20] local.INFO: The information of course #frenchliterature has been retrieve.  
+[2017-02-27 16:22:25] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:22:34] local.INFO: The information of course #introchemi has been retrieve.  
+[2017-02-27 16:22:46] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:24:44] local.INFO: The information of course #intprojmgn has been retrieve.  
+[2017-02-27 16:28:32] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:28:48] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:31:32] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:31:40] local.INFO: The information of course #linuxcmd has been retrieve.  
+[2017-02-27 16:31:48] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:32:00] local.INFO: The information of course #networkhacks has been retrieve.  
+[2017-02-27 16:32:05] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:32:10] local.INFO: The information of course #frenchliterature has been retrieve.  
+[2017-02-27 16:32:16] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:32:27] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:32:32] local.INFO: The information of course #introalgo has been retrieve.  
+[2017-02-27 16:32:37] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-02-27 16:33:25] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-02-27 16:33:25","last_login":"2017-02-27 16:33:25","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-02-27 16:33:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-27 16:33:54] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-27 16:53:30] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-27 16:54:02] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-27 16:54:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-27 16:54:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

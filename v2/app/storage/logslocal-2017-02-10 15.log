@@ -9,3 +9,7 @@
   'first_name' => 'Joe',
   'last_name' => 'Doe',
 ) {"user_id":63} 
+[2017-02-10 15:58:28] local.INFO: Information of account #{63} has just been updated. Request inputs: array (
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+) {"user_id":63} 

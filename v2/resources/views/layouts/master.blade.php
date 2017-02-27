@@ -40,30 +40,33 @@
     <!--[if lt IE 9]>
       <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->   
+    <![endif]-->   	
 	@yield('header-styles')
-
+	
+	@yield('header-scripts')
+	 
     </head>
 
     <body data-base-url="<?php echo URL::to('/'); ?>">        
        
 		@yield('content')  
-
 		
 		<!-- JQUERY -->
-		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="{{asset('js/jquery-1.10.2.min.js')}}"></script>
+		<!-- <script>jQuery.noConflict();</script> -->
 
 		<!-- OTHER JS --> 
 		<script src="{{asset('js/superfish.js')}}"></script>
 		<script src="{{asset('js/bootstrap.min.js')}}"></script>
 		<script src="{{asset('js/retina.min.js')}}"></script>
-		<script src="{{asset('assets/validate.js')}}"></script>
-		<script src="{{asset('js/jquery.placeholder.js')}}"></script>
+		<script src="{{asset('js/jquery.validate.js')}}"></script>
+		<script src="{{asset('js/jquery.placeholder.js' )}}"></script>
 		<script src="{{asset('js/functions.js')}}"></script>
 		<script src="{{asset('js/classie.js')}}"></script>
-		<script src="{{asset('js/uisearch.js')}}"></script>
+		<!--
+		<script src="{{asset('js/uisearch.js')}}" type="text/javascript"></script>
 		<script>new UISearch( document.getElementById( 'sb-search' ) );</script>
-		
+		-->
         @yield('scripts')    
     </body>
 </html>

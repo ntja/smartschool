@@ -1,83 +1,48 @@
-<footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-md-4 col-xs-12">
-                        <div class="widget">
-                            <h2 class="related-title">
-                                <span>About SmartSchool</span>
-                            </h2>
+<footer>
+<hr>
+<div class="container" id="nav-footer">
+	<div class="row text-left">
+		<div class="col-md-3 col-sm-3">
+			<h4>{{__('Browse')}}</h4>
+			<ul>
+				<li><a href="prices_plans.html">Prices</a></li>
+				<li><a href="courses_grid.html">Courses</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contacts.html">Contacts</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+		<div class="col-md-3 col-sm-3">
+			<h4>{{__('Top Categories')}}</h4>
+			<ul>
+				<li><a href="course_details_1.html">Biology</a></li>
+				<li><a href="course_details_2.html">Management</a></li>
+				<li><a href="course_details_2.html">History</a></li>
+				<li><a href="course_details_3.html">Litterature</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+		<div class="col-md-3 col-sm-3">
+			<h4>{{__('About SmartSchool')}}</h4>
+			<ul>
+				<li><a href="about_us.html">About Us</a></li>
+				<li><a href="apply_2.html">Join Courses</a></li>
+				<li><a href="#">Terms and conditions</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+		<div class="col-md-3 col-sm-3">
+			<ul id="follow_us">
+				<li><a href="#"><i class="icon-facebook"></i></a></li>
+				<li><a href="#"><i class="icon-twitter"></i></a></li>
+				<li><a href="#"><i class=" icon-google"></i></a></li>
+			</ul>
+			<ul>
+				<li><strong class="phone">+00237 655101101</strong><br><small>Mon - Fri / 9.00AM - 06.00PM</small></li>
+				<li>Questions ? <a href="#">questions@smartskul.com</a></li>
+			</ul>
+		</div><!-- End col-md-4 -->
+	</div><!-- End row -->
+</div>
+<div id="copy_right">© <?php echo date("Y"); ?>  SmartSchool. All rights reserved.</div>
+</footer>
 
-                            <div class="text-widget">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...</p>
-
-                                <a href="#" class="btn btn-primary btn-square">Read More</a>
-                            </div>
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-3 col-md-3 col-xs-12">
-                        <div class="widget">
-                            <h2 class="related-title">
-                                <span>Contact Details</span>
-                            </h2>
-
-                            <ul class="contact-details">
-                                <li><i class="fa fa-link"></i> <a href="#">www.smartskul.com</a></li>
-                                <li><i class="fa fa-envelope-o"></i> <a href="mailto:info@yoursite.com">contact@smartskul.com</a></li>
-                                <li><i class="fa fa-phone"></i></li>                                
-                                <li><i class="fa fa-home"></i> Yaounde - Cameroon</li>
-                            </ul>
-
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
-                    <div class="col-md-5 col-md-5 col-xs-12">
-                        <div class="widget">
-                            <h2 class="related-title">
-                                <span>Become Teacher on SmartSchool</span>
-                            </h2>
-
-                            <div class="text-widget">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took...</p>
-
-                                <a href="#" class="btn btn-primary btn-square">Read More</a>
-                            </div>
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </footer><!-- end footer -->
-        
-        <div class="topbar copyrights">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-sm-12 text-left hidden-xs">
-                        <div class="topmenu">
-                            <span><i class="fa fa-home"></i> <a href="index.html">Home</a></span>
-                            <span><a href="index.html">About us</a></span>
-                            <span><a href="index.html">Contact us</a></span>
-                            <span><a href="index.html">Terms of Usage</a></span>
-                            <span><a href="index.html">Site Copyrights</a></span>
-                        </div><!-- end callus -->
-                    </div>
-
-                    <div class="col-md-6 col-sm-12 text-right">
-                        <div class="social-icons">
-                            <ul class="list-inline">
-                            <li class="facebook"><a data-toggle="tooltip" data-placement="top" title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="google"><a data-toggle="tooltip" data-placement="top" title="Google Plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li class="twitter"><a data-toggle="tooltip" data-placement="top" title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="linkedin"><a data-toggle="tooltip" data-placement="top" title="Linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li class="pinterest"><a data-toggle="tooltip" data-placement="top" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li class="skype"><a data-toggle="tooltip" data-placement="top" title="Skype" href="#"><i class="fa fa-skype"></i></a></li>
-                            <li class="vimeo"><a data-toggle="tooltip" data-placement="top" title="Vimeo" href="#"><i class="fa fa-vimeo"></i></a></li>
-                            <li class="youtube"><a data-toggle="tooltip" data-placement="top" title="Youtube" href="#"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                        </div><!-- end social icons -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end topbar -->
-        </div><!-- end topbar -->
+<div id="toTop">{{__('Back to top')}}</div>

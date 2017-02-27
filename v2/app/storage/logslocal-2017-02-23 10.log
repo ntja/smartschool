@@ -1,0 +1,100 @@
+[2017-02-23 10:06:37] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'passwo',
+)}.  
+[2017-02-23 10:07:22] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'passwo',
+)}.  
+[2017-02-23 10:09:17] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'pass',
+)}.  
+[2017-02-23 10:09:21] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'pass',
+)}.  
+[2017-02-23 10:09:28] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-23 10:09:28","last_login":"2017-02-23 10:09:28","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-23 10:11:01] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'pass',
+)}.  
+[2017-02-23 10:11:09] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-02-23 10:11:09","last_login":"2017-02-23 10:11:09","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-02-23 10:12:33] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'pass',
+)}.  
+[2017-02-23 10:48:16] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:49:03] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:50:01] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:50:04] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:50:08] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:50:30] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:55:43] local.ERROR: Invalid attempt to create a new account with an email taken {jephte@sw.ai}. Returned code: 400. Request inputs  #array (
+  'email' => 'jephte@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+).  
+[2017-02-23 10:56:05] local.INFO: The new account #67 has just been created. Request inputs:  #{array (
+  'email' => 'jephte1@sw.ai',
+  'first_name' => 'Jephte Armand',
+  'last_name' => 'Ndongmou',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-02-23 10:55:49',
+  'verify_token' => 'Fe4WcUzN6iqWhjKbFgga3rxk5mAUcnwnRn1M8cAuNnewixjejD',
+)}.  
