@@ -173,28 +173,3 @@ function get_course_details(id){
 	});
 	return  result;
 }
-
-//get instructor's courses
-function get_instructor_courses(id,token, uri){		
-	var result = null;
-	$.ajax({
-		url: uri,
-		method: "GET",
-		headers: {
-			"x-client-id": "0000",
-			"Content-Type": "application/json",
-			"cache-control": "no-cache",
-			"x-access-token" : token
-		},
-		crossDomain:true,
-		async:false
-	})
-	.done(function (data, textStatus, jqXHR) {
-		console.log(data);
-		result = data;
-	})
-	.fail(function (jqXHR, textStatus, errorThrown) {
-		console.log('request failed !');
-	});
-	return  result;
-}

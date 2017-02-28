@@ -14,6 +14,11 @@
 	"What are you looking for ?": "Que recherchez-vous ?",
 	"Filter by" : "filtrer par",
 	"Books" : "Livres",
+	"Recent Discussions" : "Discussions Récentes",
+	"List of My Courses" : "Ma Liste de Cours",
+	"My Students" : "Mes Elèves",
+	"My Invitations" : "Mes Invitations",
+	"MCQs & Assignments" : "QCMs & Exercices",
 	"Courses" : "Cours",
 	"Expert teachers" : "Enseignants chevrognés",
 	"Thousands of E-Books" : "Milliers de livres",
@@ -59,5 +64,14 @@
 	"Online Discussion with Instructors" : "Suivi en Ligne par des Enseignants",
 	"Video streaming with Instructors" : "Streaming Vidéo avec des enseignants",
 	"Preparation for National Exams" : "Préparation aux Examens Nationaux",
-	"Preparation for entrance examination in Prestigious Schools" : "Préparation aux Concours D'entrée Dans les Grandes Ecoles"
+	"Preparation for entrance examination in Prestigious Schools" : "Préparation aux Concours D'entrée Dans les Grandes Ecoles",
+	"List of Courses" : "Liste des Cours",
+	"Published" : "Publié(s)",
+	"Unpublished" : "Non-publié(s)",
+	"Course Name" : "Titre du Cours",
+	"Short Name" : "Nom Réduit",
+	"Status" : "Status",
+	"Filter" : "Filtre",
+	"Category" : "Categorie",
+	"Create New Course" : "Créer un Nouveau Cours"
 }

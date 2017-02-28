@@ -26,7 +26,7 @@
 				<div class="col-md-4 col-sm-6 text-center">
 					<a href="<?php echo URL::to('/instructor/courses'); ?>"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_1_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
-					<h3>{{__('My Courses')}}</h3></a>		
+					<h3>{{__('List of My Courses')}}</h3></a>		
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6 text-center">
@@ -56,7 +56,7 @@
 				<div class="col-md-4 col-sm-6 text-center">
 					<a href="#"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_5_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
-					<h3>{{__('Quizzes & Assignments')}}</h3></a>		
+					<h3>{{__('MCQs & Assignments')}}</h3></a>		
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6 text-center">
