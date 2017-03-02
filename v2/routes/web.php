@@ -44,6 +44,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/instructor/dashboard', function () {
 		return view('instructor.dashboard');
 	});
+	Route::get('/instructor/profile', function () {
+		return view('instructor.profile');
+	});
 	Route::get('/instructor/courses', function () {
 		return view('instructor.courses');
 	});

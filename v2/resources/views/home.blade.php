@@ -4,6 +4,11 @@
     SmartSchool | {{__('Courses, Education')}}
 @stop
 
+@section('header-styles')
+   <!-- CUSTOM STYLES -->
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+@stop
+
 @section('content')
 
 @include('partials/header')

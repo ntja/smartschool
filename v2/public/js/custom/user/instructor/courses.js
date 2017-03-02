@@ -31,7 +31,8 @@
 		if(user_detail){
 			$('#user_name').empty().html(user_detail.first_name);
 		}
-		
+		// get course categories
+		get_course_categories(user_token);
 		//get course of a given instructor
 		get_instructor_courses(user_id, user_token, uri);
 		//console.info(user_courses.data);
@@ -133,6 +134,36 @@
 			}else{
 				html = '<h3> No Course Found </h3>';
 				$('.no-course').append(html);
+			}
+		})
+		.fail(function (jqXHR, textStatus, errorThrown) {
+			console.log('request failed !');
+		});
+		//return  result;
+	}
+	
+	function get_course_categories(user_token){
+		$.ajax({
+			url: config.api_url + "/categories?type=course",
+			method: "GET",
+			headers: {
+				"x-client-id": "0000",
+				"Content-Type": "application/json",
+				"cache-control": "no-cache",
+				"x-access-token" : user_token
+			},
+			crossDomain:false,
+			async:true
+		})
+		.done(function (data, textStatus, jqXHR) {
+			console.log(data);
+			if(data.total>0){
+				$('#category_list').empty();				
+				html = '<option value=""></option>';
+				for(i=0;i < data.data.length;i++){
+					html +='<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>';
+				}
+				$('#category_list').append(html);
 			}
 		})
 		.fail(function (jqXHR, textStatus, errorThrown) {

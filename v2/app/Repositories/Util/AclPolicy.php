@@ -33,6 +33,7 @@ class AclPolicy {
     const RESOURCE_BOOK = "App\Repositories\Custom\Resource\Book";
     const RESOURCE_BOOK_SEARCH = "App\Repositories\Custom\Resource\Books\Search";
     const RESOURCE_BOOK_CATEGORY = "App\Repositories\Custom\Resource\Books\Category";
+	const RESOURCE_CATEGORY = "App\Repositories\Custom\Resource\Category";
 	
 	/*
      * Create a new policy instance.
@@ -284,6 +285,13 @@ class AclPolicy {
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_BOOK_CATEGORY)) {
                 $role = ["ADMINISTRATOR","INSTRUCTOR","LEARNER"];
                 if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_CATEGORY)) {
+                $role = ["ADMINISTRATOR", "INSTRUCTOR", "LEARNER","PARENT","GUEST"];
+                if (in_array($user->getRole(), $role)) {
                     return true;
                 } else {
                     return false;

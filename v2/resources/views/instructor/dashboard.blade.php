@@ -3,7 +3,10 @@
 @section('header-title')
     SmartSchool | {{__('Instructor Dashboard')}}
 @stop
-
+@section('header-styles')
+   <!-- CUSTOM STYLES -->
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+@stop
 @section('header-scripts')
 	<!--
 	<script src="{{asset('js/plugins/scriptaculous-js-1.9.0/lib/prototype.js')}}"></script>

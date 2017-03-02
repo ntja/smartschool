@@ -27,7 +27,7 @@ class BookCategory extends Authenticatable{
      * @var array
      */
     protected $hidden = [
-        
+         'delete_status'
     ];
 
     public function __construct() {           
@@ -68,7 +68,7 @@ class BookCategory extends Authenticatable{
         }
     }
 
-    public function getCategories($params) {
+    public function getList($params) {
         try {
             if (!is_array($params)){
                 throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
@@ -77,8 +77,8 @@ class BookCategory extends Authenticatable{
             if (!array_key_exists("limit", $params)){
                 throw new Exception("Expected key (limit) in parameter array.");
             }
-                       
-            $result = null;        
+            $rows = null;  
+			
             $limit = intval($params['limit']);                
 
             $rows = DB::table('book_categories')->where('delete_status', '=', '0')->orderBy('id','DESC')->paginate($limit);
@@ -86,9 +86,7 @@ class BookCategory extends Authenticatable{
             if (!count($rows)) {
                 return false;
             }
-            $result = $rows;
-
-            return $result;
+            return $rows;
         } catch (Exception $ex) {
 
             LogRepository::printLog('error', $ex->getMessage());

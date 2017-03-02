@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Exception;
 use App\Repositories\Util\LogRepository;
+use DB;
 
 class CourseCategory extends Authenticatable{
     /**
@@ -26,7 +27,7 @@ class CourseCategory extends Authenticatable{
      * @var array
      */
     protected $hidden = [
-        
+        'delete_status'
     ];
 
     public function __construct() {           
@@ -77,9 +78,7 @@ class CourseCategory extends Authenticatable{
                 }
                 $this->date_created = $params['date_created'];
             }            
-						
-			//var_dump($params);
-			//die();
+			//var_dump($params);die();
             return $this->save();
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -90,47 +89,17 @@ class CourseCategory extends Authenticatable{
         try {
             if (!is_array($params)){
                 throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
-            }
-
-            if (!array_key_exists("before", $params)){
-                throw new Exception("Expected key (before) in parameter array.");
-            }
-            if (!array_key_exists("after", $params)){
-                throw new Exceptionn("Expected key (after) in parameter array.");
-            }
+            }           
             if (!array_key_exists("limit", $params)){
                 throw new Exception("Expected key (limit) in parameter array.");
             }
-                       
-            $result = null;
-            $after = $params['after'];
-            $before = $params['before'];        
+			$rows = null;
             $limit = intval($params['limit']);
-            $select = DB::table('course_categories')
-                    ->skip(0)
-                     ->where('delete_status', '=', 0)
-                    ->take($limit);            
-            if ($after) {
-                $select = $select
-                        ->where('id', '<', base64_decode($after))
-                        ->orderBy('id', 'desc');
-            }
-            if ($before) {
-                $select = $select
-                        ->where('id', '>', base64_decode($before))
-                        ->orderBy('id', 'asc');
-            }
-            if ((!$before) && (!$after)) {
-                $select = $select
-                        ->orderBy('id', 'desc');
-            }
-            $rows = $select->get();
+			$rows = DB::table('course_categories')->where('delete_status', '=', '0')->orderBy('id','DESC')->paginate($limit);           
             if (!count($rows)) {
                 return false;
             }
-            $result = $rows;
-
-            return $result;
+            return $rows;
         } catch (Exception $ex) {
 
             LogRepository::printLog('error', $ex->getMessage());

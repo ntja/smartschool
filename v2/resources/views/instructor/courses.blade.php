@@ -3,12 +3,9 @@
 @section('header-title')
     SmartSchool | {{__('List of Courses')}}
 @stop
-
-@section('header-scripts')
-	<!--
-	<script src="{{asset('js/plugins/scriptaculous-js-1.9.0/lib/prototype.js')}}"></script>
-	<script src="{{asset('js/plugins/scriptaculous-js-1.9.0/src/scriptaculous.js')}}"></script>
-	-->
+@section('header-styles')
+   <!-- CUSTOM STYLES -->
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 @stop
 @section('content')
 	@include('partials/header-connected-user')
@@ -37,7 +34,7 @@
 				<!--  Modal -->     
 				 
 				  <!-- Button trigger modal -->
-					<button class="button_medium" data-toggle="modal" data-target="#myModal"><span class="icon-plus"></span>
+					<button class="button_medium btn-round" data-toggle="modal" data-target="#myModal"><span class="icon-plus"></span>
 					  {{__('Create New Course')}}
 					</button>
 				</div>
@@ -65,12 +62,12 @@
 						</table>
 					 </div>
                     </div><!-- End filterable -->  
-			<div class="row">
-				<div class="col-md-12 text-right">
-					<ul class="pagination">					  
-					</ul>
-				</div>
-			</div>					
+					<div class="row">
+						<div class="col-md-12 text-right">
+							<ul class="pagination">					  
+							</ul>
+						</div>
+					</div>					
         </div><!-- End col-lg-9-->  
 		<div class="row">
 			<div class="col-md-12">				
@@ -78,62 +75,100 @@
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				  <div class="modal-dialog modal-lg">
 					<div class="modal-content">
-					  <div class="modal-header">
+					  <div class="modal-header bg-info">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel"><span class="icon-plus"> Add a Course</span></h4>
+						<h4 class="modal-title" id="myModalLabel"><span class="icon-plus"> Add Course form</span></h4>
 					  </div>
-					  <div class="modal-body">
-						   <form role="form" class="form-horizontal" id="new-course"  action="javascript:void" method="post">                            
-                            <div class="row">         
-                                <div class="col-md-6">  
-                                    <div class="form-group">
-                                        <div class="col-md-10">
-                                            <label class="control-label">Course Name</label>
-                                            <input class="form-control" type="text" name="name" id="name" placeholder="Course Title" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-10">                                    
-                                            <label class="control-label">Short Name</label>
-                                            <input class="form-control" type="text" name="shortname" id="shortname" placeholder="Course short name" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">  
-                                    <div class="form-group">
-                                        <div class="col-md-10 styled-select">
-                                            <label class="control-label">Course Category</label>
-                                            <select class="form-control select" data-live-search="true" name="category">
-                                                <option value="1">Computer Science</option>
-                                                <option value="2">Mathematics</option>
-                                                <option value="3">Physics</option>
-                                                <option value="4">Chemistry</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-10">
-                                            <label class="control-label">Course Language</label>
-                                            <select class="form-control select" data-live-search="true" name="language">
-                                                <option value="fr">French</option>
-                                                <option value="en">English</option>                                        
-                                            </select>
-                                        </div>
-                                    </div>                               
-                                </div>
-                            </div>                      
-                            <div class="row">         
-                                <div class="col-md-12">        
-                                    <div class="form-group">
-                                        <div class="col-md-11"> 
-                                            <label class="control-label">Course Description <small>(What student will learn through this course)</small></label>     
-                                             <textarea name="course_description" id="course_description" rows="10" cols="80">                
-                                            </textarea>                            
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                        </form>  
+					  <div class="modal-body">							 
+							<form name="example-1" id="wrapped" action="apply_send.php" method="POST" autocomplete="off">
+								<div class="step">
+									<div class="row">
+										<h3 class="col-md-10">Enter the Information of Course</h3>
+										<p class="col-md-12">Please FIll out the Form below to create your course</p>
+										<div class="col-md-6">
+											<ul class="data-list">
+												<li>
+													<label class="control-label">Course Title</label>
+													<div class="form-group">
+														<input type="text" name="course_title" class="required form-control" placeholder="Course Title">
+														
+													</div>													
+												</li>
+												<li>
+													<label class="control-label">Short Name</label>
+													<div class="form-group">
+														<input type="text" name="short_name" class="required form-control" placeholder="Short Name">
+														
+													</div></li>
+												<li>
+													<label class="control-label">Course Format</label>
+													<div class="styled-select">
+														<select class="form-control required" name="format">
+															<option value=""></option>
+															<option value="1">SECTIONS</option>
+															<option value="2">CHAPTERS</option>
+															<option value="3">MODULES</option>
+															<option value="4">PARTS</option>
+														</select>
+														
+													</div>
+												</li>
+											</ul>
+										</div><!-- end col-md-6 -->
+										<div class="col-md-6">                        
+											<ul class="data-list" style="margin:0; padding:0;">
+												<li>
+													<label class="control-label">Target Audience</label>
+													<div class="styled-select">
+														<select class="form-control required" name="target_audience">
+															<option value=""></option>
+															<option value="3">College</option>
+															<option value="4">High School</option>
+														</select>
+														
+													</div>
+												</li>
+												<li>
+													<label class="control-label">Course Category</label>
+													<div class="styled-select">
+														<select class="form-control required" name="category" id="category_list">
+															<option value=""></option>
+															<option value="1">Computer Science</option>
+															<option value="2">Mathematics</option>
+															<option value="3">Physics</option>
+															<option value="4">Chemistry</option>
+														</select>
+														
+													</div>
+												</li>
+												<li>
+													<label class="control-label">Course Language</label>
+													<div class="styled-select">
+														<select class="form-control required" name="language">
+															<option value=""></option>
+															<option value="1">English</option>
+															<option value="4">French</option>
+														</select>
+														
+													</div>
+												</li>
+											</ul>									
+										</div><!-- end col-md-6 -->
+									</div><!-- end row -->
+									<div class="row">         
+										<div class="col-md-12">        
+											<div class="form-group">
+												<div class="col-md-12"> 
+													<label class="control-label">Course Description <small>(What student will learn through this course)</small></label>     
+													 <textarea name="course_description" id="course_description" rows="30" cols="100">                
+													</textarea>                            
+												</div>
+											</div>                                    
+										</div>
+									</div>
+										
+								</div><!-- end step-->            			
+						</form>
 					</div>
 					  <div class="modal-footer">
 						<button type="button" class=" button_medium_outline" data-dismiss="modal"><span class="icon-cross"></span> Close</button>

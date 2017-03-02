@@ -20,7 +20,7 @@
 						<li><a href="#"><i class=" icon-download"></i> {{__('E-books Library')}}</a></li>
 						<li><a href="#"><i class=" icon-download"></i> {{__('My Matches')}}</a></li>
 						<li><a href="#"><i class=" icon-download"></i> {{__('Questions & Answers')}}</a></li>
-						<li><a href="#"><i class="icon-cog"></i> {{__('Settings')}}</a></li>
+						<li><a href="<?php echo URL::to('/instructor/profile'); ?>"><i class="icon-cog"></i> {{__('Profile')}}</a></li>
 						<li class="divider"></li>
 						<li class="logout"><a href="#"><i class="icon-off"></i> {{__('Logout')}}</a></li>
 					</ul>

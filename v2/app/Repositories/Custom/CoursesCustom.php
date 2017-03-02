@@ -598,7 +598,10 @@ class CoursesCustom {
                     ];
                     return $result;
 				}
-            }            
+            }else{
+                http_response_code(400);
+                die(); 
+            }           
         }catch(Exception $ex){
             LogRepository::printLog('error', $ex->getMessage());
         }
