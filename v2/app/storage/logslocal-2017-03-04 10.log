@@ -1,0 +1,15 @@
+[2017-03-04 10:53:13] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwrd',
+)}.  
+[2017-03-04 10:53:24] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-04 10:53:24","last_login":"2017-03-04 10:53:24","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-04 10:53:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 10:53:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 10:53:44] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 10:53:44] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 

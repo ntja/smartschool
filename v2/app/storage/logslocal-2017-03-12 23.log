@@ -1,0 +1,274 @@
+[2017-03-12 23:01:48] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:01:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:01:56] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:03:22] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:10:23] local.INFO: Information of course #{20} has just been updated. Request inputs: array (
+  'name' => 'Introduction to Discrete Mathematics',
+  'shortname' => 'discretemath101',
+  'courseformat' => 'MODULES',
+  'targetaudience' => '0',
+  'category' => '2',
+  'language' => 'fr',
+  'shortdescription' => '<p>&nbsp;</p>
+
+<p><span style="font-family: Times-Roman; color: rgb(35, 31, 32);"><span style="font-size: 18px;">Discrete mathematics describes processes that consist of a sequence of individual steps.<br />
+This contrasts with calculus, which describes processes that change in a continuous fashion. Whereas the ideas of calculus were fundamental to the science and technology of the<br />
+industrial revolution, the ideas of discrete mathematics underlie the science and technology of the computer age. The main themes of a first course in discrete mathematics are<br />
+logic and proof, induction and recursion, discrete structures, combinatorics and discrete<br />
+probability, algorithms and their analysis, and applications and modeling.</span></span></p>
+
+<p>&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:10:23] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Repositories\Custom\Courses\CourseCustom::prepareReponseAfterPut() in C:\laragon\www\smartschool\v2\app\Repositories\Custom\Courses\CourseCustom.php:425
+Stack trace:
+#0 C:\laragon\www\smartschool\v2\app\Http\Controllers\Courses\CourseController.php(90): App\Repositories\Custom\Courses\CourseCustom->updateCourse(Array, '20')
+#1 [internal function]: App\Http\Controllers\Courses\CourseController->put(Object(Illuminate\Http\Request), '20')
+#2 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#3 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('put', Array)
+#4 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Courses\CourseController), 'put')
+#5 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#6 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Router.php(559): Illuminate\Routing\Route->run()
+#7 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 C:\laragon\www\smartschool\v2\app\Http\Middleware\GetUserFromToken.php(73): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\GetUserFromToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 C:\laragon\www\smartschool\v2\app\Http\Middleware\GetUserFromToken.php(73): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\GetUserFromToken->handle(Object(Illuminate\Http\Request), Object(Closure), '1')
+#13 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#19 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Router.php(561): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Router.php(520): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#23 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Router.php(498): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#24 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(174): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#25 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#26 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(149): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 C:\laragon\www\smartschool\v2\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#32 C:\laragon\www\smartschool\v2\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#33 {main}  
+[2017-03-12 23:11:07] local.INFO: Information of course #{20} has just been updated. Request inputs: array (
+  'name' => 'Introduction to Discrete Mathematics',
+  'shortname' => 'discretemath101',
+  'courseformat' => 'MODULES',
+  'targetaudience' => '0',
+  'category' => '2',
+  'language' => 'fr',
+  'shortdescription' => '<p>&nbsp;</p>
+
+<p><span style="font-family: Times-Roman; color: rgb(35, 31, 32);"><span style="font-size: 18px;">Discrete mathematics describes processes that consist of a sequence of individual steps.<br />
+This contrasts with calculus, which describes processes that change in a continuous fashion. Whereas the ideas of calculus were fundamental to the science and technology of the<br />
+industrial revolution, the ideas of discrete mathematics underlie the science and technology of the computer age. The main themes of a first course in discrete mathematics are<br />
+logic and proof, induction and recursion, discrete structures, combinatorics and discrete<br />
+probability, algorithms and their analysis, and applications and modeling.</span></span></p>
+
+<p>&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:11:08] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:13:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:13:56] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:13:56] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:14:37] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:15:09] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:15:10] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:15:10] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:15:56] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:15:57] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:16:20] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:16:21] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:16:21] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:17:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:17:52] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:20:07] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:21:05] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:21:05] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:23:42] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:23:44] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:26:54] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:26:55] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:27:38] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:30:40] local.INFO: Information of course #{20} has just been updated. Request inputs: array (
+  'name' => 'Introduction to Discrete Mathematics',
+  'shortname' => 'discretemath101',
+  'courseformat' => 'MODULES',
+  'targetaudience' => '1',
+  'category' => '2',
+  'language' => 'fr',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-family:Courier New,Courier,monospace;"><span style="color: rgb(35, 31, 32);"><span style="font-size: 18px;">Discrete mathematics describes processes that consist of a sequence of individual steps. This contrasts with calculus, which describes processes that change in a continuous fashion. Whereas the ideas of calculus were fundamental to the science and technology of the industrial revolution, the ideas of discrete mathematics underlie the science and technology of the computer age. The main themes of a first course in discrete mathematics are logic and proof, induction and recursion, discrete structures, combinatorics and discrete probability, algorithms and their analysis, and applications and modeling.</span></span></span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:30:41] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:33:04] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:33:05] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:33:05] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:33:20] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 23:33:42] local.INFO: Information of course #{20} has just been updated. Request inputs: array (
+  'name' => 'Introduction to Discrete Mathematics',
+  'shortname' => 'discretemath101',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '1',
+  'category' => '2',
+  'language' => 'fr',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-family:Courier New,Courier,monospace;"><span style="color: rgb(35, 31, 32);"><span style="font-size: 18px;">Discrete mathematics describes processes that consist of a sequence of individual steps. This contrasts with calculus, which describes processes that change in a continuous fashion. Whereas the ideas of calculus were fundamental to the science and technology of the industrial revolution, the ideas of discrete mathematics underlie the science and technology of the computer age. The main themes of a first course in discrete mathematics are logic and proof, induction and recursion, discrete structures, combinatorics and discrete probability, algorithms and their analysis, and applications and modeling.</span></span></span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:34:36] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:34:37] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:34:37] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:34:53] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:35:25] local.INFO: Information of course #{22} has just been updated. Request inputs: array (
+  'name' => 'Python Data Science',
+  'shortname' => 'pythondata',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '2',
+  'category' => '1',
+  'language' => 'en',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. Data science has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. Data science is a field that is at the intersection of many fields, including data mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:35:36] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:36:49] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:36:50] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:36:51] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:37:02] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:38:09] local.INFO: Information of course #{22} has just been updated. Request inputs: array (
+  'name' => 'Python Data Science',
+  'shortname' => 'pythondata',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '2',
+  'category' => '1',
+  'language' => 'en',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. <strong>Data science</strong> has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. <strong>Data science</strong> is a field that is at the intersection of many fields, including data mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:39:09] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:48:33] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:48:34] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:48:34] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:48:50] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:49:17] local.INFO: Information of course #{22} has just been updated. Request inputs: array (
+  'name' => 'Python Data Science',
+  'shortname' => 'pythondata',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '2',
+  'category' => '1',
+  'language' => 'fr',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. <strong>Data science</strong> has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. <strong>Data science</strong> is a field that is at the intersection of many fields, including data mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:49:44] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:54:33] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 23:54:34] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 23:54:34] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 23:54:41] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-12 23:55:01] local.INFO: Information of course #{22} has just been updated. Request inputs: array (
+  'name' => 'Python Data Science',
+  'shortname' => 'pythondata',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '2',
+  'category' => '1',
+  'language' => 'fr',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. <strong>Data science</strong> has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. <strong>Data science</strong> is a field that is at the intersection of many fields, including data mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-12 23:55:32] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 

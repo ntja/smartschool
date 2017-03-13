@@ -1,0 +1,15 @@
+[2017-03-01 10:01:36] local.INFO: The new account #84 has just been created. Request inputs:  #{array (
+  'email' => 'doho@domain.com',
+  'first_name' => 'Severin',
+  'last_name' => 'Doho',
+  'honorific' => 'Mr',
+  'role' => 'LEARNER',
+  'phone' => NULL,
+  'photo' => NULL,
+  'date_created' => '2017-03-01 10:01:28',
+  'verify_token' => 'amlZcMvnSxWpkaSYnt456g7RCfq1BWQ5KwuXDLSYAxoxkWWzZy',
+)}.  
+[2017-03-01 10:03:46] local.INFO: Successful activation of account #{{"id":84,"first_name":"Severin","last_name":"Doho","role":"LEARNER","email":"doho@domain.com","verified_status":"VERIFIED","date_created":"2017-03-01 10:01:28","date_updated":"2017-03-01 10:03:45","last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}}.  
+[2017-03-01 10:04:04] local.INFO: Successful authentication of account {"id":84,"first_name":"Severin","last_name":"Doho","role":"LEARNER","email":"doho@domain.com","verified_status":"VERIFIED","date_created":"2017-03-01 10:01:28","date_updated":"2017-03-01 10:04:04","last_login":"2017-03-01 10:04:04","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":84} 
+[2017-03-01 10:04:07] local.INFO: Account #84 information have just been fetched by account #{84}. {"user_id":84} 
+[2017-03-01 10:08:14] local.INFO: Account #84 information have just been fetched by account #{84}. {"user_id":84} 

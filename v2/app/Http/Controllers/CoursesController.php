@@ -50,7 +50,7 @@ class CoursesController extends Controller {
             $photo = array_key_exists("photo", $data) ? $data["photo"] : null;
             $smallicon   = array_key_exists("smallicon", $data) ? $data["smallicon"] : null;
             $smalliconhover   = array_key_exists("smalliconhover", $data) ? $data["smalliconhover"] : null;
-            $istranslate   = array_key_exists("istranslate", $data) ? $data["istranslate"] : 0;
+            $istranslate   = array_key_exists("istranslate", $data) ? $data["istranslate"] : '0';
             $directorypath   = array_key_exists("directorypath", $data) ? $data["directorypath"] : null;
             $aboutthecourse   = array_key_exists("aboutthecourse", $data) ? $data["aboutthecourse"] : null;
             $targetaudience   = array_key_exists("targetaudience", $data) ? $data["targetaudience"] : '0';

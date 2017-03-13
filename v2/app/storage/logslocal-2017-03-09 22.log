@@ -1,0 +1,74 @@
+[2017-03-09 22:24:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:24:04] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:26:51] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:26:52] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:26:52] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:27:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:27:25] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:27:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:27:47] local.INFO: The information of course #24 has been retrieve. {"user_id":1} 
+[2017-03-09 22:31:07] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:31:08] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:31:08] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:31:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:31:56] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:32:05] local.INFO: The information of course #24 has been retrieve. {"user_id":1} 
+[2017-03-09 22:33:38] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:33:39] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:33:39] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:36:40] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:36:41] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:36:41] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:36:54] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
+[2017-03-09 22:44:51] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:44:52] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:45:03] local.INFO: The information of course #23 has been retrieve. {"user_id":1} 
+[2017-03-09 22:55:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 22:55:51] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 22:55:51] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-09 22:56:01] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 

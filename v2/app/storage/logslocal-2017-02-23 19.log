@@ -1,0 +1,18 @@
+[2017-02-23 19:59:47] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY jephte@sw.ai limit 1)  
+[2017-02-23 19:59:47] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'jephte@sw.ai',
+)}  
+[2017-02-23 19:59:47] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'jephte@sw.ai',
+)}  
+[2017-02-23 19:59:58] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY jephte@sw.ai limit 1)  
+[2017-02-23 19:59:58] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  
+[2017-02-23 19:59:58] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  

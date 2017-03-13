@@ -1,0 +1,17 @@
+[2017-03-08 11:06:19] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-03-08 11:06:19","last_login":"2017-03-08 11:06:19","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-08 11:06:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-08 11:06:28] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-08 11:06:29] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-08 11:06:30] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-08 11:06:36] local.INFO: The information of course #26 has been retrieve. {"user_id":1} 
+[2017-03-08 11:10:41] local.INFO: The information of course #24 has been retrieve. {"user_id":1} 
+[2017-03-08 11:11:00] local.INFO: The information of course #6 has been retrieve. {"user_id":1} 
+[2017-03-08 11:11:10] local.INFO: The information of course #12 has been retrieve. {"user_id":1} 
+[2017-03-08 11:11:20] local.INFO: The information of course #23 has been retrieve. {"user_id":1} 
+[2017-03-08 11:11:53] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 

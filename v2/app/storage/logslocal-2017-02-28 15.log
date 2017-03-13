@@ -1,0 +1,20 @@
+[2017-02-28 15:31:48] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 15:31:52] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 15:40:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 15:40:35] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 15:44:11] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 15:44:14] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 15:52:58] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 15:52:59] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 

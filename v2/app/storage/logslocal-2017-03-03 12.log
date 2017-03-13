@@ -1,0 +1,5 @@
+[2017-03-03 12:21:16] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-03 12:21:20] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 

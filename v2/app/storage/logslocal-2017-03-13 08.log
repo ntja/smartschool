@@ -1,0 +1,80 @@
+[2017-03-13 08:51:34] local.INFO: The information of course #objdetect has been retrieve.  
+[2017-03-13 08:52:06] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'joedoe@domain.com',
+  'password' => 'PASSWORD',
+)}.  
+[2017-03-13 08:52:18] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-03-13 08:52:17","last_login":"2017-03-13 08:52:17","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-13 08:52:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 08:52:30] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 08:52:32] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 08:52:32] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 08:52:40] local.INFO: The information of course #26 has been retrieve. {"user_id":1} 
+[2017-03-13 08:53:30] local.INFO: Information of course #{26} has just been updated. Request inputs: array (
+  'name' => 'Mastering MongoDB',
+  'shortname' => 'mongodb',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '2',
+  'category' => '1',
+  'language' => 'en',
+  'shortdescription' => '<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Georgia,serif;">Imagine a world where using a database is so simple that you soon forget you&rsquo;re even using it. Imagine a world where speed and scalability just work, and there&rsquo;s no need for complicated configuration or setup. Imagine being able to focus only on the task at hand, get things done, and then&mdash;just for a change&mdash;leave work on time. </span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Georgia,serif;">That might sounda bit fanciful, but MongoDB promises to help you accomplish all these things (and more). MongoDB (derived from the word humongous) is a relatively new breed of database that has no concept of tables, schemas, SQL, or rows. It doesn&rsquo;t have transactions, ACID compliance, joins, foreign keys, or many of the other features that tend to cause headaches in the early hours of the morning. In short, MongoDB is a very different database than you&rsquo;re probably used to, especially if you&rsquo;ve used a relational database management system (RDBMS) in the past. In fact, you might even be shaking your head in wonder at the lack of so-called &ldquo;standard&rdquo; features.</span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Georgia,serif;">Fear not! In this course, you will learn about MongoDB&rsquo;s background and guiding principles, and why the MongoDB team made the design decisions that it did. We&rsquo;ll also take a whistle-stop tour of MongoDB&rsquo;s feature list, providing just enough detail to ensure that you&rsquo;ll be completely hooked on this topic for the rest of the course.</span></span></h3>
+
+<h3 style="text-align: justify;"><br />
+<span style="font-size:18px;"><span style="font-family: Georgia,serif;">We&rsquo;ll start by looking at the philosophy and ideas behind the creation of MongoDB, as well as some of the interesting and somewhat controversial design decisions. We&rsquo;ll explore the concept of document-oriented databases, how they fit together, and what their strengths and weaknesses are. We&rsquo;ll also explore JSON and examine how it applies to MongoDB. To wrap things up, we&rsquo;ll step through some of the notable features of MongoDB.</span></span></h3>
+',
+) {"user_id":1} 
+[2017-03-13 08:53:52] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-13 08:53:58] local.INFO: The information of course #mongodb has been retrieve.  
+[2017-03-13 08:56:20] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-03-13 08:56:20","last_login":"2017-03-13 08:56:20","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-13 08:56:25] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 08:56:40] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 08:56:41] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 08:56:41] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 08:57:00] local.INFO: The information of course #26 has been retrieve. {"user_id":1} 
+[2017-03-13 08:57:13] local.INFO: Information of course #{26} has just been updated. Request inputs: array (
+  'name' => 'Mastering MongoDB',
+  'shortname' => 'mongodb',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '2',
+  'category' => '1',
+  'language' => 'en',
+  'shortdescription' => '<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Georgia,serif;">Imagine a world where using a database is so simple that you soon forget you&rsquo;re even using it. Imagine a world where speed and scalability just work, and there&rsquo;s no need for complicated configuration or setup. Imagine being able to focus only on the task at hand, get things done, and then&mdash;just for a change&mdash;leave work on time. </span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Georgia,serif;">That might sound a bit fanciful, but MongoDB promises to help you accomplish all these things (and more). MongoDB (derived from the word humongous) is a relatively new breed of database that has no concept of tables, schemas, SQL, or rows. It doesn&rsquo;t have transactions, ACID compliance, joins, foreign keys, or many of the other features that tend to cause headaches in the early hours of the morning. In short, MongoDB is a very different database than you&rsquo;re probably used to, especially if you&rsquo;ve used a relational database management system (RDBMS) in the past. In fact, you might even be shaking your head in wonder at the lack of so-called &ldquo;standard&rdquo; features.</span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Georgia,serif;">Fear not! In this course, you will learn about MongoDB&rsquo;s background and guiding principles, and why the MongoDB team made the design decisions that it did. We&rsquo;ll also take a whistle-stop tour of MongoDB&rsquo;s feature list, providing just enough detail to ensure that you&rsquo;ll be completely hooked on this topic for the rest of the course.</span></span></h3>
+
+<h3 style="text-align: justify;"><br />
+<span style="font-size:18px;"><span style="font-family: Georgia,serif;">We&rsquo;ll start by looking at the philosophy and ideas behind the creation of MongoDB, as well as some of the interesting and somewhat controversial design decisions. We&rsquo;ll explore the concept of document-oriented databases, how they fit together, and what their strengths and weaknesses are. We&rsquo;ll also explore JSON and examine how it applies to MongoDB. To wrap things up, we&rsquo;ll step through some of the notable features of MongoDB.</span></span></h3>
+',
+) {"user_id":1} 
+[2017-03-13 08:57:34] local.INFO: The information of course #11 has been retrieve. {"user_id":1} 
+[2017-03-13 08:58:17] local.INFO: The information of course #11 has been retrieve. {"user_id":1} 
+[2017-03-13 08:58:42] local.INFO: Information of course #{11} has just been updated. Request inputs: array (
+  'name' => 'Introduction to algorithmic',
+  'shortname' => 'introalgo',
+  'courseformat' => 'CHAPTERS',
+  'targetaudience' => '0',
+  'category' => '3',
+  'language' => 'fr',
+  'shortdescription' => '<p>text</p>
+',
+) {"user_id":1} 

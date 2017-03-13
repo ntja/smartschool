@@ -1,0 +1,147 @@
+[2017-03-07 22:00:12] local.INFO: The information of course #cloudcomputing has been retrieve.  
+[2017-03-07 22:00:58] local.INFO: The information of course #cloudcomputing has been retrieve.  
+[2017-03-07 22:02:31] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-07 22:02:31","last_login":"2017-03-07 22:02:31","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-07 22:02:36] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:03:20] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:03:22] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:16:47] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-07 22:16:55] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-07 22:18:35] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-07 22:19:46] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-07 22:23:30] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-07 22:23:30","last_login":"2017-03-07 22:23:30","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-07 22:23:35] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:24:23] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:24:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:30:53] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:30:54] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:34:27] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:34:28] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:34:28] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:35:48] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:35:50] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:35:50] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:38:10] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:38:11] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:39:10] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:39:11] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:39:11] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:39:37] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:39:38] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:40:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:40:22] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:40:22] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:41:35] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:41:36] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:41:36] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:42:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:42:04] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:42:40] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:42:41] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:42:41] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:43:04] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:43:05] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:43:45] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:43:46] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:47:17] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:47:19] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:47:19] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:49:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:49:25] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:55:35] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:55:36] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-07 22:55:36] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-07 22:55:51] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 
+[2017-03-07 22:56:49] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 
+[2017-03-07 22:57:07] local.INFO: The information of course #24 has been retrieve. {"user_id":1} 
+[2017-03-07 22:59:45] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-07 22:59:46] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 

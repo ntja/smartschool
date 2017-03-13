@@ -1,0 +1,65 @@
+[2017-02-23 20:00:12] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY jephte@sw.ai limit 1)  
+[2017-02-23 20:00:12] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  
+[2017-02-23 20:00:12] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  
+[2017-02-23 20:01:21] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY jephte@sw.ai limit 1)  
+[2017-02-23 20:05:55] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY albert@dmain.com limit 1)  
+[2017-02-23 20:05:55] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@dmain.com',
+  'password' => 'passord',
+)}  
+[2017-02-23 20:05:55] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@dmain.com',
+  'password' => 'passord',
+)}  
+[2017-02-23 20:06:04] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY albert@dmain.com limit 1)  
+[2017-02-23 20:06:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@dmain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:06:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@dmain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:06:15] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY albert@domain.com limit 1)  
+[2017-02-23 20:06:15] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:06:15] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:07:10] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY albert@domain.com limit 1)  
+[2017-02-23 20:07:10] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:07:10] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:07:41] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY albert@domain.com limit 1)  
+[2017-02-23 20:07:41] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:07:41] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'albert@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:08:04] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `accounts` where `email` LIKE BINARY jack@domain.com limit 1)  
+[2017-02-23 20:08:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:08:04] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-23 20:09:11] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-02-23 20:09:11","last_login":"2017-02-23 20:09:11","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 

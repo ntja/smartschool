@@ -1,0 +1,210 @@
+[2017-03-13 10:00:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:00:48] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:00:48] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:01:09] local.INFO: The information of course #19 has been retrieve. {"user_id":1} 
+[2017-03-13 10:02:13] local.INFO: Information of course #{19} has just been updated. Request inputs: array (
+  'name' => 'OPTIMIZATION IN PRACTICE WITH MATLAB',
+  'shortname' => 'optmatlab',
+  'courseformat' => 'MODULES',
+  'targetaudience' => '0',
+  'category' => '2',
+  'language' => 'en',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-family: LiberationSerif; font-size: 15pt; color: rgb(0, 0, 0);">Optimization can be viewed as a process that searches methodically for better answers,<br />
+<span style="font-size: 15pt;">better solutions, or better designs that a human being may not be able to find through<br />
+<span style="font-size: 15pt;">experience, intuition, or courageous trial-and-error. Optimization can be defined as the art <span style="font-size: 15pt;">of making things better. Interestingly, optimization very often does not simply allow us to <span style="font-size: 15pt;">do something better, but it may also make it possible to do something that we did not<br />
+<span style="font-size: 15pt;">otherwise know how to do. To take full advantage of the power of optimization in<br />
+<span style="font-size: 15pt;">practice, there is no choice but to use a computer.</span></span></span></span></span></span></span></p>
+
+<p style="text-align: justify;"><br />
+<span style="font-family: LiberationSerif; font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;">The study of optimization typically takes a theoretical and/or computational approach.<br />
+<span style="font-size: 15pt;">The theoretical approach is highly useful when the objective is to develop new<br />
+<span style="font-size: 15pt;">optimization methods or to assess how the current methods work [<span style="font-size: 15pt; color: rgb(0, 0, 238);">1<span style="font-size: 15pt; color: rgb(0, 0, 0);">]. Additionally, the<br />
+<span style="font-size: 15pt;">study of optimization often focuses on the understanding of various search algorithms for<br />
+<span style="font-size: 15pt;">optimization. A book by Reklaitis and co-authors [<span style="font-size: 15pt; color: rgb(0, 0, 238);">2<span style="font-size: 15pt; color: rgb(0, 0, 0);">] is an example of methods-based<br />
+<span style="font-size: 15pt;">optimization presentation. While these books play an important role in the general study<br />
+<span style="font-size: 15pt;">of optimization, we pursue a different approach. The objective of this book takes on a<br />
+<span style="font-size: 15pt;">practical perspective. </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p style="text-align: justify;"><span style="font-family: LiberationSerif; font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt; color: rgb(0, 0, 238);"><span style="font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt; color: rgb(0, 0, 238);"><span style="font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;">The current interest is in the immediate ability to apply optimization <span style="font-size: 15pt;">in practice. In order to reach this objective, and to have the ability to apply optimization to <span style="font-size: 15pt;">real world problems, we use the approach that is almost always required in the application <span style="font-size: 15pt;">of optimization. We use the power of the computer, in conjunction with the study of <span style="font-size: 15pt;">different important practical aspects of optimization.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p>&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-13 10:06:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:06:30] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:06:30] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:06:46] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:06:47] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:06:48] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:06:54] local.INFO: The information of course #19 has been retrieve. {"user_id":1} 
+[2017-03-13 10:07:49] local.INFO: Information of course #{19} has just been updated. Request inputs: array (
+  'name' => 'OPTIMIZATION IN PRACTICE WITH MATLAB',
+  'shortname' => 'optmatlab',
+  'courseformat' => 'MODULES',
+  'targetaudience' => '0',
+  'category' => '2',
+  'language' => 'en',
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-family:Courier New,Courier,monospace;"><span style="font-size: 15pt; color: rgb(0, 0, 0);">Optimization can be viewed as a process that searches methodically for better answers,<br />
+<span style="font-size: 15pt;">better solutions, or better designs that a human being may not be able to find through<br />
+<span style="font-size: 15pt;">experience, intuition, or courageous trial-and-error. Optimization can be defined as the art <span style="font-size: 15pt;">of making things better. Interestingly, optimization very often does not simply allow us to <span style="font-size: 15pt;">do something better, but it may also make it possible to do something that we did not<br />
+<span style="font-size: 15pt;">otherwise know how to do. To take full advantage of the power of optimization in<br />
+<span style="font-size: 15pt;">practice, there is no choice but to use a computer.</span></span></span></span></span></span></span></span></p>
+
+<p style="text-align: justify;"><br />
+<span style="font-family:Courier New,Courier,monospace;"><span style="font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;">The study of optimization typically takes a theoretical and/or computational approach.<br />
+<span style="font-size: 15pt;">The theoretical approach is highly useful when the objective is to develop new<br />
+<span style="font-size: 15pt;">optimization methods or to assess how the current methods work [<span style="font-size: 15pt; color: rgb(0, 0, 238);">1<span style="font-size: 15pt; color: rgb(0, 0, 0);">]. Additionally, the<br />
+<span style="font-size: 15pt;">study of optimization often focuses on the understanding of various search algorithms for<br />
+<span style="font-size: 15pt;">optimization. A book by Reklaitis and co-authors [<span style="font-size: 15pt; color: rgb(0, 0, 238);">2<span style="font-size: 15pt; color: rgb(0, 0, 0);">] is an example of methods-based<br />
+<span style="font-size: 15pt;">optimization presentation. While these books play an important role in the general study<br />
+<span style="font-size: 15pt;">of optimization, we pursue a different approach. The objective of this book takes on a<br />
+<span style="font-size: 15pt;">practical perspective. </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p style="text-align: justify;"><span style="font-family:Courier New,Courier,monospace;"><span style="font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt; color: rgb(0, 0, 238);"><span style="font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt; color: rgb(0, 0, 238);"><span style="font-size: 15pt; color: rgb(0, 0, 0);"><span style="font-size: 15pt;"><span style="font-size: 15pt;"><span style="font-size: 15pt;">The current interest is in the immediate ability to apply optimization <span style="font-size: 15pt;">in practice. In order to reach this objective, and to have the ability to apply optimization to <span style="font-size: 15pt;">real world problems, we use the approach that is almost always required in the application <span style="font-size: 15pt;">of optimization. We use the power of the computer, in conjunction with the study of <span style="font-size: 15pt;">different important practical aspects of optimization.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p>&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-13 10:07:54] local.INFO: The information of course #19 has been retrieve. {"user_id":1} 
+[2017-03-13 10:08:06] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:08:06] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:09:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:09:56] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:09:56] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:10:58] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:11:00] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:12:32] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:12:33] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:13:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:13:23] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:13:23] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:13:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:13:35] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:13:35] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:14:13] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:14:14] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:14:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:14:48] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:14:48] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:16:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:16:44] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:16:44] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 10:17:17] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:17:18] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:18:37] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:18:38] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:20:34] local.INFO: The information of course #12 has been retrieve. {"user_id":1} 
+[2017-03-13 10:21:23] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-13 10:22:12] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-03-13 10:22:12","last_login":"2017-03-13 10:22:12","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-13 10:22:15] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:22:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 10:22:22] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 10:22:27] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 
+[2017-03-13 10:23:08] local.INFO: Information of course #{25} has just been updated. Request inputs: array (
+  'name' => 'Introduction to Project Management',
+  'shortname' => 'intprojmgn',
+  'courseformat' => 'PARTS',
+  'targetaudience' => '1',
+  'category' => '1',
+  'language' => 'en',
+  'shortdescription' => '<h2 class="course-info-heading"><strong>About this course</strong></h2>
+
+<h3 style="text-align: justify;"><strong><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">Project management is an essential skill-set for many careers and in many contexts in our lives. Introduction to Project Management is an ideal starting point if you need to manage projects at work or at home, while not necessarily being a formally trained project manager. It is also suitable if you are considering undertaking a project in the near future and are seeking to learn and apply essential project management knowledge and skills.</span></span></strong></h3>
+
+<h3 style="text-align: justify;"><strong><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">To deliver a project successfully, it&#39;s important to start by clearly identifying what the project is, and what its outcomes will be. In the course, we will show you practical ways to explore and understand your goals from the outset of your project, and to consider all the factors that may affect its execution. Step by step you will learn how to plan, scope, schedule, cost and manage your project from beginning to end. Since every project relies on the people who are delivering it, the course also enables you to explore how you can effectively communicate, manage people and employ leadership skills to successfully deliver your own project.</span></span></strong></h3>
+
+<h3 style="text-align: justify;"><strong><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">In Introduction to Project Management, you will learn practical ways to use project management skills, whether your project is large or small. Join us to explore how you can benefit from using project management techniques in your own projects.</span></span></strong></h3>
+
+<p>&nbsp;</p>
+
+<h3 class="course-info-heading"><strong>What you&#39;ll learn</strong></h3>
+
+<div class="course-info-list wysiwyg-content">
+<ul>
+	<li style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;"><strong>Core knowledge and applied skills in project management</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;"><strong>Essential communication skills to help you manage a project</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;"><strong>An understanding of why today&#39;s projects are more complex</strong></span></span></li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-13 10:23:18] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 
+[2017-03-13 10:23:27] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-13 10:23:38] local.INFO: The information of course #intprojmgn has been retrieve.  

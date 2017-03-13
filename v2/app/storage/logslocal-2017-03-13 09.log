@@ -1,0 +1,173 @@
+[2017-03-13 09:01:44] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:01:45] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:02:33] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:02:34] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:02:34] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:03:22] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 
+[2017-03-13 09:04:53] local.INFO: Information of course #{25} has just been updated. Request inputs: array (
+  'name' => 'Introduction to Project Management',
+  'shortname' => 'intprojmgn',
+  'courseformat' => 'PARTS',
+  'targetaudience' => '1',
+  'category' => '1',
+  'language' => 'en',
+  'shortdescription' => '<h2 class="course-info-heading">About this course</h2>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">Project management is an essential skill-set for many careers and in many contexts in our lives. Introduction to Project Management is an ideal starting point if you need to manage projects at work or at home, while not necessarily being a formally trained project manager. It is also suitable if you are considering undertaking a project in the near future and are seeking to learn and apply essential project management knowledge and skills.</span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">To deliver a project successfully, it&#39;s important to start by clearly identifying what the project is, and what its outcomes will be. In the course, we will show you practical ways to explore and understand your goals from the outset of your project, and to consider all the factors that may affect its execution. Step by step you will learn how to plan, scope, schedule, cost and manage your project from beginning to end. Since every project relies on the people who are delivering it, the course also enables you to explore how you can effectively communicate, manage people and employ leadership skills to successfully deliver your own project.</span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">In Introduction to Project Management, you will learn practical ways to use project management skills, whether your project is large or small. Join us to explore how you can benefit from using project management techniques in your own projects.</span></span></h3>
+
+<p>&nbsp;</p>
+
+<h3 class="course-info-heading">What you&#39;ll learn</h3>
+
+<div class="course-info-list wysiwyg-content">
+<ul>
+	<li>Core knowledge and applied skills in project management</li>
+	<li>Essential communication skills to help you manage a project</li>
+	<li>An understanding of why today&acirc;&euro;&trade;s projects are more complex</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+',
+) {"user_id":1} 
+[2017-03-13 09:13:58] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:13:59] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:14:58] local.INFO: The information of course #25 has been retrieve. {"user_id":1} 
+[2017-03-13 09:15:31] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:15:32] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:15:32] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:15:41] local.INFO: The information of course #26 has been retrieve. {"user_id":1} 
+[2017-03-13 09:16:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:16:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:16:26] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:21:16] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:21:17] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:22:25] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:22:27] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:22:27] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:24:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:24:51] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:24:57] local.INFO: The information of course #23 has been retrieve. {"user_id":1} 
+[2017-03-13 09:28:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:28:48] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:28:48] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:29:44] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:29:45] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:29:45] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:30:10] local.INFO: The information of course #26 has been retrieve. {"user_id":1} 
+[2017-03-13 09:32:11] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:32:13] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:50:28] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:50:28] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:50:28] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:50:42] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:50:44] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:50:44] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:51:10] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:51:11] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:51:11] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:51:19] local.INFO: The information of course #6 has been retrieve. {"user_id":1} 
+[2017-03-13 09:52:45] local.INFO: Information of course #{6} has just been updated. Request inputs: array (
+  'name' => 'Principles of LED Light Communications',
+  'shortname' => 'ledcom',
+  'courseformat' => 'SECTIONS',
+  'targetaudience' => '0',
+  'category' => '3',
+  'language' => 'en',
+  'shortdescription' => '<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">Balancing theoretical analysis and practical advice, this course describes all the underlying principles required to build high-performance indoor optical wireless communication (OWC) systems based on visible and infrared light, alongside essential techniques for optimizing systems by maximizing throughput, reducing hardware complexity, and measuring performance effectively. It provides a comprehensive analysis of information rate-, spectral-, and powerefficiencies for single- and multi-carrier transmission schemes, and novel analysisof non-linear signal distortion, enabling the use of off-the-shelf LED technology.</span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">Other topics covered include cellular network throughput and coverage, static resourcepartitioning via dynamic interference-aware scheduling, realistic light propagationmodeling, OFDM, optical MIMO transmission, and non-linearity modeling.</span></span></h3>
+
+<h3 style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Courier New,Courier,monospace;">Covering practical techniques for building indoor optical wireless cellular networkssupporting multiple users, and guidelines for 5G cellular system studies, in additionto physical layer issues, this is an indispensable resource for academic researchers, professional engineers, and graduate students working in optical communications.</span></span></h3>
+',
+) {"user_id":1} 
+[2017-03-13 09:55:49] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:55:50] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:55:50] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:56:10] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:56:10] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-13 09:58:10] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-13 09:58:11] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-13 09:58:25] local.INFO: The information of course #19 has been retrieve. {"user_id":1} 

@@ -1,0 +1,24 @@
+[2017-03-02 19:50:23] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-02 19:50:22","last_login":"2017-03-02 19:50:22","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-02 19:50:38] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 19:50:54] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 19:51:08] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 19:51:12] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 19:52:09] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 19:52:11] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 19:54:13] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 19:54:18] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 19:54:18] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 19:59:30] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-02 19:59:53] local.INFO: The information of course #optmatlab has been retrieve.  

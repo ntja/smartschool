@@ -16,7 +16,12 @@ function alertNotify(message, type){
 	$('.response-message div').addClass(type);
 	$('.response-message').empty().html(html);
 }
-
+// Set custom error messages for jquery validate
+$.extend($.validator.messages, {
+	required: "This field is required",
+	email: "Invalid email address",
+	number: "Invalid value"
+});
 $('#search').on('click', function(){
 	query = $('.query').val();
 	uri = $('body').attr('data-base-url')+'/search?query='+query;
@@ -93,7 +98,7 @@ function logout(){
 	window.localStorage.removeItem('sm_user_id');
 	window.localStorage.removeItem('sm_user_role');
 	
-	uri = $('body').attr('data-base-url')+'/login';
+	uri = $('body').attr('data-base-url')+'/home';
 	window.location.assign(uri);
 }
 
@@ -173,3 +178,4 @@ function get_course_details(id){
 	});
 	return  result;
 }
+

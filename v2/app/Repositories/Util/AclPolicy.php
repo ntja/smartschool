@@ -30,6 +30,7 @@ class AclPolicy {
     const RESOURCE_COURSE_CATEGORY = "App\Repositories\Custom\Resource\Courses\Category";
     const RESOURCE_COURSE_COURSE_JOIN = "App\Repositories\Custom\Resource\Courses\Course\Join";    
     const RESOURCE_COURSE_COURSE_APPLICATION = "App\Repositories\Custom\Resource\Courses\Course\Application";
+	const RESOURCE_COURSE_COURSE_CHANGE_STATUS = "App\Repositories\Custom\Resource\Courses\Course\ChangeStatus";
     const RESOURCE_BOOK = "App\Repositories\Custom\Resource\Book";
     const RESOURCE_BOOK_SEARCH = "App\Repositories\Custom\Resource\Books\Search";
     const RESOURCE_BOOK_CATEGORY = "App\Repositories\Custom\Resource\Books\Category";
@@ -316,4 +317,43 @@ class AclPolicy {
             }
 		}
 	}
+
+	public function put($user, $resource, $owner = false) {
+        if (is_object($resource)) {
+            if (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE)) {
+                $role = ["INSTRUCTOR"];
+                //die($user->getRole());
+                if (in_array($user->getRole(), $role)) {
+                    if ($owner) {                                               
+                        if ($user->isCourseOwner($resource)) {                            
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }else{
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }else if (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE_CHANGE_STATUS)) {
+                $role = ["INSTRUCTOR"];
+                //die($user->getRole());
+                if (in_array($user->getRole(), $role)) {
+                    if ($owner) {                                               
+                        if ($user->isCourseOwner($resource)) {                            
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }else{
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+		}
+	}
+	
 }

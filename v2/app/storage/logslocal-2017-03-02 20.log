@@ -1,0 +1,29 @@
+[2017-03-02 20:01:17] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-02 20:02:30] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwodd',
+)}.  
+[2017-03-02 20:02:45] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwod',
+)}.  
+[2017-03-02 20:03:00] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-02 20:02:59","last_login":"2017-03-02 20:02:59","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-02 20:03:09] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 20:53:36] local.ERROR: Connection could not be established with host smtp.mailtrap.io [php_network_getaddresses: getaddrinfo failed: Hôte inconnu.  #0]  
+[2017-03-02 20:54:43] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'beyala@domain.biiiej',
+  'password' => 'password',
+)}  
+[2017-03-02 20:54:53] local.ERROR: Invalid attempt to authenticate a non verified account {"id":38,"first_name":"Calyxte","last_name":"Beyala","role":"LEARNER","email":"beyala@domain.com","verified_status":"PENDING","date_created":"2017-03-02 20:53:30","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-03-02 20:55:33] local.ERROR: Invalid attempt to authenticate a non verified account {"id":38,"first_name":"Calyxte","last_name":"Beyala","role":"LEARNER","email":"beyala@domain.com","verified_status":"PENDING","date_created":"2017-03-02 20:53:30","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-03-02 20:55:41] local.ERROR: Invalid attempt to authenticate a non verified account {"id":38,"first_name":"Calyxte","last_name":"Beyala","role":"LEARNER","email":"beyala@domain.com","verified_status":"PENDING","date_created":"2017-03-02 20:53:30","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-03-02 20:56:23] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-02 20:56:23","last_login":"2017-03-02 20:56:23","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-02 20:56:32] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 20:56:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 20:56:51] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 

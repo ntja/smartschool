@@ -1,0 +1,112 @@
+[2017-03-04 15:02:25] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 15:02:26] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 15:05:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 15:05:35] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 15:05:35] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 15:18:53] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 15:18:54] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 15:18:54] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 15:25:09] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 15:25:10] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 15:27:59] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 15:28:00] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 15:29:19] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_date' in 'field list' (SQL: insert into `courses` (`name`, `shortname`, `language`, `largeicon`, `photo`, `previewlink`, `shortdescription`, `start_date`, `smallicon`, `smalliconhover`, `istranslate`, `directorypath`, `aboutthecourse`, `targetaudience`, `faq`, `coursesyllabus`, `courseformat`, `suggestedreadings`, `estimatedclassworkload`, `recommendedbackground`, `date_created`, `instructor`, `school`, `category`) values (Python Data Science, pythondata, en, , , , <p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. Data science has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. Data science is a field that is at the intersection of many fields, including data<br />
+mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span></p>
+
+<p style="text-align: justify;"><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+, , , , 0, , , 2, , , CHAPTERS, , , , 2017-03-04 15:29:19, 1, , 1)) {"user_id":1} 
+[2017-03-04 15:32:36] local.ERROR: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'istranslate' at row 1 (SQL: insert into `courses` (`name`, `shortname`, `language`, `largeicon`, `photo`, `previewlink`, `shortdescription`, `start_date`, `smallicon`, `smalliconhover`, `istranslate`, `directorypath`, `aboutthecourse`, `targetaudience`, `faq`, `coursesyllabus`, `courseformat`, `suggestedreadings`, `estimatedclassworkload`, `recommendedbackground`, `date_created`, `instructor`, `school`, `category`) values (Python Data Science, pythondata, en, , , , <p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. Data science has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. Data science is a field that is at the intersection of many fields, including data<br />
+mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span></p>
+
+<p style="text-align: justify;"><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+, , , , 0, , , 2, , , CHAPTERS, , , , 2017-03-04 15:32:36, 1, , 1)) {"user_id":1} 
+[2017-03-04 15:39:45] local.ERROR: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'istranslate' at row 1 (SQL: insert into `courses` (`name`, `shortname`, `language`, `largeicon`, `photo`, `previewlink`, `shortdescription`, `start_date`, `smallicon`, `smalliconhover`, `istranslate`, `directorypath`, `aboutthecourse`, `targetaudience`, `faq`, `coursesyllabus`, `courseformat`, `suggestedreadings`, `estimatedclassworkload`, `recommendedbackground`, `date_created`, `instructor`, `school`, `category`) values (Python Data Science, pythondata, en, , , , <p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. Data science has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. Data science is a field that is at the intersection of many fields, including data<br />
+mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span></p>
+
+<p style="text-align: justify;"><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+, , , , 0, , , 2, , , CHAPTERS, , , , 2017-03-04 15:39:45, 1, , 1)) {"user_id":1} 
+[2017-03-04 15:40:59] local.INFO: The new course #22 has just been created. Request inputs:  #{array (
+  'name' => 'Python Data Science',
+  'shortname' => 'pythondata',
+  'language' => 'en',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-size:14px;">Today, we live in a world of connected things where tons of data is generated and it is humanly impossible to analyze all the incoming data and make decisions. Human decisions are increasingly replaced by decisions made by computers. Thanks to the field of data science. Data science has penetrated deeply in our connected world and there is a growing demand in the market for people who not only understand data science algorithms thoroughly, but are also capable of programming these algorithms. Data science is a field that is at the intersection of many fields, including data<br />
+mining, machine learning, and statistics, to name a few.</span></p>
+
+<p style="text-align: justify;"><span style="font-size:14px;">Python as a programming language has evolved over the years and today, it is the number one choice for a data scientist. Its ability to act as a scripting language for quick prototype building and its sophisticated language constructs for full-fledged software development combined with its fantastic library support for numeric computations has led to its current popularity among data scientists and the general scientific programming community.</span></p>
+
+<p style="text-align: justify;"><br />
+<span style="font-size:14px;">This course brings the art of data science with power Python programming to the readers and helps them master the concepts of data science. Knowledge of Python is not mandatory to follow this book. Non-Python programmers can refer to the first chapter, which introduces the Python data structures and function programming concepts.</span></p>
+
+<p style="text-align: justify;">&nbsp;</p>
+',
+  'start_date' => NULL,
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => '0',
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '2',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => 'CHAPTERS',
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '1',
+  'date_created' => '2017-03-04 15:40:59',
+)}. {"user_id":1} 
+[2017-03-04 15:44:02] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 15:44:03] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 15:44:03] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 15:44:46] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-04 15:44:56] local.INFO: The information of course #pythondata has been retrieve.  

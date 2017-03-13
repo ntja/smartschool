@@ -1,0 +1,59 @@
+[2017-03-02 21:09:23] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-02 21:09:23","last_login":"2017-03-02 21:09:23","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-02 21:09:32] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:09:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:09:54] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:10:28] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:10:32] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:15:49] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:15:53] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:19:22] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:19:27] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:23:09] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:23:13] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:23:13] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:24:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:24:47] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:28:37] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:28:41] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:28:42] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:30:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:30:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:30:25] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:31:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:31:52] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:33:19] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:33:23] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:40:33] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:40:37] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:42:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:42:25] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:42:26] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:46:00] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:46:04] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:46:04] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:47:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:47:38] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 
+[2017-03-02 21:47:38] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-02 21:48:27] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-02 21:48:31] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":1} 

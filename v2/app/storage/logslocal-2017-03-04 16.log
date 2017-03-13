@@ -1,0 +1,154 @@
+[2017-03-04 16:18:53] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-04 16:18:53","last_login":"2017-03-04 16:18:53","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-04 16:18:57] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 16:19:05] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 16:19:06] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 16:19:07] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 16:23:27] local.INFO: The new course #23 has just been created. Request inputs:  #{array (
+  'name' => 'Mathematical Analysis I',
+  'shortname' => 'mathanalysis',
+  'language' => 'en',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<p style="text-align: justify;"><tt><span style="font-size:16px;"><span class="fontstyle0">This Course is meant to help students acquire the basics of Calculus in curricula where mathematical tools play a&nbsp; crucial part (so Engineering, Physics, Computer Science and the like). The fundamental concepts and methods of Differential and Integral Calculus for functions of one real variable are presented with the primary purpose of letting students assimilate their effective employment, but with critical awareness. </span></span></tt></p>
+
+<p style="text-align: justify;"><tt><span style="font-size:16px;"><span class="fontstyle0">The general philosophy inspiring our approach has been to simplify the system of notions available prior to the university reform; at the same time we wished to maintain the rigorous exposition and avoid the trap of compiling a mere formulary of ready-to-use prescriptions.</span></span></tt><br style=" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; " />
+&nbsp;</p>
+',
+  'start_date' => NULL,
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => '0',
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '1',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => 'MODULES',
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '2',
+  'date_created' => '2017-03-04 16:23:27',
+)}. {"user_id":1} 
+[2017-03-04 16:29:16] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 16:29:17] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 16:32:26] local.INFO: The new course #24 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Cloud Computing',
+  'shortname' => 'cloudcomputing',
+  'language' => 'en',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size: 18px;"><span class="fontstyle0">Cloud computing </span><span class="fontstyle2">is more than a service sitting in some remote data center. It&rsquo;s a set of approaches that can help organizations quickly, effectively add and subtract resources in almost real time. Unlike other approaches, the cloud is as much about the business model as it is about technology. Companies clearly understand that technology is at the heart of how they operate their businesses. Business executives have long been frustrated with the complexities of getting their computing needs met quickly and cost effectively. In a sense, cloud computing has started to become mainstream<br />
+because these business executives have forced the issue into the forefront.</span></span></span><br style=" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; " />
+&nbsp;</p>
+
+<p style="text-align: justify;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size: 18px;"><span class="fontstyle0">The cloud environment itself requires a strong foundation of best practices in software development, software architecture, and service management foundations. This strong foundation is especially important because most organizations combine public and private cloud services. You want to be informed before you start your search. We think this course will give you the context to make informed decisions.</span></span></span><br style=" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; " />
+&nbsp;</p>
+',
+  'start_date' => NULL,
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => '0',
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '0',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => 'PARTS',
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '1',
+  'date_created' => '2017-03-04 16:32:26',
+)}. {"user_id":1} 
+[2017-03-04 16:32:28] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 16:34:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 16:34:51] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 16:38:32] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 16:38:33] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 16:38:33] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 16:39:33] local.INFO: The new course #25 has just been created. Request inputs:  #{array (
+  'name' => 'Introduction to Design Patterns',
+  'shortname' => 'designpattern',
+  'language' => 'en',
+  'photo' => NULL,
+  'largeicon' => NULL,
+  'previewlink' => NULL,
+  'shortdescription' => '<p style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Comic Sans MS,cursive;"><span class="fontstyle0">Why keep reinventing the wheel? Why not just write down your solution and refer back to it as needed? That&rsquo;s what design patterns are all about. A design pattern represents a solution to a problem or class of problems that you can<br />
+put to work at once in your own code. </span></span></span></p>
+
+<p style="text-align: justify;"><span style="font-size:18px;"><span style="font-family: Comic Sans MS,cursive;"><span class="fontstyle0">In fact, design patterns go one step further &mdash; they also let you share in the solutions found by other programmers, and </span><span class="fontstyle2">expert </span><span class="fontstyle0">programmers at that. The design patterns you see in this book represent insightful solutions to dilemmas that just about every programmer comes up against sooner or later, and knowing them is going to save you a lot of time and effort.</span></span></span></p>
+
+<p style="text-align: justify;"><br style=" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; " />
+&nbsp;</p>
+',
+  'start_date' => NULL,
+  'smallicon' => NULL,
+  'smalliconhover' => NULL,
+  'istranslate' => '0',
+  'directorypath' => NULL,
+  'aboutthecourse' => NULL,
+  'targetaudience' => '1',
+  'faq' => NULL,
+  'coursesyllabus' => NULL,
+  'courseformat' => 'CHAPTERS',
+  'suggestedreadings' => NULL,
+  'estimatedclassworkload' => NULL,
+  'recommendedbackground' => NULL,
+  'instructor' => 1,
+  'school' => NULL,
+  'category' => '1',
+  'date_created' => '2017-03-04 16:39:33',
+)}. {"user_id":1} 
+[2017-03-04 16:39:34] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-04 16:41:13] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-04 16:41:26] local.INFO: The information of course #cloudcomputing has been retrieve.  
+[2017-03-04 16:43:36] local.INFO: Successful authentication of account {"id":4,"first_name":"David","last_name":"Palmer","role":"ADMINISTRATOR","email":"admin@domain.com","verified_status":"VERIFIED","date_created":"2016-08-21 16:00:40","date_updated":"2017-03-04 16:43:35","last_login":"2017-03-04 16:43:35","honorific":"Mr","phone":"987654321","photo":null,"subscription":"UNPAID"}. {"user_id":4} 
+[2017-03-04 16:43:55] local.INFO: Account #4 information have just been fetched by account #{4}. {"user_id":4} 
+[2017-03-04 16:44:42] local.INFO: Successful authentication of account {"id":13,"first_name":"Bill","last_name":"Buckanan","role":"LEARNER","email":"bill@domain.com","verified_status":"VERIFIED","date_created":"2016-08-28 10:18:51","date_updated":"2017-03-04 16:44:41","last_login":"2017-03-04 16:44:41","honorific":"Mr","phone":"655134682","photo":null,"subscription":"UNPAID"}. {"user_id":13} 
+[2017-03-04 16:44:47] local.INFO: Account #13 information have just been fetched by account #{13}. {"user_id":13} 
+[2017-03-04 16:51:30] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-04 16:51:44] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-04 16:58:18] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  

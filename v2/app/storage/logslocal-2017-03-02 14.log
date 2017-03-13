@@ -1,0 +1,21 @@
+[2017-03-02 14:47:33] local.INFO: Successful authentication of account {"id":66,"first_name":"Jephte Armand","last_name":"Ndongmou","role":"LEARNER","email":"jephte@sw.ai","verified_status":"VERIFIED","date_created":"2017-02-13 09:28:43","date_updated":"2017-03-02 14:47:31","last_login":"2017-03-02 14:47:31","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":66} 
+[2017-03-02 14:52:39] local.ERROR: Missing argument 2 for App\Repositories\Custom\CategoriesCustom::getList(), called in C:\Program Files\Ampps\www\smartschool\v2\app\Http\Controllers\CategoriesController.php on line 53 and defined {"user_id":66} 
+[2017-03-02 14:54:50] local.ERROR: Undefined variable: param {"user_id":66} 
+[2017-03-02 14:55:45] local.ERROR: Undefined variable: param {"user_id":66} 
+[2017-03-02 14:57:01] local.INFO: All courses have been retrieve by user #66. Request inputs: {array (
+  'type' => 'book',
+  'limit' => 20,
+)}. {"user_id":66} 
+[2017-03-02 14:57:53] local.INFO: All courses have been retrieve by user #66. Request inputs: {array (
+  'type' => 'book',
+  'limit' => 20,
+)}. {"user_id":66} 
+[2017-03-02 14:58:12] local.INFO: All courses have been retrieve by user #66. Request inputs: {array (
+  'type' => 'book',
+  'limit' => 20,
+)}. {"user_id":66} 
+[2017-03-02 14:59:39] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delete_status' in 'where clause' (SQL: select count(*) as aggregate from `course_categories` where `delete_status` = 0) {"user_id":66} 
+[2017-03-02 14:59:48] local.INFO: All courses have been retrieve by user #66. Request inputs: {array (
+  'type' => 'book',
+  'limit' => 20,
+)}. {"user_id":66} 

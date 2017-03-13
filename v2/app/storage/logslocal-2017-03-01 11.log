@@ -1,0 +1,12 @@
+[2017-03-01 11:50:40] local.ERROR: Invalid attempt to authenticate a non verified account {"id":83,"first_name":"Severin","last_name":"Doho","role":"LEARNER","email":"doho@doamin.com","verified_status":"PENDING","date_created":"2017-03-01 10:00:17","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-03-01 11:54:28] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'doho@doamn.com',
+  'password' => 'password',
+)}  
+[2017-03-01 11:56:52] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-03-01 11:56:51","last_login":"2017-03-01 11:56:51","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-01 11:56:57] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-01 11:57:37] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-01 11:57:40] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 

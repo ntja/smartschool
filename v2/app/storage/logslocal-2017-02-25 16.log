@@ -1,0 +1,25 @@
+[2017-02-25 16:08:55] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jephte@sw.ai',
+  'password' => 'password',
+)}  
+[2017-02-25 16:09:59] local.INFO: Successful authentication of account {"id":37,"first_name":"Dominique Georges","last_name":"Djomo","role":"LEARNER","email":"georges@domain.com","verified_status":"VERIFIED","date_created":"2017-02-23 22:10:59","date_updated":"2017-02-25 16:09:59","last_login":"2017-02-25 16:09:59","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":37} 
+[2017-02-25 16:11:40] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-02-25 16:11:40","last_login":"2017-02-25 16:11:40","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-02-25 16:18:56] local.INFO: Successful authentication of account {"id":37,"first_name":"Dominique Georges","last_name":"Djomo","role":"LEARNER","email":"georges@domain.com","verified_status":"VERIFIED","date_created":"2017-02-23 22:10:59","date_updated":"2017-02-25 16:18:56","last_login":"2017-02-25 16:18:56","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":37} 
+[2017-02-25 16:19:37] local.INFO: Account #37 information have just been fetched by account #{37}. {"user_id":37} 
+[2017-02-25 16:21:16] local.INFO: Account #37 information have just been fetched by account #{37}. {"user_id":37} 
+[2017-02-25 16:22:49] local.INFO: Account #37 information have just been fetched by account #{37}. {"user_id":37} 
+[2017-02-25 16:26:05] local.INFO: Account #37 information have just been fetched by account #{37}. {"user_id":37} 
+[2017-02-25 16:26:36] local.INFO: Successful authentication of account {"id":37,"first_name":"Dominique Georges","last_name":"Djomo","role":"LEARNER","email":"georges@domain.com","verified_status":"VERIFIED","date_created":"2017-02-23 22:10:59","date_updated":"2017-02-25 16:26:36","last_login":"2017-02-25 16:26:36","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":37} 
+[2017-02-25 16:26:43] local.INFO: Account #37 information have just been fetched by account #{37}. {"user_id":37} 
+[2017-02-25 16:26:59] local.INFO: Account #37 information have just been fetched by account #{37}. {"user_id":37} 
+[2017-02-25 16:28:06] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-02-25 16:28:06","last_login":"2017-02-25 16:28:06","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-02-25 16:29:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:29:59] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:31:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:31:59] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:32:50] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:35:19] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:37:38] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-02-25 16:37:38","last_login":"2017-02-25 16:37:38","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-02-25 16:37:46] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:38:15] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-25 16:38:29] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 

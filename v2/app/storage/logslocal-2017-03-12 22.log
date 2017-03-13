@@ -1,0 +1,35 @@
+[2017-03-12 22:09:07] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 22:09:08] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 22:09:08] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 22:09:22] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 22:09:49] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 22:09:50] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 22:09:50] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 22:11:13] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-12 22:11:14] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-12 22:11:14] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '10',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-03-12 22:11:31] local.INFO: The information of course #20 has been retrieve. {"user_id":1} 
+[2017-03-12 22:14:28] local.ERROR: Undefined index: istranslate {"user_id":1} 
+[2017-03-12 22:20:15] local.ERROR: Undefined index: istranslate {"user_id":1} 
+[2017-03-12 22:23:26] local.ERROR: Undefined index: istranslate {"user_id":1} 
+[2017-03-12 22:23:59] local.ERROR: Undefined index: istranslate {"user_id":1} 
+[2017-03-12 22:25:32] local.ERROR: Undefined index: istranslate {"user_id":1} 
+[2017-03-12 22:53:45] local.ERROR: Undefined variable: param {"user_id":1} 

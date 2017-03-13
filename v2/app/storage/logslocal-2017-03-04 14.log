@@ -1,0 +1,15 @@
+[2017-03-04 14:38:03] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 14:38:04] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 14:46:04] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 14:46:05] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-04 14:48:05] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-04 14:48:06] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 

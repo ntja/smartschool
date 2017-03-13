@@ -1,0 +1,98 @@
+[2017-02-28 10:28:32] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwordd',
+)}  
+[2017-02-28 10:31:28] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwordd',
+)}  
+[2017-02-28 10:32:13] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'passwordd',
+)}  
+[2017-02-28 10:32:16] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-28 10:33:33] local.ERROR: Invalid authentication attempt with inputs:  {array (
+  'email' => 'jack@domain.com',
+  'password' => 'password',
+)}  
+[2017-02-28 10:35:15] local.ERROR: Invalid attempt to authenticate an account with inputs {array (
+  'email' => 'joedoe@domain.com',
+  'password' => 'passwordd',
+)}.  
+[2017-02-28 10:35:26] local.INFO: Successful authentication of account {"id":1,"first_name":"Joe","last_name":"Doe","role":"INSTRUCTOR","email":"joedoe@domain.com","verified_status":"VERIFIED","date_created":"2016-09-22 21:33:46","date_updated":"2017-02-28 10:35:26","last_login":"2017-02-28 10:35:26","honorific":"Mr","phone":"6155134666","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-02-28 10:35:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:35:45] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:38:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:39:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:40:21] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:41:08] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:42:18] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:42:42] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:42:57] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:42:58] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:46:43] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:46:44] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:47:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:47:26] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:47:39] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:47:40] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:49:34] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:49:35] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:53:24] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:53:25] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:53:52] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-02-28 10:53:52] local.INFO: The courses of instructor #'1' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":1} 
+[2017-02-28 10:54:59] local.INFO: Successful authentication of account {"id":7,"first_name":"David","last_name":"Palmer","role":"INSTRUCTOR","email":"david@domain.com","verified_status":"VERIFIED","date_created":"2016-10-21 09:36:15","date_updated":"2017-02-28 10:54:59","last_login":"2017-02-28 10:54:59","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":7} 
+[2017-02-28 10:55:32] local.INFO: Account #7 information have just been fetched by account #{7}. {"user_id":7} 
+[2017-02-28 10:55:42] local.INFO: Account #7 information have just been fetched by account #{7}. {"user_id":7} 
+[2017-02-28 10:55:43] local.INFO: The courses of instructor #'7' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":7} 
+[2017-02-28 10:57:22] local.ERROR: Invalid attempt to authenticate a non verified account {"id":76,"first_name":"Donald","last_name":"Trump","role":"INSTRUCTOR","email":"donald@domain.com","verified_status":"PENDING","date_created":"2017-02-23 14:53:29","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-02-28 10:58:07] local.ERROR: Invalid attempt to authenticate a non verified account {"id":76,"first_name":"Donald","last_name":"Trump","role":"INSTRUCTOR","email":"donald@domain.com","verified_status":"PENDING","date_created":"2017-02-23 14:53:29","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-02-28 10:58:10] local.ERROR: Invalid attempt to authenticate a non verified account {"id":76,"first_name":"Donald","last_name":"Trump","role":"INSTRUCTOR","email":"donald@domain.com","verified_status":"PENDING","date_created":"2017-02-23 14:53:29","date_updated":null,"last_login":null,"honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}  
+[2017-02-28 10:58:26] local.INFO: Successful authentication of account {"id":76,"first_name":"Donald","last_name":"Trump","role":"INSTRUCTOR","email":"donald@domain.com","verified_status":"VERIFIED","date_created":"2017-02-23 14:53:29","date_updated":"2017-02-28 10:58:26","last_login":"2017-02-28 10:58:26","honorific":"Mr","phone":null,"photo":null,"subscription":"UNPAID"}. {"user_id":76} 
+[2017-02-28 10:58:32] local.INFO: Account #76 information have just been fetched by account #{76}. {"user_id":76} 
+[2017-02-28 10:58:40] local.INFO: Account #76 information have just been fetched by account #{76}. {"user_id":76} 
+[2017-02-28 10:58:41] local.INFO: The courses of instructor #'76' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":76} 
+[2017-02-28 10:59:17] local.INFO: Account #76 information have just been fetched by account #{76}. {"user_id":76} 
+[2017-02-28 10:59:18] local.INFO: The courses of instructor #'76' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":76} 
+[2017-02-28 10:59:43] local.INFO: Account #76 information have just been fetched by account #{76}. {"user_id":76} 
+[2017-02-28 10:59:43] local.INFO: The courses of instructor #'76' has been retrieve. Request inputs: {array (
+  'limit' => '7',
+  'status' => NULL,
+)}. {"user_id":76} 

@@ -108,10 +108,10 @@ class CoursesCustom {
     public function validate($param, $get_request=false) {
         try {            
             if (!is_array($param)) {
-                throw new Exception("Expected array as parameter , " . (is_object($level) ? get_class($level) : gettype($level)) . " found.");
+                throw new Exception("Expected array as parameter , " . (is_object($param) ? get_class($param) : gettype($param)) . " found.");
             }
-            
-            if(!$get_request){                        
+            //var_dump($param);die('here');
+            if(!$get_request){				
                 if (array_key_exists('name', $param)) {
                     if (is_null($param['name'])) {
                         $result = array("code" => 4000, "description" => "name is required ");
@@ -147,13 +147,6 @@ class CoursesCustom {
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
                     }                    
-                    $row = $this->getCourseByShortname($param['shortname']);
-                    if($row){
-                        LogRepository::printLog('error', "Invalid attempt  to create a new course with a taken shortname {".$param['shortname']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
-                        $result = array("code" => 4001, "description" => "This shortname is already taken");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
-                    }
                 }else{
                     throw new Exception("Expected 'shortname' in array as parameter , " . (is_object($param['shortname']) ? get_class($param['shortname']) : gettype($param['shortname'])) . " found.");
                 }
@@ -290,8 +283,6 @@ class CoursesCustom {
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
                     }                                    
-                }else{
-                    throw new Exception("Expected 'istranslate' in array as parameter , " . (is_object($param['istranslate']) ? get_class($param['istranslate']) : gettype($param['istranslate'])) . " found.");
                 }
                 if (array_key_exists('directorypath', $param)) {
                     if (!is_null($param['directorypath'])) {
@@ -434,14 +425,7 @@ class CoursesCustom {
                             $result = array("code" => 4000, "description" => "school is a number ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
-                        }
-                        $school = $this->_schoolsCustom->getSchoolByID($param['school']);
-                        if(!$school){
-                            LogRepository::printLog('error', "Invalid school ID {".$param['school']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
-                            $result = array("code" => 4001, "description" => "Invalid school ID");
-                            echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                            return false;
-                        }
+                        }                        
                     }                                        
                 }
                 if (array_key_exists('category', $param)) {
@@ -449,24 +433,10 @@ class CoursesCustom {
                         $result = array("code" => 4000, "description" => "category is a number ");
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
-                    }
-                    $category = $this->_categoriesCustom->getCategoryByID($param['category']);
-                    if(!$category){
-                        LogRepository::printLog('error', "Invalid category ID {".$param['category']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
-                        $result = array("code" => 4011, "description" => "Invalid category ID");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
-                    }                    
+                    }                                        
                 }else{
                     throw new Exception("Expected numeric for key (category), " . (is_object($param['category']) ? get_class($param['category']) : gettype($param['category'])) . ' found.');
-                }                  
-                $row = $this->uniqueCourse($param['name'],$param['instructor']);
-                if($row){
-                    LogRepository::printLog('error', "Invalid attempt for an instructor to create a new course with a duplicate name {".$param['name']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
-                    $result = array("code" => 4012, "description" => "You already have a course with that name");
-                    echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                    return false;
-                }
+                }                                  
             }            
             return true;
         } catch (Exception $ex) {
@@ -490,9 +460,47 @@ class CoursesCustom {
             if(!$valid){
                 http_response_code(400);
                 die(); 
-            }            
+            }          
+			// verify if school exists
+			if (!is_null($param['school'])) {				
+				$school = $this->_schoolsCustom->getSchoolByID($param['school']);
+				if(!$school){
+					LogRepository::printLog('error', "Invalid school ID {".$param['school']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+					$result = array("code" => 4001, "description" => "Invalid school ID");
+					echo json_encode($result, JSON_UNESCAPED_SLASHES);
+					http_response_code(400);
+					die(); 
+				}
+			}
+			// check if course is unique for a given instructor
+			$row = $this->uniqueCourse($param['name'],$param['instructor']);
+			if($row){
+				LogRepository::printLog('error', "Invalid attempt for an instructor to create a new course with a duplicate name {".$param['name']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+				$result = array("code" => 4012, "description" => "You already have a course with that name");
+				echo json_encode($result, JSON_UNESCAPED_SLASHES);
+				http_response_code(400);
+				die();
+			}
+			// Check if category exists
+			$category = $this->_categoriesCustom->getCategoryByID($param['category']);
+			if(!$category){
+				LogRepository::printLog('error', "Invalid category ID {".$param['category']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+				$result = array("code" => 4011, "description" => "Invalid category ID");
+				echo json_encode($result, JSON_UNESCAPED_SLASHES);
+				http_response_code(400);
+				die();
+			}
+			$row = $this->getCourseByShortname($param['shortname']);
+			if($row){
+				LogRepository::printLog('error', "Invalid attempt  to create a new course with a taken shortname {".$param['shortname']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+				$result = array("code" => 4001, "description" => "This shortname is already taken");
+				echo json_encode($result, JSON_UNESCAPED_SLASHES);
+				http_response_code(400);
+				die();
+			}
             $params['date_created'] = date('Y-m-d H:i:s');            
-            //var_dump($params);die();
+            
+			// save course
             $saved = $this->_model->dbSave($params);
             if($saved){             
                 $course_id = $this->_model->id;

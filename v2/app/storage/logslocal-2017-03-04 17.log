@@ -1,0 +1,5 @@
+[2017-03-04 17:01:04] local.INFO: All courses have been retrieve by user #. Request inputs: {array (
+  'limit' => 10,
+  'status' => NULL,
+)}.  
+[2017-03-04 17:01:54] local.INFO: The information of course #pythondata has been retrieve.  

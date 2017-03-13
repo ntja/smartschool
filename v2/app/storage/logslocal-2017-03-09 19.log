@@ -1,0 +1,8 @@
+[2017-03-09 19:29:42] local.INFO: Successful authentication of account {"id":1,"first_name":"Jack","last_name":"Bauer","role":"INSTRUCTOR","email":"jack@domain.com","verified_status":"VERIFIED","date_created":"2016-08-10 05:26:39","date_updated":"2017-03-09 19:29:41","last_login":"2017-03-09 19:29:41","honorific":"Mr","phone":"65514410","photo":null,"subscription":"UNPAID"}. {"user_id":1} 
+[2017-03-09 19:29:47] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 19:29:55] local.INFO: Account #1 information have just been fetched by account #{1}. {"user_id":1} 
+[2017-03-09 19:29:56] local.INFO: All course  categories have been retrieve by user #1. Request inputs: {array (
+  'type' => 'course',
+  'limit' => 20,
+)}. {"user_id":1} 
+[2017-03-09 19:45:43] local.INFO: The information of course #22 has been retrieve. {"user_id":1} 
