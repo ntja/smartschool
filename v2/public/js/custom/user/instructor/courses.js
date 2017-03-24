@@ -259,6 +259,17 @@
 			//load course details
 			get_single_course(course_id, user_token, uri);					
 		});
+		
+		//When user clcik on change-staus button
+		$('body').delegate('.change-status a','click', function(e) {
+			//console.log($(this).data('course-id'));
+			var course_id = $(this).data('course-id');
+			var course_status = $(this).data('status');
+			//console.log($(this).parents().closest('.status'));
+			uri = config.api_url + "/courses/"+course_id;
+			//Change course status
+			change_status(course_id, course_status, user_token, uri);					
+		});
 
 		
 		$('#edit-course_format').change(function() {
@@ -398,14 +409,14 @@
 				for(i=0;i < user_courses.data.length;i++){
 					html = '<tr>';
 					html +='<td width="5%">'+user_courses.data[i].id+'</td>';
-					html += '<td width="35%"><a href="#">'+user_courses.data[i].name+'</a></td>';
-					html += '<td width="15%">'+user_courses.data[i].shortname+'</td>';
+					html += '<td width="30%"><a href="#">'+user_courses.data[i].name+'</a></td>';
+					html += '<td width="20%">'+user_courses.data[i].shortname+'</td>';
 					html +='<td width="15%"><a href="#">'+user_courses.data[i].course_category.name+'</a></td>';
 					if(user_courses.data[i].status === "UNPUBLISHED"){
-						html +='<td width="10%"><span class="label label-warning">'+user_courses.data[i].status+'</span></td>';
+						html +='<td width="10%" class="status"><span class="label label-warning">'+user_courses.data[i].status+'</span></td>';
 					}else{
 						count_published_courses++;
-						html +='<td width="10%"><span class="label label-success">'+user_courses.data[i].status+'</span></td>';
+						html +='<td width="10%" class="status"><span class="label label-success">'+user_courses.data[i].status+'</span></td>';
 					}			
 					html +='<td width="15%">';
 					html += '<div class="btn-group">';
@@ -413,11 +424,11 @@
 					html +='<ul class="dropdown-menu" role="menu">';
 					html +='<li class="edit-course"><a data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)"  data-toggle="modal" data-target="#editModal">Edit</a></li>';
 					if(user_courses.data[i].status =="PUBLISHED"){
-					   html +='<li><a href="javascript:void(0)">Unpublish</a></li>';
+					   html +='<li class="change-status"><a data-status="UNPUBLISHED" data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)">Unpublish</a></li>';
 					}else{
-						html +='<li><a href="javascript:void(0)">Publish</a></li>';
+						html +='<li class="change-status"><a data-status="PUBLISHED" data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)">Publish</a></li>';
 					}
-					html +='<li><a href="'+user_courses.data[i].id+'/delete">delete</a></li>';
+					html +='<li><a href="course/'+user_courses.data[i].id+'/view">View</a></li>';
 					html +='</ul></div>'; 
 					html += '</td>';
 					html +='</tr>';
@@ -548,6 +559,41 @@
 		//return  result;
 	}
 	
+	function change_status(course_id, course_status, user_token, uri){
+		var data = {"status" : course_status};
+		$.ajax({
+			url: config.api_url + "/courses/"+course_id+"/change-status",
+			method: "PUT",
+			contentType: "application/json",
+			crossDomain: true,
+			dataType: "json",
+			data: JSON.stringify(data),
+			headers: {
+				"x-client-id": "0000",
+				"Content-Type": "application/json",
+				"cache-control": "no-cache",
+				"x-access-token" : user_token
+			},
+			async:true
+		})
+		.done(function (data, textStatus, jqXHR) {
+			alertNotify("Your Course has been successfully "+course_status, 'success');
+            console.log(data); 		
+		})
+		.fail(function (jqXHR, textStatus, errorThrown) {
+			if(jqXHR.status == 400){
+				var response = JSON.parse(jqXHR.responseText);
+				console.info(response);
+				if(response.code == 4000 || response.code == 4003){
+					alertNotify(response.description, 'error');
+				}else{
+					alertNotify("An internal server error occurred. Please try again later", 'error');
+				}
+			}else{
+				alertNotify("An internal server error occurred. Please try again later", 'error');
+			}  
+		});
+	}
 	
  });
 })(jQuery);

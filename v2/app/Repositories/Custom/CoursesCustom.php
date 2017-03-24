@@ -550,7 +550,7 @@ class CoursesCustom {
             $course = $this->model();
             $row = $course::with(['account'=> function ($query) {
 					$query->select('id','first_name','last_name');
-				},'courseCategory'])->where('id', '=', $id)->first();
+				},'courseCategory','section'])->where('id', '=', $id)->first();
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -562,7 +562,7 @@ class CoursesCustom {
             $course = $this->model();
 			$row = $course::with(['account'=> function ($query) {
 					$query->select('id','first_name','last_name');
-				},'courseCategory'])->where('courses.shortname', '=', $short_name)->first();
+				},'courseCategory','section'])->where('courses.shortname', '=', $short_name)->first();
 			/*
             $row = $course::join('accounts', 'accounts.id', '=', 'courses.instructor')
                 ->join('course_categories', 'course_categories.id', '=', 'courses.category')

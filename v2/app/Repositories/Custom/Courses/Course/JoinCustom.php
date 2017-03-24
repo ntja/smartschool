@@ -20,7 +20,7 @@ class JoinCustom {
     const REQUESTED_BY_INSTRUCTOR = "INSTRUCTOR";
 
     /*
-     * Fields of table Accounts
+     * Fields of table join_courses
      */
     protected $_account;
     protected $_course;
@@ -56,10 +56,6 @@ class JoinCustom {
         return new JoinCourse();
     }
 
-    public function getRole(){               
-        return $this->_role;
-    }
-    
     public function getPropertyValue($key){
         $property_name = "_".$key;
         return $this->$property_name;
@@ -225,7 +221,7 @@ class JoinCustom {
      * @param Array($mixed) $params Associative array of parameter     
      * @return Array(mixed) The result informations
      */
-    public function dbSave($params) {        
+    public function DbSave($params) {        
         try {                        
             $result = null;
             $valid = $this->validate($params);            
@@ -241,18 +237,7 @@ class JoinCustom {
                 echo json_encode($result, JSON_UNESCAPED_SLASHES);
 				http_response_code(400);
                 die(); 
-                /*
-				$result = array(
-                        "code" => 200, 
-                        "account" => $application->account,
-                        "course" => $application->course,
-                        "date_requested" => $application->date_requested,
-                        "date_joined" => $application->date_joined,
-                        "status" => $application->status,
-                    );              
-                return $result;
-				
-				*/
+                
             }else{
                 $saved = $this->_model->dbSave($params);
                 if($saved){             
@@ -268,7 +253,7 @@ class JoinCustom {
                     LogRepository::printLog('info', "The new application of user #".$account." to join course #".$course." has just been saved. Request inputs:  #{" . var_export($params,true) . "}.");
                 }else{
                     http_response_code(400);
-                    $result = array("code" => 4000, "description" => "An error occured. application has not been saved");
+                    $result = array("code" => 4000, "description" => "An error occured. Application has not been saved");
                     echo json_encode($result, JSON_UNESCAPED_SLASHES);
                     die(); 
                 }           
@@ -279,7 +264,7 @@ class JoinCustom {
         }
     }
    
-   //check if a user already applied to a course
+   
     public function prepareResponseAfterPost($course,$account) {
         try {         
             $result = array(
@@ -309,15 +294,12 @@ class JoinCustom {
     }    
 	
 	//verifies if a couple (account, course) already exists
+	//check if a user already applied to a course
     public function uniqueApplication($account, $course) {
-        try {
-            $result = null;            
-            $join_course = new JoinCourse();
-            $result = $join_course::where('account', '=', $account)->where('course', '=', $course)->first();           
-            return $result;
+        try {            
+            return $this->model()->where('account', '=', $account)->where('course', '=', $course)->first();           
         } catch (Exception $ex) {
             LogRepo::printLog('error', $ex->getMessage());
         }
-        return $result;
     }
 }

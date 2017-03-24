@@ -27,7 +27,7 @@ class InformationsController extends Controller {
             //var_export($resource_informations);die();
             if (Gate::forUser($current_account)->denies('post', [$resource_informations,true])) {
                 LogRepo::printLog('info', "Invalid attempt to update informations of another account #{" .$id. "}. Returned code: 4007.");
-                $result = array("code" => 4007, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 4007, "description" => "You do not have permissions for that request.");
                 return response()->json($result,400);
             }
 			$json_data = file_get_contents('php://input');

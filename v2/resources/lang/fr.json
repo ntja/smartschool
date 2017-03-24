@@ -6,6 +6,7 @@
 	"Re-type your password" : "Confirmation mot de passe",
 	"Password" : "Mot de passe",
 	"First Name" : "Prénom",
+	"Profile" : "Profil"
 	"Last Name" : "Nom de famille",
 	"Email" : "Adresse email",
 	"Log in" : "Se connecter",
@@ -95,8 +96,8 @@
 	"SECTIONS" : "SECTIONS",
 	"CHAPTERS" : "CHAPITRES",
 	"PARTS" : "PARTIES",
-	"Basic" : "Basique",
-	"Beginning" : "Débutant",
+	"Intermediate" : "Intermédiaire",
+	"Beginner" : "Débutant",
 	"Advanced" : "Avancé",
 	"MODULES" : "MODULES",
 	"Create Course form" : "Formulaire création de Cours",

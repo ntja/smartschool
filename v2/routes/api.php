@@ -33,6 +33,8 @@ Route::group(['middleware' => 'jwt.auth:1'], function () { //bypass ACL because 
 	Route::get('/courses/{courseId}', 'Courses\CourseController@get')->where('courseId', '[a-z0-9]+');
 	Route::put('/courses/{courseId}', 'Courses\CourseController@put')->where('courseId', '[a-z0-9]+');
 	Route::get('/categories', 'CategoriesController@get');
+	Route::post('/questions', 'QuestionsController@post');
+	Route::post('/answers', 'AnswersController@post');
 });
 Route::get('/accounts', 'AccountsController@get');
 route::put('/accounts/{accountId}/password', 'Accounts\Account\PasswordController@post')->where('accountId', '[0-9]+');
@@ -54,6 +56,15 @@ Route::post('/courses', 'CoursesController@post');
 Route::post('/courses/{courseId}/join', 'Courses\Course\JoinController@post')->where('courseId', '[0-9]+');
 Route::get('/courses/{courseId}/applications', 'Courses\Course\ApplicationsController@get')->where('courseId', '[0-9]+');
 Route::put('/courses/{courseId}/change-status', 'Courses\Course\ChangeStatusController@put')->where('courseId', '[0-9]+');
+
+Route::post('/courses/{courseId}/sections', 'Courses\Course\SectionsController@post')->where('courseId', '[0-9]+');
+Route::get('/courses/{courseId}/sections', 'Courses\Course\SectionsController@get')->where('courseId', '[0-9]+');
+
+Route::get('/courses/{courseId}/sections/{sectId}', 'Courses\Course\SectionController@get')->where('courseId', '[0-9]+')->where('sectId', '[0-9]+');
+Route::put('/courses/{courseId}/sections/{sectId}', 'Courses\Course\SectionController@put')->where('courseId', '[0-9]+')->where('sectId', '[0-9]+');
+
+Route::post('/courses/sections/{sectId}/lessons', 'Courses\Course\Sections\LessonsController@post')->where('sectId', '[0-9]+');
+Route::get('/courses/sections/{sectId}/lessons', 'Courses\Course\Sections\LessonsController@get')->where('sectId', '[0-9]+');
 
 
 Route::post('/schools', 'SchoolsController@post');

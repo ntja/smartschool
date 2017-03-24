@@ -69,7 +69,7 @@ class JoinController extends Controller {
             );
 			//var_dump($informations);die();
             $custom_join = new JoinCustom();
-            $result = $custom_join->dbSave($informations);            
+            $result = $custom_join->DbSave($informations);            
             return response()->json($result);
         } catch (Exception $ex) {
             LogRepo::printLog('error', $ex->getMessage());

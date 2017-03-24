@@ -14,7 +14,7 @@ use Exception;
 class CoursesController extends Controller {
 
     public function __construct() {
-         $this->middleware('jwt.auth', ['except' => ['get']]);
+        $this->middleware('jwt.auth', ['except' => ['get']]);
     }    
 
     /**
@@ -109,12 +109,12 @@ class CoursesController extends Controller {
             $account = new AccountsCustom($account_token_id);
             $ressource_course = new ResourceCourse();
             if (Gate::forUser($account)->denies('get', $ressource_course)) {
-                $result = array("code" => 403, "description" => "You do not have permissions for that request..");
-                return response()->json($result);
+                $result = array("code" => 403, "description" => "You do not have permissions for that request.");
+                return response()->json($result,400);
             }
             
             if(!$data['limit']){
-                $limit = 10;
+                $limit = 12;
             }else{
                 $limit = $data['limit'];
             }         

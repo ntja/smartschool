@@ -53,6 +53,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/learner/dashboard', function () {
 		return view('learner.dashboard');
 	});
+	Route::get('/learner/course', function () {
+		return view('learner.course');
+	});
 	
 	Route::get('/course/{ID}', 'Views\Courses\DetailsController@get')->where('ID', '[a-z0-9]+');
 	

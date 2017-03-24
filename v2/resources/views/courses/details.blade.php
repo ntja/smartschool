@@ -46,7 +46,7 @@
     </ol>
 
 	 <div class="row">
-     		<div class="col-md-8">
+     		<div class="col-md-8" id="course_content">
                     
                     <h3 class="chapter_course no_margin_rop">Chapter 1: Welcome.</h3>
                     <div class="strip_single_course">
@@ -72,73 +72,7 @@
                               <li><i class="icon-mic"></i> Audio lesson</li>
                         </ul>
                     </div><!-- end strip single course -->
-                                      
-                    <h3 class="chapter_course">Chapter 2: Case aeque melius duo ut, porro ridens habemus quo in.</h3>
-                    <div class="strip_single_course">
-                        <h4><a href="#">Et has suscipit probatus.</a></h4>
-                        <ul>
-                              <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-doc"></i>Text reading</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <div class="strip_single_course">
-                        <h4><a href="#">Quo ea feugiat saperet vulputate</a></h4>
-                        <ul>
-                              <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-doc"></i>Text reading</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <div class="strip_single_course">
-                        <h4><a href="#">Legere sanctus perfecto at eos</a></h4>
-                        <ul>
-                              <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-doc"></i>Text reading</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <div class="strip_single_course">
-                        <h4><a href="#">Mei habemus voluptua ex, utroque instructior.</a></h4>
-                        <ul>
-                              <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-doc"></i>Text reading</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <h3 class="chapter_course">Chapter 3: Case aeque melius duo ut, porro ridens habemus quo in.</h3>
-                    <div class="strip_single_course">
-                        <h4><a href="#">Ysu suavitate adversarium philosophia.</a></h4>
-                        <ul>
-                            <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-video"></i> Video</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <div class="strip_single_course">
-                        <h4><a href="#">Eu sit causae elaboraret efficiendi.</a></h4>
-                        <ul>
-                            <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-video"></i> Video</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <div class="strip_single_course">
-                        <h4><a href="#">Moderatius efficiantur eu mei.</a></h4>
-                        <ul>
-                            <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-video"></i> Video</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                    
-                    <div class="strip_single_course add_bottom_30">
-                        <h4><a href="#">Diam assentior sententiae eu duo.</a></h4>
-                        <ul>
-                            <li><i class="icon-clock"></i> 00:58</li>
-                              <li><i class="icon-video"></i> Video</li>
-                        </ul>
-                    </div><!-- end strip single course -->
-                
+                   
             </div><!-- End col-md-8  -->
             
             <aside class="col-md-4">

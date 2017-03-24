@@ -45,6 +45,12 @@ class Course extends Authenticatable{
 	public function account(){
         return $this->belongsTo('App\Models\Account', 'instructor');
     }
+	
+	// 1 to * relationship with section table
+	public function section(){
+        return $this->hasMany('App\Models\CourseSection', 'course');
+    }
+	
 	/*
 	//many 2 many relationship with Account table
 	public function manyAccounts(){
@@ -284,7 +290,7 @@ class Course extends Authenticatable{
 				*/
 				$select = Course::with(['account'=> function ($query) {
 						$query->select('id','first_name','last_name');
-					},'courseCategory'])->where('courses.delete_status', '=', '0')->where('courses.status', '=', "PUBLISHED");
+					},'courseCategory', 'section'])->where('courses.delete_status', '=', '0')->where('courses.status', '=', "PUBLISHED");
             }else{
 				//die('here');
                 $status = $params['status'];
@@ -299,7 +305,7 @@ class Course extends Authenticatable{
 					*/
 				$select = Course::with(['account'=> function ($query) {
 					$query->select('id','first_name','last_name');
-				},'courseCategory'])->where('courses.delete_status', '=', '0');
+				},'courseCategory','section'])->where('courses.delete_status', '=', '0');
                 if ($status) {
                     $select = $select
                             ->where('status', '=', $status);
@@ -344,7 +350,7 @@ class Course extends Authenticatable{
             $query = '%'.$params['query'].'%';
 			$select = Course::with(['account'=> function ($query) {
 					$query->select('id','first_name','last_name');
-				},'courseCategory'])
+				},'courseCategory', 'section'])
 				->where('courses.delete_status', '=', '0')
 				->where('courses.status', '=', "PUBLISHED")
 				->where(function ($q) use ($query) {

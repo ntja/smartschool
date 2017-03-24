@@ -35,6 +35,10 @@ class AclPolicy {
     const RESOURCE_BOOK_SEARCH = "App\Repositories\Custom\Resource\Books\Search";
     const RESOURCE_BOOK_CATEGORY = "App\Repositories\Custom\Resource\Books\Category";
 	const RESOURCE_CATEGORY = "App\Repositories\Custom\Resource\Category";
+	const RESOURCE_QUESTION = "App\Repositories\Custom\Resource\Question";
+	const RESOURCE_ANSWER = "App\Repositories\Custom\Resource\Answer";
+	const RESOURCE_COURSE_COURSE_SECTION = "App\Repositories\Custom\Resource\Courses\Course\Section";
+	const RESOURCE_COURSE_SECTION_LESSON = "App\Repositories\Custom\Resource\Courses\Course\Sections\Lesson";
 	
 	/*
      * Create a new policy instance.
@@ -183,6 +187,45 @@ class AclPolicy {
                 } else {
                     return false;
                 }
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_QUESTION)) {
+                $role = ["GUEST","LEARNER", "INSTRUCTOR"];
+                if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_ANSWER)) {
+                $role = ["LEARNER", "INSTRUCTOR"];
+                if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE_SECTION)) {
+                $role = ["INSTRUCTOR"];
+				//var_dump($user->isCourseOwner($resource));die();
+                if (in_array($user->getRole(), $role)) { 
+					if ($user->isCourseOwner($resource)) {
+						return true;
+					} else {
+						return false;
+					}
+                } else {
+                    return false;
+                }
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_SECTION_LESSON)) {
+                $role = ["INSTRUCTOR"];
+				/**/
+                if (in_array($user->getRole(), $role)) { 
+					if ($user->isCourseOwner($resource)) {
+						return true;
+					} else {
+						return false;
+					}
+                } else {
+                    return false;
+                }
+				
             } 
 		}
 	}
@@ -297,8 +340,7 @@ class AclPolicy {
                 } else {
                     return false;
                 }
-            }
-            elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_SEARCH)) {
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_SEARCH)) {
                 $role = ["ADMINISTRATOR","INSTRUCTOR","LEARNER","GUEST"];
                 //var_dump($user->getRole());die();
                 if (in_array($user->getRole(), $role)) {                    
@@ -306,15 +348,22 @@ class AclPolicy {
                 } else {
                     return false;
                 }
-            }
-            elseif (!strcasecmp(get_class($resource), self::RESOURCE_BOOK_SEARCH)) {
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_BOOK_SEARCH)) {
                 $role = ["ADMINISTRATOR","INSTRUCTOR","LEARNER","GUEST"];
                 if (in_array($user->getRole(), $role)) {                    
                     return true;
                 } else {
                     return false;
                 }
-            }
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE_SECTION)) {
+                $role = ["INSTRUCTOR","LEARNER","ADMINISTRATOR","GUEST"];
+				//var_dump($user->isCourseOwner($resource));die();
+                if (in_array($user->getRole(), $role)) { 
+					return true;
+                } else {
+                    return false;
+                }
+            } 
 		}
 	}
 

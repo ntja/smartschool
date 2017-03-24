@@ -49,8 +49,8 @@
 											<div class="styled-select">
 												<select class="form-control required" name="edit-target_audience" id="edit-target_audience">
 													<option value="">{{__('Select an Audience')}}</option>
-													<option value="0">{{__('Basic')}}</option>
-													<option value="1">{{__('Beginning')}}</option>
+													<option value="0">{{__('Beginner')}}</option>
+													<option value="1">{{__('Intermediate')}}</option>
 													<option value="2">{{__('Advanced')}}</option>
 													<option value="3">{{__('Other')}}</option>
 												</select>														

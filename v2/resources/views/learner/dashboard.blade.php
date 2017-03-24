@@ -39,7 +39,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6 text-center">
-					<a href="#"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_3_small.png')}}" alt="" ></div>
+					<a href="<?php echo URL::to('/learner/course'); ?>"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_3_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
 					<h3>{{__('My Courses')}}</h3></a>		
 					</div>
