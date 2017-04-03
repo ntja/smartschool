@@ -4,7 +4,7 @@
 
 (function($) {
 	$(document).ready(function() {
-		var params = get_query(), uri = config.api_url + '/accounts/reset-password?key='+params.key;
+		var params = qs(), uri = config.api_url + '/accounts/reset-password?key='+params.key;
 		base_url = $('body').attr('data-base-url');
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'),form = $("#reset-password-form");;
         //check if user token is still valid 
@@ -21,12 +21,13 @@
 		}
 		//console.log(params.key);
 		// Set custom error messages
-        $.extend($.validator.messages, {
-           required: "This field is required",
-            email: "Invalid email address",
-			minlength: "Minimum length : 8 characters",
-			equalTo : "Must match password field"
+		$.extend($.validator.messages, {
+            required: settings.i18n.translate("validation.1"),
+            email: settings.i18n.translate("validation.2"),
+			minlength: $.validator.format(settings.i18n.translate("validation.4")),
+			equalTo : settings.i18n.translate("validation.5")
         });
+        
         form.validate({
             errorElement: 'label',
             //errorClass: 'error',
@@ -87,7 +88,7 @@
 				.done(function(data, textStatus, jqXHR) {
 					//var uri;
 					$('#reset-password-form').slideUp('slow');
-					alertNotify("Your password has been successfully reset. You can log in now.", 'success');
+					alertNotify(settings.i18n.translate("reset.password.1"), 'success');
 					console.log(data);
 				})
 				.fail(function(jqXHR, textStatus, errorThrown) {
@@ -98,10 +99,10 @@
 						if(response.code == 4000){
 							alertNotify(response.description, 'error');
 						}else{
-							alertNotify("An internal server error occurred. Please try again later", 'error');
+							alertNotify(settings.i18n.translate("error.1"), 'error');
 						}
 					}else{
-						alertNotify("An internal server error occurred. Please try again later", 'error');
+						alertNotify(settings.i18n.translate("error.1"), 'error');
 					}                   
 				}).always(function() {
 						$('#submit_btn .loader').fadeOut('slow',function(){$(this).remove()});

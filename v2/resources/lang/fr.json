@@ -6,7 +6,7 @@
 	"Re-type your password" : "Confirmation mot de passe",
 	"Password" : "Mot de passe",
 	"First Name" : "Prénom",
-	"Profile" : "Profil"
+	"Profile" : "Profil",
 	"Last Name" : "Nom de famille",
 	"Email" : "Adresse email",
 	"Log in" : "Se connecter",
@@ -101,7 +101,22 @@
 	"Advanced" : "Avancé",
 	"MODULES" : "MODULES",
 	"Create Course form" : "Formulaire création de Cours",
-	"Please Fill out the Form below to create your course" : "Veuillez Remplir le formulaire ci-dessous pour créer un cours"
-	
-	
+	"Please Fill out the Form below to create your course" : "Veuillez Remplir le formulaire ci-dessous pour créer un cours",
+	"Course Details" : "Contenu du Cours",
+	"Enroll Now" : "S'inscrire maintenant",
+	"Details" : "Détails",
+	"Subscribe" : "S'abonner",
+	"Joined Date" : "Date d'inscription",
+	"Progress" : "Progression",
+	"Courses you are following" : "Cours suivis",
+	"Overview" : "Aperçu",
+	"Course Overview" : "Aperçu du Cours",
+	"Mon - Fri" : "Lun - Ven",
+	"All rights reserved" : "Tous Droits Reservés",
+	"About Us" : "Qui Sommes-nous ?",
+	"Terms and conditions" : "Conditions d'utilisation",
+	"Contact Us" : "Nous Contacter",
+	"Enroll now in the latest courses" : "Inscrivez-vous aux derniers cours",
+	"Free" : "Gratuit",
+	"Account Activation" : "Activation du Compte"
 }

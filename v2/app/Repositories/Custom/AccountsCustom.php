@@ -276,7 +276,26 @@ class AccountsCustom {
                     }  
                 }else {
                     throw new Exception("Expected 'password' in array as parameter , " . (is_object($param['password']) ? get_class($param['password']) : gettype($param['password'])) . " found.");
-                }                               
+                }
+				if (array_key_exists('human_verification', $param)){
+                    if (is_null($param['human_verification'])) {
+                        $result = array("code" => 4000, "description" => "human_verification is required ");
+                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        return false;
+                    }
+                    if (!is_numeric($param['human_verification'])) {
+                        $result = array("code" => 4000, "description" => "human_verification must be a number");
+                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        return false;
+                    }
+                    if ($param['human_verification'] != 4) {
+                        $result = array("code" => 4000, "description" => "human_verification value is incorrect");
+                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        return false;
+                    }
+                }else {
+                    throw new Exception("Expected 'human_verification' in array as parameter , " . (is_object($param['human_verification']) ? get_class($param['human_verification']) : gettype($param['human_verification'])) . " found.");
+                } 
             }                                    
             return true;
         } catch (Exception $ex) {
@@ -301,6 +320,7 @@ class AccountsCustom {
                 http_response_code(400);
                 die(); 
             }            
+			unset($params['human_verification']);
             $params['date_created'] = date('Y-m-d H:i:s');
             $params['verify_token'] = str_random(50);            
             $saved = $this->_model->dbSave($params);
@@ -330,8 +350,8 @@ class AccountsCustom {
                 unset($params['password']);
                 LogRepository::printLog('info', "The new account #".$account_id." has just been created. Request inputs:  #{" . var_export($params,true) . "}.");
             }else{
-                http_response_code(400);
-                $result = array("code" => 4000, "description" => "An error occurred. Account has not been created");
+                http_response_code(500);
+                $result = array("code" => 5000, "description" => "An error occurred. Account has not been created");
                 echo json_encode($result, JSON_UNESCAPED_SLASHES);
                 die(); 
             }           
@@ -395,7 +415,7 @@ class AccountsCustom {
         }
     }    
     
-    public function checkUser($email) {
+    public function checkUser($email,$password=null) {
         try {
             $result = null;            
             $account = $this->model();       

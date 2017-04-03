@@ -1,9 +1,12 @@
 @extends('layouts.master')
 
 @section('header-title')
-    SmartSchool | {{__('Register')}}
+    SmartSchool | {{__('Account Activation')}}
 @stop
-
+@section('header-styles')
+   <!-- CUSTOM STYLES -->
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+@stop
 @section('content')
 
 @include('partials/header')
@@ -20,7 +23,8 @@
 
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
-	<script src="{{asset('js/custom/custom.js')}}"></script>
+	<script src="{{asset('js/custom/functions.js')}}"></script>
+	<script src="{{asset('js/localization/i18n.js')}}"></script>
    <script src="{{asset('js/custom/user/activate.js')}}"></script>
 @stop
 

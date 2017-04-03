@@ -6,8 +6,11 @@
 	$(document).ready(function() {
 		var uri = config.api_url + '/accounts/verify';
 		/* Get Current URL */		
-		var params = get_query();
+		var params = qs();
 		console.log(params);
+		if(params[0] == undefined){
+			window.location.assign($('body').attr('data-base-url')+'/login');
+		}
 		//{"email":email,"verify_token":verify_token}
 		$.ajax({
 			url: uri,
@@ -26,7 +29,7 @@
 			//var uri;
 			if(data.success==1){
 				alertNotify(data.message, 'success');
-				$('.response-message').append('<p> If you are not redirected to log in page in 3 secondes, Please click on the following link: <a href="'+$('body').attr('data-base-url')+'/login">Log in</a> </p>');
+				$('.response-message').append('<p>'+ settings.i18n.translate("activate.1") +' <a href="'+$('body').attr('data-base-url')+'/login">'+ settings.i18n.translate("login.1") +'</a> </p>');
 				setTimeout(function(){
 					window.location.assign($('body').attr('data-base-url')+'/login');
 				},3000);
@@ -43,10 +46,10 @@
 				}else if(response.code == 4010){
 					alertNotify(response.description, 'warning');
 				}else{
-					alertNotify("An internal server error occurred. Please try again later", 'error');
+					alertNotify(settings.i18n.translate("error.1"), 'error');
 				}
 			}else{
-				alertNotify("An internal server error occurred. Please try again later", 'error');
+				alertNotify(settings.i18n.translate("error.1"), 'error');
 			}                   
 		});				
 	});

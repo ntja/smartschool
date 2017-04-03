@@ -45,7 +45,7 @@
 	 
     </head>
 
-    <body data-base-url="<?php echo URL::to('/'); ?>">        
+    <body data-base-url="<?php echo URL::to('/'); ?>" data-locale="<?php echo App::getLocale(); ?>">        
        
 		@yield('content')  
 		

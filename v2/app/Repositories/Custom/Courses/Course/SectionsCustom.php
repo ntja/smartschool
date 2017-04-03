@@ -212,14 +212,14 @@ class SectionsCustom {
         }
     }
 	
-	public function getList($params){
+	public function getList($params,$id){
         try{            
             //dd("Here");
             $validate = $this->validate($params,true);            
             if ($validate) {                         
                 //Retrieve a list of item paginated by after and before params
 				
-                $rows = $this->_model->getSections($params);
+                $rows = $this->_model->getSections($params,$id);
 				if(!$rows){					
 					$result = [
                         'code' => 200,

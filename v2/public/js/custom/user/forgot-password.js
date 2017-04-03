@@ -20,10 +20,10 @@
 			}
 		}
 		// Set custom error messages
-        $.extend($.validator.messages, {
-            required: "This field is required",
-            email: "Invalid email address"
-        });
+		$.extend($.validator.messages, {
+            required: settings.i18n.translate("validation.1"),
+            email: settings.i18n.translate("validation.2")
+        });        
         form.validate({
             errorElement: 'label',
             //errorClass: 'error',
@@ -81,10 +81,10 @@
 						if(response.code == 4000){
 							alertNotify(response.description, 'error');
 						}else{
-							alertNotify("An internal server error occurred. Please try again later", 'error');
+							alertNotify(settings.i18n.translate("error.1"), 'error');
 						}
 					}else{
-						alertNotify("An internal server error occurred. Please try again later", 'error');
+						alertNotify(settings.i18n.translate("error.1"), 'error');
 					}                   
 				}).always(function() {
 						$('#submit_btn .loader').fadeOut('slow',function(){$(this).remove()});

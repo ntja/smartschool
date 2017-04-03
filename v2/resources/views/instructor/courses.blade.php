@@ -8,7 +8,7 @@
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 @stop
 @section('content')
-	@include('partials/header-connected-user')
+	@include('partials/instructor/header')
    
     <section id="main_content" >
     	<div class="container">
@@ -80,6 +80,8 @@
 
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
+	<script src="{{asset('js/localization/i18n.js')}}"></script>
+	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
 	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>
 	<script> 

@@ -15,6 +15,6 @@ config = settings.environments[environment];
 
 (function($) {
     $(document).ready(function() {
-        root_admin = $('body').attr('data-base-url');
+        base_url = $('body').attr('data-base-url');
     });
 })(jQuery);

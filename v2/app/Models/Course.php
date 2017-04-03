@@ -27,7 +27,7 @@ class Course extends Authenticatable{
      * @var array
      */
     protected $hidden = [
-        'delete_status','instructor','school','category'
+        'delete_status'
     ];
 
     public function __construct() {           

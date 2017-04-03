@@ -68,7 +68,8 @@
 
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
-	<script src="{{asset('js/custom/custom.js')}}"></script>
+	<script src="{{asset('js/custom/functions.js')}}"></script>
+	<script src="{{asset('js/localization/i18n.js')}}"></script>
    <script src="{{asset('js/custom/user/register.js')}}"></script>
 @stop
 

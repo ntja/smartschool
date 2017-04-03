@@ -6,6 +6,7 @@ use App\Repositories\Util\LogRepository;
 use Exception;
 //use App\Models\Course;
 use App\Repositories\Custom\JoinCoursesCustom;
+use App\Repositories\Custom\Courses\CategoriesCustom;
 
 class ApplicationsCustom {
     
@@ -14,9 +15,11 @@ class ApplicationsCustom {
      */    
 
     protected $_joinCoursesCustom;
+	protected $_categoriesCustom;
 
     public function __construct($id = null) {   
-        $this->_joinCoursesCustom = new JoinCoursesCustom();          
+        $this->_joinCoursesCustom = new JoinCoursesCustom();
+		$this->_categoriesCustom = new CategoriesCustom();
     }   
         
     /**
@@ -30,13 +33,7 @@ class ApplicationsCustom {
         try {            
             if (!is_array($param)) {
                 throw new Exception("Expected array as parameter , " . (is_object($level) ? get_class($level) : gettype($level)) . " found.");
-            }   
-            /*                 
-            if (!array_key_exists('id', $param)) {
-                throw new Exception("Expected 'id' in array as parameter , " . (is_object($param['id']) ? get_class($param['id']) : gettype($param['id'])) . " found.");
-            } 
-            */          
-            return TRUE;            
+            }               
             return true;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -51,9 +48,25 @@ class ApplicationsCustom {
             if ($validate) {                         
                 //Retrieve a list of item paginated by after and before params
                 $rows = $this->_joinCoursesCustom->model()->getApplication($params, $account->getPropertyValue('id'));  
-                LogRepository::printLog('info', "All courses have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
-                return $rows;
-            }            
+                if(!$rows){					
+					$result = [
+                        'code' => 200,
+                        'data' => [],
+                        'total' => 0,
+                    ];
+                    return $result;
+				}
+				//var_dump($rows);die();
+				for($i=0; $i<count($rows); $i++){
+					$category_name = $this->_categoriesCustom->getcategoryByID($rows[$i]['course_details']->category);
+					//var_dump($category_name);die();
+					$rows[$i]['category'] = $category_name?$category_name->name:null;
+				}
+				return $rows;
+            }else{
+				http_response_code(400);
+                die();
+			}            
         }catch(Exception $ex){
             LogRepository::printLog('error', $ex->getMessage());
         }

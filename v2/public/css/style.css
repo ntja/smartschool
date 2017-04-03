@@ -1026,7 +1026,7 @@ position:absolute; left:10px; top:-15px; background-color:#f8f8f8; padding:0px 1
 /* #home with subscription ========== */
 #subscribe_home {
 	background-color:#004e6d;
-	padding:30px 30px 0 30px;
+	padding:40px 20px 20px 20px;
 	margin-top:30px;
 }
 #subscribe_home input, #subscribe_home .styled-select {
@@ -1038,6 +1038,7 @@ position:absolute; left:10px; top:-15px; background-color:#f8f8f8; padding:0px 1
 #subscribe {
 	background:url(../img/arrow_hand_1.png) no-repeat center bottom;
 	padding-bottom:70px;
+	color: #0088cc;
 }
 /* #home with video ========== */
 .video {

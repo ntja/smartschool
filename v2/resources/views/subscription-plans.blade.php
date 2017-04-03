@@ -3,12 +3,15 @@
 @section('header-title')
     SmartSchool | {{__('Subscription Plans')}}
 @stop
-
+@section('header-styles')
+   <!-- CUSTOM STYLES -->
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+@stop
 @section('content')
 
 @include('partials/header')
 
-<section id="sub-header">
+<section>
 <div class="container">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 text-center">
@@ -19,7 +22,6 @@
 		</div>
 	</div><!-- End row -->
 </div><!-- End container -->
-<div class="divider_top"></div>
 </section><!-- End sub-header -->
 
 <section id="main_content">
@@ -47,7 +49,7 @@
                 <div class="plan plan-tall col-md-4">
                 <span class="ribbon"></span>
                     <h2 class="plan-title">{{__('Pack 1')}} + {{__('Unlimited Access to MCQs and Assignments')}}</h2>
-                    <p class="plan-price">$1<span>/{{__('Month')}}</span></p>
+                    <p class="plan-price">$0.99<span>/{{__('Month')}}</span></p>
                     <ul class="plan-features">
                     	<li><strong>{{__('Unlimited Access to MCQs')}}</strong></li>
                         <li><strong>{{__('Unlimited Access to assignments')}}</strong></li>
@@ -81,7 +83,7 @@
             
                 <div class="col-md-4">
                     <div class="question_box">
-                        <h3>No sit debitis meliore postulant, per ex prompta alterum sanctus?</h3>
+                        <h3>{{__('How To Subscribe')}}?</h3>
                         <p>
                             Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
                         </p>
@@ -90,7 +92,7 @@
                 
                 <div class="col-md-4">
                     <div class="question_box">
-                        <h3>Autem putent singulis usu ea, bonorum suscipit eum?</h3>
+                        <h3>{{__('What is the refund politic')}} ?</h3>
                         <p>
                             Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
                         </p>
@@ -99,7 +101,7 @@
                 
                 <div class="col-md-4">
                     <div class="question_box">
-                        <h3>Pro moderatius philosophia ad, ad mea mupercipitur?</h3>
+                        <h3>{{__('How to upgrade my current plan')}}?</h3>
                         <p>
                             Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
                         </p>

@@ -8,7 +8,7 @@
 	
 @stop
 @section('content')
-	@include('partials/header-connected-user')
+	@include('partials/instructor/header')
  
 <section id="main_content">
 

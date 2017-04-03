@@ -55,7 +55,7 @@ class SectionsController extends Controller {
         }
 	}
 	
-	public function get(Request $request) {
+	public function get(Request $request, $id) {
         try {                      
             $data = $request->only('account_id','limit','is_visible');
             $account_token_id = $data['account_id'];
@@ -80,7 +80,7 @@ class SectionsController extends Controller {
             );
             //var_dump($account->getRole());die();
             $custom_course = new SectionsCustom();            
-            $result = $custom_course->getList($informations);            
+            $result = $custom_course->getList($informations, $id);            
             return response()->json($result);
         } catch (Exception $ex) {
             LogRepo::printLog('error', $ex->getMessage());

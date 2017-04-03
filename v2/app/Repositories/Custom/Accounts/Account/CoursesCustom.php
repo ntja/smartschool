@@ -77,8 +77,15 @@ class CoursesCustom {
                 //dd("Herexx");
                 //Retrieve a list of item paginated by after and before params
                 $rows = $this->_courseCustom->model()->getCourses($params, $role, $account);  
-                LogRepository::printLog('info', "The courses of instructor #".var_export($account,true)." has been retrieve. Request inputs: {" . var_export($params,true) . "}.");    
-                return $rows;
+                if(!$rows){					
+					$result = [
+                        'code' => 200,
+                        'data' => [],
+                        'total' => 0,
+                    ];
+                    return $result;
+				}
+				return $rows;
             }else{
 				http_response_code(400);
                 die();

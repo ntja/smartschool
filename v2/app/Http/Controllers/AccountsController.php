@@ -32,13 +32,13 @@ class AccountsController extends Controller {
             $ressource_account = new ResourceAccount();
             if (Gate::forUser($account)->denies('post', $ressource_account)) {
                 LogRepo::printLog('error', "Invalid attempt to create a new account with the role ".$account->getRole());
-                $result = array("code" => 403, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 4003, "description" => "You do not have permissions for that request..");
                 return response()->json($result, 400);
             }
             $person_info = file_get_contents('php://input');
             $data = json_decode($person_info, TRUE);
             if (!is_array($data)) {
-                $result = array("code" => 400, "description" => "invalid request body");
+                $result = array("code" => 4000, "description" => "invalid request body");
                 return response()->json($result, 400);
             }
 
@@ -50,7 +50,8 @@ class AccountsController extends Controller {
 			$honorific = array_key_exists("honorific", $data) ? $data["honorific"] : "Mr";
 			$phone = array_key_exists("phone", $data) ? $data["phone"] : null;
 			$photo = array_key_exists("photo", $data) ? $data["photo"] : null;
-            $password = array_key_exists("password", $data) ? $data["password"] : null;			
+            $password = array_key_exists("password", $data) ? $data["password"] : null;
+			$human_verification = array_key_exists("human_verification", $data) ? $data["human_verification"] : null;
 
             $informations = array(
                 'email' => $email,
@@ -60,7 +61,8 @@ class AccountsController extends Controller {
                 'role' => $role,
                 'password' => $password,
 				'phone' => $phone,
-				'photo' => $photo
+				'photo' => $photo,
+				'human_verification' => $human_verification,
             );
 			//var_dump($informations);die();
             $custom_account = new AccountsCustom($account_token_id);            
@@ -86,7 +88,7 @@ class AccountsController extends Controller {
             //checking user permission,
             $ressource_account = new ResourceAccount();
             if (Gate::forUser($account)->denies('get', $ressource_account)) {
-                $result = array("code" => 403, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 4003, "description" => "You do not have permissions for that request..");
                 return response()->json($result,400);
             }                       
             if (!$data['limit']) {

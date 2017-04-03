@@ -49,10 +49,12 @@ class AuthenticateController extends Controller {
 
 				$email = array_key_exists("email", $data) ? $data["email"] : null;
 				$password = array_key_exists("password", $data) ? $data["password"] : null;
+				$human_verification = array_key_exists("human_verification", $data) ? $data["human_verification"] : null;
 
 				$informations = array(
 					'email' => $email,
 					'password' => $password,
+					'human_verification' => $human_verification,
 				);
 				$custom_authenticate = new AuthenticateCustom();
 				$result = $custom_authenticate->authenticate($informations);

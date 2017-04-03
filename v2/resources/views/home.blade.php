@@ -16,12 +16,16 @@
 <section id="sub-header" >
   	<div class="container">
     	<div class="row">
-        	<div class="col-md-6" id="subscribe">
+        	
+			<div class="col-md-6">
+			<!---->
             	<h1> {{__('LEARN EVERYTHING FROM ANYWHERE') }}</h1>
                 <h2 class="hidden-xs">{{__('For free. For everyone. Forever') }}</h2>
+				
             </div>
+			
             <div class="col-md-6">
-            <div id="subscribe_home"  class="login">           
+            <div id="subscribe_home" class="login">           
 			<form method="post" id="register-form">
 				<div class="response-message"></div>
 				<div class="row">
@@ -63,7 +67,7 @@
                 <div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
-							<input type="number" id="verify_contact_home" class=" form-control" placeholder="{{__('Are you human ?')}} 3 + 1 =" required>
+							<input type="number" id="verify_human" class="form-control" placeholder="{{__('Are you human ?')}} 3 + 1 =" required>
 						</div>
 				</div>
 				 {{ csrf_field() }}
@@ -155,7 +159,7 @@
         	<div class="row">
 				<div class="col-md-12 text-center">
 					<h2>{{__('Latest Courses')}}</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, ius minim gubergren ad.</p>
+					<p class="lead">{{__('Enroll now in the latest courses')}}.</p>
 				</div>
 			</div><!-- End row -->
 			<div id="course_list">
@@ -172,7 +176,8 @@
   
 	@section('scripts')
 		<script src="{{asset('js/custom/config/config.js')}}"></script>
-		<script src="{{asset('js/custom/custom.js')}}"></script>	   
+		<script src="{{asset('js/localization/i18n.js')}}"></script>
+		<script src="{{asset('js/custom/functions.js')}}"></script>
 	   <script src="{{asset('js/custom/user/register.js')}}"></script>
 	   <script src="{{asset('js/custom/home.js')}}"></script>
 	@stop

@@ -267,26 +267,11 @@ class JoinCustom {
    
     public function prepareResponseAfterPost($course,$account) {
         try {         
-            $result = array(
+            $result = [
                 'code' => 201,
                 'course' => $course,
-                'account' => $account,
-                'links' =>
-                    [
-                        [
-                            'href' => "/accounts/{$account}",
-                            'rel' => 'retrieve',
-                            'requestTypes' => array("GET"),
-                            'responseTypes' => array("application/json")
-                        ],
-                        [                           
-                            'href' => "/courses/{$course}",
-                            'rel' => 'retrieve',
-                            'requestTypes' => array("GET"),
-                            'responseTypes' => array("application/json")                        
-                        ]
-                    ]
-                );
+                'account' => $account,                
+            ];
             return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());

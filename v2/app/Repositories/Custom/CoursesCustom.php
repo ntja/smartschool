@@ -596,7 +596,6 @@ class CoursesCustom {
 				
                 $rows = $this->_model->getCourses($params, $account);
 				if($rows){
-					LogRepository::printLog('info', "All courses have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
 					return $rows;
 				}else{
 					$result = [

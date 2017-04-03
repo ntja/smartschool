@@ -11,10 +11,11 @@
 	-->
     <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.min.css')}}">
 @stop
 
 @section('content')
-
+<div class="notification-container"></div>
  @include('partials/header')
   	
 <section id="sub-header" data-course_id=<?php echo $course_id; ?>>
@@ -49,16 +50,16 @@
   
 	<ol class="breadcrumb">
       <li><a href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
-      <li class="active">{{__('Course Details')}}</li>
+      <li class="active">{{__('Course Overview')}}</li>
     </ol>
 
 	 <div class="row">
      		<div class="col-md-8" id="course_content">                   
-                   
+                <span></span>   
             </div><!-- End col-md-8  -->
             
             <aside class="col-md-4">
-            	<a href="#" class=" button_fullwidth">{{__('Enroll Now')}}</a> 
+            	<a href="javascript:;" class="enroll button_fullwidth">{{__('Enroll Now')}}</a> 
             	<div class="box_style_1">
          			<h4>length: <span class="length pull-right"></span></h4>
          			<h4>Effort: <span class="effort pull-right"></span></h4>
@@ -102,8 +103,10 @@
 
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
-	<script src="{{asset('js/custom/custom.js')}}"></script>
-   <script src="{{asset('js/custom/courses/details.js')}}"></script>
+	<script src="{{asset('js/localization/i18n.js')}}"></script>
+	<script src="{{asset('js/custom/functions.js')}}"></script>
+	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
+   <script src="{{asset('js/custom/courses/overview.js')}}"></script>
 @stop
 
 @stop 

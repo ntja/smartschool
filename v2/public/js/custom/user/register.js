@@ -15,19 +15,21 @@
 		// if token exists and is valid
         if (user_token && valid_token == true) {
 			if(user_role == 'LEARNER'){
-				window.location.assign(base_url + '/learner/dashboard');
+				//window.location.assign(base_url + '/learner/dashboard');
+				$(".connect-register").html("<a class='button_top' href='"+base_url+"/learner/dashboard'>Return to Dashboard</a>");
 			}
 			if(user_role == 'INSTRUCTOR'){
-				window.location.assign(base_url + '/instructor/dashboard');
+				//window.location.assign(base_url + '/instructor/dashboard');
+				$(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
 			}
 		}
 		// Set custom error messages
         $.extend($.validator.messages, {
-            required: "This field is required",
-            email: "Invalid email address",
-			number: "Invalid value",
-			minlength: "Minimum length : 8 characters",
-			equalTo : "Must match password field"
+            required: settings.i18n.translate("validation.1"),
+            email: settings.i18n.translate("validation.2"),
+			number: settings.i18n.translate("validation.3"),
+			minlength: $.validator.format(settings.i18n.translate("validation.4")),
+			equalTo : settings.i18n.translate("validation.5")
         });
         form.validate({
             errorElement: 'label',
@@ -62,7 +64,12 @@
 					required: true,
 					number: true
 				}
-            }
+            },
+			highlight: function(element, errorClass, validClass) {
+				console.info(validClass);
+				$(element).addClass(errorClass).removeClass(validClass);
+				//$(element.form).find("id=" + element.id).addClass(errorClass);
+			}
         });
 
         function validate() {
@@ -82,11 +89,14 @@
                 password = $('#password').val();
 				first_name = $('#first_name').val();
 				last_name = $('#last_name').val();
+				human_verification = $('#verify_human').val();
+				
                 data = {
                     "email": email,
                     "password": password,
 					"first_name" : first_name,
 					"last_name" : last_name,
+					"human_verification" : human_verification,
 					"role" : "LEARNER"
                 };
                 console.log(data);
@@ -107,8 +117,8 @@
                 .done(function(data, textStatus, jqXHR) {					
 					$('#register-form').slideUp('slow');
 					html = "<div class='alert alert-success' role='alert'><span class='fa fa-check fa-lg'> </span>";
-					html += "Thank you <strong>"+first_name+"</strong> for joining SmartSchool. <br>"
-					html += "We just sent you an activation email. Please activate your account to start exploring our resources. </div>"
+					html += settings.i18n.translate("register.1")+"  <strong>"+first_name+" </strong>"+settings.i18n.translate("register.2")+"<br>";
+					html += settings.i18n.translate("register.3")+"</div>";
 					$('.login').append(html);
                     //alertNotify("Well done ! Your account has been successfully created", 'success');                    
                 })
@@ -117,13 +127,20 @@
 					if(jqXHR.status == 400){
 						var response = JSON.parse(jqXHR.responseText);
 						console.info(response.code);
-						if(response.code == 4000 || response.code == 4002 || response.code == 4003 || response.code == 4004 || response.code == 4001){
-							alertNotify(response.description, 'error');
-						}else{
-							alertNotify("An internal server error occurred. Please try again later", 'error');
+						if(response.code == 4001){
+							alertNotify(settings.i18n.translate("register.4"), 'error');
+						}
+						else if(response.code == 4000){
+							alertNotify(settings.i18n.translate("register.5"), 'error');
+						}
+						else if(response.code == 4003){
+							alertNotify(settings.i18n.translate("error.2"), 'error');
+						}
+						else{
+							alertNotify(settings.i18n.translate("error.1"), 'error');
 						}
 					}else{
-						alertNotify("An internal server error occurred. Please try again later", 'error');
+						alertNotify(settings.i18n.translate("error.1"), 'error');
 					}                   
                 })
 				.always(function() {

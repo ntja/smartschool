@@ -23,9 +23,9 @@
 		}
 		// Set custom error messages
         $.extend($.validator.messages, {
-            required: "This field is required",
-            email: "Invalid email address",
-			number: "Invalid value"
+            required: settings.i18n.translate("validation.1"),
+            email: settings.i18n.translate("validation.2"),
+			number: settings.i18n.translate("validation.3")
         });
         form.validate({
             errorElement: 'label',
@@ -54,8 +54,7 @@
 
         function validate() {
             return form.valid();
-        } 
-		
+        } 		
 		//When user clcik on login button
 		$('#submit_btn').click(function(e) {
             e.preventDefault();
@@ -66,10 +65,12 @@
                 var url, email, password, data;
                 url = config.api_url + '/accounts/authenticate';
                 email = $('#email').val();
-                password = $('#password').val();                
+                password = $('#password').val(); 
+				human_verification = $('#verify_human').val();
                 data = {
                     "email": email,
-                    "password": password                
+                    "password": password,
+					"human_verification" : human_verification,					
                 };
                 console.log(data);
                 //console.log(JSON.stringify(data))                
@@ -88,12 +89,16 @@
                 // if everything is ok
                 .done(function(data, textStatus, jqXHR) {					
                     var uri;
-                    alertNotify("Well done ! Successful authentication", 'success');
+					var return_url = qs().return_url;
+                    alertNotify(settings.i18n.translate("login.2"), 'success');
                     console.log(data);
                     window.localStorage.setItem('sm_user_role', data.role);
 					window.localStorage.setItem('sm_user_id', data.account_id);
 					window.localStorage.setItem('sm_user_token', data.token);
-                    if (data.role == "INSTRUCTOR") {                        
+					if(return_url){
+						uri = return_url;
+					}
+					else if (data.role == "INSTRUCTOR") {                        
                         uri = base_url + '/instructor/dashboard';
                     } else if (data.role == "LEARNER"){
                         uri = base_url + '/learner/dashboard';
@@ -109,13 +114,18 @@
 					if(jqXHR.status == 400){
 						var response = JSON.parse(jqXHR.responseText);
 						console.info(response.code);
-						if(response.code == 4000 || response.code == 4002 || response.code == 4003 || response.code == 4004){
-							alertNotify(response.description, 'error');
-						}else{
-							alertNotify("An internal server error occurred. Please try again later", 'error');
+						if(response.code == 4000){
+							alertNotify(settings.i18n.translate("login.4"), 'error');
+						}else if(response.code == 4004){
+							alertNotify(settings.i18n.translate("login.5"), 'error');
+						}else if(response.code == 4002 || response.code == 4003){
+							alertNotify(settings.i18n.translate("login.3"), 'error');
+						}
+						else{
+							alertNotify(settings.i18n.translate("error.1"), 'error');
 						}
 					}else{
-						alertNotify("An internal server error occurred. Please try again later", 'error');
+						alertNotify(settings.i18n.translate("error.1"), 'error');
 					}                   
                 })
 				.always(function() {

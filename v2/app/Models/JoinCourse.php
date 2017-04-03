@@ -27,14 +27,14 @@ class JoinCourse extends Pivot{
      * @var array
      */
     protected $hidden = [
-        'delete_status', 'date_requested', 'date_joined', 'date_left'
+        'delete_status',
     ];
 	
 	public function account() {
         return $this->belongsTo('App\Models\Account', 'account');
     }
-
-    public function course() {
+	
+    public function course_details() {
         return $this->belongsTo('App\Models\Course', 'course');
     }
 	
@@ -132,9 +132,14 @@ class JoinCourse extends Pivot{
             $status = $params['status'];
             $requestedby = $params['requestedby'];
 			
-			$select = JoinCourse::with(['account'=> function ($query) {
-						$query->select('id','first_name','last_name');
-					},'course'])->where('join_courses.delete_status', '=', '0');
+			$select = JoinCourse::with(
+				[
+					'account' => function ($query) {
+							$query->select('id','first_name','last_name');
+						},
+					'course_details'
+				]
+			)->where('join_courses.delete_status', '=', '0');
 			//var_dump($select);die();		
 			/*
             $select = DB::table('join_courses')

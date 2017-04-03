@@ -189,9 +189,9 @@ class CategoriesCustom {
 
     public function getcategoryByID($id){
         try{
-            $category = new CourseCategory();
-            $row = $category::where('id', '=', $id)->first();
-            return $row;
+            //$category = new CourseCategory();
+            return  $this->_model->where('id', '=', $id)->first();
+            //return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }

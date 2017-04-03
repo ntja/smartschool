@@ -88,7 +88,7 @@ class CourseSection extends Authenticatable{
         }
     }
 	
-	public function getSections($params) {
+	public function getSections($params, $course_id) {
         try {
             //var_dump($params);die();
             if (!is_array($params)){
@@ -118,7 +118,7 @@ class CourseSection extends Authenticatable{
 					$query->select('id','title','content','section');
 				}
 			]
-			)->where('course_sections.delete_status', '=', '0');
+			)->where('course_sections.delete_status', '=', '0')->where('course_sections.course',$course_id);
 			
             $rows = $select->orderBy('id','ASC')->paginate($limit);
             //var_dump($rows);die();       
