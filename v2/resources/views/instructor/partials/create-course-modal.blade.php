@@ -93,8 +93,8 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="button_medium_outline" data-dismiss="modal" id="close"><span class="icon-cross"></span> {{__('Close')}}</button>
-				<button type="button" class="button_medium" id="submit_btn">{{__('Create Course')}}</button>
+				<button type="button" class="button_medium_outline" data-dismiss="modal" id="close_create_modal"><span class="icon-cross"></span> {{__('Close')}}</button>
+				<button type="button" class="button_medium" id="submit_btn">{{__('Save')}}</button>
 			</div>
 			</div>
 		  </div>

@@ -166,7 +166,7 @@
 			</div>        
 			<div class="row hide view_all">
 				<div class="col-md-12">
-					 <a href="#" class="button_medium_outline pull-right">{{__('View All Courses')}}</a>
+					 <a href="<?php echo URL::to('/courses/catalog'); ?>" class="button_medium_outline pull-right">{{__('View All Courses')}}</a>
 				</div>
 			</div>
         </div>   <!-- End container -->

@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Util\LogRepository as LogRepo;
 use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\CoursesCustom;
-use App\Repositories\Custom\courses\CourseCustom;
+use App\Repositories\Custom\Courses\CourseCustom;
 use App\Repositories\Custom\Resource\Courses\Course as ResourceCourse;
 use Exception;
 

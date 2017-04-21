@@ -60,7 +60,7 @@ class Language
 	   }
 
 	   // sort list based on value
-	   // langArr will now be an array like: array('EN' => 1, 'ES' => 0.5)
+	   // langArr will now be an array like: array('EN' => 1, 'FR' => 0.5)
 	   arsort($langArr, SORT_NUMERIC);
 
 	   // The languages the client accepts in order of preference.
@@ -75,5 +75,6 @@ class Language
 			  return strtolower($preferredLanguage);
 		   }
 	   }
+	   return Config::get('app.fallback_locale');
 	}
 }

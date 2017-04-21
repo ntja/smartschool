@@ -76,12 +76,12 @@
 				console.log(data.data);
 				//console.log(data.valid == false);
 				if(data.data.length ==0){
-					var html = "<h3>No detail Found for this course. <a href='#'>Return to Course Catalog</a></h3>";
+					var html = "<h3>"+settings.i18n.translate("course.overview.1")+" <a href='"+base_url+"/courses/catalog'>"+settings.i18n.translate("course.overview.2")+"</a></h3>";
 				}else{
 					var html = "";
 					for(i=0; i < data.data.length; i++){
 						k = i+1;
-						html += '<h3 class="chapter_course">Chapter '+ k +' : '+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
+						html += '<h3 class="chapter_course">'+ k +' - '+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
 						for(j=0;j < data.data[i].lessons.length;j++){
 							html += '<div class="strip_single_course">';
 							html += '<h4><a href="#">'+data.data[i].lessons[j].title+'</a></h4>';
@@ -146,7 +146,7 @@
 				async:true
 			})
 			.done(function (data, textStatus, jqXHR) {
-				sudoNotify.success('You enrolled successfully to this course');
+				sudoNotify.success(settings.i18n.translate("course.overview.3")); 
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
 				console.log('request failed !');

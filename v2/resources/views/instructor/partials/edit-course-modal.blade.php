@@ -93,7 +93,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="button_medium_outline" data-dismiss="modal"><span class="icon-cross"></span> {{__('Close')}}</button>
+				<button type="button" class="button_medium_outline" data-dismiss="modal" id="close_edit_modal"><span class="icon-cross"></span> {{__('Close')}}</button>
 				<button type="button" class="button_medium" id="edit_btn">{{__('Save')}}</button>
 			</div>
 			</div>

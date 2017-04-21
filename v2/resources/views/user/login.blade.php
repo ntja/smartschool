@@ -38,7 +38,7 @@
 				<div class="login-or"><hr class="hr-or"><span class="span-or">{{__('or')}}</span></div>
 				<div class="response-message"></div>
 				<div class="form-group">
-					<input type="email" class=" form-control required" name="email" id="email" placeholder="{{__('Email')}}" required>
+					<input type="email" class=" form-control required" name="email" id="email" placeholder="{{__('Email')}}" required autofocus>
 					<span class="input-icon"><i class="icon-email"></i></span>
 				</div>
 				<div class="form-group">

@@ -58,6 +58,9 @@ Route::group(['middleware' => 'web'], function () {
 	});
 	
 	Route::get('/course/{ID}', 'Views\Courses\OverviewController@get')->where('ID', '[a-z0-9]+');
+	Route::get('/courses/catalog', function () {
+		return view('courses.catalog');
+	});
 	
 	Route::get('/subscription-plans', function () {
 		return view('subscription-plans');

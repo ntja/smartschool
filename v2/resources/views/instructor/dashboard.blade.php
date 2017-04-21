@@ -19,10 +19,10 @@
 	
   <section id="strips-course" class="shadow">  
   <div class="container">
-      <ol class="breadcrumb">
-      <li><a disabled href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
-      <li class="active">{{__('Dashboard')}}</li>
-    </ol>      
+		<ol class="breadcrumb">
+		  <li><a disabled href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
+		  <li class="active">{{__('Dashboard')}}</li>
+		</ol>      
   </div>    
     
     <article>
@@ -80,6 +80,7 @@
 
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
+	<script src="{{asset('js/localization/i18n.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
    <script src="{{asset('js/custom/user/instructor/dashboard.js')}}"></script>

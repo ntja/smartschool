@@ -11,7 +11,7 @@
 		var valid_token = check_token_validity(user_token);
 		console.log(valid_token);
 		// if token exists and is valid
-        if (user_token || valid_token == true) {
+        if (user_token && valid_token == true) {
 			if(user_role == 'LEARNER'){
 				window.location.assign(base_url + '/learner/dashboard');
 			}

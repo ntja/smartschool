@@ -114,7 +114,7 @@ function get_courses(){
 			"Content-Type": "application/json",
 			"cache-control": "no-cache"
 		},
-		crossDomain:true,
+		crossDomain:false,
 		async:false,
 		dataType:"json"
 	})

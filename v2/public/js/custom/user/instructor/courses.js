@@ -12,7 +12,15 @@
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');
         //check if user token is still valid 
 		var limit = 10, course_id=null;
-		
+		var sudoNotify = $('.notification-container').sudoNotify({				
+		  log: false, 			  
+		  // custom styles for succsee notification bar
+		  successStyle: { 
+			color: '#ffffff',
+			fontWeight:700,
+			backgroundColor: '#30d9a4'
+		  }
+		});
 		var uri = config.api_url + "/accounts/"+user_id+"/courses?limit="+limit;
 		console.log(uri);
 		/*
@@ -110,7 +118,7 @@
             //errorClass: 'error',
             errorPlacement: function errorPlacement(error, element) {
                 if(element.attr("name") == "edit-course_description"){
-					error.insertBeofre("textarea#edit-course_description")
+					error.insertBefore("textarea#edit-course_description")
 				}else{
 					error.insertBefore(element);
 					error.css({'font-size': '0.8em' });
@@ -222,10 +230,12 @@
                 .done(function(data, textStatus, jqXHR) {					
                     //$('#close').trigger('click');
 					form[0].reset();
-					form.slideUp('fast');
+					//form.slideUp('fast');
+					$('#close_create_modal').trigger('click');
 					$('#submit_btn').hide();
-                    alertNotify("Well done ! Your course has been successfully created. <br> Click on the following link to <a href='#'>add your first lesson</a>", 'success');
-                    console.log(data);                    
+                    //alertNotify("Well done ! Your course has been successfully created. <br> Click on the following link to <a href='#'>add your first lesson</a>", 'success');
+                    sudoNotify.success(settings.i18n.translate("instructor.course.1"));
+					console.log(data);                    
 					get_instructor_courses(user_id, user_token, uri);					                   
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
@@ -235,11 +245,14 @@
 						console.info(response.code);
 						if(response.code == 4000 || response.code == 4011 || response.code == 4001 || response.code == 4012){
 							alertNotify(response.description, 'error');
+							sudoNotify.error(response.description);
 						}else{
-							alertNotify("An internal server error occurred. Please try again later", 'error');
+							//alertNotify("An internal server error occurred. Please try again later", 'error');
+							sudoNotify.error(settings.i18n.translate("error.1"));
 						}
 					}else{
-						alertNotify("An internal server error occurred. Please try again later", 'error');
+						//alertNotify("An internal server error occurred. Please try again later", 'error');
+						sudoNotify.error(settings.i18n.translate("error.1"));
 					}                   
                 })
 				.always(function() {
@@ -256,7 +269,7 @@
 		$('body').delegate('.edit-course a','click', function(e) {
 			//console.log($(this).data('course-id'));
 			course_id = $(this).data('course-id');
-			uri = config.api_url + "/courses/"+course_id;
+			var uri = config.api_url + "/courses/"+course_id;
 			//load course details
 			get_single_course(course_id, user_token, uri);					
 		});
@@ -267,7 +280,7 @@
 			var course_id = $(this).data('course-id');
 			var course_status = $(this).data('status');
 			//console.log($(this).parents().closest('.status'));
-			uri = config.api_url + "/courses/"+course_id;
+			var uri = config.api_url + "/courses/"+course_id;
 			//Change course status
 			change_status(course_id, course_status, user_token, uri);					
 		});
@@ -296,7 +309,7 @@
 			$('#edit_btn').append('<i class="icon-spin4 animate-spin loader"></i>').attr('disabled','disabled');
 			//console.log($('#email').val());
             if (validate_edit_form()) {
-                var url, course_title, short_name,course_description, data, settings = [];
+                var url, course_title, short_name,course_description, data, data_obj = [];
 				course_format = $('#edit-course_format').val();
 				language = $('#edit-language').val();
 				console.log(language);
@@ -308,26 +321,14 @@
                 short_name = $('#edit-short_name').val();    
 				
 				course_description = CKEDITOR.instances['edit-course_description'].getData(); //= $('#course_description').val();
-				settings.push({"field": "name", "value": course_title?course_title:""});
-				settings.push({"field": "shortname", "value": short_name?short_name:""});
-				settings.push({"field": "courseformat", "value": course_format?course_format:""});
-				settings.push({"field": "targetaudience", "value": target_audience?target_audience:""});
-				settings.push({"field": "category", "value": category_list?category_list:""});
-				settings.push({"field": "language", "value": language?language:""});
-				settings.push({"field": "shortdescription", "value": course_description?course_description:""});
-				data['entries']  = settings;
-                /*
-				data = {
-                    "name": course_title,
-                    "shortname": short_name,
-					"courseformat": course_format,
-					"targetaudience": target_audience,
-					"category": category_list,
-					"language": language,
-					"shortdescription": course_description,
-					"instructor": user_id
-                };
-				*/
+				data_obj.push({"field": "name", "value": course_title?course_title:""});
+				data_obj.push({"field": "shortname", "value": short_name?short_name:""});
+				data_obj.push({"field": "courseformat", "value": course_format?course_format:""});
+				data_obj.push({"field": "targetaudience", "value": target_audience?target_audience:""});
+				data_obj.push({"field": "category", "value": category_list?category_list:""});
+				data_obj.push({"field": "language", "value": language?language:""});
+				data_obj.push({"field": "shortdescription", "value": course_description?course_description:""});
+				data['entries']  = data_obj;                
                 console.log(data);
                 //console.log(JSON.stringify(data))                
                 $.ajax({
@@ -349,7 +350,9 @@
 					//edit_form[0].reset();
 					//edit_form.slideUp('fast');
 					//$('#edit_btn').hide();
-                    alertNotify("Well done ! Your course has been successfully edited.", 'success');
+                    //alertNotify("Well done ! Your course has been successfully edited.", 'success');
+					$('#close_edit_modal').trigger('click');
+					sudoNotify.success(settings.i18n.translate("instructor.course.2"));
                     console.log(data);                    
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
@@ -360,12 +363,15 @@
 						var response = JSON.parse(jqXHR.responseText);
 						console.info(response);
 						if(response.code == 4000 || response.code == 4011 || response.code == 4001 || response.code == 4012){
-							alertNotify(response.description, 'error');
+							//alertNotify(response.description, 'error');
+							sudoNotify.error(response.description);
 						}else{
-							alertNotify("An internal server error occurred. Please try again later", 'error');
+							//alertNotify("An internal server error occurred. Please try again later", 'error');
+							sudoNotify.error(settings.i18n.translate("error.1"));
 						}
 					}else{
-						alertNotify("An internal server error occurred. Please try again later", 'error');
+						//alertNotify("An internal server error occurred. Please try again later", 'error');
+						sudoNotify.error(settings.i18n.translate("error.1"));
 					}                   
                 })
 				.always(function() {
@@ -423,13 +429,13 @@
 					html += '<div class="btn-group">';
 					html +='<a aria-expanded="false" href="javascript:void(0)" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></a>';
 					html +='<ul class="dropdown-menu" role="menu">';
-					html +='<li class="edit-course"><a data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)"  data-toggle="modal" data-target="#editModal">Edit</a></li>';
+					html +='<li class="edit-course"><a data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)"  data-toggle="modal" data-target="#editModal">'+settings.i18n.translate("instructor.course.5")+'</a></li>';
 					if(user_courses.data[i].status =="PUBLISHED"){
-					   html +='<li class="change-status"><a data-status="UNPUBLISHED" data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)">Unpublish</a></li>';
+					   html +='<li class="change-status"><a data-status="UNPUBLISHED" data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)">'+settings.i18n.translate("instructor.course.7")+'</a></li>';
 					}else{
-						html +='<li class="change-status"><a data-status="PUBLISHED" data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)">Publish</a></li>';
+						html +='<li class="change-status"><a data-status="PUBLISHED" data-course-id="'+user_courses.data[i].id+'" href="javascript:void(0)">'+settings.i18n.translate("instructor.course.6")+'</a></li>';
 					}
-					html +='<li><a href="course/'+user_courses.data[i].id+'/view">View</a></li>';
+					html +='<li><a href="course/'+user_courses.data[i].id+'/view">'+settings.i18n.translate("instructor.course.8")+'</a></li>';
 					html +='</ul></div>'; 
 					html += '</td>';
 					html +='</tr>';
@@ -561,7 +567,7 @@
 	}
 	
 	function change_status(course_id, course_status, user_token, uri){
-		var data = {"status" : course_status};
+		var data = {"status" : course_status};		
 		$.ajax({
 			url: config.api_url + "/courses/"+course_id+"/change-status",
 			method: "PUT",
@@ -578,7 +584,14 @@
 			async:true
 		})
 		.done(function (data, textStatus, jqXHR) {
-			alertNotify("Your Course has been successfully "+course_status, 'success');
+			//alertNotify("Your Course has been successfully "+course_status, 'success');
+			var message = "";
+			if(course_status === "PUBLISHED"){
+				 message = settings.i18n.translate("instructor.course.3");
+			}else{
+				message = settings.i18n.translate("instructor.course.4");
+			}
+			sudoNotify.success(message);
             console.log(data); 		
 		})
 		.fail(function (jqXHR, textStatus, errorThrown) {
@@ -586,12 +599,15 @@
 				var response = JSON.parse(jqXHR.responseText);
 				console.info(response);
 				if(response.code == 4000 || response.code == 4003){
-					alertNotify(response.description, 'error');
+					//alertNotify(response.description, 'error');
+					sudoNotify.error(response.description);
 				}else{
-					alertNotify("An internal server error occurred. Please try again later", 'error');
+					//alertNotify("An internal server error occurred. Please try again later", 'error');
+					sudoNotify.error(settings.i18n.translate("error.1"));
 				}
 			}else{
-				alertNotify("An internal server error occurred. Please try again later", 'error');
+				//alertNotify("An internal server error occurred. Please try again later", 'error');
+				sudoNotify.error(settings.i18n.translate("error.1"));
 			}  
 		});
 	}

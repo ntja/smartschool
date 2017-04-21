@@ -14,7 +14,7 @@ use Exception;
 class CategoriesController extends Controller {
 
     public function __construct() {
-        $this->middleware('jwt.auth');
+       $this->middleware('jwt.auth', ['except' => ['get']]);
     }    
 
     /**
@@ -29,7 +29,7 @@ class CategoriesController extends Controller {
             $account = new AccountsCustom($account_token_id);
             $resource_category = new ResourceCategory();
             if (Gate::forUser($account)->denies('get', $resource_category)) {
-                $result = array("code" => 403, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 403, "description" => "You do not have permissions for that request.");
                 return response()->json($result, 400);
             }    
 			if(!$data['limit']){

@@ -33,15 +33,15 @@ class AuthenticateCustom {
             if (!is_array($param)) {
                 throw new Exception("Expected array as parameter , " . (is_object($param) ? get_class($param) : gettype($param)) . " found.");
             }
-
+			$errors = [];
             if (array_key_exists('email', $param)){
 				if (is_null($param['email'])) {
-					$result = array("code" => 4000, "description" => "email is required ");
-					echo json_encode($result, JSON_UNESCAPED_SLASHES);
-					return false;
+					$errors [] = array("code" => 4000, "field" =>"'email'","description" => "email is required ");
+					//echo json_encode($result, JSON_UNESCAPED_SLASHES);
+					//return false;
 				}
 				if (!is_string($param['email'])) {
-					$result = array("code" => 4000, "description" => "email must be a string");
+					$result = array("code" => 4000,"field" =>"'email'", "description" => "email must be a string");
 					echo json_encode($result, JSON_UNESCAPED_SLASHES);
 					return false;
 				}
@@ -51,38 +51,43 @@ class AuthenticateCustom {
 
             if (array_key_exists('password', $param)) {
 				if (is_null($param['password'])) {
-					$result = array("code" => 4000, "description" => "password is required ");
-					echo json_encode($result, JSON_UNESCAPED_SLASHES);
-					return false;
+					$errors [] = array("code" => 4000,"field" =>"'password'", "description" => "password is required ");
+					//echo json_encode($result, JSON_UNESCAPED_SLASHES);
+					//return false;
 				}
 				if (!is_string($param['password'])) {
-					$result = array("code" => 4000, "description" => "password must be a string");
-					echo json_encode($result, JSON_UNESCAPED_SLASHES);
-					return false;
+					$errors [] = array("code" => 4000,"field" =>"'password'", "description" => "password must be a string");
+					//echo json_encode($result, JSON_UNESCAPED_SLASHES);
+					//return false;
 				}
 			}else{
                 throw new Exception("Expected 'password' in array as parameter , " . (is_object($param['password']) ? get_class($param['password']) : gettype($param['password'])) . " found.");
             }
 			if (array_key_exists('human_verification', $param)){
                     if (is_null($param['human_verification'])) {
-                        $result = array("code" => 4000, "description" => "human_verification is required ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "field" =>"'human_verification'","description" => "human_verification is required ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (!is_numeric($param['human_verification'])) {
-                        $result = array("code" => 4000, "description" => "human_verification must be a number");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "human_verification must be a number");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if ($param['human_verification'] != 4) {
-                        $result = array("code" => 4000, "description" => "human_verification value is incorrect");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "field" =>"'human_verification'", "description" => "human_verification value is incorrect");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                 }else {
                     throw new Exception("Expected 'human_verification' in array as parameter , " . (is_object($param['human_verification']) ? get_class($param['human_verification']) : gettype($param['human_verification'])) . " found.");
                 }
-            return TRUE;
+			if($errors){
+				return $errors;
+			}else{
+				return true;
+			}
+            
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }
@@ -125,7 +130,7 @@ class AuthenticateCustom {
                 throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
 
             if (!array_key_exists("email", $params)){
-                throw new Exception("Expected key (login) in parameter array.");
+                throw new Exception("Expected key (email) in parameter array.");
             }
 
             if (!is_string($params["email"])){
@@ -140,25 +145,28 @@ class AuthenticateCustom {
                 throw new Exception("Expected String for key (password) in parameter array , " . (is_object($params["password"]) ? get_class($params["password"]) : gettype($params["password"])) . " found.");
             }
 
-		$valid = $this->validate($params);            
-		if(!$valid){
-			http_response_code(400);
-			die(); 
+		$result = $this->validate($params);   
+		//var_dump($result);die();
+		if($result !== true){
+			//http_response_code(400);
+			//die();
+			return response()->json($result, 400);
 		}
         
 		unset($params['human_verification']);
         $custom_account = new AccountsCustom();
         $account = $custom_account->checkUser($params['email']);        
         //var_dump($account);die();
+		$result = [];
         if (!is_null($account)) {
             if($account->verified_status !== "VERIFIED"){
                 LogRepository::printLog('error', "Invalid attempt to authenticate a non-verified account " .$account);
-                    $result = array("code" => 4004, "description" => 'We have sent you a verification email. Please verify your email address so we know that it\'s really you !');
+                    $result [] = array("code" => 4004, "description" => 'We have sent you a verification email. Please verify your email address so we know that it\'s really you !');
                     return response()->json($result, 400);
             }
             if (!$token = JWTAuth::attempt($params)) {
 				LogRepository::printLog('error', "Invalid attempt to authenticate an account with inputs {" . var_export($params,true) . "}.");
-                $result = array("code" => 4002, "description" => 'Authentication failed. Invalid email address or password');
+                $result []  = array("code" => 4002, "description" => 'Authentication failed. Invalid email address or password');
                 return response()->json($result, 400);
             }
 			$account->is_active = 1;
@@ -170,7 +178,7 @@ class AuthenticateCustom {
             return $result;
         } else {
             LogRepository::printLog('error', "Invalid authentication attempt with inputs:  {". var_export($params,true)."}");
-            $result = array("code" => 4003,"description" => 'Invalid credentials');
+            $result [] = array("code" => 4003,"description" => 'Invalid credentials');
             return response()->json($result, 400);
         }
         

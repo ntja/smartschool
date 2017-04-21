@@ -6,8 +6,10 @@
 @section('header-styles')
    <!-- CUSTOM STYLES -->
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.min.css')}}">
 @stop
 @section('content')
+	<div class="notification-container"></div>
 	@include('partials/instructor/header')
    
     <section id="main_content" >
@@ -83,6 +85,7 @@
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
+	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
 	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>
 	<script> 
 		CKEDITOR.replace( 'course_description', {height : 500, width : '100%'} );

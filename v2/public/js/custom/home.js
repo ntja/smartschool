@@ -7,7 +7,7 @@
 
         var courses = null, data = null,base_url = $('body').attr('data-base-url');      
         
-		//Get user details
+		//Get courses list
 		courses = get_courses();		
 		
 		if(courses){
@@ -24,8 +24,8 @@
 				html += "<div class='col-item'>";
 				//html += "<span class='ribbon_course'></span>";
 				html += "<div class='photo'>";
-				html += "<a href='"+base_url + "/course/"+data[i].shortname+"'><img src='"+base_url + "/img/poetry.jpg' alt='' /></a>";
-				html += "<div class='cat_row'><a href='#'>"+data[i].course_category.name+"</a><span class='pull-right'><i class='icon-clock'></i>6 "+settings.i18n.translate('home.3')+"</span></div>";
+				html += "<a href='"+base_url + "/course/"+data[i].shortname+"'><img src='"+base_url + "/public/img/poetry.jpg' alt='' /></a>";
+				html += "<div class='cat_row'><a href='#'>"+data[i].course_category.name+"</a><span class='pull-right'><i class='icon-money'></i>"+settings.i18n.translate('home.3')+"</span></div>";
 				html += "</div>";
 				html += "<div class='info'>";
 				html += "<div class='row'>";
@@ -46,7 +46,7 @@
 				html += "</div>";												
 			}
 			$('#course_list').append(html);
-			if(data.length > 8){
+			if(data.length > 12){
 				$('.view_all').removeClass('hide');
 			}
 		}

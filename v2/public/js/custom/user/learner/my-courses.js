@@ -62,7 +62,7 @@
 					html += '</tbody>';
 					$('.courses .table').append(html);
 				}else{
-					html = '<div class=" col-md-10 col-md-offset-1 text-center"><h3> You are not registered on any Course. </h3><p><a href="#" class="button_medium">Browse Course Catalog</a></p></div>';
+					html = '<div class=" col-md-10 col-md-offset-1 text-center"><h3> '+settings.i18n.translate("learner.course.1")+' </h3><p><a href="'+base_url+'/courses/catalog" class="button_medium">'+settings.i18n.translate("learner.course.2")+'</a></p></div>';
 					$('.courses').empty().append(html);
 				}
 			})
@@ -70,7 +70,26 @@
 				console.log('request failed !');
 			});
 			//return  result;
-		}				
+		}	
+		
+		/*
+		$('#characterLeft').text('140 characters left');
+		$('#message').keyup(function () {
+			var max = 140;
+			var len = $(this).val().length;
+			if (len >= max) {
+				$('#characterLeft').text('You have reached the limit');
+				$('#characterLeft').addClass('red');
+				$('#btnSubmit').addClass('disabled');            
+			} 
+			else {
+				var ch = max - len;
+				$('#characterLeft').text(ch + ' characters left');
+				$('#btnSubmit').removeClass('disabled');
+				$('#characterLeft').removeClass('red');            
+			}
+		}); 
+		*/
 		
 	});
 })(jQuery);

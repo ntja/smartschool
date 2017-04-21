@@ -462,10 +462,10 @@ class CoursesCustom {
                 die(); 
             }          
 			// verify if school exists
-			if (!is_null($param['school'])) {				
-				$school = $this->_schoolsCustom->getSchoolByID($param['school']);
+			if (!is_null($params['school'])) {				
+				$school = $this->_schoolsCustom->getSchoolByID($params['school']);
 				if(!$school){
-					LogRepository::printLog('error', "Invalid school ID {".$param['school']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+					LogRepository::printLog('error', "Invalid school ID {".$params['school']."}. Returned code: 400. Request inputs :" . var_export($params,true) . ".");
 					$result = array("code" => 4001, "description" => "Invalid school ID");
 					echo json_encode($result, JSON_UNESCAPED_SLASHES);
 					http_response_code(400);
@@ -473,26 +473,26 @@ class CoursesCustom {
 				}
 			}
 			// check if course is unique for a given instructor
-			$row = $this->uniqueCourse($param['name'],$param['instructor']);
+			$row = $this->uniqueCourse($params['name'],$params['instructor']);
 			if($row){
-				LogRepository::printLog('error', "Invalid attempt for an instructor to create a new course with a duplicate name {".$param['name']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+				LogRepository::printLog('error', "Invalid attempt for an instructor to create a new course with a duplicate name {".$params['name']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
 				$result = array("code" => 4012, "description" => "You already have a course with that name");
 				echo json_encode($result, JSON_UNESCAPED_SLASHES);
 				http_response_code(400);
 				die();
 			}
 			// Check if category exists
-			$category = $this->_categoriesCustom->getCategoryByID($param['category']);
+			$category = $this->_categoriesCustom->getCategoryByID($params['category']);
 			if(!$category){
-				LogRepository::printLog('error', "Invalid category ID {".$param['category']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+				LogRepository::printLog('error', "Invalid category ID {".$params['category']."}. Returned code: 400. Request inputs :" . var_export($params,true) . ".");
 				$result = array("code" => 4011, "description" => "Invalid category ID");
 				echo json_encode($result, JSON_UNESCAPED_SLASHES);
 				http_response_code(400);
 				die();
 			}
-			$row = $this->getCourseByShortname($param['shortname']);
+			$row = $this->getCourseByShortname($params['shortname']);
 			if($row){
-				LogRepository::printLog('error', "Invalid attempt  to create a new course with a taken shortname {".$param['shortname']."}. Returned code: 400. Request inputs :" . var_export($param,true) . ".");
+				LogRepository::printLog('error', "Invalid attempt  to create a new course with a taken shortname {".$params['shortname']."}. Returned code: 400. Request inputs :" . var_export($params,true) . ".");
 				$result = array("code" => 4001, "description" => "This shortname is already taken");
 				echo json_encode($result, JSON_UNESCAPED_SLASHES);
 				http_response_code(400);
@@ -504,7 +504,7 @@ class CoursesCustom {
             $saved = $this->_model->dbSave($params);
             if($saved){             
                 $course_id = $this->_model->id;
-                $result = $this->prepareResponseAfterPost($params,$course_id);
+                $result = $this->prepareResponseAfterPost($course_id);
                 LogRepository::printLog('info', "The new course #".$course_id." has just been created. Request inputs:  #{" . var_export($params,true) . "}.");
             }else{
                 http_response_code(400);
@@ -518,26 +518,11 @@ class CoursesCustom {
         }
     }
    
-    public function prepareResponseAfterPost($param,$id) {
+    public function prepareResponseAfterPost($id) {
         try {         
             $result = array(
                 'code' => 201,
-                'id' => $id,
-                'links' =>
-                    [
-                        [
-                            'href' => "/courses/{$id}",
-                            'rel' => 'retrieve',
-                            'requestTypes' => array("GET"),
-                            'responseTypes' => array("application/json")
-                        ],
-                         [
-                            'href' => "/courses/{$id}/lessons",
-                            'rel' => 'retrieve',
-                            'requestTypes' => array("GET"),
-                            'responseTypes' => array("application/json")
-                        ]
-                    ]
+                'id' => $id,                
                 );
             return $result;
         } catch (Exception $ex) {

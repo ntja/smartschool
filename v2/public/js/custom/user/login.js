@@ -113,17 +113,22 @@
 					//if  status code is 400
 					if(jqXHR.status == 400){
 						var response = JSON.parse(jqXHR.responseText);
-						console.info(response.code);
-						if(response.code == 4000){
-							alertNotify(settings.i18n.translate("login.4"), 'error');
-						}else if(response.code == 4004){
-							alertNotify(settings.i18n.translate("login.5"), 'error');
-						}else if(response.code == 4002 || response.code == 4003){
-							alertNotify(settings.i18n.translate("login.3"), 'error');
+						console.info(response);
+						for(i=0;i<response.length; i++){
+							//console.info(response.length);
+							//console.info(response[i].code );
+							if(response[i].code == 4000){								
+								alertNotify(settings.i18n.translate("login.4"), 'error');
+							}else if(response[i].code == 4004){
+								alertNotify(settings.i18n.translate("login.5"), 'error');
+							}else if(response[i].code == 4002 || response[i].code == 4003){
+								alertNotify(settings.i18n.translate("login.3"), 'error');
+							}
+							else{
+								alertNotify(settings.i18n.translate("error.1"), 'error');
+							}
 						}
-						else{
-							alertNotify(settings.i18n.translate("error.1"), 'error');
-						}
+						
 					}else{
 						alertNotify(settings.i18n.translate("error.1"), 'error');
 					}                   

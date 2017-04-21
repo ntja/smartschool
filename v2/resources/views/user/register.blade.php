@@ -32,7 +32,7 @@
 				<div class="login-or"><hr class="hr-or"><span class="span-or">{{__('or')}}</span></div>
 				<div class="response-message"></div>
 				<div class="form-group">
-					<input type="text" class="form-control required" name="first_name" id="first_name" placeholder="{{__('First Name')}}" required>
+					<input type="text" class="form-control required" name="first_name" id="first_name" placeholder="{{__('First Name')}}" required autofocus>
 					<span class="input-icon"><i class="icon-user"></i></span>
 				</div>
 				<div class="form-group">
