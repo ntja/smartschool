@@ -11,6 +11,7 @@ settings = {
 };
 
 environment = 'staging';
+
 config = settings.environments[environment];
 
 (function($) {
