@@ -1,4 +1,3 @@
-
 var settings, config, environment;
 
 settings = {
