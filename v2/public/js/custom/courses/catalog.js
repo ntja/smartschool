@@ -68,8 +68,12 @@
 				if(data.data.length ==0){
 					var html = "<h3>No course found. <a href='"+base_url+"/courses/catalog'>Return to Home page</a></h3>";
 				}else{
-					var html = "";
+					html = "<div class='row'>"
 					for(i=0; i < data.data.length; i++){
+						if(i%3 == 0){
+							html += "</div>";
+							html += "<div class='row'>";
+						}					
 						html += '<div class="col-lg-4 col-md-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';

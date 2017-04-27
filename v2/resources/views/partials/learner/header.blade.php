@@ -15,7 +15,7 @@
 			<ul class="user_panel user">
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('Welcome')}}, <strong id="user_name">{{__('User Name')}}</strong> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><i class=" icon-user"></i> {{__('Courses Catalog')}} </a></li>
+						<li><a href="<?php echo URL::to('/courses/catalog'); ?>"><i class=" icon-user"></i> {{__('Courses Catalog')}} </a></li>
 						<li><a href="<?php echo URL::to('/learner/my-courses'); ?>"><i class=" icon-download"></i> {{__('My Courses')}}</a></li>
 						<li><a href="#"><i class=" icon-download"></i> {{__('E-books Library')}}</a></li>
 						<li><a href="#"><i class=" icon-download"></i> {{__('My Matches')}}</a></li>
