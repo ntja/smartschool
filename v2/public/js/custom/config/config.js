@@ -1,4 +1,5 @@
 var settings, config, environment;
+
 settings = {
     environments: {
         development: {
