@@ -5,7 +5,7 @@ settings = {
             api_url: 'http://127.0.0.1/smartschool/v2/api'
         },
         staging: {
-            api_url: 'http://api.smartskul.com/v2/public'
+            api_url: 'http://stagging.smartskul.com/v2/api'
         }
     }
 };
