@@ -36,7 +36,7 @@
         
         <div class="row">
         
-        <aside class="col-lg-3 col-md-4 col-sm-4">
+        <aside class="col-lg-3 col-md-4 col-sm-3">
             <div class="box_style_1">
             	<h4>{{__('Subjects')}}</h4>
 				<ul class="submenu-col subject">										
@@ -45,7 +45,7 @@
             </div>
         </aside>
         
-        <div class="col-lg-9 col-md-8 col-sm-8">
+        <div class="col-lg-9 col-md-8 col-sm-9">
         	<div class="row" id="course_list">                                               
        		</div><!-- End row -->
         </div><!-- End col-lg-9-->                        
