@@ -139,56 +139,58 @@ class AccountsCustom {
                 }else{
                     throw new Exception("Expected 'verified_status' in array as parameter , " . (is_object($param['verified_status']) ? get_class($param['verified_status']) : gettype($param['verified_status'])) . " found.");
                 }                  
-            }else{
+            }
+            else{
+                $errors = [];
                 if (array_key_exists('email', $param)) {
                     if (is_null($param['email'])) {
-                        $result = array("code" => 4000, "description" => "Email address is required ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "Email address is required ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (!is_string($param['email'])) {
-                        $result = array("code" => 4000, "description" => "Email address is a string ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "Email address is a string ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (empty(trim($param['email']))) {
-                        $result = array("code" => 4000, "description" => "Email address must not be empty ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "Email address must not be empty ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
-					if(!$this->isEmail($param['email'])) {
-						$result = array("code" => 4000, "description" => "Invalid Email address");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
-					}
+                    if(!$this->isEmail($param['email'])) {
+                        $errors [] = array("code" => 4000, "description" => "Invalid Email address");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
+                    }
                     $account = new Account();
                     $email = $account::where('email', 'LIKE BINARY', $param['email'])->first();                                                                                                
                     if ($email) {
                         unset($param['password']);
                         LogRepository::printLog('error', "Invalid attempt to create a new account with an email taken {".$param['email']."}. Returned code: 400. Request inputs  #" . var_export($param,true) . ".");
-                        $result = array("code" => 4001, "description" => "Email address already in use");                       
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4001, "description" => "Email address already in use");                       
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                 }else{
-                throw new Exception("Expected 'email' in array as parameter , " . (is_object($param['email']) ? get_class($param['email']) : gettype($param['email'])) . " found.");
+                    throw new Exception("Expected 'email' in array as parameter , " . (is_object($param['email']) ? get_class($param['email']) : gettype($param['email'])) . " found.");
                 }
 
                 if (array_key_exists('first_name', $param)){
                     if (is_null($param['first_name'])) {
-                        $result = array("code" => 4000, "description" => "first_name is required ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "first_name is required ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }                   
                     if (!is_string($param['first_name'])) {
-                        $result = array("code" => 4000, "description" => "first_name is a string ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "first_name is a string ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (empty(trim($param['first_name']))) {
-                        $result = array("code" => 4000, "description" => "first_name must not be empty ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "first_name must not be empty ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                 }else {
                     throw new Exception("Expected 'first name' in array as parameter , " . (is_object($param['first_name']) ? get_class($param['first_name']) : gettype($param['first_name'])) . " found.");
@@ -196,44 +198,44 @@ class AccountsCustom {
 
                 if (array_key_exists('last_name', $param)){
                     if (is_null($param['last_name'])) {
-                        $result = array("code" => 4000, "description" => "last_name is required ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "last_name is required ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (!is_string($param['last_name'])) {
-                        $result = array("code" => 4000, "description" => "last_name is a string ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "last_name is a string ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (empty(trim($param['last_name']))) {
-                        $result = array("code" => 4000, "description" => "last_name must not be empty ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "last_name must not be empty ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                 }else {
                     throw new Exception("Expected 'last_name' in array as parameter , " . (is_object($param['last_name']) ? get_class($param['last_name']) : gettype($param['last_name'])) . " found.");
                 }                        
                 if (array_key_exists('role', $param)){
                     if (is_null($param['role'])) {
-                        $result = array("code" => 4000, "description" => "role is required");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "role is required");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (!is_string($param['role'])) {
-                        $result = array("code" => 4000, "description" => "role must be a string");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "role must be a string");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     } 
                     if (empty(trim($param['role']))) {
-                        $result = array("code" => 4000, "description" => "Role must not be empty");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "Role must not be empty");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if(isset($param['role']) && SELF::ROLE_GUEST === $this->_role){
                         if(!in_array($param['role'],[self::ROLE_LEARNER, self::ROLE_INSTRUCTOR, self::ROLE_PARENT])){
-                            $result = array("code" => 4000, "description" => "Expected LEARNER or INSTRUCTOR or PARENT for key (role)");
-                            echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                            return false;
+                            $errors [] = array("code" => 4000, "description" => "Expected LEARNER or INSTRUCTOR or PARENT for key (role)");
+                            //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                            //return false;
                         }
                     }
                 }else {
@@ -241,63 +243,63 @@ class AccountsCustom {
                 }
                 if (array_key_exists('honorific', $param)){
                     if (is_null($param['honorific'])) {
-                        $result = array("code" => 4000, "description" => "honorific is required ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "honorific is required ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     } 
                     if (!is_string($param['honorific'])) {
-                        $result = array("code" => 4000, "description" => "honorific is a string ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "honorific is a string ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     } 
                     if(!in_array($param['honorific'], [self::HONORIFIC_MR, self::HONORIFIC_MS, self::HONORIFIC_MISS])){
-                        $result = array("code" => 4000, "description" => "honorific should be one of these values : ".self::HONORIFIC_MR." or ".self::HONORIFIC_MS." or ".self::HONORIFIC_MISS);
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "honorific should be one of these values : ".self::HONORIFIC_MR." or ".self::HONORIFIC_MS." or ".self::HONORIFIC_MISS);
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                 }else {
                     throw new Exception("Expected 'honorific' in array as parameter , " . (is_object($param['honorific']) ? get_class($param['honorific']) : gettype($param['honorific'])) . " found.");
                 }
                 if (array_key_exists('password', $param)){
                     if (is_null($param['password'])) {
-                        $result = array("code" => 4000, "description" => "password is required");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "password is required");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (!is_string($param['password'])) {
-                        $result = array("code" => 4000, "description" => "password must be a string");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "password must be a string");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (strlen($param['password']) < 8 ) {
-                        $result = array("code" => 4000, "description" => "Minimum password length : 8 characters");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "Minimum password length : 8 characters");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }  
                 }else {
                     throw new Exception("Expected 'password' in array as parameter , " . (is_object($param['password']) ? get_class($param['password']) : gettype($param['password'])) . " found.");
                 }
-				if (array_key_exists('human_verification', $param)){
+		if (array_key_exists('human_verification', $param)){
                     if (is_null($param['human_verification'])) {
-                        $result = array("code" => 4000, "description" => "human_verification is required ");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "human_verification is required ");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if (!is_numeric($param['human_verification'])) {
-                        $result = array("code" => 4000, "description" => "human_verification must be a number");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "human_verification must be a number");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                     if ($param['human_verification'] != 4) {
-                        $result = array("code" => 4000, "description" => "human_verification value is incorrect");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
+                        $errors [] = array("code" => 4000, "description" => "human_verification value is incorrect");
+                        //echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                        //return false;
                     }
                 }else {
                     throw new Exception("Expected 'human_verification' in array as parameter , " . (is_object($param['human_verification']) ? get_class($param['human_verification']) : gettype($param['human_verification'])) . " found.");
                 } 
             }                                    
-            return true;
+            return $errors;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }
@@ -315,29 +317,29 @@ class AccountsCustom {
     public function dbSave($params) {
         try {                        
             $result = null;
-            $valid = $this->validate($params);            
-            if(!$valid){
-                http_response_code(400);
-                die(); 
+            $error = $this->validate($params);            
+            if($error){
+                //http_response_code(400);
+                //die(); 
+                return response()->json($error, 400);
             }            
-			unset($params['human_verification']);
+            unset($params['human_verification']);
             $params['date_created'] = date('Y-m-d H:i:s');
             $params['verify_token'] = str_random(50);            
             $saved = $this->_model->dbSave($params);
             if($saved){             
                 $account_id = $this->_model->id; 				
-                $result = $this->prepareResponseAfterPost($params,$account_id);
-                
-				$this->_model->notify(new AccountVerification($this->_model));
-				/*
-				$email = $params['email'];
-				$verify_token = $params['verify_token'];
-				$send = Mail::send('mails.verification', ['email' => $email,'verify_token' => $verify_token], function ($m) use ($email) {						  
-						  $m->to($email)
-							->subject('Activate your account on SmartSchool');
-				});
-				//var_dump($send);die();
-				//LogRepository::printLog('warning', $send);
+                $result = $this->prepareResponseAfterPost($params,$account_id);                
+		$this->_model->notify(new AccountVerification($this->_model));
+                /*
+                $email = $params['email'];
+                $verify_token = $params['verify_token'];
+                $send = Mail::send('mails.verification', ['email' => $email,'verify_token' => $verify_token], function ($m) use ($email) {						  
+                                  $m->to($email)
+                                        ->subject('Activate your account on SmartSchool');
+                });
+                //var_dump($send);die();
+                //LogRepository::printLog('warning', $send);
                 if(count(Mail::failures()) > 0){
                     LogRepository::printLog('warning', "An error occured. Verification email could not be sent.");
                       $result=array(
