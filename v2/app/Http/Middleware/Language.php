@@ -17,15 +17,15 @@ class Language
     {		
 		//var_dump($this->getBrowserLocale());die();
         
-		if (Session::has('sm_applocale') AND array_key_exists(Session::get('sm_applocale'), Config::get('languages'))) {
+        if (Session::has('sm_applocale') AND array_key_exists(Session::get('sm_applocale'), Config::get('languages'))) {
             App::setLocale(Session::get('sm_applocale'));
         }
         else { 
-			// This is optional as Laravel will automatically set the fallback language if there is none specified
+            // This is optional as Laravel will automatically set the fallback language if there is none specified
             //App::setLocale(Config::get('app.fallback_locale'));
 			
-			//set default language based on user browser language
-			App::setLocale($this->getBrowserLocale());			
+            //set default language based on user browser language
+            App::setLocale($this->getBrowserLocale());			
         }
         return $next($request);
     }
@@ -49,8 +49,7 @@ class Language
 	   $numLanguages = count($langs);
 	   $langArr = array();
 
-	   for ($num = 0; $num < $numLanguages; $num++)
-	   {
+	   for ($num = 0; $num < $numLanguages; $num++){
 		  $newLang = strtoupper($langs[$num]);
 		  $newQual = isset($quals[$num]) ?(empty($quals[$num]) ? 1.0 : floatval($quals[$num])) : 0.0;
 
@@ -67,13 +66,11 @@ class Language
 	   $acceptedLanguages = array_keys($langArr);
 
 	   // Set the most preferred language that we have a translation for.
-	   foreach ($acceptedLanguages as $preferredLanguage)
-	   {
-		   if (in_array($preferredLanguage, $websiteLanguages))
-		   {
-			  //$_SESSION['lang'] = $preferredLanguage;
-			  return strtolower($preferredLanguage);
-		   }
+	   foreach ($acceptedLanguages as $preferredLanguage){
+                if (in_array($preferredLanguage, $websiteLanguages)){
+                    //$_SESSION['lang'] = $preferredLanguage;
+                    return strtolower($preferredLanguage);
+                }
 	   }
 	   return Config::get('app.fallback_locale');
 	}

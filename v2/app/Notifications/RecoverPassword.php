@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Support\Facades\Session;
 
 class RecoverPassword extends Notification
 {
@@ -43,12 +44,23 @@ class RecoverPassword extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
+        $user_language = Session::get('sm_applocale');
+        if($user_language == 'fr'){
+            return (new MailMessage)
+			->subject('Mot de passe re-initialisé')
+			->greeting("Chèr(e) {$this->user->first_name},")			
+			->line('Vous avez re-initialisez votre mot de passe oublié. Veuillez vous connecter pour accéder à la plateforme')
+			->action('Connexion', config('app.url').'login')
+			->line('Trouvez du plaisir à apprendre avec SmartSchool !');
+        }  else {
+            return (new MailMessage)
 			->subject('Password Updated')
 			->greeting("Dear {$this->user->first_name},")			
 			->line('You\'ve just reset your forgotten password. Please login to continue using our Platform')
 			->action('Login', config('app.url').'login')
-			->line('We hope you enjoy using SmartSchool !');					
+			->line('We hope you enjoy using SmartSchool !');
+        }
+        					
     }
 
     /**
