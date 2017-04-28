@@ -4,7 +4,7 @@ settings.i18n = {
             'home.1': 'Aperçu',
 			'home.2': 'Souscrire',
 			'home.3': 'Gratuit',
-			'activate.1' : 'Si vous n\'êtes pas redirigé à la page de connexion dans 3 sécondes, veuillez cliquer sur le lien ci-après: ',
+			'activate.1' : 'Si vous n\'êtes pas redirigé à la page de connexion dans 5 sécondes, veuillez cliquer sur le lien ci-après: ',
 			'error.1' : "Une erreur interne est survenue. Veuillez re-essayer plutard",
 			"error.2" : "Requête non authorisée",
 			'login.1' : "Connexion",

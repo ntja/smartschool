@@ -32,7 +32,7 @@
 				$('.response-message').append('<p>'+ settings.i18n.translate("activate.1") +' <a href="'+$('body').attr('data-base-url')+'/login">'+ settings.i18n.translate("login.1") +'</a> </p>');
 				setTimeout(function(){
 					window.location.assign($('body').attr('data-base-url')+'/login');
-				},3000);
+				},5000);
 			}
 			console.log(data);
 		})
