@@ -318,7 +318,7 @@ class AccountsCustom {
         try {                        
             $result = null;
             $error = $this->validate($params);            
-            if($error){
+            if(!empty($error)){
                 //http_response_code(400);
                 //die(); 
                 return response()->json($error, 400);

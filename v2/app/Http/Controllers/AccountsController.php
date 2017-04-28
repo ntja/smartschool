@@ -67,7 +67,7 @@ class AccountsController extends Controller {
 			//var_dump($informations);die();
             $custom_account = new AccountsCustom($account_token_id);            
             $result = $custom_account->dbSave($informations);            
-            return response()->json($result);
+            return $result;
         } catch (Exception $ex) {
             LogRepo::printLog('error', $ex->getMessage());
         }
