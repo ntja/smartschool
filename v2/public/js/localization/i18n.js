@@ -41,7 +41,7 @@ settings.i18n = {
             'home.1': 'Overview',
 			'home.2': 'Subscribe',
 			'home.3': 'Free',
-			'activate.1' : 'If you are not redirected to log in page in 3 secondes, Please click on the following link:',
+			'activate.1' : 'If you are not redirected to log in page in 5 secondes, Please click on the following link:',
 			'error.1' : "An internal server error occurred. Please try again later",
 			"error.2" : "You don't have permission for that request",
 			'login.1' : "Log In",
