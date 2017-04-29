@@ -53,15 +53,15 @@
     </ol>
 
 	 <div class="row">
-     		<div class="col-md-8" id="course_content">                   
+     		<div class="col-md-9" id="course_content">                   
                    
-            </div><!-- End col-md-8  -->
+            </div><!-- End col-md-9  -->
             
-            <aside class="col-md-4">
+            <aside class="col-md-3">
             	<a href="#" class=" button_fullwidth">{{__('Enroll Now')}}</a> 
             	<div class="box_style_1">
-         			<h4>length: <span class="length pull-right"></span></h4>
-         			<h4>Effort: <span class="effort pull-right"></span></h4>
+         			<h5>length: <span class="length pull-right"></span></h5>
+                                <h5>Effort: <span class="effort pull-right"></span></h5>
                     <h4>Review:  <span class="review pull-right rating_2"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i><i class=" icon-star-empty"></i></span></h4>
                     <h4>Price: <span class="price pull-right">Free</span></h4>
 					<h4>Subject: <span class="subject pull-right"></span></h4>
@@ -78,20 +78,20 @@
                                 Bio: 
                             </p>
                         </div>
-                    </div>                    
-				</div>
-           
-				<div class="box_style_1">
+                    </div>                                            
+		</div>
+         
+		<div class="box_style_1">
                     <h4>Related content</h4>
-					<p>No related content found.</p>
-					<!--
+			<p>No related content found.</p>                        
+			<!--
                     <ul class="list_1">
-					  <li><a href="#">Ceteros mediocritatem</a></li>
-					  <li><a href="#">Labore nostrum</a></li>
-					  <li><a href="#">Primis bonorum</a></li>
-					  <li><a href="#">Ceteros mediocritatem</a></li>
-					</ul>-->
-				</div>
+                        <li><a href="#">Ceteros mediocritatem</a></li>
+                        <li><a href="#">Labore nostrum</a></li>
+                        <li><a href="#">Primis bonorum</a></li>
+                        <li><a href="#">Ceteros mediocritatem</a></li>
+                      </ul>-->
+                      </div>
 			</aside> <!-- End col-md-34 -->
      	
      </div><!-- End row -->         

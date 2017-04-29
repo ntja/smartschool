@@ -25,15 +25,15 @@
 			</ul>
 		</div><!-- End col-md-4 -->
 		<div class="col-md-3 col-sm-3">
-			<ul id="follow_us">
-				<li><a href="#"><i class="icon-facebook"></i></a></li>
-				<li><a href="#"><i class="icon-twitter"></i></a></li>
-				<li><a href="#"><i class=" icon-google"></i></a></li>
-			</ul>
-			<ul>
-				<li><strong class="phone">+00237 655 134 682</strong><br><small>{{__('Mon - Fri')}} / 9.00AM - 06.00PM</small></li>
-				<li>{{__('Questions')}} ? <a href="#">questions@smartskul.com</a></li>				
-			</ul>
+                    <ul id="follow_us">
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class=" icon-google"></i></a></li>
+                    </ul>
+                    <ul>
+                        <li><strong class="phone">+00237 655 134 682</strong><br><small>{{__('Mon - Fri')}} / 8.00AM - 06.00PM</small></li>
+                        <li>{{__('Questions')}} ? <a href="#">info@smartskul.com</a></li>				
+                    </ul>
 		</div><!-- End col-md-4 -->
 	</div><!-- End row -->
 </div>

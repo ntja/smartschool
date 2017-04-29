@@ -8,17 +8,17 @@
         var course_details = null, course_id = $('section').data('course_id'), base_url = $('body').attr('data-base-url');      
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');
         //check if user token is still valid 
-		var valid_token = check_token_validity(user_token);
-		console.log(valid_token);
-		// if token exists and is valid
+        var valid_token = check_token_validity(user_token);
+        //console.log(valid_token);
+        // if token exists and is valid
         if (user_token && valid_token == true) {
-			if(user_role == 'LEARNER'){
-				$(".connect-register").html("<a class='button_top' href='"+base_url+"/learner/dashboard'>Return to Dashboard</a>");
-			}
-			if(user_role == 'INSTRUCTOR'){
-				$(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
-			}
-		}
+            if(user_role == 'LEARNER'){
+                    $(".connect-register").html("<a class='button_top' href='"+base_url+"/learner/dashboard'>Return to Dashboard</a>");
+            }
+            if(user_role == 'INSTRUCTOR'){
+                    $(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
+            }
+        }
 		//Get course details
 		course_details = get_course_details(course_id);	
 		$('#course_title').prepend("<h2><strong>"+course_details.name+"</strong></h2>");
@@ -80,14 +80,17 @@
 				}else{
 					var html = "";
 					for(i=0; i < data.data.length; i++){
-						k = i+1;
+                                            //if section has at least one lesson show it
+                                            if(data.data[i].lessons.length>0){
+                                                k = i+1;
 						html += '<h3 class="chapter_course">'+ k +' - '+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
 						for(j=0;j < data.data[i].lessons.length;j++){
 							html += '<div class="strip_single_course">';
-							html += '<h4><a href="#">'+data.data[i].lessons[j].title+'</a></h4>';
-							html += '<ul><li><i class="icon-clock"></i> 00:58</li><li><i class="icon-doc"></i>Text reading</li></ul>';
+							html += '<h4><a href="'+base_url+'/course/'+course_id+'/lesson/'+data.data[i].lessons[j].slug_title+'">'+data.data[i].lessons[j].title+'</a></h4>';
+							html += '<ul><li><i class="icon-clock"></i> 00:00</li><li><i class="icon-doc"></i>Text reading</li></ul>';
 							html += '</div>';
-						}					
+						}
+                                            }
 					}
 				}
 				

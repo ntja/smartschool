@@ -4,11 +4,7 @@
     SmartSchool | {{__('Course Details')}}
 @stop
 @section('header-styles')
-   <!-- CUSTOM STYLES -->
-   <!--
-	<script src="{{asset('js/plugins/scriptaculous-js-1.9.0/lib/prototype.js')}}"></script>
-	<script src="{{asset('js/plugins/scriptaculous-js-1.9.0/src/scriptaculous.js')}}"></script>
-	-->
+   <!-- CUSTOM STYLES -->   
     <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.min.css')}}">
@@ -18,7 +14,7 @@
 <div class="notification-container"></div>
  @include('partials/header')
   	
-<section id="sub-header" data-course_id=<?php echo $course_id; ?>>
+<section id="sub-header" data-course_id={{{ $course_id }}}>
   	<div class="container">
     
     	<div class="row">
@@ -66,10 +62,10 @@
          			<h4>{{__('Effort')}}: <span class="effort pull-right"></span></h4>
                     <h4>{{__('Rate')}}:  <span class="review pull-right rating_2"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i><i class=" icon-star-empty"></i></span></h4>
                     <h4>{{__('Price')}}: <span class="price pull-right">{{__('Free')}}</span></h4>
-					<h4>{{__('Subject')}}: <span class="subject pull-right"></span></h4>
-					<h4>{{__('Level')}}: <span class="level pull-right"></span></h4>
-					<h4>{{__('Language')}}: <span class="language pull-right"></span></h4><br>
-                	<h4>{{__('Teachers')}}</h4>
+                    <h4>{{__('Subject')}}: <span class="subject pull-right"></span></h4>
+                    <h4>{{__('Level')}}: <span class="level pull-right"></span></h4>
+                    <h4>{{__('Language')}}: <span class="language pull-right"></span></h4><br>
+                    <h4>{{__('Teachers')}}</h4>
                     <div class="media">
                         <div class="pull-right">
                             <img src="{{asset('img/avatar3.jpg')}}" class="photo img-circle" alt="">
@@ -81,20 +77,30 @@
                             </p>
                         </div>
                     </div>                    
-				</div>
+		</div>
            
-				<div class="box_style_1">
-                    <h4>{{__('Related content')}}</h4>
-					<p>{{__('No related content found')}}.</p>
-					<!--
+                <div class="box_style_1">
+                   <h4 class="text-center">{{__('Share this course with a friend')}}</h4>
+                   <ul id="follow_us" class="text-center">
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class=" icon-google"></i></a></li>
+                        <li><a href="#"><i class=" icon-linkedin"></i></a></li>
+                    </ul>		
+		</div>
+                
+		<div class="box_style_1">
+                   <h4>{{__('Related content')}}</h4>
+                    <p>{{__('No related content found')}}.</p>                    
+		<!--
                     <ul class="list_1">
-					  <li><a href="#">Ceteros mediocritatem</a></li>
-					  <li><a href="#">Labore nostrum</a></li>
-					  <li><a href="#">Primis bonorum</a></li>
-					  <li><a href="#">Ceteros mediocritatem</a></li>
-					</ul>-->
-				</div>
-			</aside> <!-- End col-md-34 -->
+                        <li><a href="#">Ceteros mediocritatem</a></li>
+                        <li><a href="#">Labore nostrum</a></li>
+                        <li><a href="#">Primis bonorum</a></li>
+                        <li><a href="#">Ceteros mediocritatem</a></li>
+                    </ul>-->
+		</div>
+	</aside> <!-- End col-md-34 -->
      	
      </div><!-- End row -->         
   </div><!-- End container -->
