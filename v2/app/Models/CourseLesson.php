@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use DB;
 use Exception;
 use App\Repositories\Util\LogRepository;
+use Illuminate\Support\Str;
 
 class CourseLesson extends Authenticatable{
     /**
@@ -20,7 +21,7 @@ class CourseLesson extends Authenticatable{
     protected $table = 'course_lessons';
     public $timestamps = false;
     protected $fillable = [
-        'title','content','section'
+        'title','content','section', 'slug_title'
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -78,6 +79,8 @@ class CourseLesson extends Authenticatable{
                 }
                 $this->date_created = $params['date_created'];
             }
+			$this->slug_title = Str::slug($params['title']);
+			
 			//var_dump($params);die();
             return $this->save();
         } catch (Exception $ex) {

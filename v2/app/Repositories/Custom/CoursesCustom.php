@@ -564,8 +564,7 @@ class CoursesCustom {
     public function uniqueCourse($course_name, $instructor){
         try{
             $course = $this->model();
-            $row = $course::where('instructor', '=', $instructor)
-                            ->where('name','LIKE',$course_name)->first();
+            $row = $course::where('instructor', '=', $instructor)->where('name','LIKE',$course_name)->first();
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -580,16 +579,16 @@ class CoursesCustom {
                 //Retrieve a list of item paginated by after and before params
 				
                 $rows = $this->_model->getCourses($params, $account);
-				if($rows){
-					return $rows;
-				}else{
-					$result = [
+                if($rows){
+                        return $rows;
+                }else{
+                    $result = [
                         'code' => 200,
                         'data' => [],
                         'total' => 0,
                     ];
                     return $result;
-				}
+		}
             }else{
                 http_response_code(400);
                 die(); 

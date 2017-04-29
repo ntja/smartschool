@@ -8,6 +8,7 @@ use Mail;
 use App\Models\CourseSection;
 use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\CoursesCustom;
+use \Illuminate\Support\Str;
 
 class SectionsCustom {
         
@@ -220,15 +221,23 @@ class SectionsCustom {
                 //Retrieve a list of item paginated by after and before params
 				
                 $rows = $this->_model->getSections($params,$id);
-				if(!$rows){					
-					$result = [
+                for($i=0; $i<count($rows);$i++){
+                    //$row->title = Str::slug($row->title, '-');
+                    for($j=0; $j<count($rows[$i]->lessons);$j++){
+                        $rows[$i]->lessons[$j]->slug_title = Str::slug($rows[$i]->lessons[$j]->title);
+                        //var_dump($rows[$i]->lessons[$j]->title);
+                    }
+                }                
+                //var_dump($rows);die();
+                if(!$rows){					
+                        $result = [
                         'code' => 200,
                         'data' => [],
                         'total' => 0,
                     ];
                     return $result;
-				}
-				return $rows;
+                }
+                return $rows;
             }else{
                 http_response_code(400);
                 die(); 
@@ -238,7 +247,7 @@ class SectionsCustom {
         }
     }
 	
-	public function getSectionByID($id){
+        public function getSectionByID($id){
         try{
             return $this->model()->with(['course'])->where('id', '=', $id)->first();
         }catch (Exception $ex) {

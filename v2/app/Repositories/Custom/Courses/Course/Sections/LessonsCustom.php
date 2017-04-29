@@ -4,7 +4,7 @@ namespace App\Repositories\Custom\Courses\Course\Sections;
 
 use App\Repositories\Util\LogRepository;
 use Exception;
-use Mail;
+//use Mail;
 use App\Models\CourseLesson;
 use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\Courses\Course\SectionsCustom;
@@ -158,30 +158,30 @@ class LessonsCustom {
                 http_response_code(400);
                 die(); 
             }            
-			$params['date_created'] = date('Y-m-d H:i:s');
+            $params['date_created'] = date('Y-m-d H:i:s');
             //var_dump($params);die();	
-			$unique_lesson_title = $this->uniqueLessonPerSection($params['title'],$params['section']);
+            $unique_lesson_title = $this->uniqueLessonPerSection($params['title'],$params['section']);
             //var_dump($unique_section_title);die();
 			// if user already applied to a course
             if($unique_lesson_title){
-				$result = array("code" => 4000, "description" => "The section #".$params['section']." already has the lesson '". $params['title']."'");
+                $result = array("code" => 4000, "description" => "The section #".$params['section']." already has the lesson '". $params['title']."'");
                 echo json_encode($result, JSON_UNESCAPED_SLASHES);
-				http_response_code(400);
+                http_response_code(400);
                 die(); 
             }
-			$saved = $this->_model->DbSave($params);
-			if($saved){             
-				$id = $this->_model->id;
-				$section = $this->_model->section;
-				$result = $this->prepareResponseAfterPost($id);				            
-				LogRepository::printLog('info', "The new lesson of section #".$section." has just been created. Request inputs:  #{" . var_export($params,true) . "}.");
-			}else{
-				http_response_code(400);
-				$result = array("code" => 4000, "description" => "An error occured. Section has not been saved");
-				echo json_encode($result, JSON_UNESCAPED_SLASHES);
-				die(); 
-			}           
-			return $result;
+            $saved = $this->_model->DbSave($params);
+            if($saved){             
+                    $id = $this->_model->id;
+                    $section = $this->_model->section;
+                    $result = $this->prepareResponseAfterPost($id);				            
+                    LogRepository::printLog('info', "The new lesson of section #".$section." has just been created. Request inputs:  #{" . var_export($params,true) . "}.");
+            }else{
+                    http_response_code(400);
+                    $result = array("code" => 4000, "description" => "An error occured. Section has not been saved");
+                    echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                    die(); 
+            }           
+            return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }

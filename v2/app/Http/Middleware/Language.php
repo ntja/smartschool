@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Session;
 class Language
 {
     public function handle($request, Closure $next)
-    {		
-		//var_dump($this->getBrowserLocale());die();
-        
+    {        
         if (Session::has('sm_applocale') AND array_key_exists(Session::get('sm_applocale'), Config::get('languages'))) {
             App::setLocale(Session::get('sm_applocale'));
         }
