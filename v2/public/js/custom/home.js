@@ -14,7 +14,7 @@
 			data = courses.data;
 			console.info(data);
 			$('#course_list').empty();
-			html = "<div class='row'>"
+			html = "<div class='row'>";
 			for(i=0; i<data.length; i++){
 				if(i%4 == 0){
 					html += "</div>";
@@ -25,7 +25,11 @@
 				//html += "<span class='ribbon_course'></span>";
 				html += "<div class='photo'>";
 				html += "<a href='"+base_url + "/course/"+data[i].shortname+"'><img src='"+base_url + "/public/img/poetry.jpg' alt='' /></a>";
-				html += "<div class='cat_row'><a href='#'>"+data[i].course_category.name+"</a><span class='pull-right'><i class='icon-money'></i>"+settings.i18n.translate('home.3')+"</span></div>";
+				html += "<div class='cat_row'>";
+                                if(data[i].course_category){
+                                    html += "<a href='#'>"+data[i].course_category.name+"</a>";
+                                }
+                                html += "<span class='pull-right'><i class='icon-money'></i>"+settings.i18n.translate('home.3')+"</span></div>";
 				html += "</div>";
 				html += "<div class='info'>";
 				html += "<div class='row'>";
@@ -46,8 +50,9 @@
 				html += "</div>";												
 			}
 			$('#course_list').append(html);
+                        console.log(data.length);
 			if(data.length > 12){
-				$('.view_all').removeClass('hide');
+                            $('.view_all').removeClass('hide');
 			}
 		}
 	});

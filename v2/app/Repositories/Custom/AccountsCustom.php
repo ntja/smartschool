@@ -330,7 +330,7 @@ class AccountsCustom {
             if($saved){             
                 $account_id = $this->_model->id; 				
                 $result = $this->prepareResponseAfterPost($params,$account_id);                
-		$this->_model->notify(new AccountVerification($this->_model));
+				$this->_model->notify(new AccountVerification($this->_model));
                 /*
                 $email = $params['email'];
                 $verify_token = $params['verify_token'];
@@ -351,11 +351,9 @@ class AccountsCustom {
                */
                 unset($params['password']);
                 LogRepository::printLog('info', "The new account #".$account_id." has just been created. Request inputs:  #{" . var_export($params,true) . "}.");
-            }else{
-                http_response_code(500);
-                $result = array("code" => 5000, "description" => "An error occurred. Account has not been created");
-                echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                die(); 
+            }else{                
+                $result = array("code" => 4000, "description" => "An error occurred. Account has not been created");
+                return response()->json($error, 400);
             }           
             return $result;
         } catch (Exception $ex) {

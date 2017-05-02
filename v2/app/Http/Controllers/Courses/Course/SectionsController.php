@@ -62,7 +62,7 @@ class SectionsController extends Controller {
             $account = new AccountsCustom($account_token_id);
             $ressource_section = new ResourceSection();
             if (Gate::forUser($account)->denies('get', $ressource_section)) {
-                $result = array("code" => 403, "description" => "You do not have permissions for that request.");
+                $result = array("code" => 4003, "description" => "You do not have permissions for that request.");
                 return response()->json($result,400);
             }
             

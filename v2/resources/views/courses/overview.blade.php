@@ -25,16 +25,18 @@
         
         <div class="row course_desc" id="sub-header-features-2">
         	<div class="col-md-12 summary">
-            	<h2>{{__('A brief summary')}}</h2>               
+            	<!--<h2>{{__('A brief summary')}}</h2>-->
             </div> 
-			<div class="col-md-12">
-            	<h2>{{__('What you will learn')}}</h2>
+            <div class="col-md-12">
+            	<!--
+                <h2>{{__('What you will learn')}}</h2>
                 <ul class="list_ok">
                     <li><strong>Certified</strong> and expert teachers</li>
                     <li><strong>Extensive</strong> doumentation provided</li>
                     <li><strong>Money back</strong> garantee</li>
                     <li><strong>Became an exeprt</strong> in only 6 days</li>
                 </ul>
+                -->
            </div>
         </div><!-- End row -->		
     </div><!-- End container -->

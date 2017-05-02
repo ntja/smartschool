@@ -125,11 +125,8 @@ class CourseSection extends Authenticatable{
             if (!count($rows)) {
                 return false;
             }
-            $result = $rows;
-
-            return $result;
+            return $rows;
         } catch (Exception $ex) {
-
             LogRepository::printLog('error', $ex->getMessage());
         }
     }

@@ -78,7 +78,11 @@
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
 						html += '<a href="'+base_url+'/course/'+data.data[i].shortname+'"><img src="'+base_url+'/public/img/poetry.jpg" alt="" /></a>';
-						html += '<div class="cat_row"><a href="#">'+data.data[i].course_category.name+'</a><span class="pull-right"><i class=" icon-money"></i>Free</span></div>';
+						html += '<div class="cat_row">';
+                                                if(data.data[i].course_category){
+                                                    html += '<a href="#">'+data.data[i].course_category.name+'</a>';
+                                                }
+                                                html += '<span class="pull-right"><i class=" icon-money"></i>Free</span></div>';
 						html += '</div>';
 						html += '<div class="info">';
 						html +=	'<div class="row">'

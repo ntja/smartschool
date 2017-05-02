@@ -21,11 +21,12 @@
         }
 		//Get course details
 		course_details = get_course_details(course_id);	
-		$('#course_title').prepend("<h2><strong>"+course_details.name+"</strong></h2>");
-		$('.subject').html("Subject : "+course_details.language);
+		$('#course_title').prepend("<h2><strong>"+course_details.name+"</strong></h2>");		
 		$('.summary').append(course_details.shortdescription);
 		$('.language').html(course_details.language);
-		$('.subject').html(course_details.course_category.name);
+                if(course_details.course_category){
+                    $('.subject').html(course_details.course_category.name);
+                }		
 		$('.length').html(course_details.expected_duration);
 		$('.level').html(course_details.targetaudience);
 		
@@ -83,7 +84,7 @@
                                             //if section has at least one lesson show it
                                             if(data.data[i].lessons.length>0){
                                                 k = i+1;
-						html += '<h3 class="chapter_course">'+ k +' - '+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
+						html += '<h3 class="chapter_course">'+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
 						for(j=0;j < data.data[i].lessons.length;j++){
 							html += '<div class="strip_single_course">';
 							html += '<h4><a href="'+base_url+'/course/'+course_id+'/lesson/'+data.data[i].lessons[j].slug_title+'">'+data.data[i].lessons[j].title+'</a></h4>';
@@ -97,7 +98,7 @@
 				$('#course_content').html(html);
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
-				console.log('request failed !');
+                            console.log('request failed !');
 			});
 		}
 		
@@ -116,8 +117,8 @@
 				async:false
 			})
 			.done(function (data, textStatus, jqXHR) {
-				console.log(data);
-				result = data;		
+                            console.log(data);
+                            result = data;		
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
 				console.log('request failed !');

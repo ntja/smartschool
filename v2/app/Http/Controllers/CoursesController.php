@@ -114,7 +114,7 @@ class CoursesController extends Controller {
             }
             
             if(!$data['limit']){
-                $limit = 12;
+                $limit = 16;
             }else{
                 $limit = $data['limit'];
             }         

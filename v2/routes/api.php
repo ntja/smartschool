@@ -30,8 +30,8 @@ Route::group(['middleware' => 'jwt.auth:1'], function () { //bypass ACL because 
 	Route::get('/books/{bookId}', 'Books\BookController@get')->where('bookId', '[0-9]+');
 	Route::get('/books/categories', 'Books\CategoriesController@get');
 	Route::get('/books/search', 'Books\SearchController@get');
-	Route::get('/courses/{courseId}', 'Courses\CourseController@get')->where('courseId', '[a-z0-9]+');
-	Route::put('/courses/{courseId}', 'Courses\CourseController@put')->where('courseId', '[a-z0-9]+');
+	Route::get('/courses/{courseId}', 'Courses\CourseController@get')->where('courseId', '[a-zA-Z\-]+');
+	Route::put('/courses/{courseId}', 'Courses\CourseController@put')->where('courseId', '[a-zA-Z\-]+');
 	Route::get('/categories', 'CategoriesController@get');
 	Route::post('/questions', 'QuestionsController@post');
 	Route::post('/answers', 'AnswersController@post');
@@ -52,6 +52,7 @@ Route::post('/courses/categories', 'Courses\CategoriesController@post');
 
 Route::post('/courses', 'CoursesController@post');
 //Route::get('/courses/{shortname}', 'Courses\ShortnameController@get')->where('shortname', '[a-z0-9]+');
+Route::post('/courses/from-storage', 'Courses\FromStorageController@post');
 
 Route::post('/courses/{courseId}/join', 'Courses\Course\JoinController@post')->where('courseId', '[0-9]+');
 Route::get('/courses/{courseId}/applications', 'Courses\Course\ApplicationsController@get')->where('courseId', '[0-9]+');

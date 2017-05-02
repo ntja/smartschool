@@ -8,14 +8,14 @@
     <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.min.css')}}">
+	<script type="text/javascript" src="{{asset('js/jwplayer/jwplayer.js')}}"></script>
 @stop
 
 @section('content')
 <div class="notification-container"></div>
  @include('partials/header')
 <section id="main_content" data-course_id={{{ $course_id }}}>
-  <div class="container">
-  
+  <div class="container">	
   <ol class="breadcrumb">
       <li><a href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
       <li class="active">Active page</li>
@@ -61,7 +61,7 @@
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                     <small>Someone famous in <cite title="">Body of work</cite></small>
              </blockquote>
-             <p><img src="img/pic_1.jpg" width="800" height="400" alt="Pic" class="img-responsive"></p>
+             <p><img src="{{asset('img/pic_1.jpg')}}" width="800" height="400" alt="Pic" class="img-responsive"></p>
              <h4>Text of the printing</h4>
              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
