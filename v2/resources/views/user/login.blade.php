@@ -22,9 +22,9 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
 		<div id="login">
-			<p class="text-center">
-				<img src="img/logo-smartschool.png" alt="">
-			</p>
+			<h3 class="text-center">
+			{{__('Start learning on SmartSchool')}}
+			</h3>
 			<hr>
 			<form id="login-form" method="post">
 				<div class="row">

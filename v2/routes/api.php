@@ -59,7 +59,7 @@ Route::get('/courses/{courseId}/applications', 'Courses\Course\ApplicationsContr
 Route::put('/courses/{courseId}/change-status', 'Courses\Course\ChangeStatusController@put')->where('courseId', '[0-9]+');
 
 Route::post('/courses/{courseId}/sections', 'Courses\Course\SectionsController@post')->where('courseId', '[0-9]+');
-Route::get('/courses/{courseId}/sections', 'Courses\Course\SectionsController@get')->where('courseId', '[0-9]+');
+Route::get('/courses/{courseId}/sections', 'Courses\Course\SectionsController@get')->where('courseId', '[0-9a-zA-Z\-]+');
 
 Route::get('/courses/{courseId}/sections/{sectId}', 'Courses\Course\SectionController@get')->where('courseId', '[0-9]+')->where('sectId', '[0-9]+');
 Route::put('/courses/{courseId}/sections/{sectId}', 'Courses\Course\SectionController@put')->where('courseId', '[0-9]+')->where('sectId', '[0-9]+');

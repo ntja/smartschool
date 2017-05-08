@@ -40,7 +40,7 @@
 		}	
 		*/
 		//$('#course_content').html(html);
-		get_section_details(course_details.id);
+		get_section_details(course_details.id, course_id);
 		
 		
 		//get user information
@@ -61,7 +61,7 @@
 		});
 		
 		//get section information
-		function get_section_details(course_id){		
+		function get_section_details(course_id, course_shortname){		
 			var result = null;
 			$.ajax({
 				url: config.api_url + "/courses/"+course_id+"/sections",
@@ -81,17 +81,17 @@
 				}else{
 					var html = "";
 					for(i=0; i < data.data.length; i++){
-                                            //if section has at least one lesson show it
-                                            if(data.data[i].lessons.length>0){
-                                                k = i+1;
-						html += '<h3 class="chapter_course">'+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
-						for(j=0;j < data.data[i].lessons.length;j++){
-							html += '<div class="strip_single_course">';
-							html += '<h4><a href="'+base_url+'/course/'+course_id+'/lesson/'+data.data[i].lessons[j].slug_title+'">'+data.data[i].lessons[j].title+'</a></h4>';
-							html += '<ul><li><i class="icon-clock"></i> 00:00</li><li><i class="icon-doc"></i>Text reading</li></ul>';
-							html += '</div>';
-						}
-                                            }
+						//if section has at least one lesson show it
+						if(data.data[i].lessons.length>0){
+							k = i+1;
+							html += '<h3 class="chapter_course">'+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
+							for(j=0;j < data.data[i].lessons.length;j++){
+								html += '<div class="strip_single_course">';
+								html += '<h4><a href="'+base_url+'/course/'+course_shortname+'/'+data.data[i].lessons[j].slug_title+'">'+data.data[i].lessons[j].title+'</a></h4>';
+								html += '<ul><li><i class="icon-clock"></i> 00:00</li><li><i class="icon-doc"></i>Text reading</li></ul>';
+								html += '</div>';
+							}
+                        }
 					}
 				}
 				

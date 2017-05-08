@@ -14,7 +14,7 @@ use Mail;
 //use JWTFactory;
 
 class AccountsController extends Controller {
-
+  
     public function __construct() {
         $this->middleware('jwt.auth', ['except' => ['post']]);
     }    

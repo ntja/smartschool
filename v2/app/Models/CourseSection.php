@@ -103,6 +103,19 @@ class CourseSection extends Authenticatable{
             $limit = intval($params['limit']);
 
 			$is_visible = $params['is_visible'];
+			
+			if(is_numeric($course_id)){
+				$id = $course_id;
+			}else{
+				$row = DB::table('courses')->where('shortname', $course_id)->select('id')->first();
+				if($row){
+					$id = $row->id;
+				}else{
+					throw new Exception("Course shortname you provided is invalid");
+				}
+			}
+			//var_dump($id);die();
+			
 			/*
 			$select = DB::table('courses')
 					->join('course_categories', 'course_categories.id', '=', 'courses.category')
@@ -118,7 +131,7 @@ class CourseSection extends Authenticatable{
 					$query->select('id','title','content','section');
 				}
 			]
-			)->where('course_sections.delete_status', '=', '0')->where('course_sections.course',$course_id);
+			)->where('course_sections.delete_status', '=', '0')->where('course_sections.course',$id);
 			
             $rows = $select->orderBy('id','ASC')->paginate($limit);
             //var_dump($rows);die();       

@@ -10,8 +10,7 @@ use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\CoursesCustom;
 use \Illuminate\Support\Str;
 
-class SectionsCustom {
-        
+class SectionsCustom {        
 
     const IS_VISIBLE_0 = "0";
     const IS_VISIBLE_1 = "1";
@@ -230,7 +229,7 @@ class SectionsCustom {
                 }                
                 //var_dump($rows);die();
                 if(!$rows){					
-                        $result = [
+                    $result = [
                         'code' => 200,
                         'data' => [],
                         'total' => 0,
