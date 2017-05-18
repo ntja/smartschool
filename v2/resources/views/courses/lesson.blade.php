@@ -15,7 +15,7 @@
 <div class="notification-container"></div>
  @include('partials/header')
 <section id="main_content" data-course_id={{{ $course_id }}}>
-  <div class="container">	
+  <div class="container-fluid">	
   <ol class="breadcrumb">
       <li><a href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
       <li class="active">Active page</li>
@@ -24,16 +24,16 @@
         //var_dump($sections_with_lessons);die();
       ?>
 	<div class="row">
-            <aside class="col-md-4" style="/*border-right: solid #EEEEEE 1px; */">
+            <aside class="col-md-3" style="/*border-right: solid #EEEEEE 1px; */">
                 <div class="box_style_4">           
                 <div class="panel-group" id="accordion">
                     @for ($i = 0; $i < count($sections_with_lessons); $i++)
                         @if(count($sections_with_lessons[$i]->lessons)>0)
-                            <div class="panel panel-info">
+                            <div class="panel panel-default">
                               <div class="panel-heading">
-                                <h6 class="panel-title">
+                                <h5 class="panel-titl">
                                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#course{{{ $sections_with_lessons[$i]->id }}}">{{{ $sections_with_lessons[$i]->title }}}<i class="indicator icon-plus pull-right"></i></a>
-                                </h6>
+                                </h5>
                               </div>                      
                               <div id="course{{{ $sections_with_lessons[$i]->id }}}" class="panel-collapse collapse">
                                 <div class="panel-body">
@@ -49,9 +49,9 @@
                     @endfor  
                 </div>
            </div>           
-         </aside> <!-- End col-md-4 -->
+         </aside> <!-- End col-md-3 -->
          
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="clearfix text-center"><a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a><a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   <a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a></div>
                 <hr>
             <h2>Simply dummy text</h2>
@@ -67,7 +67,7 @@
              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
             <hr>
             <div class="clearfix text-center"><a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a><a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   <a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a></div>
-            </div><!-- End col-md-8  -->                        
+            </div><!-- End col-md-9  -->                        
      	
      </div><!-- End row -->
   </div><!-- End container -->

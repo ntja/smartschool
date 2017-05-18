@@ -45,7 +45,7 @@ class LessonController extends Controller {
 			//var_dump($response);die();
             $data = json_decode($response)->data;            
             //$data = $data?$data->data:null;
-			//var_dump($response);die();
+			//var_dump(json_decode($response));die();
             //return $result;
         return view('courses.lesson')->with(['course_id' => $course_id, 'sections_with_lessons' => $data]);
     }
