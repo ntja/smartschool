@@ -42,7 +42,7 @@ class FromStorageController extends Controller {
                 }
                 $extract_course_titles[] = $title;                
             }
-            //die();
+            var_dump($extract_course_titles);die();
             //end($array);           
             return $extract_course_titles;
     }
