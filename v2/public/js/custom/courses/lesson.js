@@ -22,9 +22,8 @@
 		$('body').delegate('.lesson_title', 'click',function(){			
 			//get_lesson_details($(this).data('lesson_id'));
 			window.localStorage.setItem('sm_lesson_id',$(this).data('lesson_id'))
-			window.location.assign($(this).data('href'));
-		});
-		
+			window.location.replace($(this).data('href'));
+		});		
 		// Get lesson detail
 		get_lesson_details(lesson_id);
 		
@@ -46,7 +45,7 @@
 					$('.lesson_title').html(data.title);
 					$('.lesson_content').html(data.content);
 					if(data.lesson_material.length>0){						
-						$('.lesson_video').append('<video width="100%" src="'+base_url+'/'+data.lesson_material[0].link+'" style="border:0;" class="video_course"></video>')
+						$('.lesson_video').append('<iframe width="100%" src="'+base_url+'/'+data.lesson_material[0].link+'" style="border:0;" class="video_course"></iframe>')
 					}
 				}
 			})

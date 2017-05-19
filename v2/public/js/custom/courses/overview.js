@@ -62,7 +62,7 @@
 		$('body').delegate('.lesson_title', 'click',function(){
 			console.log($(this).data('lesson_id'));
 			window.localStorage.setItem('sm_lesson_id',$(this).data('lesson_id'))
-			window.location.assign($(this).data('href'));
+			window.location.replace($(this).data('href'));
 		});
 		
 		//get section information
