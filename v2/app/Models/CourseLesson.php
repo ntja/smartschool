@@ -37,8 +37,13 @@ class CourseLesson extends Authenticatable{
     }
     
 	// 1 to * relationship with section table
-    public function section(){
-        return $this->belongsTo('App\Models\CourseSection');
+    public function course_section(){
+        return $this->belongsTo('App\Models\CourseSection','section');
+    }
+	
+	// 1 to * relationship with lesson_materials table
+    public function lesson_material(){
+        return $this->hasMany('App\Models\LessonMaterial','lesson');
     }
 
     public function dbSave($params) {

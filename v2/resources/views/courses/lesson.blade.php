@@ -39,7 +39,7 @@
                                 <div class="panel-body">
                                     <ul class="list_1">                                                            
                                         @for ($j = 0; $j < count($sections_with_lessons[$i]->lessons); $j++)
-                                        <li><a href="{{{ $sections_with_lessons[$i]->lessons[$j]->slug_title }}}"><small>{{{ $sections_with_lessons[$i]->lessons[$j]->title }}}</small></a></li>
+                                        <li><a class="lesson_title" href="javascript:void(0);" data-href="{{{ $sections_with_lessons[$i]->lessons[$j]->slug_title }}}" data-lesson_id="{{{ $sections_with_lessons[$i]->lessons[$j]->id }}}"><small>{{{ $sections_with_lessons[$i]->lessons[$j]->title }}}</small></a></li>
                                         @endfor
                                     </ul>
                                 </div>
@@ -54,17 +54,9 @@
             <div class="col-md-9">
                 <div class="clearfix text-center"><a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a><a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   <a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a></div>
                 <hr>
-            <h2>Simply dummy text</h2>
-             <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-             <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-			<blockquote class="styled">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                    <small>Someone famous in <cite title="">Body of work</cite></small>
-             </blockquote>
-             <p><img src="{{asset('img/pic_1.jpg')}}" width="800" height="400" alt="Pic" class="img-responsive"></p>
-             <h4>Text of the printing</h4>
-             <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-             <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+            <h3 class="lesson_title text-center"></h3>
+            <p class="lesson_content"></p>
+			<div class="lesson_video"></div>			
             <hr>
             <div class="clearfix text-center"><a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a><a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   <a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a></div>
             </div><!-- End col-md-9  -->                        
@@ -77,8 +69,9 @@
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
-	<script src="{{asset('js/custom/functions.js')}}"></script>
+	<script src="{{asset('js/custom/functions.js')}}"></script>	
 	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
+	<script src="{{asset('js/custom/courses/lesson.js')}}"></script>
 @stop
 
 @stop 

@@ -364,7 +364,7 @@ class CourseCustom {
                 }
                 if (array_key_exists('category', $param)) {
                     if (!is_numeric($param['category'])) {
-                        $result = array("code" => 4000, "description" => "category is a number ");
+                        $result = array("code" => 4000, "description" => "category is a number");
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
                     }                                        

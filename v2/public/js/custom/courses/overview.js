@@ -42,7 +42,6 @@
 		//$('#course_content').html(html);
 		get_section_details(course_details.id, course_id);
 		
-		
 		//get user information
 		var user = get_user_details(user_id, user_token);
 		if(user ){
@@ -58,6 +57,12 @@
 			}
 			$('.enroll').append('<i class="icon-spin4 animate-spin loader"></i>').attr('disabled','disabled');
 			join_course(user_id, user_token,course_details.id);
+		});
+		
+		$('body').delegate('.lesson_title', 'click',function(){
+			console.log($(this).data('lesson_id'));
+			window.localStorage.setItem('sm_lesson_id',$(this).data('lesson_id'))
+			window.location.assign($(this).data('href'));
 		});
 		
 		//get section information
@@ -87,7 +92,7 @@
 							html += '<h3 class="chapter_course">'+data.data[i].title+'<small class="pull-right">'+data.data[i].lessons.length+' lesson (s)</small></h3>';
 							for(j=0;j < data.data[i].lessons.length;j++){
 								html += '<div class="strip_single_course">';
-								html += '<h4><a href="'+base_url+'/course/'+course_shortname+'/'+data.data[i].lessons[j].slug_title+'">'+data.data[i].lessons[j].title+'</a></h4>';
+								html += '<h4><a class="lesson_title" href="javascript:void(0);" data-href="'+base_url+'/course/'+course_shortname+'/'+data.data[i].lessons[j].slug_title+'" data-lesson_id="'+data.data[i].lessons[j].id+'">'+data.data[i].lessons[j].title+'</a></h4>';
 								html += '<ul><li><i class="icon-clock"></i> 00:00</li><li><i class="icon-doc"></i>Text reading</li></ul>';
 								html += '</div>';
 							}
@@ -98,7 +103,7 @@
 				$('#course_content').html(html);
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
-                            console.log('request failed !');
+                console.log('request failed !');
 			});
 		}
 		

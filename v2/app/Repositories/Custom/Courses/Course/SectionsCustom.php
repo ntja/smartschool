@@ -162,7 +162,7 @@ class SectionsCustom {
                 die(); 
             }            
 			$params['date_created'] = date('Y-m-d H:i:s');
-            var_dump($params);die();	
+            //var_dump($params);die();	
 			$unique_section_title = $this->uniqueSectionPerCourse($params['title'],$params['course']);
             //var_dump($unique_section_title);die();
 			// if user already applied to a course
