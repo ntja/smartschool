@@ -9,6 +9,25 @@
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.min.css')}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.1.1/mediaelementplayer.min.css" integrity="sha256-WXx0FFqRfy9q9IjmwAEJqvBycVIwfemORECxUHP+o0g=" crossorigin="anonymous" />
+	<style>
+		.myIframe {
+			position: relative;
+			padding-bottom: 62.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: auto; 
+			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
+			border: solid black 1px;
+		} 
+			.myIframe iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+	</style>
 @stop
 
 @section('content')
@@ -56,7 +75,7 @@
                 <hr>
             <h3 class="lesson_center_title text-center"></h3>
             <p class="lesson_content"></p>
-			<div class="lesson_video" style="width:100%; background-color:transparent; overflow:hidden"></div>			
+			<div class="lesson_video myIframe" style="background-color:transparent; overflow:hidden"></div>
             <hr>
             <div class="clearfix text-center"><a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a><a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   <a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a></div>
             </div><!-- End col-md-9  -->                        

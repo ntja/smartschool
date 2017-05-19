@@ -44,9 +44,11 @@
 				if(data){
 					$('.lesson_center_title').html(data.title);
 					$('.lesson_content').html(data.content);
-					if(data.lesson_material.length>0){						
-						$('.lesson_video').append('<iframe scrolling="yes" class="mejs-player" width="980" height="360"  src="'+base_url+'/'+data.lesson_material[0].link+'" frameborder="0" allowfullscreen></iframe>');
+					if(data.lesson_material.length>0){								
+						$('.lesson_video').append('<iframe scrolling="yes" class="mejs-player" src="'+base_url+'/'+data.lesson_material[0].link+'?rel=0" frameborder="0" allowfullscreen></iframe>');
 						//$('.lesson_video').append('<video width="100%" height="100%" controls="controls" class="mejs__player" data-mejsoptions=\'{"alwaysShowControls": "true"}\'><source src="'+base_url+'/'+data.lesson_material[0].link+'" /></video>');
+						$('video').attr('autoplay',false);
+						console.log($('video').attr('autoplay'));
 
 					}
 				}
