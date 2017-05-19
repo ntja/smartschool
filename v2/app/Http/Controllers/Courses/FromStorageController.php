@@ -42,7 +42,7 @@ class FromStorageController extends Controller {
                 }
                 $extract_course_titles[] = $title;                
             }
-            var_dump($extract_course_titles);die();
+            //var_dump($extract_course_titles);die();
             //end($array);           
             return $extract_course_titles;
     }
@@ -54,7 +54,7 @@ class FromStorageController extends Controller {
             $directories = \File::directories('storage/courses/'.$course);
             $extract_course_titles = [];
             foreach ($directories as $dir){
-                $explode_dir = explode('\\', $dir);
+                $explode_dir = explode('/', $dir);
                 $title = end($explode_dir);                
                 $extract_course_titles[] = $title;                 
             }
