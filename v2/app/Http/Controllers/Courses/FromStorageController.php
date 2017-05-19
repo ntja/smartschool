@@ -35,7 +35,7 @@ class FromStorageController extends Controller {
             $directories = \File::directories($storage);
             //var_dump($directories);die();
             foreach ($directories as $dir){
-                $explode_dir = explode('\\', $dir);
+                $explode_dir = explode('/', $dir);
                 $title = end($explode_dir);
                 if(in_array($title, $course_titles)){
                     continue;
