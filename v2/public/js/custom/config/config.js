@@ -1,4 +1,3 @@
-
 var settings, config, environment;
 
 settings = {
@@ -12,7 +11,7 @@ settings = {
     }
 };
 
-environment = 'development';
+environment = 'staging';
 
 config = settings.environments[environment];
 
