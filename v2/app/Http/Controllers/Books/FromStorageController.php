@@ -158,7 +158,7 @@ class FromStorageController extends Controller {
 			$imagick->setResolution(150, 150);
 			$imagick->readImage(__DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]');
 			//$imagick = $imagick->flattenImages();
-			$imagick->writeFile('storage/books/cover.jpg'); 
+			$imagick->writeImage('cover.jpg'); 
             //$lessons = $this->getVideosOfLessons();
             var_dump($imagick);die();
             //return $lessons;
