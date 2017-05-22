@@ -49,7 +49,7 @@
 	<ol class="breadcrumb">
       <li><a href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
 	  <li><a href="<?php echo URL::to('/courses/catalog'); ?>">{{__('Courses Catalog')}}</a></li>
-      <li class="active">{{__('Course Overview')}}</li>
+      <li class="active">{{{ $course_id }}}</li>
     </ol>
 
 	 <div class="row">

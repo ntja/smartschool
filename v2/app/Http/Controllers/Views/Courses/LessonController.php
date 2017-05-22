@@ -42,11 +42,13 @@ class LessonController extends Controller {
             $response = curl_exec($curl);
             // Close request to clear up some resources
             curl_close($curl);
-			//var_dump($response);die();
-            $data = json_decode($response)->data;            
-            //$data = $data?$data->data:null;
-			//var_dump(json_decode($response));die();
-            //return $result;
+			if(count((array)json_decode($response))>0){
+				//var_dump(json_decode($response));die();
+				$data = json_decode($response)->data;
+				//$data = $data?$data->data:null;
+			}else{
+				$data = [];
+			}			
         return view('courses.lesson')->with(['course_id' => $course_id, 'sections_with_lessons' => $data]);
     }
 }

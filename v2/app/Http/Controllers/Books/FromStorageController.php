@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Courses;
+namespace App\Http\Controllers\Books;
 
 use Illuminate\Http\Request;
 
@@ -22,9 +22,9 @@ class FromStorageController extends Controller {
      *upload file
      */
 
-    public function getNonUploadedCourses($storage) {
+    public function getNonUploadedBooks($storage) {
         //get all courses fro DB
-            $courses = DB::table('courses')->select('name')->get()->toArray();
+            $courses = DB::table('books')->select('name')->get()->toArray();
             foreach ($courses as $course) {
                 //var_dump($course);die();
                 $course_titles[] = $course->name;
@@ -152,10 +152,16 @@ class FromStorageController extends Controller {
     
     public function post(Request $request) {        
         try {
-            //$file = $request->file()['file'];            
-            $lessons = $this->getVideosOfLessons();
-            //var_dump($lessons);die();
-            return $lessons;
+			//$contents = \Storage::get('thinking-skills.pdf');
+            //$file = File::get('storage/books/thinking-skills.pdf');
+			$imagick = new \Imagick();
+			$imagick->setResolution(150, 150);
+			$imagick->readImage(__DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]');
+			//$imagick = $imagick->flattenImages();
+			$imagick->writeFile('storage/books/cover.jpg'); 
+            //$lessons = $this->getVideosOfLessons();
+            var_dump($imagick);die();
+            //return $lessons;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
         }         

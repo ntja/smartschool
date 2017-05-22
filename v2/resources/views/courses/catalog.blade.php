@@ -17,7 +17,7 @@
             <div class="col-md-10 col-md-offset-1 text-center">
                 <h1>{{__('Courses Catalog')}}</h1>      
                 <p class="lead">
-                   {{__('Explore new interests and career opportunities with courses in Mathematics, Computer Science, Chemistry, Physics, Biology and more.')}}
+                   {{__('Explore new interests and career opportunities with courses in Mathematics, Computer Science, Chemistry, Physics, Biology and more...')}}
                 </p>
             </div>
         </div><!-- End row -->

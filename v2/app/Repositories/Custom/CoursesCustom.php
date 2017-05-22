@@ -533,9 +533,16 @@ class CoursesCustom {
     public function getCourseByID($id){
         try{
             $course = $this->model();
-            $row = $course::with(['account'=> function ($query) {
+            $row = $course::with(
+			[
+				'account'=> function ($query) {
 					$query->select('id','first_name','last_name');
-				},'courseCategory','section'])->where('id', '=', $id)->first();
+				},
+				'courseCategory',
+				'section'  => function ($query) {
+					$query->select('*');
+				}
+			])->where('id', '=', $id)->first();
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
@@ -545,9 +552,16 @@ class CoursesCustom {
     public function getCourseByShortname($short_name){
         try{
             $course = $this->model();
-			$row = $course::with(['account'=> function ($query) {
+			$row = $course::with(
+			[
+				'account'=> function ($query) {
 					$query->select('id','first_name','last_name');
-				},'courseCategory','section'])->where('courses.shortname', 'LIKE', $short_name)->first();
+				},
+				'courseCategory',
+				'section' => function ($query) {
+					$query->select('*');
+				}
+			])->where('courses.shortname', 'LIKE', $short_name)->first();
 			/*
             $row = $course::join('accounts', 'accounts.id', '=', 'courses.instructor')
                 ->join('course_categories', 'course_categories.id', '=', 'courses.category')

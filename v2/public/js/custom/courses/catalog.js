@@ -79,10 +79,10 @@
 						html += '<div class="photo">';
 						html += '<a href="'+base_url+'/course/'+data.data[i].shortname+'"><img src="'+base_url+'/public/img/poetry.jpg" alt="" /></a>';
 						html += '<div class="cat_row">';
-                                                if(data.data[i].course_category){
-                                                    html += '<a href="#">'+data.data[i].course_category.name+'</a>';
-                                                }
-                                                html += '<span class="pull-right"><i class=" icon-money"></i>Free</span></div>';
+						if(data.data[i].course_category){
+							html += '<a href="#">'+data.data[i].course_category.name+'</a>';
+						}
+						html += '<span class="pull-right"><i class=" icon-money"></i>'+settings.i18n.translate('home.3')+'</span></div>';
 						html += '</div>';
 						html += '<div class="info">';
 						html +=	'<div class="row">'
@@ -96,8 +96,8 @@
 						html += '</div>';
 						html += '</div>';
 						html += '<div class="separator clearfix">';
-						html += '<p class="btn-add"> <a href="apply_2.html"><i class="icon-export-4"></i> Subscribe</a></p>';
-						html += '<p class="btn-details"> <a href="'+base_url+'/course/'+data.data[i].shortname+'"><i class=" icon-eye"></i> Details</a></p>';
+						html += '<p class="btn-add"> <a href="apply_2.html"><i class="icon-export-4"></i> '+settings.i18n.translate('home.2')+'</a></p>';
+						html += '<p class="btn-details"> <a href="'+base_url+'/course/'+data.data[i].shortname+'"><i class=" icon-eye"></i> '+settings.i18n.translate('home.1')+'</a></p>';
 						html += '</div>';
 						html += '</div>';
 						html += '</div>';

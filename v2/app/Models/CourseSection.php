@@ -128,12 +128,12 @@ class CourseSection extends Authenticatable{
 			$select = CourseSection::with(
 			[
 				'lessons'=> function ($query) {
-					$query->select('id','title','content','section');
+					$query->select('id','title','content','section')->orderBy('title','ASC');
 				}
 			]
 			)->where('course_sections.delete_status', '=', '0')->where('course_sections.course',$id);
 			
-            $rows = $select->orderBy('id','ASC')->paginate($limit);
+            $rows = $select->orderBy('title','ASC')->paginate($limit);
             //var_dump($rows);die();       
             if (!count($rows)) {
                 return false;

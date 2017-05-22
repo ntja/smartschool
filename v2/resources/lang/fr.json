@@ -129,9 +129,9 @@
 	"Length" : "Durée",
 	"Effort" : "Effort",
 	"Language" : "Langue",
-        "Share this course with a friend" : "Partager ce cours avec un ami",
-        "Previous" : "Pr&Eacute;c&Eacute;dent",
-        "Next" : "Suivant",
-        "Mark as complete" : "Marquez comme achev&eacute;"
-        
+	"Share this course with a friend" : "Partager ce cours avec un ami",
+	"Previous" : "Pr&Eacute;c&Eacute;dent",
+	"Next" : "Suivant",
+	"Mark as complete" : "Marquez comme achev&eacute;",
+	"Share on" : "Partager sur"
 }

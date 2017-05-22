@@ -49,15 +49,20 @@ class LessonCustom {
 				}
 				*/
 				$lesson = $this->_lessonCustom->model();
-				$row = $lesson::with(
+				$select = $lesson::with(
 					[
 						'lesson_material' => function ($query) {
-							$query->select('id','type','link','lesson');
+							$query->select('id','type','link','lesson','extension');
 						},
 						'course_section' => function ($query) {
 							$query->select('course_sections.*');
 						}
-					])->where('course_lessons.id', '=', $id)->select('course_lessons.*')->first();
+					]);
+				if(is_numeric($id)){
+					$row = $select->where('course_lessons.id', '=', $id)->select('course_lessons.*')->first();
+				}else{
+					$row = $select->where('course_lessons.slug_title', 'LIKE', $id)->select('course_lessons.*')->first();
+				}
 				//var_dump($row);die();
                 if($row){
 					LogRepository::printLog('info', "The information of lesson #". $id ." has been retrieved."); 
