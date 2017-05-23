@@ -160,7 +160,7 @@ class FromStorageController extends Controller {
 			//$imagick->readImage($path);
 			//reduce the dimensions - scaling will lead to black color in transparent regions
 			$imagick->scaleImage(800,0);
-			$imagick->cropImage(500,500, 0,70);
+			$imagick->cropImage(100,100, 0,60);
 			//set new format
 			$imagick->setImageFormat('jpeg');
 			$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
