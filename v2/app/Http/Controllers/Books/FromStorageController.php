@@ -156,7 +156,7 @@ class FromStorageController extends Controller {
             //$file = File::get('storage/books/thinking-skills.pdf');
 			$path = __DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]';
 			$imagick = new \Imagick($path);			
-			$imagick->setResolution(200, 200);
+			$imagick->setResolution(300, 300);
 			//$imagick->readImage($path);
 			//reduce the dimensions - scaling will lead to black color in transparent regions
 			$imagick->scaleImage(800,0);
@@ -167,7 +167,7 @@ class FromStorageController extends Controller {
 			$imagick->setImageCompressionQuality(100);
 			//$imagick->setImageColorspace(4);
 			//$imagick->setImageBackgroundColor('white');
-			$imagick->writeImages(__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg',fALSE); 
+			$imagick->writeImage(__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'); 
 			//$imagick = $imagick->flattenImages();
 			$imagick->trimImage(0);
 			$output = $imagick->getimageblob();
