@@ -150,31 +150,35 @@ class FromStorageController extends Controller {
         }        
     }
     
+	public function extractCoverFromPdf($filepath){
+		$imagick = new \Imagick($filepath);			
+		$imagick->setResolution(300, 300);
+		//$imagick->readImage($filepath);
+		//reduce the dimensions - scaling will lead to black color in transparent regions
+		$imagick->scaleImage(800,0);
+		$imagick->cropImage(900,850, 0,100);
+		//set new format
+		$imagick->setImageFormat('jpeg');
+		$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
+		$imagick->setCompressionQuality(100);
+		//$imagick->setImageColorspace(4);
+		//$imagick->setImageBackgroundColor('white');		
+		//$imagick = $imagick->flattenImages();
+		$imagick->trimImage(0);
+		$imagick->writeImage(__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'); 
+		$output = $imagick->getimageblob();
+		$outputtype = $imagick->getFormat();
+		header("content-type:$outputtype");
+		print_r($output);die();		
+		$imagick->destroy();
+	}
+	
     public function post(Request $request) {        
         try {
 			//$contents = \Storage::get('thinking-skills.pdf');
             //$file = File::get('storage/books/thinking-skills.pdf');
-			$path = __DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]';
-			$imagick = new \Imagick($path);			
-			$imagick->setResolution(300, 300);
-			//$imagick->readImage($path);
-			//reduce the dimensions - scaling will lead to black color in transparent regions
-			$imagick->scaleImage(800,0);
-			$imagick->cropImage(900,850, 0,100);
-			//set new format
-			$imagick->setImageFormat('jpeg');
-			$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
-			$imagick->setCompressionQuality(100);
-			//$imagick->setImageColorspace(4);
-			//$imagick->setImageBackgroundColor('white');
-			$imagick->writeImage(__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'); 
-			//$imagick = $imagick->flattenImages();
-			$imagick->trimImage(0);
-			$output = $imagick->getimageblob();
-			$outputtype = $imagick->getFormat();
-			header("content-type:$outputtype");
-			print_r($output);die();		
-			$imagick->destroy();
+			$path = __DIR__ . DIRECTORY_SEPARATOR .'stockholm-school-of-economics.pdf[0]';
+			$this->extractCoverFromPdf($path);
             //$lessons = $this->getVideosOfLessons();            
             //return $lessons;
         } catch (Exception $ex) {
