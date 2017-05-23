@@ -153,27 +153,15 @@ class FromStorageController extends Controller {
     public function post(Request $request) {        
         try {
 			//$contents = \Storage::get('thinking-skills.pdf');
-            //$file = File::get('storage/books/thinking-skills.pdf');
-			$path = __DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]';
-			$imagick = new \Imagick($path);			
-			$imagick->setResolution(300, 300);			
-			//$imagick->readImage($path);
-			//reduce the dimensions - scaling will lead to black color in transparent regions
-			$imagick->scaleImage(800,0);
-			//set new format
-			$imagick->setImageFormat('jpeg');
-			$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
-			$imagick->setImageCompressionQuality(100);
-			//$imagick->setImageColorspace(4);
-			$imagick->setImageBackgroundColor('white');
-			$imagick->writeImages('cover.jpg',fALSE); 
+            $file = File::get(__DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf');
+			$imagick = new \Imagick();
+			$imagick->setResolution(150, 150);
+			$imagick->readImage(__DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]');
+			var_dump($file );die();
 			//$imagick = $imagick->flattenImages();
-			$output = $imagick->getimageblob();
-			$outputtype = $imagick->getFormat();
-			header("content-type:$outputtype");
-			print_r($output);die();		
-			$imagick->destroy();
-            //$lessons = $this->getVideosOfLessons();            
+			$imagick->writeImage('cover.jpg'); 
+            //$lessons = $this->getVideosOfLessons();
+            var_dump($imagick);die();
             //return $lessons;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
