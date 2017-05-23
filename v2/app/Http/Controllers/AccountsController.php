@@ -10,8 +10,6 @@ use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\Resource\Account as ResourceAccount;
 use Exception;
 use Mail;
-//use JWTAuth;
-//use JWTFactory;
 
 class AccountsController extends Controller {
   
