@@ -156,10 +156,11 @@ class FromStorageController extends Controller {
             //$file = File::get('storage/books/thinking-skills.pdf');
 			$path = __DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]';
 			$imagick = new \Imagick($path);			
-			$imagick->setResolution(300, 300);			
+			$imagick->setResolution(400, 400);
 			//$imagick->readImage($path);
 			//reduce the dimensions - scaling will lead to black color in transparent regions
 			$imagick->scaleImage(800,0);
+			$imagick->cropImage(400,400, 30,10);
 			//set new format
 			$imagick->setImageFormat('jpeg');
 			$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
