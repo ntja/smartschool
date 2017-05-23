@@ -164,7 +164,7 @@ class FromStorageController extends Controller {
 			//set new format
 			$imagick->setImageFormat('jpeg');
 			$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
-			$imagick->setImageCompressionQuality(100);
+			$imagick->setCompressionQuality(100);
 			//$imagick->setImageColorspace(4);
 			//$imagick->setImageBackgroundColor('white');
 			$imagick->writeImage(__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'); 
