@@ -153,10 +153,11 @@ class FromStorageController extends Controller {
     public function post(Request $request) {        
         try {
 			//$contents = \Storage::get('thinking-skills.pdf');
-            //$file = File::get('storage/books/thinking-skills.pdf');
+            $file = File::get(__DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf');
 			$imagick = new \Imagick();
 			$imagick->setResolution(150, 150);
 			$imagick->readImage(__DIR__ . DIRECTORY_SEPARATOR .'thinking-skills.pdf[0]');
+			var_dump($file );die();
 			//$imagick = $imagick->flattenImages();
 			$imagick->writeImage('cover.jpg'); 
             //$lessons = $this->getVideosOfLessons();
