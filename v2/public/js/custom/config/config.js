@@ -11,7 +11,7 @@ settings = {
     }
 };
 
-environment = 'staging';
+environment = 'development';
 
 config = settings.environments[environment];
 
