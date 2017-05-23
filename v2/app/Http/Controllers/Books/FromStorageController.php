@@ -171,7 +171,7 @@ class FromStorageController extends Controller {
 			$output = $imagick->getimageblob();
 			$outputtype = $imagick->getFormat();
 			header("content-type:$outputtype");
-			//print_r($output);die();		
+			print_r($output);die();		
 			$imagick->destroy();
             //$lessons = $this->getVideosOfLessons();            
             //return $lessons;
