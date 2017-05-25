@@ -57,7 +57,7 @@
 						if(data.lesson_material[0].extension == "mp4"){
 								$('.lesson_video').append('<video width="100%" height="100%" controls="controls" class="mejs__player" data-mejsoptions=\'{"alwaysShowControls": "true"}\'><source src="'+base_url+'/'+data.lesson_material[0].link+'" /></video>');
 						}else{
-							$('.lesson_video').addClass('myIframe').append('<iframe scrolling="yes" class="mejs-player" src="'+base_url+'/'+data.lesson_material[0].link+'?rel=0" frameborder="0" allowfullscreen></iframe>');							
+							$('.lesson_video').addClass('myIframe').append('<iframe scrolling="yes" class="mejs-player" src="'+base_url+'/'+data.lesson_material[0].link+'?rel=0" frameborder="0" allowfullscreen></iframe>');
 						}
 						//$('video').attr('autoplay',false);						
 

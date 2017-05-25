@@ -20,6 +20,10 @@ function alertNotify(message, type){
 function qs(){
 	var url = location.search;
 	var qs = url.substring(url.indexOf('?') + 1).split('&');
+	if(qs[0]==""){
+		return null;
+	}
+	//console.log(qs[0]);
 	for(var i = 0, result = {}; i < qs.length; i++){
 		qs[i] = qs[i].split('=');
 		result[qs[i][0]] = decodeURIComponent(qs[i][1]);

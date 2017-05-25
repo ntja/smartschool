@@ -299,7 +299,7 @@ class BooksCustom {
                 //Retrieve a list of item paginated by after and before params
                 $rows = $this->_model->getBooks($params, $account);
 				if($rows){
-					LogRepository::printLog('info', "All books have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
+					//LogRepository::printLog('info', "All books have been retrieve by user #".$account->getPropertyValue('id').". Request inputs: {" . var_export($params,true) . "}.");    
 					return $rows;
 				}else{
 					$result = [

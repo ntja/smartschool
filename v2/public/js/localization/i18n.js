@@ -36,6 +36,8 @@ settings.i18n = {
 			"instructor.course.6" : "Publier",
 			"instructor.course.7" : "Rendre non publique",
 			"instructor.course.8" : "Voir",
+			"book.catalog.1" : "Télécharger",
+			"book.catalog.2" : "Lire",
         },
         en: {
             'home.1': 'Overview',
@@ -73,6 +75,8 @@ settings.i18n = {
 			"instructor.course.6" : "Publish",
 			"instructor.course.7" : "Unpublish",
 			"instructor.course.8" : "View",
+			"book.catalog.1" : "Download",
+			"book.catalog.2" : "Read",
         }
     },
     language: 'en',

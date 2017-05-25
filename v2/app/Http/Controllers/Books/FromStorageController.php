@@ -22,136 +22,86 @@ class FromStorageController extends Controller {
      *upload file
      */
 
-    public function getNonUploadedBooks($storage) {
-        //get all courses fro DB
-            $courses = DB::table('books')->select('name')->get()->toArray();
-            foreach ($courses as $course) {
-                //var_dump($course);die();
-                $course_titles[] = $course->name;
+    public function getNonUploadedCategories($storage) {
+        $course_categories = DB::table('book_categories')->select('name')->get()->toArray();
+		//$books = DB::table('books')->select('name')->get()->toArray();
+			$category_titles = [];
+			$extract_cat_titles = [];
+            foreach ($course_categories as $category) {
+                //var_dump($category);die();
+                $category_titles[] = $category->name;
             }
-            $extract_course_titles = [];
-            //var_dump($course_titles);die();
-            //return $courses;
-            $directories = \File::directories($storage);
-            //var_dump($directories);die();
+			//var_dump($category_titles);die();
+			$directories = \File::directories('storage/books');
+			//var_dump($directories);die();
             foreach ($directories as $dir){
-                $explode_dir = explode('\\', $dir);
+                $explode_dir = explode(DIRECTORY_SEPARATOR, $dir);
                 $title = end($explode_dir);
-                if(in_array($title, $course_titles)){
+                if(in_array($title, $category_titles)){
                     continue;
                 }
-                $extract_course_titles[] = $title;                
+                $extract_cat_titles[] = $title;                
             }
-            //var_dump($extract_course_titles);die();
+            //var_dump($extract_cat_titles);die();
             //end($array);           
-            return $extract_course_titles;
+            return $extract_cat_titles;
     }
     
-    public function getLessonsOfCourse() {
-        $courses = $this->getNonUploadedCourses('storage/courses');
-        $lessons = [];
-        foreach ($courses as $course) {
-            $directories = \File::directories('storage/courses/'.$course);
-            $extract_course_titles = [];
-            foreach ($directories as $dir){
-                $explode_dir = explode('\\', $dir);
-                $title = end($explode_dir);                
-                $extract_course_titles[] = $title;                 
-            }
-            //var_dump($extract_course_titles);die();
-            $lessons[$course] = $extract_course_titles;
-        }        
-        return $lessons;
-    }
-    
-    public function getVideosOfLessons() {
-        try {            
-            DB::beginTransaction();
-            $lessons = $this->getLessonsOfCourse();
-            //var_dump($lessons);die();
-            foreach($lessons as $lesson => $values){
-                //var_dump($lesson);//die(); $lesson => courses,
-                /**/
-                $course_id = DB::table('courses')->insertGetId(
-                        [
-                            'name' => $lesson,
-                            'shortname' => Str::slug($lesson),
-                            'language' => 'EN',
-                            'shortdescription' => ' ',
-                            'status' => 'PUBLISHED',
-                            'course_type' => 'STANDALONE'
-                        ]
-                    ); 
-                
-                foreach($values as $value){
-                    //var_dump($value);
-                    /**/
-                    $section_id = DB::table('course_sections')->insertGetId(
-                        [
-                            'title' => $value,                            
-                            'description' => ' ',                            
-                            'course' => $course_id
-                        ]
-                    );                      
-                                         
-                    //$directories = \File::directories('storage/courses/'.$lesson.'/'.$value); 
-                    //$extract_course_titles = [];
-                    $array_files = [];
-                    
-                    $files = \File::allFiles('storage/courses/'.$lesson.'/'.$value.'/video lectures');
-                    foreach ($files as $file){
-                        /**/
-                        $lesson_id = DB::table('course_lessons')->insertGetId(
-                            [
-                                'title' =>  explode('.mp4', $file->getFilename())[0],
-                                'slug_title' => Str::slug(explode('.mp4', $file->getFilename())[0]),
-                                'objective' => ' ',
-                                'content' => ' ',
-                                'section' => $section_id
-                            ]
-                        ); 
-                        
-                        /**/
-                        DB::table('lesson_materials')->insert(
-                            [
-                                'title' => explode('.mp4', $file->getFilename())[0],
-                                'type' => 'VIDEO',                                    
-                                'link' => $file->getPathname(),
-								'extension' => $file->getExtension(),
-                                'lesson' => $lesson_id
-                            ]
-                        ); 
-                        
-                        $x = [
-                            'path' => $file->getPathname(),
-                            'file_name' => $file->getFilename(),
-                            'extension' => $file->getExtension(),
-                            'size' => $file->getSize()
-                        ];
-                        $array_files[] = $x;
-                        //var_dump($array_files);
-                    }
-                    //return $files;
-                    //var_dump($files[0]->getPathname());
-                    
-                    //$result[$lesson][$value] = $extract_course_titles;
-                    $result[$lesson][$value]['video_lectures'] = $array_files;
-                }
-                //die();
-            }
-            //die();
-            //die();
-            DB::commit();
-            return isset($result)? $result:'No Course to Upload';
+    public function getBooks($path) {
+		try{
+			$categories = $this->getNonUploadedCategories($path);
+			$array_files = [];			
+			DB::beginTransaction();
+			foreach ($categories as $category){
+				/**/				
+				$cat_id = DB::table('book_categories')->insertGetId(
+					array('name' => $category)
+				);
+				
+				$books = \File::allFiles('storage/books/'.$category);
+				foreach($books as $book){
+					//$cover = $book->getRealPath().''.$book					
+					$arr = explode(DIRECTORY_SEPARATOR,$book->getRealPath());
+					$arr_2 = explode(DIRECTORY_SEPARATOR,$book->getPathname());
+					array_pop($arr);
+					array_pop($arr_2);
+					$cover = implode(DIRECTORY_SEPARATOR,$arr). DIRECTORY_SEPARATOR .'cover'. DIRECTORY_SEPARATOR .Str::slug(explode('.pdf', $book->getFilename())[0]).'.jpg';
+					$cover_rel_link = implode(DIRECTORY_SEPARATOR,$arr_2). DIRECTORY_SEPARATOR .'cover'. DIRECTORY_SEPARATOR .Str::slug(explode('.pdf', $book->getFilename())[0]).'.jpg';
+					//var_dump($cover_rel_link);die();
+					$this->extractCoverFromPdf($book->getRealPath().'[0]',$cover);
+					$book_id = DB::table('books')->insertGetId(
+						[
+							'name' =>  explode('.pdf', $book->getFilename())[0],
+							'slug_name' => Str::slug(explode('.pdf', $book->getFilename())[0]),
+							'category' => $cat_id,
+							'size' => $book->getSize(),
+							'cover' => $cover_rel_link,
+							'filepath' => $book->getPathname(),
+						]
+					); 
+					$x = [
+						'path' => $book->getPathname(),
+						'file_name' => $book->getFilename(),
+						'extension' => $book->getExtension(),
+						'size' => $book->getSize()
+					];
+					$array_files[] = $x;
+				}
+				$result['books'] = $array_files;
+			}
+			//
+			DB::commit();
+            return isset($result)? $result:'No book to Upload';
             //var_dump($result);die();            
         } catch (Exception $ex) {
             DB::rollback();
             echo $ex->getessage();
-        }        
+        }
+		
     }
-    
-	public function extractCoverFromPdf($filepath){
-		$imagick = new \Imagick($filepath);			
+        
+	public function extractCoverFromPdf($filepath, $savepath=__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'){
+		$imagick = new \Imagick($filepath);
 		$imagick->setResolution(300, 300);
 		//$imagick->readImage($filepath);
 		//reduce the dimensions - scaling will lead to black color in transparent regions
@@ -165,20 +115,21 @@ class FromStorageController extends Controller {
 		//$imagick->setImageBackgroundColor('white');		
 		//$imagick = $imagick->flattenImages();
 		$imagick->trimImage(0);
-		$imagick->writeImage(__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'); 
-		$output = $imagick->getimageblob();
-		$outputtype = $imagick->getFormat();
-		header("content-type:$outputtype");
-		print_r($output);die();		
+		$imagick->writeImage($savepath); 
+		//$output = $imagick->getimageblob();
+		//$outputtype = $imagick->getFormat();
+		//header("content-type:$outputtype");
+		//print_r($output);die();		
 		$imagick->destroy();
 	}
 	
     public function post(Request $request) {        
         try {
+			return $this->getBooks('storage/books');
 			//$contents = \Storage::get('thinking-skills.pdf');
             //$file = File::get('storage/books/thinking-skills.pdf');
-			$path = __DIR__ . DIRECTORY_SEPARATOR .'stockholm-school-of-economics.pdf[0]';
-			$this->extractCoverFromPdf($path);
+			//$path = __DIR__ . DIRECTORY_SEPARATOR .'stockholm-school-of-economics.pdf[0]';
+			//$this->extractCoverFromPdf($path);
             //$lessons = $this->getVideosOfLessons();            
             //return $lessons;
         } catch (Exception $ex) {

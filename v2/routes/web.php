@@ -64,6 +64,15 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/courses/catalog', function () {
 		return view('courses.catalog');
 	});
+	Route::get('/courses', function () {
+		return view('courses.catalog');
+	});
+	Route::get('/books/catalog', function () {
+		return view('books.catalog');
+	});
+	Route::get('/books', function () {
+		return view('books.catalog');
+	});
 	
 	Route::get('/subscription-plans', function () {
             return view('subscription-plans');
