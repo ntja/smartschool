@@ -16,13 +16,26 @@
 			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
 			border: solid black 1px;
 		} 
-			.myIframe iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
+		.myIframe iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.modal-dialog {
+		  width: 100%;
+		  height: 100%;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.modal-content {
+		  height: auto;
+		  min-height: 100%;
+		  border-radius: 0;
+		}
 
 	</style>
 @stop
