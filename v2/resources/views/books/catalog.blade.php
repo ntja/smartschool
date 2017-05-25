@@ -25,17 +25,14 @@
 		}
 		
 		.modal-dialog {
-		  width: 100%;
-		  height: 100%;
-		  margin: 0;
-		  padding: 0;
-		}
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
 
-		.modal-content {
-		  height: auto;
-		  min-height: 100%;
-		  border-radius: 0;
-		}
+.modal-content {
+  height: 99%;
+}
 
 	</style>
 @stop
