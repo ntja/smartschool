@@ -21,13 +21,118 @@
                     window.location.assign(base_url + '/instructor/dashboard');
             }
         }
+		
+		function facebook_login() {
+            try {
+
+                FB.login(function(response) {
+                    var token;
+                    console.log(response);
+                    if (response.authResponse) {
+                        token = response.authResponse.accessToken;
+                        console.log(token);
+
+                        var url = config.api_url + "/accounts/social-login";
+                        var data = {"network": "facebook", "network_token": token};
+                        $.ajax({
+                            url: url,
+                            method: "POST",
+                            headers: {
+                                "content-type": "application/json"
+                            },
+                            data: JSON.stringify(data),
+                            crossDomain: true
+                        })
+                                .done(function(data, jqXHR, textStatus) {
+                                    console.info(data);
+                                    if (data.logged == false) {  // if user does not have an account yet
+                                        window.localStorage.setItem('email', data.email);
+                                        window.localStorage.setItem('social_id', data.social_id);
+                                        window.localStorage.setItem('first_name', data.first_name);
+                                        window.localStorage.setItem('last_name', data.last_name);
+                                        window.localStorage.setItem('facebook_id', data.facebook_id);
+                                        uri = base_url + '/complete-registration';
+                                        window.location.assign(uri);
+                                    } else if (data.logged == true) {
+                                        login(data);
+                                    }
+
+                                })
+                                .fail(function(jqXHR, textStatus, errorThrown) {
+									showAlert('This account has been suspended. Please contact the Administrator', false);
+									return;
+                                    console.log(jqXHR);
+                                    console.log(errorThrown);
+                                });
+
+                    } else {
+                        console.log('User canceled login or he is not fully authorized.');
+                    }
+                }, {
+                    scope: 'email',
+                    return_scopes: true
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        function google_authenticate(network_code) {
+            var token = network_code;
+            $(document).ready(function() {
+                //console.error(token);
+                if (token) {
+                    var url = config.api_url + "/accounts/social-login";
+                    var data = {"network": "google", "network_token": token};
+                    $.ajax({
+                        url: url,
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/json"
+                        },
+                        data: JSON.stringify(data),
+                        crossDomain: true
+                    })
+                            .done(function(data, jqXHR, textStatus) {
+                                console.log(data);
+                                if (data.logged == false) { // if user does not have an account yet
+                                    window.localStorage.setItem('email', data.email);
+                                    window.localStorage.setItem('social_id', data.social_id);
+                                    window.localStorage.setItem('first_name', data.first_name);
+                                    window.localStorage.setItem('last_name', data.last_name);
+                                    window.localStorage.setItem('google_id', data.google_id);
+                                    uri = base_url + '/complete-registration';
+                                    window.location.assign(uri);
+                                } else if (data.logged == true) {
+                                    console.info("enter here");
+                                    login(data);
+                                }
+                            })
+                            .fail(function(jqXHR, textStatus, errorThrown) {
+								console.log(jqXHR);
+								console.log(errorThrown);
+								var response = JSON.parse(jqXHR.responseText);
+								console.info(response);
+								if(response.code == 4000){
+									showAlert(response.description, false);
+								}else{
+									showAlert("An error occurred. Please try again later", false);
+								}
+								return;
+                            });
+                } else {
+                    console.log('User cancelled  login process or he is not fully authorized.');
+                }
+            });
+        }
+		
 		// Set custom error messages
         $.extend($.validator.messages, {
             required: settings.i18n.translate("validation.1"),
             email: settings.i18n.translate("validation.2"),
 			number: settings.i18n.translate("validation.3")
         });
-        form.validate({
+        
+		form.validate({
             errorElement: 'label',
             //errorClass: 'error',
             errorPlacement: function errorPlacement(error, element) {
@@ -51,7 +156,14 @@
                 }
             }
         });
-
+		
+		$("#google-login").click(function(e){            
+			 e.preventDefault();
+			 $('.alert-container .close').parent().css('display', 'none');
+			 console.info($('.login').data("network"));
+			 google_authenticate($('.login').data("network"));
+        });
+		
         function validate() {
             return form.valid();
         } 		
