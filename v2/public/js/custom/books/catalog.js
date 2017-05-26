@@ -67,7 +67,16 @@
 			var src = $(this).data('book');
 			$(".book-title").html($(this).data('book-title'));
 			$('.book-content').empty().addClass('myIframe').append('<iframe scrolling="yes" src="'+base_url+'/'+src+'" class="embed-responsive-item" allowfullscreen></iframe>');
-		});		
+		});
+		
+		$('body').delegate('.category', 'click',function(){
+			var cat = $(this).data('category_id');
+			var uri = config.api_url + "/books?limit="+limit;
+			uri += '&category='+cat;
+			get_books(uri);
+			$(this).addClass('active');
+		});
+		
 		// Get all course categories
 		get_book_categories();
 			
@@ -174,7 +183,7 @@
 					//$('#category_list').empty();				
 					html = '';
 					for(i=0;i < data.data.length;i++){
-						html +='<li><a href="#">'+data.data[i].name+'</a></li>';
+						html +='<li><a class="category" href="#" data-category_id="'+data.data[i].id+'">'+data.data[i].name+'</a></li>';
 					}
 					$('.subject').append(html);
 				}

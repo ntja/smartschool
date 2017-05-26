@@ -11,7 +11,7 @@
 			position: relative;
 			padding-bottom: 52.00%;
 			padding-top: 30px;
-			height: 0;
+			height: 100%;
 			overflow: auto; 
 			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
 			border: solid black 1px;
@@ -25,13 +25,13 @@
 		}
 		
 		.modal-dialog {
-  width: 98%;
-  height: 92%;
+  width: 96%;
+  height: 100%;
   padding: 0;
 }
 
 .modal-content {
-  height: 99%;
+  height: 100%;
 }
 
 	</style>
