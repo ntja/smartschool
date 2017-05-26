@@ -37,8 +37,25 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
+	
 
     'debug' => env('APP_DEBUG', false),
+	
+	/*
+      |--------------------------------------------------------------------------
+      | Google Configuration
+      |--------------------------------------------------------------------------
+      |
+      | Here you may configure the google social login settings for your application.
+
+      |
+     */
+    'google_client_id' => '97971554904-h8bcjdqf2v6k8vg4glcbv8ke9pu1sohi.apps.googleusercontent.com',
+    'google_client_secret' => 'lJW2JuAfnnw0bOGBGDjInA_n',
+    //'google_redirect_uri' => 'http://sw.ai/staging/squirrel/view/public/login',
+    'google_simple_api_key' => 'AIzaSyCS137W5R_39r0NhizOBBNtn5MslGkSZ9g',
+	'google_redirect_uri' => 'http://stagging.smartskul.com/login',
+	
 
     /*
     |--------------------------------------------------------------------------
