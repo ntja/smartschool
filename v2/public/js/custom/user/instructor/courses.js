@@ -6,7 +6,7 @@
     $(document).ready(function() {
 
         var form, role, user_courses = null;  
-		form = $("#create-course-form");
+		form = $("#wrapped");
 		var edit_form = $("#edit-course-form");
         //base_url = $('body').attr('data-base-url');		
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');
@@ -77,6 +77,7 @@
 		});
 		
 		form.validate({
+			ignore: [],
             errorElement: 'label',
             //errorClass: 'error',
             errorPlacement: function errorPlacement(error, element) {

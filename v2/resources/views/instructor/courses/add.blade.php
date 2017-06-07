@@ -187,12 +187,12 @@
 	<script src="{{asset('js/custom/custom.js')}}"></script>
 	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
 	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>
-	<!--
+	<!---->
 	<script> 
 		CKEDITOR.replace( 'course_description', {height : 400, width : '100%'} );
 		CKEDITOR.replace( 'edit-course_description', {height : 400, width : '100%'} );
 	</script>	
-	-->
+	
    <script src="{{asset('js/custom/user/instructor/courses.js')}}"></script>   
 @stop
 
