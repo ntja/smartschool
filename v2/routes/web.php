@@ -57,6 +57,10 @@ Route::group(['middleware' => 'web'], function () {
 		return view('learner.my-courses');
 	});
 	
+	Route::get('/instructor/course/add', function () {
+		return view('instructor.courses.add');
+	});
+	
 	Route::get('/course/{ID}', 'Views\Courses\OverviewController@get')->where('ID', '[a-zA-Z0-9\-]+');
         
     Route::get('/course/{ID}/{lessID}', 'Views\Courses\LessonController@get')->where('ID', '[a-zA-Z0-9\-]+')->where('lessID', '[a-zA-Z0-9\-]+');

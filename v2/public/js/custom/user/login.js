@@ -43,27 +43,27 @@
                             data: JSON.stringify(data),
                             crossDomain: true
                         })
-                                .done(function(data, jqXHR, textStatus) {
-                                    console.info(data);
-                                    if (data.logged == false) {  // if user does not have an account yet
-                                        window.localStorage.setItem('email', data.email);
-                                        window.localStorage.setItem('social_id', data.social_id);
-                                        window.localStorage.setItem('first_name', data.first_name);
-                                        window.localStorage.setItem('last_name', data.last_name);
-                                        window.localStorage.setItem('facebook_id', data.facebook_id);
-                                        uri = base_url + '/complete-registration';
-                                        window.location.assign(uri);
-                                    } else if (data.logged == true) {
-                                        login(data);
-                                    }
+						.done(function(data, jqXHR, textStatus) {
+							console.info(data);
+							if (data.logged == false) {  // if user does not have an account yet
+								window.localStorage.setItem('email', data.email);
+								window.localStorage.setItem('social_id', data.social_id);
+								window.localStorage.setItem('first_name', data.first_name);
+								window.localStorage.setItem('last_name', data.last_name);
+								window.localStorage.setItem('facebook_id', data.facebook_id);
+								uri = base_url + '/complete-registration';
+								window.location.assign(uri);
+							} else if (data.logged == true) {
+								login(data);
+							}
 
-                                })
-                                .fail(function(jqXHR, textStatus, errorThrown) {
-									showAlert('This account has been suspended. Please contact the Administrator', false);
-									return;
-                                    console.log(jqXHR);
-                                    console.log(errorThrown);
-                                });
+						})
+						.fail(function(jqXHR, textStatus, errorThrown) {
+							showAlert('This account has been suspended. Please contact the Administrator', false);
+							return;
+							console.log(jqXHR);
+							console.log(errorThrown);
+						});
 
                     } else {
                         console.log('User canceled login or he is not fully authorized.');
@@ -201,16 +201,16 @@
             // if everything is ok
             .done(function(data, textStatus, jqXHR) {					
                 var uri;
-                                    var return_url = qs().return_url;
+                 var return_url = qs()?qs().return_url:null;
                 alertNotify(settings.i18n.translate("login.2"), 'success');
                 console.log(data);
                 window.localStorage.setItem('sm_user_role', data.role);
-                                    window.localStorage.setItem('sm_user_id', data.account_id);
-                                    window.localStorage.setItem('sm_user_token', data.token);
-                                    if(return_url){
-                                            uri = return_url;
-                                    }
-                                    else if (data.role == "INSTRUCTOR") {                        
+				window.localStorage.setItem('sm_user_id', data.account_id);
+				window.localStorage.setItem('sm_user_token', data.token);
+				if(return_url){
+					uri = return_url;
+				}
+                    else if (data.role == "INSTRUCTOR") {                        
                     uri = base_url + '/instructor/dashboard';
                 } else if (data.role == "LEARNER"){
                     uri = base_url + '/learner/dashboard';
