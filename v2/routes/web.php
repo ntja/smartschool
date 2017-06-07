@@ -57,7 +57,7 @@ Route::group(['middleware' => 'web'], function () {
 		return view('learner.my-courses');
 	});
 	
-	Route::get('/instructor/course/add', function () {
+	Route::get('/instructor/courses/add', function () {
 		return view('instructor.courses.add');
 	});
 	
