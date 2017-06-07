@@ -1,37 +1,37 @@
 // WIZARD  ===============================================================================
 jQuery(function($) {
-	// Basic wizard with validation
-	$("#survey_container").wizard({
-		stepsWrapper: "#wrapped",
-		submit: ".submit",
-		beforeSelect: function( event, state ) {
-			var inputs = $(this).wizard('state').step.find(':input');
-			return !inputs.length || !!inputs.valid();
-		}
+				// Basic wizard with validation
+				$("#survey_container").wizard({
+					stepsWrapper: "#wrapped",
+					submit: ".submit",
+					beforeSelect: function( event, state ) {
+						var inputs = $(this).wizard('state').step.find(':input');
+						return !inputs.length || !!inputs.valid();
+					}
+			
 
+				}).validate({
+					errorPlacement: function(error, element) { 
+						if ( element.is(':radio') || element.is(':checkbox') ) {
+							error.insertBefore( element.next() );
 
-	}).validate({
-		errorPlacement: function(error, element) { 
-			if ( element.is(':radio') || element.is(':checkbox') ) {
-				error.insertBefore( element.next() );
+						} else { 
+							error.insertAfter( element );
+						}
+					}
+				});
+				
+				//  progress bar
+				$("#progressbar").progressbar();
 
-			} else { 
-				error.insertAfter( element );
-			}
-		}
-	});
-	
-	//  progress bar
-	$("#progressbar").progressbar();
+				$("#survey_container").wizard({
+					afterSelect: function( event, state ) {
+						$("#progressbar").progressbar("value", state.percentComplete);
+						$("#location").text("(" + state.stepsComplete + "/" + state.stepsPossible + ")");
+					}
+				});
 
-	$("#survey_container").wizard({
-		afterSelect: function( event, state ) {
-			$("#progressbar").progressbar("value", state.percentComplete);
-			$("#location").text("(" + state.stepsComplete + "/" + state.stepsPossible + ")");
-		}
-	});
-
-});
+			});
 			
 // OHTER ===============================================================================
  $(document).ready(function(){   

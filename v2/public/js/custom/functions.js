@@ -70,7 +70,7 @@ function check_token_validity(token){
 	});
 	return  result;
 }
-
+		
 function logout(){
 	var uri;
 	window.localStorage.removeItem('sm_user_token');

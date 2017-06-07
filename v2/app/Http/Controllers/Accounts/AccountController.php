@@ -29,9 +29,9 @@ class AccountController extends Controller{
             
             //checking user permission,
             if (Gate::forUser($current_account)->denies('get', [$resource_accounts,false])) {
-                LogRepo::printLog('info', "Invalid attempt to read account #{" .$id. "}. Returned code: 4004.");
+                 LogRepo::printLog('info', "Invalid attempt to read account #{" .$id. "}. Returned code: 4004.");
                 $result = array("code" => 4004, "description" => "You do not have permissions for that request.");
-                return response()->json($result, 400);
+                return $result;
             }
             $informations = array(
                 'id' => (int)$id,				

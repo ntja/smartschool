@@ -12,8 +12,8 @@
 	<div class="notification-container"></div>
 	@include('partials/instructor/header')
    
-    <section id="main_content">
-    	<div class="container">		
+    <section id="main_content" >
+    	<div class="container">
         
         <ol class="breadcrumb">
           <li><a href="<?php echo URL::to('/instructor/dashboard'); ?>">{{__('Dashboard')}}</a></li>
