@@ -6,7 +6,7 @@
     $(document).ready(function() {
 
         var form, role, user_courses = null;  
-		form = $("#wrapped");
+		form = $("#create-course-form");
 		var edit_form = $("#edit-course-form");
         //base_url = $('body').attr('data-base-url');		
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');

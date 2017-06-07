@@ -27,7 +27,7 @@
 		<div class="shadow"></div>
 	</div><!-- end top-wizard -->
     
-	<form name="example-1" id="wrapped" action="#" method="POST" autocomplete="off">
+	<form name="example-1" id="create-course-form" action="#" method="POST" autocomplete="off">
 		<div id="middle-wizard">
 			<div class="step">
 				<div class="box_style_2">
@@ -178,7 +178,6 @@
 	<!-- Wizard-->
 	<script src="{{asset('js/jquery-ui-1.8.12.min.js')}}"></script>
 	<script src="{{asset('js/jquery.wizard.js')}}"></script>
-	<script src="{{asset('js/jquery.validate.js')}}"></script>
 	<script src="{{asset('check_radio/jquery.icheck.js')}}"></script>
 	<script src="{{asset('js/wizard_func.js')}}"></script>
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
@@ -190,7 +189,7 @@
 	<!---->
 	<script> 
 		CKEDITOR.replace( 'course_description', {height : 400, width : '100%'} );
-		CKEDITOR.replace( 'edit-course_description', {height : 400, width : '100%'} );
+		//CKEDITOR.replace( 'edit-course_description', {height : 400, width : '100%'} );
 	</script>	
 	
    <script src="{{asset('js/custom/user/instructor/courses.js')}}"></script>   
