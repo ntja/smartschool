@@ -44,7 +44,7 @@ class ResetPassword extends Notification
      */
     public function toMail($notifiable)
     {
-         $user_language = Session::get('sm_applocale');
+        $user_language = Session::get('sm_applocale');
         if($user_language == 'fr'){
             return (new MailMessage)
 			->subject('Re-initialisation du mot de passe')
@@ -53,7 +53,7 @@ class ResetPassword extends Notification
 			->action('Reset Password', config('app.url').'reset-password?key='.$this->secret)
 			->line('Si vous ignorez ce message votre mot de passe ne sera pas re-initialisé.')
 			->line('Si vous n \'avez pas essayé de re-initialiser votre mot de passe faites nous savoir '.config('app.url').'contact-us');
-        }  else {
+        }else {
             return (new MailMessage)
 			->subject('Reset Password')
 			->greeting("Hello {$this->user->first_name},")			

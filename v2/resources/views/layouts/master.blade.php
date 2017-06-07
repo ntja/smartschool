@@ -1,3 +1,11 @@
+<?php
+$user_language = Session::get('sm_applocale');
+if($user_language == 'fr'){
+	echo 'francais';
+}else{
+	echo 'anglais';
+} 
+?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->

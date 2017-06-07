@@ -52,7 +52,7 @@ class RecoverPassword extends Notification
 			->line('Vous avez re-initialisez votre mot de passe oublié. Veuillez vous connecter pour accéder à la plateforme')
 			->action('Connexion', config('app.url').'login')
 			->line('Trouvez du plaisir à apprendre avec SmartSchool !');
-        }  else {
+        }else {
             return (new MailMessage)
 			->subject('Password Updated')
 			->greeting("Dear {$this->user->first_name},")			
@@ -60,7 +60,6 @@ class RecoverPassword extends Notification
 			->action('Login', config('app.url').'login')
 			->line('We hope you enjoy using SmartSchool !');
         }
-        					
     }
 
     /**
