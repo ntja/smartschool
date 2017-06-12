@@ -27,7 +27,7 @@
     
     
     <section id="main_content">
-    	<div class="container">
+    	<div class="container-fluid" style="position:relative;">
         
         <ol class="breadcrumb">
 		  <li><a disabled href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>

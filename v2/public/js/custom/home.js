@@ -34,7 +34,7 @@
 				html += "<div class='info'>";
 				html += "<div class='row'>";
 				html += "<div class='course_info col-md-12 col-sm-12'>";
-				html += "<h4>"+data[i].name+"</h4>";
+				html += "<h5><strong>"+data[i].name+"</strong></h5>";
 				//html += "<p> "+data[i].shortdescription.substr(0,100)+"</p>";
 				html += "<div class='rating'>";
 				html += "<i class='icon-star'></i><i class='icon-star'></i><i class='icon-star'></i><i class='icon-star'></i><i class='icon-star-empty'></i>";

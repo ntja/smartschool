@@ -68,13 +68,13 @@
 				if(data.data.length ==0){
 					var html = "<h3>No course found. <a href='"+base_url+"/courses/catalog'>Return to Home page</a></h3>";
 				}else{
-					html = "<div class='row'>"
+					html = "<div class='row-fluid'>"
 					for(i=0; i < data.data.length; i++){
-						if(i%3 == 0){
+						if(i%4 == 0){
 							html += "</div>";
 							html += "<div class='row'>";
 						}					
-						html += '<div class="col-lg-4 col-md-6">';
+						html += '<div class="col-lg-3 col-md-6 col-sm-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
 						html += '<a href="'+base_url+'/course/'+data.data[i].shortname+'"><img src="'+base_url+'/public/img/poetry.jpg" alt="" /></a>';
@@ -87,7 +87,7 @@
 						html += '<div class="info">';
 						html +=	'<div class="row">'
 						html += '<div class="course_info col-md-12 col-sm-12">';
-						html += '<h4>'+data.data[i].name+'</h4>';
+						html += '<h5><strong>'+data.data[i].name+'</strong></h5>';
 						//html += '<p > Lorem ipsum dolor sit amet, no sit sonet corpora indoctum, quo ad fierent insolens. Duo aeterno ancillae ei. </p>';
 						html += '<div class="rating">';
 						html += '<i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i>'

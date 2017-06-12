@@ -26,19 +26,19 @@
     <article>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-6 text-center">
+				<div class="box_style_1 col-md-4 col-sm-6 text-center">
 					<a href="<?php echo URL::to('/courses/catalog'); ?>"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_1_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
 					<h3>{{__('Courses Catalog')}}</h3></a>		
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 text-center">
-					<a href="#"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_2_small.png')}}" alt="" ></div>
+				<div class="box_style_1 col-md-4 col-sm-6 text-center">
+					<a href="<?php echo URL::to('/books/catalog'); ?>"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_2_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
 					<h3>{{__('E-books Library')}}</h3></a>		
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 text-center">
+				<div class="box_style_1 col-md-4 col-sm-6 text-center">
 					<a href="<?php echo URL::to('/learner/my-courses'); ?>"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_3_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
 					<h3>{{__('My Courses')}}</h3></a>		
@@ -50,19 +50,19 @@
 	<article>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-6 text-center">
+				<div class="box_style_1 col-md-4 col-sm-6 text-center">
 					<a href="#"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_4_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
 					<h3>{{__('Questions & Answers')}}</h3></a>		
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 text-center">
+				<div class="box_style_1 col-md-4 col-sm-6 text-center">
 					<a href="#"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_5_small.png')}}" alt="" ></div>
 					<div class="col-md-8 col-md-offset-1 col-sm-8 col-md-offset-1">
-					<h3>{{__('My Matches')}}</h3></a>		
+					<h3>{{__('My Course Matches')}}</h3></a>		
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 text-center">
+				<div class="box_style_1 col-md-4 col-sm-6 text-center">
 					<a href="#"><div class="col-md-3 col-sm-3 text-center"><img width="100px" src="{{asset('img/number_6_small.png')}}" alt="" ></div>
 					<div class="col-md-9 col-sm-9">
 					<h3>{{__('Private Tutoring')}}</h3></a>		

@@ -56,7 +56,7 @@
 				<a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a>
 				<!-- <a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   -->
 				<a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a>
-				<ul id="follow_us" class="text-center"> {{__('Share on')}}: 
+				<ul class="text-center social_team"> {{__('Share on')}} : 
 					<li><a href="#"><i class="icon-facebook"></i></a></li>
 					<li><a href="#"><i class="icon-twitter"></i></a></li>
 					<li><a href="#"><i class=" icon-google"></i></a></li>

@@ -18,6 +18,7 @@
 		<div class="col-md-3 col-sm-3">
 			<h4>{{__('About SmartSchool')}}</h4>
 			<ul>
+				<li><a href="#">{{__('Become an Instructor')}}</a></li>
 				<li><a href="#">{{__('About Us')}}</a></li>
 				<li><a href="#">{{__('Contact Us')}}</a></li>
 				<li><a href="#">{{__('Terms and conditions')}}</a></li>
@@ -31,6 +32,7 @@
                         <li><a href="#"><i class=" icon-google"></i></a></li>
                     </ul>
                     <ul>
+						<li><strong class="phone">+971 509 879 819</strong><br><small>{{__('Mon - Fri')}} / 8.00AM - 06.00PM</small></li>
                         <li><strong class="phone">+00237 655 134 682</strong><br><small>{{__('Mon - Fri')}} / 8.00AM - 06.00PM</small></li>
                         <li>{{__('Questions')}} ? <a href="#">info@smartskul.com</a></li>				
                     </ul>
