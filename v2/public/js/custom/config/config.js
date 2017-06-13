@@ -7,11 +7,14 @@ settings = {
         },
         staging: {
             api_url: 'http://stagging.smartskul.com/v2/api'
+        },
+        production: {
+            api_url: 'http://smartskul.com/v2/api'
         }
     }
 };
 
-environment = 'development';
+environment = 'production';
 
 config = settings.environments[environment];
 
