@@ -14,7 +14,7 @@ settings = {
     }
 };
 
-environment = 'production';
+environment = 'staging';
 
 config = settings.environments[environment];
 
