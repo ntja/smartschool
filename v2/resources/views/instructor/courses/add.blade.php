@@ -10,10 +10,10 @@
 	<!-- Toggle Switch -->
     <link rel="stylesheet" href="{{asset('css/jquery.switch.css')}}">
 	<link rel="stylesheet" href="{{asset('js/plugins/dropzone/dropzone.min.css')}}">
-    <link href="{{asset('check_radio/skins/square/aero.css')}}" rel="stylesheet">
-	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery.ui.core.css')}}">
-	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery.ui.datepicker.css')}}">
-	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery.ui.widget.css')}}">
+    <link rel="stylesheet" href="{{asset('check_radio/skins/square/aero.css')}}">
+	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery-ui.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery-ui.structure.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery-ui.theme.min.css')}}">
 	<!-- les couleurs peuvent définies au sein de la feuille di dessous-->
 	<link rel="stylesheet" href="{{asset('css/plugins/jqueryui/jquery.ui.theme.css')}}">
 @stop
@@ -27,6 +27,7 @@
 	<div id="survey_container">
 	
 	<div id="top-wizard">	
+		<div class="response-message"></div>
 		<strong>Progress </strong>
 		<div id="progressbar"></div>
 		<div class="shadow"></div>
@@ -117,105 +118,111 @@
 			</div><!-- end step-->
             
 			<div class="step row">
-				<div class="col-md-6">
-						<ul class="data-list">
-							<li>
-								<label class="control-label">{{__('Start Date')}}</label>
-								<div class="form-group">
-									<input type="date" name="start_date" id="start_date" class="form-control" placeholder="{{__('Start Date')}}">
-								</div>													
-							</li>							
-							<li>
-								<label class="control-label">{{__('Expected Duration')}}</label>
-								<div class="form-group">
-									<input type="number" name="expected_duration" id="expected_duration" class="form-control" placeholder="{{__('Expected Duration')}}">
-								</div>
-							</li>
-						</ul>
-					</div><!-- end col-md-6 -->
-					<div class="col-md-6">                        
-						<ul class="data-list" style="margin:0; padding:0;">
-							<li>
-								<label class="control-label">{{__('End Date')}}</label>
-								<div class="form-group">
-									<input type="date" name="end_date" id="end_date" class="form-control" placeholder="{{__('End Date')}}">
-								</div>													
-							</li>
-							<li>								
-							</li>
-							<li>
-								<label class="control-label">{{__('Expected Duration Unit')}}</label>
-								<div class="styled-select">
-									<select class="form-control" name="expected_duration_unit" id="expected_duration_unit">
-										<option value="">{{__('Select a Duration Unit')}}</option>
-										<option value="days">{{__('Days')}}</option>
-										<option value="weeks">{{__('Weeks')}}</option>
-										<option value="months">{{__('Months')}}</option>
-									</select>														
-								</div>
-							</li>
-						</ul>									
-					</div><!-- end col-md-6 -->
-					<div class="col-md-12">
+				<div class="col-md-3 col-sm-6">
+				<ul class="data-list">
+					<li>
+						<label class="control-label">{{__('Start Date')}}</label>
 						<div class="form-group">
-							<div class="col-md-12"> 
-								<label class="control-label">{{__('Expected Learning')}} <small>( {{__('What student will learn through this course') }})</small></label>     
-								<textarea class="form-control" name="expected_learning" id="expected_learning" rows="30" cols="100">
-								</textarea>                            
-							</div>
-						</div>                                    
-					</div>
-					<div class="col-md-12">
+							<input type="date" name="start_date" id="start_date" class="form-control" placeholder="{{__('Start Date')}}">
+						</div>													
+					</li>												
+				</ul>
+			</div><!-- end col-md-3 -->
+			<div class="col-md-3 col-sm-6">
+				<ul class="data-list">
+					<li>
+						<label class="control-label">{{__('End Date')}}</label>
 						<div class="form-group">
-							<div class="col-md-12"> 
-								<label class="control-label">{{__('Suggested Readings')}} <small>( {{__('') }})</small></label>     
-								<textarea class="form-control" name="readings" id="readings" rows="30" cols="100">
-								</textarea>                            
-							</div>
+							<input type="date" name="end_date" id="end_date" class="form-control" placeholder="{{__('End Date')}}">
+						</div>													
+					</li>
+				</ul>
+			</div><!-- end col-md-3 -->
+			<div class="col-md-3 col-sm-6">
+				<ul class="data-list">					
+					<li>
+						<label class="control-label">{{__('Expected Duration')}}</label>
+						<div class="form-group">
+							<input type="number" name="expected_duration" id="expected_duration" class="form-control" placeholder="{{__('Expected Duration')}}">
+						</div>
+					</li>
+				</ul>
+			</div><!-- end col-md-3 -->			
+			<div class="col-md-3 col-sm-6">
+				<ul class="data-list">
+					<li>
+						<label class="control-label">{{__('Expected Duration Unit')}}</label>
+						<div class="styled-select">
+							<select class="form-control" name="expected_duration_unit" id="expected_duration_unit">
+								<option value="">{{__('Select a Duration Unit')}}</option>
+								<option value="days">{{__('Days')}}</option>
+								<option value="weeks">{{__('Weeks')}}</option>
+								<option value="months">{{__('Months')}}</option>
+							</select>														
+						</div>
+					</li>
+				</ul>
+			</div><!-- end col-md-3 -->
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">{{__('Course Cover')}}</label>
+					<div class="dropzone dz-clickable" id="dropzone">
+						<div class="dz-default dz-message">
+							<span>{{__('Drop file here to upload')}}</span>
 						</div>
 					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<div class="col-md-12"> 
-								<label class="control-label">{{__('Recommended Background')}} <small>( {{__('Background needed to succeed in this Course') }})</small></label>     
-								<textarea class="form-control" name="background" id="background" rows="30" cols="100">
-								</textarea>                            
-							</div>
-						</div>                                    
-					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<div class="col-md-12"> 
-								<label class="control-label">{{__('Frequently Asked Questions (FAQ)')}} <small>( {{__('Questions that are often asked regarding this course') }})</small></label>     
-								<textarea class="form-control" name="faq" id="faq" rows="30" cols="100">
-								</textarea>                            
-							</div>
-						</div>                                    
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label class="control-label">{{__('Small Icon Hover')}}</label>						
-							<div class="dropzone dz-clickable" id="dropzone">
-								<div class="dz-default dz-message">
-									<span>{{__('Drop file here to upload')}}</span>
-								</div>
-							</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">{{__('Course Cover Hover')}}</label>						
+					<div class="dropzone dz-clickable" id="dropzone">
+						<div class="dz-default dz-message">
+							<span>{{__('Drop file here to upload')}}</span>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label class="control-label">{{__('Small Icon')}}</label>
-							<div class="dropzone dz-clickable" id="dropzone">
-								<div class="dz-default dz-message">
-									<span>{{__('Drop file here to upload')}}</span>
-								</div>
-							</div>
-						</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-md-12"> 
+						<label class="control-label">{{__('Expected Learning')}} <small>( {{__('What student will learn through this course') }})</small></label>     
+						<textarea class="form-control" name="expected_learning" id="expected_learning" rows="30" cols="100">
+						</textarea>                            
 					</div>
-					<div class="submit" id="complete">                    	
-						<button type="submit" name="process" class="submit">{{__('Create your Course')}}</button>
-					</div><!-- end submit-->				
-			</div><!-- end step -->            			
+				</div>                                    
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-md-12"> 
+						<label class="control-label">{{__('Suggested Readings')}} <small>( {{__('') }})</small></label>     
+						<textarea class="form-control" name="readings" id="readings" rows="30" cols="100">
+						</textarea>                            
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-md-12"> 
+						<label class="control-label">{{__('Recommended Background')}} <small>( {{__('Background needed to succeed in this Course') }})</small></label>     
+						<textarea class="form-control" name="background" id="background" rows="30" cols="100">
+						</textarea>                            
+					</div>
+				</div>                                    
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-md-12"> 
+						<label class="control-label">{{__('Frequently Asked Questions (FAQ)')}} <small>( {{__('Questions that are often asked regarding this course') }})</small></label>     
+						<textarea class="form-control" name="faq" id="faq" rows="30" cols="100">
+						</textarea>                            
+					</div>
+				</div>                                    
+			</div>								
+			<div class="submit" id="complete">                    	
+				<button type="submit" name="process" class="button_medium" id="submit_btn">{{__('Create your Course')}}</button>
+			</div><!-- end submit-->				
+		</div><!-- end step -->            			
             
 		</div><!-- end middle-wizard -->
         
@@ -234,7 +241,7 @@
 
 @section('scripts')
 	<!-- Wizard-->
-	<script src="{{asset('js/jquery-ui-1.8.12.min.js')}}"></script>
+	<script src="{{asset('js/plugins/jqueryui/jquery-ui.min.js')}}"></script>
 	<script src="{{asset('js/jquery.wizard.js')}}"></script>
 	<script src="{{asset('check_radio/jquery.icheck.js')}}"></script>
 	<script src="{{asset('js/wizard_func.js')}}"></script>
@@ -244,19 +251,19 @@
 	<script src="{{asset('js/custom/custom.js')}}"></script>
 	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
 	<script src="{{asset('jjs/plugins/dropzone/dropzone.min.js')}}"></script>
-	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>
-	<script src="{{asset('js/plugins/jqueryui/jquery.ui.core.js')}}"></script>
-	<script src="{{asset('js/plugins/jqueryui/jquery.ui.widget.js')}}"></script>
-	<script src="{{asset('js/plugins/jqueryui/jquery.ui.datepicker.js')}}"></script>
-	<script src="{{asset('js/plugins/jqueryui/jquery.ui.datepicker-fr.js')}}"></script>
+	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>	
 	<script>
 	$(function() {
-		$.datepicker.setDefaults( $.datepicker.regional[ "" ] );
-		$( "#start_date" ).datepicker( $.datepicker.regional[ "fr" ] );
+		var local = $('body').data('locale');
+		$.datepicker.setDefaults( $.datepicker.regional[ local ] );
+		$( "#start_date" ).datepicker( $.datepicker.regional[ local ] );
+		$( "#end_date" ).datepicker( $.datepicker.regional[ local ] );
+		/*
 		$( "#locale" ).change(function() {
 			$( "#datepicker" ).datepicker( "option",
 				$.datepicker.regional[ $( this ).val() ] );
 		});
+		*/
 	});
 	</script>
 	<!---->
@@ -269,7 +276,7 @@
 		//CKEDITOR.replace( 'edit-course_description', {height : 400, width : '100%'} );
 	</script>	
 	
-   <script src="{{asset('js/custom/user/instructor/courses.js')}}"></script>   
+   <script src="{{asset('js/custom/user/instructor/add-course.js')}}"></script>   
 @stop
 
 @stop 
