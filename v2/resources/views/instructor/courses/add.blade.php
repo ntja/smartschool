@@ -21,8 +21,13 @@
 	<div class="notification-container"></div>
 	@include('partials/instructor/header')
    
-  <section id="wizard_bg">
+  <section id="main_content">
 	<div class="container">
+		<ol class="breadcrumb">
+          <li><a href="<?php echo URL::to('/instructor/dashboard'); ?>">{{__('Dashboard')}}</a></li>
+		  <li><a href="<?php echo URL::to('/instructor/courses'); ?>">{{__('List of Courses')}}</a></li>
+          <li class="active">{{__('Add a Course')}}</li>
+        </ol>
 	<!-- Start Survey container -->
 	<div id="survey_container">
 	
@@ -113,8 +118,7 @@
 									</div>                                    
 								</div>
 							</div><!-- end row -->								
-						</div><!-- end step-->               
-                
+						</div><!-- end step-->
 			</div><!-- end step-->
             
 			<div class="step row">
@@ -127,17 +131,7 @@
 						</div>													
 					</li>												
 				</ul>
-			</div><!-- end col-md-3 -->
-			<div class="col-md-3 col-sm-6">
-				<ul class="data-list">
-					<li>
-						<label class="control-label">{{__('End Date')}}</label>
-						<div class="form-group">
-							<input type="date" name="end_date" id="end_date" class="form-control" placeholder="{{__('End Date')}}">
-						</div>													
-					</li>
-				</ul>
-			</div><!-- end col-md-3 -->
+			</div><!-- end col-md-3 -->			
 			<div class="col-md-3 col-sm-6">
 				<ul class="data-list">					
 					<li>
@@ -163,7 +157,7 @@
 					</li>
 				</ul>
 			</div><!-- end col-md-3 -->
-			<div class="col-md-6">
+			<div class="col-md-3 col-sm-6">
 				<div class="form-group">
 					<label class="control-label">{{__('Course Cover')}}</label>
 					<div class="dropzone dz-clickable" id="dropzone">
@@ -173,50 +167,32 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<label class="control-label">{{__('Course Cover Hover')}}</label>						
-					<div class="dropzone dz-clickable" id="dropzone">
-						<div class="dz-default dz-message">
-							<span>{{__('Drop file here to upload')}}</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="form-group">
-					<div class="col-md-12"> 
-						<label class="control-label">{{__('Expected Learning')}} <small>( {{__('What student will learn through this course') }})</small></label>     
-						<textarea class="form-control" name="expected_learning" id="expected_learning" rows="30" cols="100">
-						</textarea>                            
-					</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="form-group">					
+					<label class="control-label">{{__('Expected Learning')}} <small>( {{__('What student will learn through this course') }})</small></label>     
+					<textarea class="form-control" name="expected_learning" id="expected_learning" rows="30" cols="100">
+					</textarea>					
 				</div>                                    
 			</div>
-			<div class="col-md-12">
-				<div class="form-group">
-					<div class="col-md-12"> 
-						<label class="control-label">{{__('Suggested Readings')}} <small>( {{__('') }})</small></label>     
-						<textarea class="form-control" name="readings" id="readings" rows="30" cols="100">
-						</textarea>                            
-					</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="form-group">					
+					<label class="control-label">{{__('Suggested Readings')}} <small>( {{__('Courses or books student might read in order to succeed in this course') }})</small></label>     
+					<textarea class="form-control" name="suggested_readings" id="suggested_readings" rows="30" cols="100">
+					</textarea>                            					
 				</div>
 			</div>
-			<div class="col-md-12">
-				<div class="form-group">
-					<div class="col-md-12"> 
-						<label class="control-label">{{__('Recommended Background')}} <small>( {{__('Background needed to succeed in this Course') }})</small></label>     
-						<textarea class="form-control" name="background" id="background" rows="30" cols="100">
-						</textarea>                            
-					</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="form-group">					
+					<label class="control-label">{{__('Recommended Background')}} <small>( {{__('Background needed to succeed in this Course') }})</small></label>     
+					<textarea class="form-control" name="recommended_background" id="recommended_background" rows="30" cols="100">
+					</textarea>					
 				</div>                                    
 			</div>
-			<div class="col-md-12">
-				<div class="form-group">
-					<div class="col-md-12"> 
-						<label class="control-label">{{__('Frequently Asked Questions (FAQ)')}} <small>( {{__('Questions that are often asked regarding this course') }})</small></label>     
-						<textarea class="form-control" name="faq" id="faq" rows="30" cols="100">
-						</textarea>                            
-					</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="form-group">					
+					<label class="control-label">{{__('Frequently Asked Questions (FAQ)')}} <small>( {{__('Questions that are often asked regarding this course') }})</small></label>     
+					<textarea class="form-control" name="faq" id="faq" rows="30" cols="100">
+					</textarea>					
 				</div>                                    
 			</div>								
 			<div class="submit" id="complete">                    	
@@ -256,8 +232,13 @@
 	$(function() {
 		var local = $('body').data('locale');
 		$.datepicker.setDefaults( $.datepicker.regional[ local ] );
-		$( "#start_date" ).datepicker( $.datepicker.regional[ local ] );
-		$( "#end_date" ).datepicker( $.datepicker.regional[ local ] );
+		$( "#start_date" ).datepicker( {
+			dateFormat: "DD, MM d, yy"
+		} );
+		$( "#end_date" ).datepicker( {
+			dateFormat: "DD, MM d, yy"
+		});
+		//$( "#end_date" ).datepicker( $.datepicker.regional[ local ] );
 		/*
 		$( "#locale" ).change(function() {
 			$( "#datepicker" ).datepicker( "option",
@@ -268,15 +249,78 @@
 	</script>
 	<!---->
 	<script> 
-		CKEDITOR.replace( 'course_description', {height : 400, width : '100%'} );
-		CKEDITOR.replace( 'expected_learning', {height : 200, width : '100%'} );
-		CKEDITOR.replace( 'faq', {height : 100, width : '100%'} );
-		CKEDITOR.replace( 'readings', {height : 100, width : '100%'} );
-		CKEDITOR.replace( 'background', {height : 100, width : '100%'} );		
+		CKEDITOR.replace( 'course_description',
+			{
+				height : 400, 
+				width : '100%',		
+				toolbarGroups: [
+					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
+					'/',																// Line break - next group will be placed in new line.
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'links' },
+					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+					{ name: 'styles' },
+					{ name: 'colors' }
+				]
+			} 
+		);
+		CKEDITOR.replace( 'expected_learning', 
+			{
+				height : 200,
+				width : '100%',		
+				toolbarGroups: [
+					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
+					'/',																// Line break - next group will be placed in new line.
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'links' }
+				]
+			} 
+		);
+		CKEDITOR.replace( 'faq', 
+		{
+			height : 100, 
+			width : '100%',		
+				toolbarGroups: [
+					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
+					'/',																// Line break - next group will be placed in new line.
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'links' }
+				]
+			} 
+		);
+		CKEDITOR.replace( 'suggested_readings', 
+			{
+				height : 100, 
+				width : '100%',		
+				toolbarGroups: [
+					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
+					'/',																// Line break - next group will be placed in new line.
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'links' }
+				]
+			} 
+		);
+		CKEDITOR.replace( 'recommended_background', 
+			{
+				height : 100, 
+				width : '100%',		
+				toolbarGroups: [
+					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
+					'/',																// Line break - next group will be placed in new line.
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'links' }
+				]
+			} 
+		);
 		//CKEDITOR.replace( 'edit-course_description', {height : 400, width : '100%'} );
 	</script>	
 	
-   <script src="{{asset('js/custom/user/instructor/add-course.js')}}"></script>   
+   <script src="{{asset('js/custom/user/instructor/courses/add-course.js')}}"></script>   
 @stop
 
 @stop 

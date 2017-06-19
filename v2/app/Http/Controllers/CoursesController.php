@@ -46,7 +46,7 @@ class CoursesController extends Controller {
             $largeicon = array_key_exists("largeicon", $data) ? $data["largeicon"] : null;			
 			$previewlink = array_key_exists("previewlink", $data) ? $data["previewlink"] : null;
 			$shortdescription = array_key_exists("shortdescription", $data) ? $data["shortdescription"] : null;
-            $start_date = array_key_exists("start_date", $data) ? $data["start_date"] : null;
+            $start_date = array_key_exists("start_date", $data) ? $data["start_date"] : null;			
             $photo = array_key_exists("photo", $data) ? $data["photo"] : null;
             $smallicon   = array_key_exists("smallicon", $data) ? $data["smallicon"] : null;
             $smalliconhover   = array_key_exists("smalliconhover", $data) ? $data["smalliconhover"] : null;
@@ -65,6 +65,8 @@ class CoursesController extends Controller {
             $instructor = $account_token_id;
             $school   = array_key_exists("school", $data) ? $data["school"] : null;
             $category   = array_key_exists("category", $data) ? $data["category"] : null;
+			$expected_duration = array_key_exists("expected_duration", $data) ? $data["expected_duration"] : null;
+			$expected_duration_unit = array_key_exists("expected_duration_unit", $data) ? $data["expected_duration_unit"] : null;
 
 
             $informations = array(
@@ -76,6 +78,8 @@ class CoursesController extends Controller {
 				'previewlink' => $previewlink,
 				'shortdescription' => $shortdescription,
                 'start_date' => $start_date,
+				'expected_duration' => $expected_duration,
+				'expected_duration_unit' => $expected_duration_unit,
                 'smallicon' => $smallicon,
                 'smalliconhover' => $smalliconhover,
                 'istranslate' => $istranslate,

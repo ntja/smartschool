@@ -82,7 +82,9 @@ class CoursesCustom {
                 $this->_school = $row->school;
                 $this->_category = $row->category;
                 $this->_date_created = $row->date_created;
-                $this->_date_updated = $row->date_updated;                    
+                $this->_date_updated = $row->date_updated;
+				$this->_expected_duration = $row->expected_duration;
+				$this->_expected_duration_unit = $row->expected_duration_unit;
             }            
         }
         return $this;
@@ -191,7 +193,7 @@ class CoursesCustom {
                 if (array_key_exists('largeicon', $param)) {
                     if (!is_null($param['largeicon'])) {
                         if (!is_string($param['largeicon'])) {
-                            $result = array("code" => 4000, "description" => "largeicon is a string ");
+                            $result = array("code" => 4000, "description" => "largeicon must be a string ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }
@@ -205,7 +207,7 @@ class CoursesCustom {
                 if (array_key_exists('photo', $param)) {
                     if (!is_null($param['photo'])) {
                         if (!is_string($param['photo'])) {
-                            $result = array("code" => 4000, "description" => "photo is a string ");
+                            $result = array("code" => 4000, "description" => "photo must be a string ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }
@@ -219,7 +221,7 @@ class CoursesCustom {
                 if (array_key_exists('start_date', $param)) {
                     if (!is_null($param['start_date'])) {
                         if (!is_string($param['start_date'])) {
-                            $result = array("code" => 4000, "description" => "start_date is a string ");
+                            $result = array("code" => 4000, "description" => "start_date must be a string ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }
@@ -233,7 +235,7 @@ class CoursesCustom {
                 if (array_key_exists('previewlink', $param)) {
                     if (!is_null($param['previewlink'])) {
                         if (!is_string($param['previewlink'])) {
-                            $result = array("code" => 4000, "description" => "previewlink is a string ");
+                            $result = array("code" => 4000, "description" => "previewlink must be a string ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }
@@ -247,7 +249,7 @@ class CoursesCustom {
                 if (array_key_exists('smallicon', $param)) {
                     if (!is_null($param['smallicon'])) {
                         if (!is_string($param['smallicon'])) {
-                            $result = array("code" => 4000, "description" => "smallicon is a string ");
+                            $result = array("code" => 4000, "description" => "smallicon must be a string ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }
@@ -261,7 +263,7 @@ class CoursesCustom {
                 if (array_key_exists('smalliconhover', $param)) {
                     if (!is_null($param['smalliconhover'])) {
                         if (!is_string($param['smalliconhover'])) {
-                            $result = array("code" => 4000, "description" => "smalliconhover is a string ");
+                            $result = array("code" => 4000, "description" => "smalliconhover must be a string ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }
@@ -279,7 +281,7 @@ class CoursesCustom {
                         return false;
                     }
                     if (!is_numeric($param['istranslate'])) {
-                        $result = array("code" => 4000, "description" => "istranslate is a string ");
+                        $result = array("code" => 4000, "description" => "istranslate is a string");
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
                     }                                    
@@ -422,7 +424,7 @@ class CoursesCustom {
                 if (array_key_exists('school', $param)) {
                     if (!is_null($param['school'])) {
                         if (!is_numeric($param['school'])) {
-                            $result = array("code" => 4000, "description" => "school is a number ");
+                            $result = array("code" => 4000, "description" => "school must be a number ");
                             echo json_encode($result, JSON_UNESCAPED_SLASHES);
                             return false;
                         }                        
@@ -430,13 +432,22 @@ class CoursesCustom {
                 }
                 if (array_key_exists('category', $param)) {
                     if (!is_numeric($param['category'])) {
-                        $result = array("code" => 4000, "description" => "category is a number ");
+                        $result = array("code" => 4000, "description" => "category must be a number ");
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
                     }                                        
                 }else{
                     throw new Exception("Expected numeric for key (category), " . (is_object($param['category']) ? get_class($param['category']) : gettype($param['category'])) . ' found.');
-                }                                  
+                }
+				if (array_key_exists('expected_duration', $param)) {
+                    if (!is_null($param['expected_duration'])) {
+                        if (!is_numeric($param['expected_duration'])) {
+                            $result = array("code" => 4000, "description" => "expected_duration must be a number");
+                            echo json_encode($result, JSON_UNESCAPED_SLASHES);
+                            return false;
+                        }                        
+                    }
+                }
             }            
             return true;
         } catch (Exception $ex) {

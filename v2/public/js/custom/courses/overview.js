@@ -24,10 +24,10 @@
 		$('#course_title').prepend("<h2><strong>"+course_details.name+"</strong></h2>");		
 		$('.summary').append(course_details.shortdescription);
 		$('.language').html(course_details.language);
-                if(course_details.course_category){
-                    $('.subject').html(course_details.course_category.name);
-                }		
-		$('.length').html(course_details.expected_duration);
+		if(course_details.course_category){
+			$('.subject').html(course_details.course_category.name);
+		}		
+		$('.length').html(course_details.expected_duration+' '+course_details.expected_duration_unit);
 		$('.level').html(course_details.targetaudience);
 		
 		/*		
@@ -121,9 +121,8 @@
 				crossDomain:true,
 				async:false
 			})
-			.done(function (data, textStatus, jqXHR) {
-                            console.log(data);
-                            result = data;		
+			.done(function (data, textStatus, jqXHR) {				
+				result = data;		
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
 				console.log('request failed !');

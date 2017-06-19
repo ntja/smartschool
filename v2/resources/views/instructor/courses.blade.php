@@ -36,9 +36,9 @@
 				<!--  Modal -->     
 				  <div class="response-message"></div>
 				  <!-- Button trigger modal -->
-					<button class="button_medium btn-round" data-toggle="modal" data-target="#myModal"><span class="icon-plus"></span>
+					<a class="button_medium btn-round" href="<?php echo URL::to('/instructor/courses/add'); ?>"><span class="icon-plus"></span>
 					  {{__('Create New Course')}}
-					</button>
+					</a>
 				</div>
 			</div>
            <div class="panel panel-info filterable add_bottom_45">
@@ -72,7 +72,7 @@
 					</div>					
         </div><!-- End col-lg-9-->
 		<!-- modals . create course and edit course -->
-		@include('instructor/partials/create-course-modal')
+		
 		@include('instructor/partials/edit-course-modal')
 		</div><!-- End row -->       
         </div><!-- End container -->

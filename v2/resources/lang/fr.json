@@ -134,5 +134,11 @@
 	"Next" : "Suivant",
 	"Mark as complete" : "Marquez comme achev&eacute;",
 	"Share on" : "Partager sur",
-	"Books Catalog" : "Catalogue de Livres"
+	"Books Catalog" : "Catalogue de Livres",
+	"About the Course" : "A propos du cours",
+	"Start Date" : "Date de début du cours",
+	"Expected Duration" : "Durée du cours",
+	"Expected Duration Unit" : "Durée du cours dans le temps",
+	"Course Cover" : "Couverture du Cours",
+	"Expected Learning" : "Objectif du cours"
 }

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
 use Exception;
 use App\Repositories\Util\LogRepository;
+use Illuminate\Support\Str;
 
 class Course extends Authenticatable{
     /**
@@ -19,7 +20,9 @@ class Course extends Authenticatable{
     protected $table = 'courses';
     public $timestamps = false;
     protected $fillable = [
-        'name','shortname','language','largeicon','photo','previewlink','shortdescription','smallicon','smalliconhover','istranslate','directorypath','aboutthecourse','targetaudience','faq','coursesyllabus','courseformat','suggestedreadings','estimatedclassworkload','recommendedbackground','instructor','school','category'
+        'name','shortname','language','largeicon','photo','previewlink','shortdescription','smallicon','smalliconhover','istranslate','directorypath',
+		'aboutthecourse','targetaudience','faq','coursesyllabus','courseformat','suggestedreadings','estimatedclassworkload','recommendedbackground',
+		'instructor','school','category','expected_learning','start_date','expected_duration','expected_duration_unit'
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -82,7 +85,7 @@ class Course extends Authenticatable{
                 if (!is_string($params['shortname'])) {
                     throw new Exception("Expected String for key (shortname), " . (is_object($params['shortname']) ? get_class($params['shortname']) : gettype($params['shortname'])) . ' found.');
                 }
-                $this->shortname = $params['shortname'];
+                $this->shortname = Str::slug($params['shortname']);
             }
 
             if (array_key_exists("language", $params)) {
@@ -96,8 +99,8 @@ class Course extends Authenticatable{
                     if (!is_string($params['largeicon'])) {
                         throw new Exception("Expected String for key (largeicon), " . (is_object($params['largeicon']) ? get_class($params['largeicon']) : gettype($params['largeicon'])) . ' found.');
                     }
-                }                
-                $this->largeicon = $params['largeicon'];
+					$this->largeicon = $params['largeicon'];
+                }
             }
             if (array_key_exists("photo", $params)) {
                 if (!is_null($params['photo'])) {
@@ -126,25 +129,48 @@ class Course extends Authenticatable{
 					if (!is_string($params['start_date'])) {
 						throw new Exception("Expected String for key (start_date), " . (is_object($params['start_date']) ? get_class($params['start_date']) : gettype($params['start_date'])) . ' found.');
 					}
+					$this->start_date = $params['start_date'];
 				}
-                
-                $this->start_date = $params['start_date'];
+            }
+			if (array_key_exists("expected_duration", $params)) {
+				if (!is_null($params['expected_duration'])) {
+					if (!is_string($params['expected_duration'])) {
+						throw new Exception("Expected String for key (expected_duration), " . (is_object($params['expected_duration']) ? get_class($params['expected_duration']) : gettype($params['expected_duration'])) . ' found.');
+					}
+					$this->expected_duration = $params['expected_duration'];
+				}
+            }
+			if (array_key_exists("expected_duration_unit", $params)) {
+				if (!is_null($params['expected_duration_unit'])) {
+					if (!is_string($params['expected_duration_unit'])) {
+						throw new Exception("Expected String for key (expected_duration_unit), " . (is_object($params['expected_duration_unit']) ? get_class($params['expected_duration_unit']) : gettype($params['expected_duration_unit'])) . ' found.');
+					}
+					$this->expected_duration_unit = $params['expected_duration_unit'];
+				}
+            }
+			if (array_key_exists("end_date", $params)) {
+				if (!is_null($params['end_date'])) {
+					if (!is_string($params['end_date'])) {
+						throw new Exception("Expected String for key (end_date), " . (is_object($params['end_date']) ? get_class($params['end_date']) : gettype($params['end_date'])) . ' found.');
+					}
+					$this->end_date = $params['end_date'];
+				}
             }
             if (array_key_exists("smallicon", $params)) {
                 if (!is_null($params['smallicon'])) {
                     if (!is_string($params['smallicon'])) {
                         throw new Exception("Expected String for key (smallicon), " . (is_object($params['smallicon']) ? get_class($params['smallicon']) : gettype($params['smallicon'])) . ' found.');
                     }
-                }                
-                $this->smallicon = $params['smallicon'];
+					$this->smallicon = $params['smallicon'];
+                }
             }
             if (array_key_exists("smalliconhover", $params)) {
                 if (!is_null($params['smalliconhover'])) {
                     if (!is_string($params['smalliconhover'])) {
                         throw new Exception("Expected String for key (smalliconhover), " . (is_object($params['smalliconhover']) ? get_class($params['smalliconhover']) : gettype($params['smalliconhover'])) . ' found.');
                     }
-                }                
-                $this->smalliconhover = $params['smalliconhover'];
+					$this->smalliconhover = $params['smalliconhover'];
+                }
             }            
 
             if (array_key_exists("istranslate", $params)) {
@@ -158,72 +184,72 @@ class Course extends Authenticatable{
                     if (!is_string($params['directorypath'])) {
                         throw new Exception("Expected String for key (directorypath), " . (is_object($params['directorypath']) ? get_class($params['directorypath']) : gettype($params['directorypath'])) . ' found.');
                     }
-                }                
-                $this->directorypath = $params['directorypath'];
+					$this->directorypath = $params['directorypath'];
+                }
             }
             if (array_key_exists("aboutthecourse", $params)) {
                 if (!is_null($params['aboutthecourse'])) {
                     if (!is_string($params['aboutthecourse'])) {
                         throw new Exception("Expected String for key (aboutthecourse), " . (is_object($params['aboutthecourse']) ? get_class($params['aboutthecourse']) : gettype($params['aboutthecourse'])) . ' found.');
                     }
-                }                
-                $this->aboutthecourse = $params['aboutthecourse'];
+					$this->aboutthecourse = $params['aboutthecourse'];
+                }
             }
             if (array_key_exists("targetaudience", $params)) {
                 if (!is_null($params['targetaudience'])) {
                     if (!is_string($params['targetaudience'])) {
                         throw new Exception("Expected String for key (targetaudience), " . (is_object($params['targetaudience']) ? get_class($params['targetaudience']) : gettype($params['targetaudience'])) . ' found.');
                     }
-                }                
-                $this->targetaudience = $params['targetaudience'];
+					$this->targetaudience = $params['targetaudience'];
+                }
             }
             if (array_key_exists("faq", $params)) {
                 if (!is_null($params['faq'])) {
                     if (!is_string($params['faq'])) {
                         throw new Exception("Expected String for key (faq), " . (is_object($params['faq']) ? get_class($params['faq']) : gettype($params['faq'])) . ' found.');
                     }
-                }                
-                $this->faq = $params['faq'];
+					$this->faq = $params['faq'];
+                }
             }
             if (array_key_exists("coursesyllabus", $params)) {
                 if (!is_null($params['coursesyllabus'])) {
                     if (!is_string($params['coursesyllabus'])) {
                         throw new Exception("Expected String for key (coursesyllabus), " . (is_object($params['coursesyllabus']) ? get_class($params['coursesyllabus']) : gettype($params['coursesyllabus'])) . ' found.');
                     }
-                }                
-                $this->coursesyllabus = $params['coursesyllabus'];
+					$this->coursesyllabus = $params['coursesyllabus'];
+                }
             }
             if (array_key_exists("courseformat", $params)) {
                 if (!is_null($params['courseformat'])) {
                     if (!is_string($params['courseformat'])) {
                         throw new Exception("Expected String for key (courseformat), " . (is_object($params['courseformat']) ? get_class($params['courseformat']) : gettype($params['courseformat'])) . ' found.');
                     }
-                }                
-                $this->courseformat = $params['courseformat'];
+					$this->courseformat = $params['courseformat'];
+                }
             }
             if (array_key_exists("suggestedreadings", $params)) {
                 if (!is_null($params['suggestedreadings'])) {
                     if (!is_string($params['suggestedreadings'])) {
                         throw new Exception("Expected String for key (suggestedreadings), " . (is_object($params['suggestedreadings']) ? get_class($params['suggestedreadings']) : gettype($params['suggestedreadings'])) . ' found.');
                     }
-                }                
-                $this->suggestedreadings = $params['suggestedreadings'];
+					$this->suggestedreadings = $params['suggestedreadings'];
+                }
             }
             if (array_key_exists("estimatedclassworkload", $params)) {
                 if (!is_null($params['estimatedclassworkload'])) {
                     if (!is_string($params['estimatedclassworkload'])) {
                         throw new Exception("Expected String for key (estimatedclassworkload), " . (is_object($params['estimatedclassworkload']) ? get_class($params['estimatedclassworkload']) : gettype($params['estimatedclassworkload'])) . ' found.');
                     }
-                }                
-                $this->estimatedclassworkload = $params['estimatedclassworkload'];
+					$this->estimatedclassworkload = $params['estimatedclassworkload'];
+                }
             }
             if (array_key_exists("recommendedbackground", $params)) {
                 if (!is_null($params['recommendedbackground'])) {
                     if (!is_string($params['recommendedbackground'])) {
                         throw new Exception("Expected String for key (recommendedbackground), " . (is_object($params['recommendedbackground']) ? get_class($params['recommendedbackground']) : gettype($params['recommendedbackground'])) . ' found.');
                     }
-                }                
-                $this->recommendedbackground = $params['recommendedbackground'];
+					$this->recommendedbackground = $params['recommendedbackground'];
+                }
             }
             if (array_key_exists("date_created", $params)) {
                 if (!is_string($params['date_created'])) {
@@ -231,6 +257,7 @@ class Course extends Authenticatable{
                 }
                 $this->date_created = $params['date_created'];
             }
+			
             if (array_key_exists("instructor", $params)) {
                 if (!is_numeric($params['instructor'])) {
                     throw new Exception("Expected Numeric for key (instructor), " . (is_object($params['instructor']) ? get_class($params['instructor']) : gettype($params['instructor'])) . ' found.');
@@ -243,8 +270,8 @@ class Course extends Authenticatable{
                     if (!is_numeric($params['school'])) {
                         throw new Exception("Expected Numeric for key (school), " . (is_object($params['school']) ? get_class($params['school']) : gettype($params['school'])) . ' found.');
                     }
-                }                
-                $this->school = $params['school'];
+					$this->school = $params['school'];
+                }
             }
             if (array_key_exists("category", $params)) {
                 if (!is_numeric($params['category'])) {
