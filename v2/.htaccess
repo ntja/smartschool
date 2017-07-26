@@ -19,8 +19,8 @@
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 	
 	# redirect non www to www url
-	rewritecond %{http_host} ^smartskul.com [nc]
-	rewriterule ^(.*)$ http://www.smartskul.com/$1 [r=301,nc]
+	#rewritecond %{http_host} ^smartskul.com [nc]
+	#rewriterule ^(.*)$ http://www.smartskul.com/$1 [r=301,nc]
 </IfModule>
 
 <Files ".env">
