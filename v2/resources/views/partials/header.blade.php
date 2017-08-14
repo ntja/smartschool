@@ -47,3 +47,38 @@
 	</div>
 </div>
 </header><!-- End header -->
+<nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="mobnav-btn"></div>
+			<ul class="sf-menu">
+				<li class="normal_drop_down">
+					<a href="<?php echo URL::to('/courses/catalog'); ?>">{{__('Courses')}}</a>
+					<!--
+					<div class="mobnav-subarrow"></div>
+					<ul>
+						<li><a href="index.html">Revolution version</a></li>
+						<li><a href="index_2.html">Subscription version</a></li>
+						<li><a href="index_3.html">With Ajax Search bar</a></li>
+						<li><a href="index_4.html">With Video</a></li>
+					</ul>
+					-->
+				</li>				
+				<li><a href="<?php echo URL::to('/books/catalog'); ?>">{{__('Books')}}</a></li>
+			</ul>
+            
+            <div class="col-md-3 pull-right hidden-sm hidden-xs">
+                    <div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+              </div><!-- End search -->
+              
+		</div>
+	</div><!-- End row -->
+</div><!-- End container -->
+</nav>
