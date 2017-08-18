@@ -103,7 +103,7 @@ class JoinCourse extends Pivot{
             }            
             return $this->save();
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -175,8 +175,7 @@ class JoinCourse extends Pivot{
 
             return $result;
         } catch (Exception $ex) {
-
-            LogRepository::printLog('error', $ex->getMessage());
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

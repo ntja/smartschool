@@ -282,7 +282,7 @@ class Course extends Authenticatable{
 			//var_dump($params);die();
             return $this->save();
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -353,8 +353,7 @@ class Course extends Authenticatable{
 
             return $result;
         } catch (Exception $ex) {
-
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -374,25 +373,40 @@ class Course extends Authenticatable{
 
             $result = null;            
             $limit = intval($params['limit']);
-            $query = '%'.$params['query'].'%';
-			$select = Course::with(['account'=> function ($query) {
-					$query->select('id','first_name','last_name');
-				},'courseCategory', 'section'])
+            //$query = '%'.$params['query'].'%';
+			$array_query = $params['query'];
+			//var_dump($array_query);die(); 
+			$select = Course::join('course_categories', 'course_categories.id', '=', 'courses.category')
+			/*
+			with(
+				[
+					'account'=> function ($query) {
+						$query->select('id','first_name','last_name');
+					},
+					'courseCategory', 
+					'section'
+				]
+			)
+			*/
 				->where('courses.delete_status', '=', '0')
 				->where('courses.status', '=', "PUBLISHED")
-				->where(function ($q) use ($query) {
-                    $q->where('courses.name', 'like', $query)
-                            ->orWhere('courses.shortname', 'like', $query)
-                            ->orWhere('courses.shortdescription', 'like',  $query)
-                            ->orWhere('courses.aboutthecourse', 'like',  $query)
-                            ->orWhere('courses.faq', 'like',  $query)
-                            ->orWhere('courses.coursesyllabus', 'like',  $query)
-                            ->orWhere('courses.suggestedreadings', 'like',  $query)
-                            ->orWhere('courses.recommendedbackground', 'like',  $query)
-                            ->orWhere('course_categories.name', 'like',  $query)
-                            ->orWhere('course_categories.shortname', 'like',  $query)
-                            ->orWhere('course_categories.description', 'like',  $query);
+				->where(function ($q) use ($array_query) {
+					foreach($array_query as $query){
+						//var_dump($query);
+						$q->orWhere('courses.name', 'like', '%' . $query . '%')					
+						->orWhere('courses.shortname', 'like', '%' . $query . '%')
+						->orWhere('courses.shortdescription', 'like',  '%' . $query . '%')
+						->orWhere('courses.aboutthecourse', 'like', '%' . $query . '%')
+						->orWhere('courses.faq', 'like',  '%' . $query . '%')
+						->orWhere('courses.coursesyllabus', 'like',  '%' . $query . '%')
+						->orWhere('courses.suggestedreadings', 'like',  '%' . $query . '%')
+						->orWhere('courses.recommendedbackground', 'like',  '%' . $query . '%');
+						//->orWhere('course_categories.name', 'like',  $query)
+						//->orWhere('course_categories.shortname', 'like',  $query)
+						//->orWhere('course_categories.description', 'like',  $query);
+					}
                 });
+				//die(); 
 			/*
             $select = DB::table('courses')
 				->join('course_categories','course_categories.id','=','courses.category')
@@ -414,15 +428,15 @@ class Course extends Authenticatable{
                             ->orWhere('course_categories.description', 'like',  $query);
                 });
             */     
-            $rows = $select->orderBy('courses.id','DESC')->paginate($limit);
+            $rows = $select->select('courses.id','courses.name','courses.shortname')->orderBy('courses.id','DESC')->paginate($limit);
             if (!count($rows)) {
                 return false;
             }
-            $result = $rows;
+            //$result = $rows;
 
-            return $result;            
+            return $rows;            
         }catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

@@ -13,7 +13,7 @@ use DB;
 use App\Models\Course;
 
 class SearchCustom {
-        
+	
     protected $_model;
     protected $_row;    
 
@@ -44,7 +44,7 @@ class SearchCustom {
             if (!is_array($param)) {
                 throw new Exception("Expected array as parameter , " . (is_object($level) ? get_class($level) : gettype($level)) . " found.");
             }
-            
+            /*
 			if (array_key_exists('query', $param)) {
 				if (!is_string($param['query'])) {
 					$result = array("code" => 4000, "description" => "query must be a string ");
@@ -56,11 +56,19 @@ class SearchCustom {
 					echo json_encode($result, JSON_UNESCAPED_SLASHES);
 					return false;
 				}
-			}               
+			}
+			*/
+			if (array_key_exists('query', $param)) {
+				if (!is_array($param['query'])) {
+					$result = array("code" => 4000, "description" => "query must be an array");
+					echo json_encode($result, JSON_UNESCAPED_SLASHES);
+					return false;
+				}				
+			}  
 			//var_dump($param); die("Here");			
             return true;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
     
@@ -70,23 +78,24 @@ class SearchCustom {
             $validate = $this->validate($params);            
             if ($validate) {                                      
                 //Retrieve a list of item paginated by after and before params
-                $rows = $this->_model->search($params);  		                                
+                $rows = $this->_model->search($params);
+				//var_dump($rows); die("Here");
                 if($rows){                    
-                    LogRepository::printLog('info', "user searched courses. Query :% ".$params['query'].' % Number of rows found: '. $rows->total());
+                    LogRepository::printLog('info', "user searched courses. Query :% ".var_export($params['query'], true).' % Number of rows found: '. $rows->total());
                     return $rows;
                 }else{
-                    LogRepository::printLog('info', "user searched courses. Query : % ".$params['query'].' % Number of rows found: 0');
+                    LogRepository::printLog('info', "user searched courses. Query : % ".var_export($params['query'], true).' % Number of rows found: 0');
                     return [
                     'rows'=> 0,
-                    'data'=>null,
+                    'data'=>[],
                     'total'=>0,
                     ];
                 }
             }     
-            http_response_code(400);       
+            http_response_code(400);
             die();
         }catch(Exception $ex){
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }    
 }

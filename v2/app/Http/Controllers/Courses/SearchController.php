@@ -28,12 +28,17 @@ class SearchController extends Controller {
                 $result = array("code" => 403, "description" => "You do not have permissions for that request.");
                 return response()->json($result, 400);
             }
-            			
+			
             if (!$data['limit']) {
                 $data['limit'] = 10; //set default value of limit param 
-            }           
+            }
+			
             $limit = $data['limit'];
             $query = $data['query'];
+			var_dump($query);die();
+			if($query){
+				$query = explode(" ", trim($query));
+			}
             $informations = array(
 				'query' => $query,                
                 'limit' => $limit,                
@@ -44,10 +49,7 @@ class SearchController extends Controller {
             $result = $custom_search->search($informations);            
             return response()->json($result);
         } catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
-            die();
-        }catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
             die();
         }
     }       

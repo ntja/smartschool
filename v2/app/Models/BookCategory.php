@@ -64,7 +64,7 @@ class BookCategory extends Authenticatable{
 			//die();
             return $this->save();
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -88,8 +88,7 @@ class BookCategory extends Authenticatable{
             }
             return $rows;
         } catch (Exception $ex) {
-
-            LogRepository::printLog('error', $ex->getMessage());
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

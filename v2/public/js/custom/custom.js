@@ -1,32 +1,27 @@
 
-// Set custom error messages for jquery validate
-$.extend($.validator.messages, {
-	required: settings.i18n.translate("validation.1"),
-	email: settings.i18n.translate("validation.2"),
-	number: settings.i18n.translate("validation.3")
-});
 $('#search').on('click', function(){
 	query = $('.query').val();
-	uri = $('body').attr('data-base-url')+'/search?query='+query;
+	uri = $('body').attr('data-base-url')+'/courses/search?q='+query.replace(/\s/g, "+");
 	window.location.assign(encodeURI(uri));
-	console.info(encodeURIComponent(query));
+	//console.info(encodeURIComponent(query));
 });
 
-$('#custom-search-input').keypress(function(e) {	
+$('.form-control query').keypress(function(e) {	
 	var key = e.which;
 	if (key == 13) {
 		if ($('.query').val() != '') {
 			e.preventDefault();
 			query = $('.query').val();
-			uri = $('body').attr('data-base-url')+'/search?query='+query;
+			uri = $('body').attr('data-base-url')+'/search?query='+query.replace(/\s/g, "+");
 			window.location.assign(encodeURI(uri));
-			console.info(encodeURI(query));
+			//console.info(encodeURI(query));
 		}
 	}
 });
 
 (function($) {
     $(document).ready(function() {
+		/*
 		var form, base_url, role, user_detail = null;      
         base_url = $('body').attr('data-base-url');
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');
@@ -37,7 +32,7 @@ $('#custom-search-input').keypress(function(e) {
         if (!user_token || valid_token == false) {						
 			window.location.assign(base_url + '/login');
 		}		
-		//When user clcik on logout button
+		//When user click on logout button
 		$('.logout').click(function(e) {
             e.preventDefault();
 			logout();
@@ -45,9 +40,10 @@ $('#custom-search-input').keypress(function(e) {
 		
 		//Get user details
 		user_detail = get_user_details(user_id, user_token);
-		console.info(user_detail);
+		//console.info(user_detail);
 		if(user_detail){
 			$('#user_name').empty().html(user_detail.first_name);
 		}
+		*/
     });
 })(jQuery);

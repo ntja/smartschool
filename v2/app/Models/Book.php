@@ -125,13 +125,12 @@ class Book extends Authenticatable{
                     throw new Exception("Expected Numeric for key (category), " . (is_object($params['category']) ? get_class($params['category']) : gettype($params['category'])) . ' found.');
                 }
                 $this->category = $params['category'];
-            }            
-						
+            }           
 			//var_dump($params);
 			//die();
             return $this->save();
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -174,8 +173,7 @@ class Book extends Authenticatable{
             }
             return $rows;
         } catch (Exception $ex) {
-
-            LogRepository::printLog('error', $ex->getMessage());
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -214,7 +212,7 @@ class Book extends Authenticatable{
 
             return $result;            
         }catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

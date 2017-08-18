@@ -61,6 +61,7 @@
 		<script src="{{asset('js/jquery.placeholder.js' )}}"></script>
 		<script src="{{asset('js/functions.js')}}"></script>
 		<script src="{{asset('js/classie.js')}}"></script>
+		<script src="{{asset('js/custom/custom.js')}}"></script>
 		<!--
 		<script src="{{asset('js/uisearch.js')}}" type="text/javascript"></script>
 		<script>new UISearch( document.getElementById( 'sb-search' ) );</script>

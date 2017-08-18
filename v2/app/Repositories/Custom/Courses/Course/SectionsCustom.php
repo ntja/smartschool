@@ -143,7 +143,7 @@ class SectionsCustom {
             }             
             return true;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -186,7 +186,7 @@ class SectionsCustom {
 			}           
 			return $result;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
    
@@ -199,7 +199,7 @@ class SectionsCustom {
                 );
             return $result;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }    
 	
@@ -208,7 +208,7 @@ class SectionsCustom {
         try {
             return $this->model()->where('title', 'LIKE', $title)->where('course', '=', $course)->first();           
         } catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 	
@@ -220,13 +220,6 @@ class SectionsCustom {
                 //Retrieve a list of item paginated by after and before params
 				
                 $rows = $this->_model->getSections($params,$id);
-                for($i=0; $i<count($rows);$i++){
-                    //$row->title = Str::slug($row->title, '-');
-                    for($j=0; $j<count($rows[$i]->lessons);$j++){
-                        $rows[$i]->lessons[$j]->slug_title = Str::slug($rows[$i]->lessons[$j]->title);
-                        //var_dump($rows[$i]->lessons[$j]->title);
-                    }
-                }                
                 //var_dump($rows);die();
                 if(!$rows){					
                     $result = [
@@ -236,21 +229,28 @@ class SectionsCustom {
                     ];
                     return $result;
                 }
+				for($i=0; $i<count($rows);$i++){
+                    //$row->title = Str::slug($row->title, '-');
+                    for($j=0; $j<count($rows[$i]->lessons);$j++){
+                        $rows[$i]->lessons[$j]->slug_title = Str::slug($rows[$i]->lessons[$j]->title);
+                        //var_dump($rows[$i]->lessons[$j]->title);
+                    }
+                }
                 return $rows;
             }else{
                 http_response_code(400);
                 die(); 
             }           
         }catch(Exception $ex){
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 	
-        public function getSectionByID($id){
+    public function getSectionByID($id){
         try{
             return $this->model()->with(['course'])->where('id', '=', $id)->first();
         }catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

@@ -28,13 +28,15 @@ class GetUserFromToken extends BaseMiddleware
 
         if($client_id){
             if (strcasecmp($request_client_id, $client_id)) {
-                $result = array("code" => 401, "description" => " Invalid application id");
+                $result = array("code" => 401, "description" => " Invalid application ID");
                 echo json_encode($result, JSON_UNESCAPED_SLASHES);
+				http_response_code(400);
                 die();
             }
         } else {
-            $result = array("code" => 401, "description" => "Application id not found");
+            $result = array("code" => 401, "description" => "Application ID not found");
             echo json_encode($result, JSON_UNESCAPED_SLASHES);
+			http_response_code(400);
             die();
         }
         
@@ -42,6 +44,7 @@ class GetUserFromToken extends BaseMiddleware
         if (! $token ) {
             if(!$force_success){
                 $result = array("code" => 4000, "description" => "token not provided");
+				http_response_code(400);
                echo json_encode($result, JSON_UNESCAPED_SLASHES);
                die();   
             }
@@ -55,10 +58,12 @@ class GetUserFromToken extends BaseMiddleware
         } catch (TokenExpiredException $e) {
 			$result = array("code" => 4003 , "description" => "token expired");
             echo json_encode($result, JSON_UNESCAPED_SLASHES);
+			http_response_code(400);
             die();
         } catch (JWTException $e) {
-           $result = array("code" => 4000, "description" => "token invalid");
+           $result = array("code" => 4000, "description" => "Invalid Token");
             echo json_encode($result, JSON_UNESCAPED_SLASHES);
+			http_response_code(400);
             die();
         }
 

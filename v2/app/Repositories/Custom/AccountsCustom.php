@@ -279,7 +279,7 @@ class AccountsCustom {
                 }else {
                     throw new Exception("Expected 'password' in array as parameter , " . (is_object($param['password']) ? get_class($param['password']) : gettype($param['password'])) . " found.");
                 }
-		if (array_key_exists('human_verification', $param)){
+				if (array_key_exists('human_verification', $param)){
                     if (is_null($param['human_verification'])) {
                         $errors [] = array("code" => 4000, "description" => "human_verification is required ");
                         //echo json_encode($result, JSON_UNESCAPED_SLASHES);
@@ -301,7 +301,7 @@ class AccountsCustom {
             }                                    
             return $errors;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -357,7 +357,7 @@ class AccountsCustom {
             }           
             return $result;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
    
@@ -378,7 +378,7 @@ class AccountsCustom {
                 );
             return $result;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -411,7 +411,7 @@ class AccountsCustom {
             }
             
         }catch(Exception $ex){
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }    
     
@@ -422,7 +422,7 @@ class AccountsCustom {
             $result = $account::where('email', 'LIKE BINARY', $email)->first();           
             return $result;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
     
@@ -433,7 +433,7 @@ class AccountsCustom {
             $result = $account::where('email', 'LIKE BINARY', $email)->where('verify_token', '=', $token)->first();           
             return $result;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -443,7 +443,7 @@ class AccountsCustom {
             $row = $account::where('id', '=', $id)->first();
             return $row;
         }catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
     

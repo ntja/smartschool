@@ -95,7 +95,7 @@ class Question extends Authenticatable{
 			//var_dump($params); die();
             return $this->save();
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

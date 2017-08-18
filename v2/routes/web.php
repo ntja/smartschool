@@ -71,6 +71,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/courses', function () {
 		return view('courses.catalog');
 	});
+	Route::get('/courses/search', function () {
+		return view('courses.search');
+	});
 	Route::get('/books/catalog', function () {
 		return view('books.catalog');
 	});
@@ -79,9 +82,9 @@ Route::group(['middleware' => 'web'], function () {
 	});
 	
 	Route::get('/subscription-plans', function () {
-            return view('subscription-plans');
+        return view('subscription-plans');
 	});
-        Route::get('/contact-us', function () {
-            return view('contact-us');
+	Route::get('/contact-us', function () {
+		return view('contact-us');
 	});        
 });

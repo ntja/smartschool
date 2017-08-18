@@ -47,14 +47,12 @@ class School extends Authenticatable{
 			}                
 
             if (array_key_exists("name", $params)) {
-                //throw new Exception("Expected key (name) in parameter array.");
                 if (!is_string($params['name'])) {
                     throw new Exception("Expected String for key (name), " . (is_object($params['name']) ? get_class($params['name']) : gettype($params['name'])) . ' found.');
                 }
                 $this->name = $params['name'];
             }
             if (array_key_exists("shortname", $params)) {
-                //throw new Exception("Expected key (shortname) in parameter array.");
                 if (!is_string($params['shortname'])) {
                     throw new Exception("Expected String for key (shortname), " . (is_object($params['shortname']) ? get_class($params['shortname']) : gettype($params['shortname'])) . ' found.');
                 }
@@ -62,14 +60,12 @@ class School extends Authenticatable{
             }
 
             if (array_key_exists("logo", $params)) {
-                //throw new Exception("Expected key (logo) in parameter array.");
                 if (!is_string($params['logo'])) {
                     throw new Exception("Expected String for key (logo), " . (is_object($params['logo']) ? get_class($params['logo']) : gettype($params['logo'])) . ' found.');
                 }
                 $this->logo = $params['logo'];
             }
             if (array_key_exists("address", $params)) {
-                //throw new Exception("Expected key (address) in parameter array.");
                 if (!is_null($params['address'])) {
                     if (!is_string($params['address'])) {
                         throw new Exception("Expected String for key (address), " . (is_object($params['address']) ? get_class($params['address']) : gettype($params['address'])) . ' found.');
@@ -78,7 +74,6 @@ class School extends Authenticatable{
                 $this->address = $params['address'];
             }
             if (array_key_exists("description", $params)) {
-                //throw new Exception("Expected key (description) in parameter array.");
                 if (!is_null($params['description'])) {
                     if (!is_string($params['description'])) {
                         throw new Exception("Expected String for key (description), " . (is_object($params['description']) ? get_class($params['description']) : gettype($params['description'])) . ' found.');
@@ -87,7 +82,6 @@ class School extends Authenticatable{
                 $this->description = $params['description'];
             }
             if (array_key_exists("banner", $params)) {
-                //throw new Exception("Expected key (banner) in parameter array.");
                 if (!is_null($params['banner'])) {
                     if (!is_string($params['banner'])) {
                         throw new Exception("Expected String for key (banner), " . (is_object($params['banner']) ? get_class($params['banner']) : gettype($params['banner'])) . ' found.');
@@ -96,7 +90,6 @@ class School extends Authenticatable{
                 $this->banner = $params['banner'];
             }
             if (array_key_exists("homelink", $params)) {
-                //throw new Exception("Expected key (homelink) in parameter array.");
                 if (!is_null($params['homelink'])) {
                     if (!is_string($params['homelink'])) {
                         throw new Exception("Expected String for key (homelink), " . (is_object($params['homelink']) ? get_class($params['homelink']) : gettype($params['homelink'])) . ' found.');
@@ -105,7 +98,6 @@ class School extends Authenticatable{
                 $this->homelink = $params['homelink'];
             }
             if (array_key_exists("location", $params)) {
-                //throw new Exception("Expected key (location) in parameter array.");
                 if (!is_null($params['location'])) {
                     if (!is_string($params['location'])) {
                         throw new Exception("Expected String for key (location), " . (is_object($params['location']) ? get_class($params['location']) : gettype($params['location'])) . ' found.');
@@ -114,7 +106,6 @@ class School extends Authenticatable{
                 $this->location = $params['location'];
             }
             if (array_key_exists("location_city", $params)) {
-                //throw new Exception("Expected key (location_city) in parameter array.");
                 if (!is_null($params['location_city'])) {
                     if (!is_string($params['location_city'])) {
                         throw new Exception("Expected String for key (location_city), " . (is_object($params['location_city']) ? get_class($params['location_city']) : gettype($params['location_city'])) . ' found.');
@@ -124,7 +115,6 @@ class School extends Authenticatable{
             }            
 
             if (array_key_exists("location_country", $params)) {
-                //throw new Exception("Expected key (location_country) in parameter array.");
                 if (!is_null($params['location_country'])) {
                     if (!is_numeric($params['location_country'])) {
                         throw new Exception("Expected Numeric for key (location_country), " . (is_object($params['location_country']) ? get_class($params['location_country']) : gettype($params['location_country'])) . ' found.');
@@ -133,7 +123,6 @@ class School extends Authenticatable{
                 $this->location_country = $params['location_country'];
             }
             if (array_key_exists("location_lon", $params)) {
-                //throw new Exception("Expected key (location_lon) in parameter array.");
                 if (!is_null($params['location_lon'])) {
                     if (!is_numeric($params['location_lon'])) {
                         throw new Exception("Expected Numeric for key (location_lon), " . (is_object($params['location_lon']) ? get_class($params['location_lon']) : gettype($params['location_lon'])) . ' found.');
@@ -142,7 +131,6 @@ class School extends Authenticatable{
                 $this->location_lon = $params['location_lon'];
             }
             if (array_key_exists("location_lat", $params)) {
-                //throw new Exception("Expected key (location_lat) in parameter array.");
                 if (!is_null($params['location_lat'])) {
                     if (!is_numeric($params['location_lat'])) {
                         throw new Exception("Expected Numeric for key (location_lat), " . (is_object($params['location_lat']) ? get_class($params['location_lat']) : gettype($params['location_lat'])) . ' found.');
@@ -151,7 +139,6 @@ class School extends Authenticatable{
                 $this->location_lat = $params['location_lat'];
             }
             if (array_key_exists("website", $params)) {
-                //throw new Exception("Expected key (website) in parameter array.");
                 if (!is_null($params['website'])) {
                     if (!is_string($params['website'])) {
                         throw new Exception("Expected String for key (website), " . (is_object($params['website']) ? get_class($params['website']) : gettype($params['website'])) . ' found.');
@@ -160,7 +147,6 @@ class School extends Authenticatable{
                 $this->website = $params['website'];
             }
             if (array_key_exists("city", $params)) {
-                //throw new Exception("Expected key (city) in parameter array.");
                 if (!is_null($params['city'])) {
                     if (!is_numeric($params['city'])) {
                         throw new Exception("Expected Numeric for key (city), " . (is_object($params['city']) ? get_class($params['city']) : gettype($params['city'])) . ' found.');
@@ -169,7 +155,6 @@ class School extends Authenticatable{
                 $this->city = $params['city'];
             }
             if (array_key_exists("webtwitter", $params)) {
-                //throw new Exception("Expected key (webtwitter) in parameter array.");
                 if (!is_null($params['webtwitter'])) {
                     if (!is_string($params['webtwitter'])) {
                         throw new Exception("Expected String for key (webtwitter), " . (is_object($params['webtwitter']) ? get_class($params['webtwitter']) : gettype($params['webtwitter'])) . ' found.');
@@ -178,7 +163,6 @@ class School extends Authenticatable{
                 $this->webtwitter = $params['webtwitter'];
             }
             if (array_key_exists("webfacebook", $params)) {
-                //throw new Exception("Expected key (webfacebook) in parameter array.");
                 if (!is_null($params['webfacebook'])) {
                     if (!is_string($params['webfacebook'])) {
                         throw new Exception("Expected String for key (webfacebook), " . (is_object($params['webfacebook']) ? get_class($params['webfacebook']) : gettype($params['webfacebook'])) . ' found.');
@@ -187,7 +171,6 @@ class School extends Authenticatable{
                 $this->webfacebook = $params['webfacebook'];
             }
             if (array_key_exists("webyoutube", $params)) {
-                //throw new Exception("Expected key (webyoutube) in parameter array.");
                 if (!is_null($params['webyoutube'])) {
                     if (!is_string($params['webyoutube'])) {
                         throw new Exception("Expected String for key (webyoutube), " . (is_object($params['webyoutube']) ? get_class($params['webyoutube']) : gettype($params['webyoutube'])) . ' found.');
@@ -196,7 +179,6 @@ class School extends Authenticatable{
                 $this->webyoutube = $params['webyoutube'];
             }
             if (array_key_exists("pagebanner", $params)) {
-                //throw new Exception("Expected key (pagebanner) in parameter array.");
                 if (!is_null($params['pagebanner'])) {
                     if (!is_string($params['pagebanner'])) {
                         throw new Exception("Expected String for key (pagebanner), " . (is_object($params['pagebanner']) ? get_class($params['pagebanner']) : gettype($params['pagebanner'])) . ' found.');
@@ -205,18 +187,16 @@ class School extends Authenticatable{
                 $this->pagebanner = $params['pagebanner'];
             }            
             if (array_key_exists("date_created", $params)) {
-                //throw new Exception("Expected key (date_created) in parameter array.");
                 if (!is_string($params['date_created'])) {
                     throw new Exception("Expected String for key (date_created), " . (is_object($params['date_created']) ? get_class($params['date_created']) : gettype($params['date_created'])) . ' found.');
                 }
                 $this->date_created = $params['date_created'];
             }            
-						
-			//var_dump($params);
-			//die();
+
+			//var_dump($params);die();
             return $this->save();
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }
