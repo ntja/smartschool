@@ -35,10 +35,12 @@ class SearchController extends Controller {
 			
             $limit = $data['limit'];
             $query = $data['query'];
-			var_dump($query);die();
+			
 			if($query){
 				$query = explode(" ", trim($query));
-			}
+				$query = array_diff($query, array(''));
+			}			
+			//var_dump($query);die();
             $informations = array(
 				'query' => $query,                
                 'limit' => $limit,                

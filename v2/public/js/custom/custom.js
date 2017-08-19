@@ -12,7 +12,7 @@ $('.form-control query').keypress(function(e) {
 		if ($('.query').val() != '') {
 			e.preventDefault();
 			query = $('.query').val();
-			uri = $('body').attr('data-base-url')+'/search?query='+query.replace(/\s/g, "+");
+			uri = $('body').attr('data-base-url')+'/search?query='+query.replace(/\s\s+/g, "+");
 			window.location.assign(encodeURI(uri));
 			//console.info(encodeURI(query));
 		}

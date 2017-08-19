@@ -376,7 +376,7 @@ class Course extends Authenticatable{
             //$query = '%'.$params['query'].'%';
 			$array_query = $params['query'];
 			//var_dump($array_query);die(); 
-			$select = Course::join('course_categories', 'course_categories.id', '=', 'courses.category')
+			$select = Course::leftJoin('course_categories', 'course_categories.id', '=', 'courses.category')
 			/*
 			with(
 				[
@@ -432,8 +432,6 @@ class Course extends Authenticatable{
             if (!count($rows)) {
                 return false;
             }
-            //$result = $rows;
-
             return $rows;            
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());

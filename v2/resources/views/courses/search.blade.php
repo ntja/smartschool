@@ -52,7 +52,11 @@
     </ol>
 
 	 <div class="row">
-		<div class="col-md-8" id="result">                   
+		<div class="col-md-6">                   
+			<h3>Search results</h3>
+			<p class="no_result hide">No Result Found.</p>
+			<ul class="list_1" id="result">				 
+			</ul>
 			<span></span>   
 		</div><!-- End col-md-8  -->
 		

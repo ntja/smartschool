@@ -20,24 +20,24 @@
             }
         }
 		/* Get Current URL */
-        var uri = $.url();
-        /* Get a segment from URL 
+        /*
+		var uri = $.url();
+         Get a segment from URL 
         last_segment = uri.segment(-1);
 		console.log(last_segment);
 		*/
+		query = qs().q;//.split("+").join(" ");
+		console.log(query);
 		url = config.api_url + "/courses/search";
-		search_items(url, ' Introduction ');
-		// click on search button
-		$('.search').on('click', function(){
-			url = config.api_url + "/courses/search";
-			search_items(url, 'python');
-		});
+		if(query){
+			search_items(url, query);
+		}		
 		
 		//search items
         function search_items(url, query) {
             try {
                 $.ajax({
-                    async: false,
+                    async: true,
                     url: url+'?query='+query,
                     type: "GET",
                     crossDomain: true,
@@ -50,10 +50,18 @@
                     }
                 })
 				.done(function(data, textStatus, jqXHR) {
-					$("#search").data('query', query);
-					//all_products = data.items;
-					//all_products = all_products.concat(data.items);
-					console.log(data.items);            
+					//$("#search").data('query', query);
+					console.log(data.data);
+					var items = data.data;
+					if(items.length==0){
+						$('.no_result').removeClass('hide');
+					}
+					for(var i=0; i<items.length;i++){
+						$('#result').append('<li><a href="'+base_url+'/course/'+items[i].shortname+'">'+items[i].name+'</a></li>');
+					}
+					
+					
+					/*
 					if (data.back != null) {
 						$("#prev").removeClass('disabled');
 						$("#prev").removeAttr('disabled');
@@ -75,6 +83,7 @@
 					$('#entries-limit').text(data.items.length);
 					
 					$("html, body").animate({scrollTop: 0}, "fast");
+					*/
 					//return false;				
 				})
 				.fail(function(jqXHR, textStatus, errorThrown) {

@@ -66,18 +66,7 @@
 					-->
 				</li>				
 				<li><a href="<?php echo URL::to('/books/catalog'); ?>">{{__('Books')}}</a></li>
-			</ul>
-            
-            <div class="col-md-3 pull-right hidden-sm hidden-xs">
-                    <div id="sb-search" class="sb-search">
-						<form>
-							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-							<input class="sb-search-submit" type="submit" value="">
-							<span class="sb-icon-search"></span>
-						</form>
-					</div>
-              </div><!-- End search -->
-              
+			</ul>                       
 		</div>
 	</div><!-- End row -->
 </div><!-- End container -->
