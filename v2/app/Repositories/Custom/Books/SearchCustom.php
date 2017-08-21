@@ -67,13 +67,13 @@ class SearchCustom {
                 //Retrieve a list of item paginated by after and before params
                 $rows = $this->_model->search($params);                                         
                 if($rows){                    
-                    LogRepository::printLog('info', "user searched Books. Query :% ".$params['query'].' % Number of rows found: '. $rows->total());
+                    LogRepository::printLog('info', "user searched Books. Query :% ".var_export($params['query'], true).' % Number of rows found: '. $rows->total());
                     return $rows;
                 }else{
-                    LogRepository::printLog('info', "user searched Books. Query : % ".$params['query'].' % Number of rows found: 0');
+                    LogRepository::printLog('info', "user searched Books. Query : % ".var_export($params['query'], true).' % Number of rows found: 0');
                     return [
                     'rows'=> 0,
-                    'data'=>null,
+                    'data'=>[],
                     'total'=>0,
                     ];
                 }

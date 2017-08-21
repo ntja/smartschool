@@ -57,7 +57,7 @@
 						$('.no_result').removeClass('hide');
 					}
 					for(var i=0; i<items.length;i++){
-						$('#result').append('<li><a href="'+base_url+'/book/'+items[i].shortname+'">'+items[i].name+'</a></li>');
+						$('#result').append('<li><a href="'+base_url+'/book/'+items[i].slug_name+'">'+items[i].name+'</a></li>');
 					}
 					
 					

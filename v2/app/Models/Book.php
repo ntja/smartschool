@@ -207,6 +207,7 @@ class Book extends Authenticatable{
                     });                             
                     
             $rows = $select->paginate($limit);
+			//die("here");
             if (!count($rows)) {
                 return [];
             }

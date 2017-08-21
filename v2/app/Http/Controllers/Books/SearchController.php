@@ -29,7 +29,7 @@ class SearchController extends Controller {
                 return response()->json($result, 400);
             }
             if (!$data['limit']) {
-                $data['limit'] = 10; //set default value of limit param 
+                $data['limit'] = 20; //set default value of limit param 
             }
 			
             $limit = $data['limit'];
