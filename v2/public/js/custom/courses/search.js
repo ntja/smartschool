@@ -27,7 +27,7 @@
 		console.log(last_segment);
 		*/
 		query = qs().q;//.split("+").join(" ");
-		console.log(query);
+		//console.log(query);
 		url = config.api_url + "/courses/search";
 		if(query){
 			search_items(url, query);
@@ -45,8 +45,8 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     headers: {
-                        "x-client-id": "0000",
-                        "x-access-token": user_token
+                        "x-client-id": "0000"
+						//,"x-access-token": user_token
                     }
                 })
 				.done(function(data, textStatus, jqXHR) {
