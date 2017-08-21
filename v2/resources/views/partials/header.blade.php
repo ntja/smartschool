@@ -6,7 +6,7 @@
 		</div>
 		<div class="col-md-5 col-sm-6 hidden-xs">
 			<div class="input-group" id="adv-search">
-                <input type="text" class="form-control query" placeholder="{{__('What are you looking for ?')}}" />
+                <input type="text" class="form-control query" id="query_input" placeholder="{{__('What are you looking for ?')}}" />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">

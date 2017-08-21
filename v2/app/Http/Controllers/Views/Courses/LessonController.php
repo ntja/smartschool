@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class LessonController extends Controller {
     
     CONST X_CLIENT_ID = '0000';
-    CONST HOST = 'http://127.0.0.1/projects/smartschool/v2/api'; //'http://stagging.smartskul.com/v2/api';
+    CONST HOST = 'http://stagging.smartskul.com/v2/api'; //'http://127.0.0.1/smartschool/v2/api';
     
     public function get(Request $request, $course_id, $lesson) {
         //$request->header('x-access-token', str_random(50));

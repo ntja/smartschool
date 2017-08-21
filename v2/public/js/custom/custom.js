@@ -1,26 +1,26 @@
 
-$('#search').on('click', function(){
-	query = $('.query').val();
-	uri = $('body').attr('data-base-url')+'/courses/search?q='+query.replace(/\s/g, "+");
-	window.location.assign(encodeURI(uri));
-	//console.info(encodeURIComponent(query));
-});
-
-$('.form-control query').keypress(function(e) {	
-	var key = e.which;
-	if (key == 13) {
-		if ($('.query').val() != '') {
-			e.preventDefault();
-			query = $('.query').val();
-			uri = $('body').attr('data-base-url')+'/search?query='+query.replace(/\s\s+/g, "+");
-			window.location.assign(encodeURI(uri));
-			//console.info(encodeURI(query));
-		}
-	}
-});
-
 (function($) {
     $(document).ready(function() {
+		$('#search').on('click', function(){
+			var query = $('.query').val();
+			uri = $('body').attr('data-base-url')+'/courses/search?q='+query.replace(/\s/g, "+");
+			window.location.assign(encodeURI(uri));
+			//console.info(encodeURIComponent(query));
+		});
+
+		$('#query_input').keypress(function(e) {	
+			var key = e.which;
+			console.info("enter pressedd");
+			if (key == 13) {
+				var query = $('.query').val();
+				if (query != '') {
+					e.preventDefault();					
+					uri = $('body').attr('data-base-url')+'/courses/search?q='+query.replace(/\s/g, "+");
+					window.location.assign(encodeURI(uri));
+					//console.info(encodeURI(query));
+				}
+			}
+		});
 		/*
 		var form, base_url, role, user_detail = null;      
         base_url = $('body').attr('data-base-url');
