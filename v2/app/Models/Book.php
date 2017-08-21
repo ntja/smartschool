@@ -193,20 +193,22 @@ class Book extends Authenticatable{
 
             $result = null;            
             $limit = intval($params['limit']);
-            $query = '%'.$params['query'].'%';
-            $select = DB::table('books')->join('book_categories','book_categories.id','=','books.category')
+            $array_query = $params['query'];
+            $select = Book::join('book_categories','book_categories.id','=','books.category')
                     ->select('books.*', 'book_categories.name as category_name')
                     ->where('books.delete_status', '=', '0')
-                    ->where(function ($q) use ($query) {
-                        $q->where('books.name', 'like', $query)                                
-                                ->orWhere('books.description', 'like',  $query)
-                                ->orWhere('books.author', 'like',  $query)                                
-                                ->orWhere('book_categories.name', 'like',  $query);                               
+					->where(function ($q) use ($array_query) {
+						foreach($array_query as $query){
+							$q->orWhere('books.name', 'like', '%' . $query . '%')                                
+                                ->orWhere('books.description', 'like',  '%' . $query . '%')
+                                ->orWhere('books.author', 'like',  '%' . $query . '%')                                
+                                ->orWhere('book_categories.name', 'like',  '%' . $query . '%'); 
+						}
                     });                             
                     
             $rows = $select->paginate($limit);
             if (!count($rows)) {
-                return false;
+                return [];
             }
             $result = $rows;
 

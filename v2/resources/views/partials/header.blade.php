@@ -15,10 +15,10 @@
                                 <form class="form-horizontal" role="form">
                                   <div class="form-group">
                                     <label for="filter">{{__('Filter by')}} :</label>
-                                    <select class="form-control">
-										<option value="" selected></option>
-                                        <option value="0" selected>{{__('Books')}}</option>
-                                        <option value="1">{{__('Courses')}}</option>
+                                    <select class="form-control" id="search_filter">
+										<option value="0" ></option>
+                                        <option value="1" >{{__('Books')}}</option>
+                                        <option value="2" selected>{{__('Courses')}}</option>
                                     </select>
                                   </div>
 								  <!--

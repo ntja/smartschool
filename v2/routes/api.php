@@ -24,6 +24,7 @@ Route::group(['middleware' => 'jwt.auth:1'], function () { //bypass ACL because 
 	Route::post('/accounts/forgot-password', 'Accounts\ForgotPasswordController@post');
 	Route::post('/accounts/reset-password', 'Accounts\RecoverPasswordController@post');
 	Route::post('/accounts/social','Accounts\SocialController@post');
+	Route::get('/search', 'SearchController@get');
 	Route::get('/courses', 'CoursesController@get');
 	Route::get('/courses/search', 'Courses\SearchController@get');
 	Route::get('/books', 'BooksController@get');

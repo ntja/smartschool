@@ -46,17 +46,12 @@ class SearchCustom {
             }
             
 			if (array_key_exists('query', $param)) {
-				if (!is_string($param['query'])) {
-					$result = array("code" => 4000, "description" => "query must be a string ");
+				if (!is_array($param['query'])) {
+					$result = array("code" => 4000, "description" => "query must be an array");
 					echo json_encode($result, JSON_UNESCAPED_SLASHES);
 					return false;
-				}
-				if (empty(trim($param['query']))) {
-					$result = array("code" => 4000, "description" => "query must not be empty ");
-					echo json_encode($result, JSON_UNESCAPED_SLASHES);
-					return false;
-				}
-			}               
+				}				
+			}              
 			//var_dump($param); die("Here");			
             return true;
         } catch (Exception $ex) {

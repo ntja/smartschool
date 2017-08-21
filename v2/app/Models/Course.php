@@ -430,7 +430,7 @@ class Course extends Authenticatable{
             */     
             $rows = $select->select('courses.id','courses.name','courses.shortname')->orderBy('courses.id','DESC')->paginate($limit);
             if (!count($rows)) {
-                return false;
+                return [];
             }
             return $rows;            
         }catch (Exception $ex) {

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Books;
+namespace App\Http\Controllers;
 
 use Gate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Util\LogRepository as LogRepo;
 use App\Repositories\Custom\AccountsCustom;
-use App\Repositories\Custom\Books\SearchCustom;
-use App\Repositories\Custom\Resource\Books\Search as ResourceSearch;
+use App\Repositories\Custom\SearchCustom;
+use App\Repositories\Custom\Resource\Search as ResourceSearch;
 use Exception;
 
 class SearchController extends Controller {
@@ -24,10 +24,12 @@ class SearchController extends Controller {
             $account = new AccountsCustom($account_token_id);
 			//var_dump($account);die();
             $resource_search = new ResourceSearch();
+			//var_dump($resource_search);die();
             if (Gate::forUser($account)->denies('get', $resource_search)) {
                 $result = array("code" => 403, "description" => "You do not have permissions for that request.");
                 return response()->json($result, 400);
             }
+			
             if (!$data['limit']) {
                 $data['limit'] = 10; //set default value of limit param 
             }
@@ -50,10 +52,7 @@ class SearchController extends Controller {
             $result = $custom_search->search($informations);            
             return response()->json($result);
         } catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
-            die();
-        }catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
             die();
         }
     }       
