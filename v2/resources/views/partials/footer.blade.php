@@ -33,7 +33,7 @@
                     </ul>
                     <ul>
 						<li><strong class="phone">+971 509 879 819</strong><br><small>{{__('Mon - Fri')}} / 8.00AM - 06.00PM</small></li>
-                        <li><strong class="phone">+00237 655 134 682</strong><br><small>{{__('Mon - Fri')}} / 8.00AM - 06.00PM</small></li>
+                        <li><strong class="phone">+237 655 134 682</strong><br><small>{{__('Mon - Fri')}} / 8.00AM - 06.00PM</small></li>
                         <li>{{__('Questions')}} ? <a href="#">info@smartskul.com</a></li>				
                     </ul>
 		</div><!-- End col-md-4 -->
