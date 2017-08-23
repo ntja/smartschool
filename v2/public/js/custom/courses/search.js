@@ -56,11 +56,39 @@
 					if(items.length==0){
 						$('.no_result').removeClass('hide');
 					}
+					/*
 					for(var i=0; i<items.length;i++){
 						$('#result').append('<li><a href="'+base_url+'/course/'+items[i].shortname+'">'+items[i].name+'</a></li>');
 					}
+					*/
 					
-					
+					html = "<div class='row'>";
+					for(i=0; i<items.length; i++){
+						if(i%4 == 0){
+							html += "</div>";
+							html += "<div class='row'>";
+						}
+						html += "<div class='col-lg-3 col-md-6 col-sm-6'>";
+						html += "<div class='col-item'>";
+						html += "<div class='photo'>";
+						html += "<a href='"+base_url + "/course/"+items[i].shortname+"'><img src='"+base_url + "/public/img/poetry.jpg' alt='' /></a>";
+						html += "<div class='cat_row'>";
+						if(items[i].course_category){
+							html += "<a href='#'>"+items[i].course_category.name+"</a>";
+						}
+						html += "<span class='pull-right'><i class='icon-money'></i>"+settings.i18n.translate('home.3')+"</span></div>";
+						html += "</div>";
+						html += "<div class='info'>";
+						html += "<div class='row'>";
+						html += "<div class='course_info col-md-12 col-sm-12'>";
+						html += "<h4><strong><a href='"+base_url + "/course/"+items[i].shortname+"'>"+items[i].name+"</a></strong></h4>";
+						html += "</div>";
+						html += "</div>";
+						html += "</div>";
+						html += "</div>";
+						html += "</div>";												
+					}
+					$('#course_list').append(html);
 					/*
 					if (data.back != null) {
 						$("#prev").removeClass('disabled');

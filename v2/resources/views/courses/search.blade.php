@@ -51,19 +51,36 @@
       <li class="active">{{__('Search Results')}}</li>
     </ol>
 
-	 <div class="row">
+	<!-- <div class="row">
 		<div class="col-md-6">                   
 			<h3>Search results</h3>
 			<p class="no_result hide">No Result Found.</p>
 			<ul class="list_1" id="result">				 
 			</ul>
 			<span></span>   
-		</div><!-- End col-md-8  -->
+		</div> End col-md-8  -->
 		
-		<aside class="col-md-4">            	
-		</aside> <!-- End col-md-34 -->
+		<!--<aside class="col-md-4">            	
+		</aside>  End col-md-34 -->
      	
-     </div><!-- End row -->         
+     </div><!-- End row -->
+	 <section id="main_content_gray">
+    	<div class="container">
+        	<div class="row">
+				<div class="col-md-12 text-center">
+					<h3>{{__('Search results')}}<span class="total"> </span></h3>
+					<p class="no_result hide lead">No Result Found.</p>
+				</div>
+			</div><!-- End row -->
+			<div id="course_list">
+			</div>        
+			<div class="row hide view_all">
+				<div class="col-md-12">
+					 <a href="<?php echo URL::to('/courses/catalog'); ?>" class="button_medium_outline pull-right">{{__('View All Courses')}}</a>
+				</div>
+			</div>
+        </div>   <!-- End container -->
+    </section><!-- End section gray -->  
   </div><!-- End container -->
   </section>
  

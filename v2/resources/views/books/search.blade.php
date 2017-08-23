@@ -5,8 +5,36 @@
 @stop
 @section('header-styles')
    <!-- CUSTOM STYLES -->   
-    <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<style>
+		.myIframe {
+			position: relative;
+			padding-bottom: 52.00%;
+			padding-top: 30px;
+			height: 100%;
+			overflow: auto; 
+			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
+			border: solid black 1px;
+		} 
+		.myIframe iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.modal-dialog {
+  width: 96%;
+  height: 100%;
+  padding: 0;
+}
+
+.modal-content {
+  height: 100%;
+}
+
+	</style>
 @stop
 
 @section('content')
@@ -59,12 +87,25 @@
 			</ul>
 			<span></span>   
 		</div><!-- End col-md-8  -->
-		
-		<aside class="col-md-4">            	
-		</aside> <!-- End col-md-34 -->
-     	
+		<div class="col-lg-9 col-md-8 col-sm-9">
+			<div class="row" id="book_list">                                               
+			</div><!-- End row -->
+		</div><!-- End col-lg-9--> 
      </div><!-- End row -->         
   </div><!-- End container -->
+  <!-- Modal -->
+	<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header bg-warning">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title book-title" id="myModalLabel"></h4>
+		  </div>
+		  <div class="modal-body book-content">			  
+		  </div>		  
+		</div>
+	  </div>
+	</div>
   </section>
  
 @include('partials/footer')
