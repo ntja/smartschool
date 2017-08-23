@@ -70,7 +70,7 @@
 							html += "</div>";
 							html += "<div class='row'>";
 						}					
-						html += '<div class="col-lg-4 col-md-6">';
+						html += '<div class="col-lg-3 col-md-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
 						html += '<a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+items[i].filepath+'" data-book-title="'+items[i].name+'"><img src="'+base_url+'/'+items[i].cover+'" alt="" /></a>';
