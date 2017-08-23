@@ -56,16 +56,17 @@
 					if(items.length==0){
 						$('.no_result').removeClass('hide');
 					}
+					/*
 					for(var i=0; i<items.length;i++){
 						$('#result').append('<li><a href="'+base_url+'/book/'+items[i].slug_name+'">'+items[i].name+'</a></li>');
 					}
-					
+					*/
 				if(data.data.length ==0){
 					var html = "<h3>No book found. <a href='"+base_url+"/books/catalog'>Return to Home page</a></h3>";
 				}else{
 					html = "<div class='row'>"
 					for(i=0; i < items.length; i++){
-						if(i%3 == 0){
+						if(i%4 == 0){
 							html += "</div>";
 							html += "<div class='row'>";
 						}					
