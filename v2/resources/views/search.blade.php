@@ -68,7 +68,7 @@
     	<div class="container">
         	<div class="row">
 				<div class="col-md-12 text-center">
-					<h3>{{__('Search results')}}<span class="total"> </span></h3>
+					<h3><!--{{__('Search results')}}--><span class="total"> </span></h3>
 					<p class="no_result hide lead">No Result Found.</p>
 				</div>
 			</div><!-- End row -->

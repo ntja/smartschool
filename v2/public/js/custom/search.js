@@ -143,23 +143,23 @@
 						}
 						$('.pagination').empty();
 						
-						if(data.last_page>1){					
-							if(data.current_page == 1){
+						if(data.books.last_page>1){					
+							if(data.books.current_page == 1){
 								$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">&laquo;</a></li>');						
 							}else{
-								$('.pagination').append('<li><a href="javascript:void(0)" id="previous" data-page="'+data.current_page+'">&laquo;</a></li>');
+								$('.pagination').append('<li><a href="javascript:void(0)" id="previous" data-page="'+data.books.current_page+'">&laquo;</a></li>');
 							}													  					  
-							for(i=1; i<=data.last_page;i++){
-								if(i==data.current_page){
+							for(i=1; i<=data.books.last_page;i++){
+								if(i==data.books.current_page){
 									$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">'+i+'</a></li>');
 								}else{
 									$('.pagination').append('<li><a href="javascript:void(0)" class="page" data-page="'+i+'">'+i+'</a></li>');
 								}
 							}
-							if(data.current_page == data.last_page){
+							if(data.books.current_page == data.books.last_page){
 								$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">&raquo;</a></li>');
 							}else{
-								$('.pagination').append('<li><a href="javascript:void(0)" id="next" data-page="'+data.current_page+'">&raquo;</a></li>');
+								$('.pagination').append('<li><a href="javascript:void(0)" id="next" data-page="'+data.books.current_page+'">&raquo;</a></li>');
 							}					
 						}
 					}
