@@ -19,6 +19,7 @@
                 $(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
             }
         }
+		var limit = 12;
 		/* Get Current URL */
         /*
 		var uri = $.url();
@@ -32,7 +33,27 @@
 		if(query){
 			search_items(url, query);
 		}		
+		//click on next page link
+		$('body').delegate('#next', 'click',function(){
+			var page = $(this).data('page')+1;
+			uri = config.api_url + "/books/search?limit="+limit+"&page="+page;
+			history.pushState({}, '', base_url + '/books/search?page=' + page + '&limit=' + limit);
+			search_items(uri, query);
+		});
 		
+		//clcik on previous page link
+		$('body').delegate('#previous', 'click',function(){
+			var page = $(this).data('page')-1;
+			uri = config.api_url + "/books/search?limit="+limit+"&page="+page;
+			history.pushState({}, '', base_url + '/books/search?page=' + page + '&limit=' + limit);
+			search_items(uri, query);
+		});
+		
+		$('body').delegate('.read-book', 'click',function(){
+			var src = $(this).data('book');
+			$(".book-title").html($(this).data('book-title'));
+			$('.book-content').empty().addClass('myIframe').append('<iframe scrolling="yes" src="'+base_url+'/'+src+'" class="embed-responsive-item" allowfullscreen></iframe>');
+		});
 		//search items
         function search_items(url, query) {
             try {
@@ -75,7 +96,7 @@
 						html += '<div class="photo">';
 						html += '<a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+items[i].filepath+'" data-book-title="'+items[i].name+'"><img src="'+base_url+'/'+items[i].cover+'" alt="" /></a>';
 						html += '<div class="cat_row">';						
-						html += '<a href="#">'+items.category_name+'</a>';						
+						html += '<a href="#">'+items[i].category_name+'</a>';						
 						html += '<span class="pull-right"><i class=" icon-money"></i>'+settings.i18n.translate('home.3')+'</span></div>';
 						html += '</div>';
 						html += '<div class="info">';
@@ -90,7 +111,7 @@
 						html += '</div>';
 						html += '</div>';
 						html += '<div class="separator clearfix">';
-						html += '<p class="btn-add"> <a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+items.filepath+'" data-book-title="'+items.name+'"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
+						html += '<p class="btn-add"> <a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+items[i].filepath+'" data-book-title="'+items[i].name+'"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						html += '<p class="btn-details"> <a href="#"><i class=" icon-download"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						html += '</div>';
@@ -106,7 +127,7 @@
 						}else{
 							$('.pagination').append('<li><a href="javascript:void(0)" id="previous" data-page="'+data.current_page+'">&laquo;</a></li>');
 						}													  					  
-						for(i=1;i<=data.last_page;i++){
+						for(i=1; i<=data.last_page;i++){
 							if(i==data.current_page){
 								$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">'+i+'</a></li>');
 							}else{

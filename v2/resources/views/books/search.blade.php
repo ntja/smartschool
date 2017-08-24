@@ -87,11 +87,17 @@
 			</ul>
 			<span></span>   
 		</div><!-- End col-md-8  -->
-		<div class="col-lg-9 col-md-8 col-sm-9">
+		<div class="col-lg-12 col-md-12 col-sm-12">
 			<div class="row" id="book_list">                                               
 			</div><!-- End row -->
-		</div><!-- End col-lg-9--> 
-     </div><!-- End row -->         
+		</div><!-- End col-lg-12--> 
+     </div><!-- End row -->
+	 <div class="row">
+		<div class="col-md-12 text-right">
+			<ul class="pagination">                  
+			</ul>
+		</div>
+	</div>
   </div><!-- End container -->
   <!-- Modal -->
 	<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
