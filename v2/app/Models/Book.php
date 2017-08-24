@@ -201,8 +201,8 @@ class Book extends Authenticatable{
 						foreach($array_query as $query){
 							$q->orWhere('books.name', 'like', '%' . $query . '%')                                
                                 ->orWhere('books.description', 'like',  '%' . $query . '%')
-                                ->orWhere('books.author', 'like',  '%' . $query . '%')                                
-                                ->orWhere('book_categories.name', 'like',  '%' . $query . '%'); 
+                                ->orWhere('books.author', 'like',  '%' . $query . '%');
+                                //->orWhere('book_categories.name', 'like',  '%' . $query . '%'); 
 						}
                     });                             
                     
