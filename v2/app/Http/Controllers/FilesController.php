@@ -109,42 +109,65 @@ class FilesController extends Controller {
 			$img->destroy();
 		}
 	}
-	
-	/*
-	public function upload(Request $request) {
+
+	public function uploadImage(Request $request) {
 		try {
-			$files = $request->file();
-			$file_count = count($files);
-			// start count how many uploaded
-			$uploadcount = 0;
-			$url=array();
-			foreach($files as $file) {
-				$rules = array('file' => 'required'); //'required|mimes:png,gif,jpeg,txt,pdf,doc'
-				$validator = Validator::make(array('file'=> $file), $rules);
-				if($validator->passes()){
-					$destinationPath = '../uploads';
-					$filename = $file->getClientOriginalName();
-					$extention = $file->getClientOriginalExtension();
-					 
-					$matches = preg_split("/[\s.]+/", $filename);
-					//preg_match('/.$/', $filename, $matches);
-					//var_dump($matches);die('ici');
-					$extension=$matches[1];
-					
-					//$filename = 'file'.'_'.date('YmdHms').'.'.$extension;
-					$url[]='/uploads/'.$filename;				
-					$upload_success = $file->move($destinationPath, $filename.'_'.date('YmdHms').'.'.$extension);
-					LogRepository::printLog('info', "File ".$filename." has been uploaded");
-					$uploadcount ++;
+			//$s3 = \Storage::disk('s3');
+			$destinationPath = public_path() . DIRECTORY_SEPARATOR ."uploads". DIRECTORY_SEPARATOR . "images". DIRECTORY_SEPARATOR;
+			$images = $request->only('image')['image'];
+			//var_dump($images);die();
+			$old_image = $request->only('old_image')["old_image"];
+			//var_dump($images);die();
+			if(!is_array($images)){
+				$this->validate($request, [
+					'image' => 'required|image|mimes:jpeg,jpg,JPG,png,gif,svg|max:2048',
+				]);
+			}
+			if($images){
+				if(is_array($images)){
+					//die("here");
+					$file_names = array();
+					for($i=0; $i<count($images); $i++){
+						$image = $images[$i];
+						$extension = $images[$i]->getClientOriginalExtension();
+						$original_name = $images[$i]->getClientOriginalName();
+						$photo_name = sha1(time() . time().$original_name) . ".{$extension}";
+						$file_name =  "uploads". DIRECTORY_SEPARATOR . "images". DIRECTORY_SEPARATOR . $photo_name;
+						$image->move($destinationPath, $file_name);
+						$file_names[] = $file_name;
+					}
+					$result = array("code" => 200, "file_name" => $file_names);
+					return response()->json($result, 200);
+				}elseif ($request->hasFile('image')) {
+					$image = $request->file('image');
+					if($image->isValid()) {
+						$extension = $image->getClientOriginalExtension();
+						$original_name = $image->getClientOriginalName();
+						$photo_name = sha1(time() . time().$original_name) . ".{$extension}";
+						$file_name = "uploads". DIRECTORY_SEPARATOR . "images". DIRECTORY_SEPARATOR . $photo_name;
+						$image->move($destinationPath, $file_name);
+						$result = array("code" => 200, "file_name" => $file_name);
+						if($old_image){
+							$file = public_path() . DIRECTORY_SEPARATOR .$old_image;
+							//var_dump($file);die();
+							if($file){
+								File::delete($file);
+							}
+						}
+						return response()->json($result, 200);
+					}
+				}else {
+					$result = "file not found";
+					return response()->json($result, 400);
 				}
 			}
-			$result = $this->prepare_reponse_after_post($url);
-			return $result;
-			} catch (Exception $ex) {
-				var_dump($ex->getMessage()); die('ici');
-				LogRepository::printLog('error', $ex->getMessage());
-			}
-    }*/
+		} catch (Exception $ex) {
+			LogRepo::printLog('error', $ex->getMessage());
+			$result = "Validation failed";
+			return response()->json($result, 400);
+			//die();
+		}
+	}
 
     public function prepare_reponse_after_post($file_info) {
         try {

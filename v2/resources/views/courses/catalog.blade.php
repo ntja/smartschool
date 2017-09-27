@@ -27,7 +27,7 @@
     
     
     <section id="main_content">
-    	<div class="container-fluid" style="position:relative;">
+    	<div class="container-fluid">
         
         <ol class="breadcrumb">
 		  <li><a disabled href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
@@ -36,8 +36,8 @@
         
         <div class="row">
         
-        <aside class="col-lg-3 col-md-4 col-sm-3">
-            <div class="box_style_1">
+        <aside class="col-lg-2 col-md-3 col-sm-2">
+            <div class="box_style_">
             	<h4>{{__('Subjects')}}</h4>
 				<ul class="submenu-col subject">										
 					<li><a href="#" id="active">{{__('All Courses')}}</a></li>
@@ -45,7 +45,7 @@
             </div>
         </aside>
         
-        <div class="col-lg-9 col-md-8 col-sm-9">
+        <div class="col-lg-10 col-md-9 col-sm-10">
         	<div class="row" id="course_list">                                               
        		</div><!-- End row -->
         </div><!-- End col-lg-9-->                        

@@ -48,7 +48,7 @@
 		}
 		
 		// get course categories
-		get_course_categories(user_token);
+		get_course_categories(user_token,'#edit-category_list');
 		
 		//get course of a given instructor
 		get_instructor_courses(user_id, user_token, uri);
@@ -185,6 +185,7 @@
 			return edit_form.valid();
         }
 		
+		/*
 		//When user clcik on create course button
 		$('#submit_btn').click(function(e) {
             e.preventDefault();
@@ -265,7 +266,8 @@
 				$('#submit_btn').removeAttr('disabled');
             }
         });
-						
+		*/
+		
 		//When user clcik on edit button
 		$('body').delegate('.edit-course a','click', function(e) {
 			//console.log($(this).data('course-id'));
@@ -289,19 +291,19 @@
 		
 		$('#edit-course_format').change(function() {
             course_format = $(this).val();
-            console.log(course_format);
+            //console.log(course_format);
         });
 		$('#edit-language').change(function() {
             language = $(this).val();
-            console.log(language);
+            //console.log(language);
         });
         $('#edit-target_audience').change(function() {
             target_audience = $(this).val();
-            console.log(target_audience);
+            //console.log(target_audience);
         });
 		$('#edit-category_list').change(function() {
             category_list = $(this).val();
-            console.log(category_list);
+            //console.log(category_list);
         });
 		//When user clcik on edit course button
 		$('#edit_btn').click(function(e) {
@@ -354,7 +356,7 @@
                     //alertNotify("Well done ! Your course has been successfully edited.", 'success');
 					$('#close_edit_modal').trigger('click');
 					sudoNotify.success(settings.i18n.translate("instructor.course.2"));
-                    console.log(data);                    
+                    //console.log(data);                    
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
 					$('#edit_btn .loader').fadeOut('slow',function(){$(this).remove()});
@@ -477,6 +479,7 @@
 		//return  result;
 	}
 	
+	/*
 	function get_course_categories(user_token){
 		$.ajax({
 			url: config.api_url + "/categories?type=course",
@@ -506,6 +509,7 @@
 		});
 		//return  result;
 	}
+	*/
  
 	function get_single_course(course_id, user_token, uri){		
 		var result = null;
@@ -552,7 +556,7 @@
 				}
 			}); 
 			//copy the category list from create course form to edit course form
-			$('#edit-category_list').empty().append($('#category_list').html());
+			//$('#edit-category_list').empty().append($('#category_list').html());
 			
 			$('#edit-category_list option').each(function(i,el){
 				if($(this).val() == data.course_category.id){

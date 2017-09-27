@@ -80,5 +80,7 @@ Route::post('/books/categories', 'Books\CategoriesController@post');
 //Route::get('/books/categories', 'Books\CategoriesController@get');
 
 
+
 // file upload
 Route::post('/uploads', 'FilesController@post');
+Route::post('/fileupload', 'FilesController@uploadImage');

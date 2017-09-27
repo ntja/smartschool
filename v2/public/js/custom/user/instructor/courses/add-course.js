@@ -32,22 +32,14 @@
 		$('.logout').click(function(e) {
             e.preventDefault();
 			logout();
-		});
-		
-		//Get user details
-		user_detail = get_user_details(user_id, user_token);
-		console.info(user_detail);
-		
-		if(user_detail){
-			$('#user_name').empty().html(user_detail.first_name);
-		}
+		});				
 		*/
 		if(user_role !== "INSTRUCTOR"){
 			logout();
 		}
 		
 		// get course categories
-		get_course_categories(user_token);
+		get_course_categories(user_token,'#category_list');
 		
 		form.validate({
 			ignore: [],
@@ -130,7 +122,8 @@
 			$(this).append('<i class="icon-spin3 animate-spin loader"></i>').attr('disabled','disabled');
 			//console.log($('#email').val());
             if (validate()) {
-                var url, course_title, short_name,course_description, data, start_date, expected_duration, expected_learning, suggested_readings, recommended_background, faq;
+                var url, course_title, short_name,course_description, data, start_date, expected_duration, expected_learning, suggested_readings,
+				recommended_background, faq, cover;
 				
                 url = config.api_url + '/courses';
                 course_title = $('#course_title').val();
@@ -143,6 +136,7 @@
 				suggested_readings = CKEDITOR.instances.suggested_readings.getData();
 				recommended_background = CKEDITOR.instances.recommended_background.getData();
 				faq = CKEDITOR.instances.faq.getData();
+				cover = $('#course_cover').data('cover');
 				
                 data = {
                     "name": course_title,
@@ -174,6 +168,9 @@
 				}
 				if(faq){
 					data.faq = faq;
+				}
+				if(cover){
+					data.photo = cover;
 				}
                 console.log(data);
                 //console.log(JSON.stringify(data))                
@@ -227,35 +224,6 @@
 				$('#submit_btn').removeAttr('disabled');
             }
         });
-
-	function get_course_categories(user_token){
-		$.ajax({
-			url: config.api_url + "/categories?type=course",
-			method: "GET",
-			headers: {
-				"x-client-id": "0000",
-				"Content-Type": "application/json",
-				"cache-control": "no-cache",
-				"x-access-token" : user_token
-			},
-			crossDomain:false,
-			async:true
-		})
-		.done(function (data, textStatus, jqXHR) {			
-			if(data.total>0){
-				//$('#category_list').empty();				
-				html = '';
-				for(i=0;i < data.data.length;i++){
-					html +='<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>';
-				}
-				$('#category_list').append(html);
-			}
-		})
-		.fail(function (jqXHR, textStatus, errorThrown) {
-			console.log('request failed !');
-		});
-		//return  result;
-	}
  
  });
 })(jQuery);

@@ -131,3 +131,32 @@ function get_courses(){
 	});
 	return  result;
 }
+
+function get_course_categories(user_token, element){
+	$.ajax({
+		url: config.api_url + "/categories?type=course",
+		method: "GET",
+		headers: {
+			"x-client-id": "0000",
+			"Content-Type": "application/json",
+			"cache-control": "no-cache",
+			"x-access-token" : user_token
+		},
+		crossDomain:false,
+		async:true
+	})
+	.done(function (data, textStatus, jqXHR) {			
+		if(data.total>0){
+			//$('#category_list').empty();				
+			html = '';
+			for(i=0;i < data.data.length;i++){
+				html +='<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>';
+			}
+			$(element).append(html);
+		}
+	})
+	.fail(function (jqXHR, textStatus, errorThrown) {
+		console.log('request failed !');
+	});
+	//return  result;
+}

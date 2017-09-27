@@ -77,7 +77,13 @@
 						html += '<div class="col-lg-3 col-md-6 col-sm-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
-						html += '<a href="'+base_url+'/course/'+data.data[i].shortname+'"><img src="'+base_url+'/public/img/poetry.jpg" alt="" /></a>';
+						html += '<a href="'+base_url+'/course/'+data.data[i].shortname+'">';
+						if(data.data[i].photo){
+							html += "<img src='"+base_url + "/public/"+data.data[i].photo+"' alt='' height='175' />";
+						}else{
+							html += "<img src='"+base_url + "/public/img/poetry.jpg' alt='' />";
+						}
+						html += "</a>";
 						html += '<div class="cat_row">';
 						if(data.data[i].course_category){
 							html += '<a href="#">'+data.data[i].course_category.name+'</a>';

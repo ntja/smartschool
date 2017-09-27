@@ -160,7 +160,7 @@
 			<div class="col-md-3 col-sm-6">
 				<div class="form-group">
 					<label class="control-label">{{__('Course Cover')}}</label>
-					<div class="dropzone dz-clickable" id="dropzone">
+					<div class="dropzone dz-clickable" id="course_cover">
 						<div class="dz-default dz-message">
 							<span>{{__('Drop file here to upload')}}</span>
 						</div>
@@ -226,7 +226,7 @@
 	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
 	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
-	<script src="{{asset('jjs/plugins/dropzone/dropzone.min.js')}}"></script>
+	<script src="{{asset('js/plugins/dropzone/dropzone.min.js')}}"></script>
 	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>	
 	<script>
 	$(function() {
@@ -251,14 +251,14 @@
 	<script> 
 		CKEDITOR.replace( 'course_description',
 			{
-				height : 400, 
+				height : 250, 
 				width : '100%',		
 				toolbarGroups: [
 					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
-					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
-					'/',																// Line break - next group will be placed in new line.
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.					
 					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
 					{ name: 'links' },
+					'/',																// Line break - next group will be placed in new line.
 					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
 					{ name: 'styles' },
 					{ name: 'colors' }
@@ -267,40 +267,34 @@
 		);
 		CKEDITOR.replace( 'expected_learning', 
 			{
-				height : 200,
+				height : 100,
 				width : '100%',		
 				toolbarGroups: [
 					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
-					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
-					'/',																// Line break - next group will be placed in new line.
-					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-					{ name: 'links' }
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.					
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },					
 				]
 			} 
 		);
 		CKEDITOR.replace( 'faq', 
 		{
-			height : 100, 
+			height : 70, 
 			width : '100%',		
 				toolbarGroups: [
 					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
-					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
-					'/',																// Line break - next group will be placed in new line.
-					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-					{ name: 'links' }
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.					
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },					
 				]
 			} 
 		);
 		CKEDITOR.replace( 'suggested_readings', 
 			{
-				height : 100, 
+				height : 70, 
 				width : '100%',		
 				toolbarGroups: [
 					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
-					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
-					'/',																// Line break - next group will be placed in new line.
-					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-					{ name: 'links' }
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.					
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },					
 				]
 			} 
 		);
@@ -310,14 +304,40 @@
 				width : '100%',		
 				toolbarGroups: [
 					{ name: 'document',	   groups: [ 'mode', 'document' ] },			// Displays document group with its two subgroups.
-					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.
-					'/',																// Line break - next group will be placed in new line.
-					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-					{ name: 'links' }
+					{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },			// Group's name will be used to create voice label.					
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },					
 				]
 			} 
 		);
-		//CKEDITOR.replace( 'edit-course_description', {height : 400, width : '100%'} );
+		
+		/*--------- create remove function in dropzone --------*/
+         Dropzone.autoDiscover = false;
+         var acceptedFileTypes = "image/*"; //dropzone requires this param be a comma separated list
+         var fileList = new Array;
+         var i = 0;
+         $("#course_cover").dropzone({
+           addRemoveLinks: true,
+		   paramName: "image",
+           maxFiles: 1, //change limit as per your requirements
+		   //acceptedFiles: '.jpeg,.jpg,.png',
+           dictMaxFilesExceeded: "Maximum upload limit reached",
+		   dictDefaultMessage: "Add cover",
+		   //previewsContainer: ".photo-thumb",
+		   createImageThumbnails: true,
+           acceptedFiles: acceptedFileTypes,
+		   url: $('body').attr('data-base-url') + '/api/fileupload',
+           dictInvalidFileType: "upload only JPG/PNG",
+           init: function () {
+               // Hack: Add the dropzone class to the element
+               //$(this.element).addClass("dropzone");
+			   this.on("success", function(file) {
+                    var response = JSON.parse(file.xhr.responseText);
+                    //$('.photo-thumb').html('<img src="' + $('body').attr('data-base-url') + '/public/'+ response["file_name"] + '" width="180px"/>');
+                    $('#course_cover').data('cover', response["file_name"]);
+					//$('#company_logo').addClass("hide");
+                });
+           }
+         });
 	</script>	
 	
    <script src="{{asset('js/custom/user/instructor/courses/add-course.js')}}"></script>   
