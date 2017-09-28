@@ -110,7 +110,7 @@
 						html += '<div class="col-lg-4 col-md-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
-						html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe" data-book="'+data.data[i].filepath+'" data-book-title="'+data.data[i].name+'"><img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
+						html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe"  data-type="iframe"><img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
 						html += '<div class="cat_row">';						
 						html += '<a href="#">'+data.data[i].category_name+'</a>';						
 						html += '<span class="pull-right"><i class=" icon-money"></i>'+settings.i18n.translate('home.3')+'</span></div>';
@@ -127,7 +127,7 @@
 						html += '</div>';
 						html += '</div>';
 						html += '<div class="separator clearfix">';
-						html += '<p class="btn-add"><a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box  fancybox.iframe" data-book="'+data.data[i].filepath+'" data-book-title="'+data.data[i].name+'"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
+						html += '<p class="btn-add"><a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe" data-type="iframe"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						html += '<p class="btn-details"> <a href="#"><i class=" icon-download"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						html += '</div>';
@@ -159,7 +159,8 @@
 				}
 				$('html, body').animate({scrollTop: 0}, "smooth");
 				$('#book_list').html(html);
-				
+				// Adjust iframe height according to the contents
+				//parent.jQuery.fancybox.getInstance().update();
 				$(".fancy-box").fancybox({
 					//maxWidth	: 800,
 					//maxHeight	: 600,
@@ -173,8 +174,14 @@
 					closeEffect : 'elastic',
 					autoSize    : false,
 					type        : 'iframe',
+					toolbar     : true,
+					smallBtn    : false,
 					iframe: {
-						preload: true // fixes issue with iframe and IE
+						preload: true, // fixes issue with iframe and IE,
+						css : {
+							width : '90%',
+							height : '90%',
+						}
 					},
 					'onComplete' : function() {
 						$('#fancybox-frame').load(function() { // wait for frame to load and then gets it's height
