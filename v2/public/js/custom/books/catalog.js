@@ -167,11 +167,20 @@
 					//width		: '70%',
 					//height		: '100%',
 					autoSize	: false,
-					scrolling : 'auto',
-					preload   : true,
+					scrolling   : 'auto',					
 					closeClick	: false,
-					openEffect	: 'elastic',
-					closeEffect	: 'none'
+					openEffect  : 'elastic',
+					closeEffect : 'elastic',
+					autoSize    : false,
+					type        : 'iframe',
+					iframe: {
+						preload: true // fixes issue with iframe and IE
+					},
+					'onComplete' : function() {
+						$('#fancybox-frame').load(function() { // wait for frame to load and then gets it's height
+						$('#fancybox-content').height($(this).contents().find('body').height()+130);
+					});
+				  }
 				});		
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
