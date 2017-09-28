@@ -6,6 +6,7 @@
 @section('header-styles')
    <!-- CUSTOM STYLES -->
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<link href="{{asset('css/jquery.fancybox.min.css')}}" rel="stylesheet">
 	<style>
 		.myIframe {
 			position: relative;
@@ -106,7 +107,9 @@
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
+	<script src="{{asset('js/custom/jquery.fancybox.min.js')}}"></script>
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
+	
    <script src="{{asset('js/custom/books/catalog.js')}}"></script>
 @stop
 

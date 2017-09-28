@@ -4,7 +4,12 @@
 
 (function($) {
     $(document).ready(function() {
-
+		
+		$.get( "http://data.oeconsortium.org/api/v1/courses/search/?q=informatique", function( data ) {
+		  $( ".result" ).html( data );
+		  console.info(data);
+		});
+		
         var courses = null, data = null,base_url = $('body').attr('data-base-url');      
         
 		//Get courses list
@@ -24,7 +29,13 @@
 				html += "<div class='col-item'>";
 				//html += "<span class='ribbon_course'></span>";
 				html += "<div class='photo'>";
-				html += "<a href='"+base_url + "/course/"+data[i].shortname+"'><img src='"+base_url + "/public/img/poetry.jpg' alt='' /></a>";
+				html += "<a href='"+base_url + "/course/"+data[i].shortname+"'>";
+				if(data[i].photo){
+					html += "<img src='"+base_url + "/public/"+data[i].photo+"' alt='' height='200' />";
+				}else{
+					html += "<img src='"+base_url + "/public/img/poetry.jpg' alt='' />";
+				}
+				html += "</a>";
 				html += "<div class='cat_row'>";
 				if(data[i].course_category){
 					html += "<a href='#'>"+data[i].course_category.name+"</a>";

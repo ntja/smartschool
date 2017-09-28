@@ -18,7 +18,8 @@
 			if(user_role == 'INSTRUCTOR'){
 				$(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
 			}
-		}
+		}		
+		
 		var limit = 12;
 		query_params = qs();
 		if(query_params){
@@ -63,12 +64,13 @@
 			get_books(uri);
 		});
 		
+		/*
 		$('body').delegate('.read-book', 'click',function(){
 			var src = $(this).data('book');
 			$(".book-title").html($(this).data('book-title'));
-			$('.book-content').empty().addClass('myIframe').append('<iframe scrolling="yes" src="'+base_url+'/'+src+'" class="embed-responsive-item" allowfullscreen></iframe>');
+			$('.book-content').empty().addClass('myIframe').append('<object data="'+base_url+'/'+src+'" type="application/pdf" width="100%" height="100%"> <iframe scrolling="yes" src="'+base_url+'/'+src+'" class="embed-responsive-item">This browser does not support PDFs. Please download the PDF to view it: <a href="'+base_url+'/'+src+'">Download PDF</a></iframe></object>');
 		});
-		
+		*/
 		$('body').delegate('.category', 'click',function(){
 			var cat = $(this).data('category_id');
 			var uri = config.api_url + "/books?limit="+limit;
@@ -78,8 +80,8 @@
 		});
 		
 		// Get all course categories
-		get_book_categories();
-			
+		get_book_categories();				
+		
 		//get all books
 		function get_books(uri){		
 			var result = null;
@@ -108,7 +110,7 @@
 						html += '<div class="col-lg-4 col-md-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
-						html += '<a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+data.data[i].filepath+'" data-book-title="'+data.data[i].name+'"><img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
+						html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe" data-book="'+data.data[i].filepath+'" data-book-title="'+data.data[i].name+'"><img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
 						html += '<div class="cat_row">';						
 						html += '<a href="#">'+data.data[i].category_name+'</a>';						
 						html += '<span class="pull-right"><i class=" icon-money"></i>'+settings.i18n.translate('home.3')+'</span></div>';
@@ -125,7 +127,7 @@
 						html += '</div>';
 						html += '</div>';
 						html += '<div class="separator clearfix">';
-						html += '<p class="btn-add"> <a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+data.data[i].filepath+'" data-book-title="'+data.data[i].name+'"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
+						html += '<p class="btn-add"><a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box  fancybox.iframe" data-book="'+data.data[i].filepath+'" data-book-title="'+data.data[i].name+'"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						html += '<p class="btn-details"> <a href="#"><i class=" icon-download"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						html += '</div>';
@@ -157,6 +159,20 @@
 				}
 				$('html, body').animate({scrollTop: 0}, "smooth");
 				$('#book_list').html(html);
+				
+				$(".fancy-box").fancybox({
+					//maxWidth	: 800,
+					//maxHeight	: 600,
+					fitToView	: true,
+					//width		: '70%',
+					//height		: '100%',
+					autoSize	: false,
+					scrolling : 'auto',
+					preload   : true,
+					closeClick	: false,
+					openEffect	: 'elastic',
+					closeEffect	: 'none'
+				});		
 			})
 			.fail(function (jqXHR, textStatus, errorThrown) {
 				console.log('request failed !');
