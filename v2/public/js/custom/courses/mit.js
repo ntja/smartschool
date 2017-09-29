@@ -61,9 +61,23 @@
 		//click on a category
 		$('body').delegate('.category', 'click',function(){
 			var category = $(this).data('id');
+			$(this).parent().siblings().each(function( index ) {
+			  $( this ).find('a').removeAttr("id");
+			});
+			console.info($(this).siblings());
+			$(this).attr('id', 'active');
 			url = "http://data.oeconsortium.org/api/v1/categories/"+category+"/";
 			get_course(url);
 		});
+		
+		$('.latest_courses').on('click',function(){
+			$(this).parent().siblings().each(function( index ) {
+			  $( this ).find('a').removeAttr("id");
+			});
+			$(this).attr('id', 'active');
+			get_latest_course();
+		});
+		
 		
 		function get_categories(){
 			var url =  "http://data.oeconsortium.org/api/v1/categories/";
@@ -107,24 +121,33 @@
 		function get_course(url){
 			//url =  "http://data.oeconsortium.org/api/v1/categories/"+cat+"/";
 			//console.log(url);			
-			$.get(url, function( data ) {			  
-			  var course_list = data.results;
-			  $( "#course_list" ).empty();
-			  $('.pagination').empty();
-			  html = '<ul class="list_1">';
-			  for(i=0;i<course_list.length;i++){
-				html +=  '<li><a href="'+course_list[i].linkurl+'" target="blank">'+course_list[i].title +'</a></li>';
-			  }
-			  html += '</ul>';
-			  $( "#course_list" ).html(html);
-			  console.info(data);
-			  //console.log(data.next_page);
-			  if(data.previous){
+			$.get(url, function() {	
+			
+			}).done(function(data) {
+				var course_list = data.results;
+				$(".title").text(data.title);
+				  $( "#course_list" ).empty();
+				  $('.pagination').empty();
+				  html = '<ul class="list_1">';
+				  for(i=0;i<course_list.length;i++){
+					html +=  '<li><a href="'+course_list[i].linkurl+'" target="blank">'+course_list[i].title +'</a></li>';
+				  }
+				  html += '</ul>';
+				  $( "#course_list" ).html(html);
+				  console.info(data);
+				  //console.log(data.next_page);
+				  if(data.previous){
 					$('.pagination').append('<li><a href="javascript:void(0)" data-previous="'+data.previous+'" id="previous">&laquo; Previous</a></li>');
-				}
-				if(data.next){			
+				  }
+				  if(data.next){			
 					$('.pagination').append('<li><a href="javascript:void(0)" data-next="'+data.next+'" id="next"> Next &raquo; </a></li>');
-				}			
+				  }			
+			})
+			  .fail(function() {
+				//alert( "error" );
+			})
+			  .always(function() {
+				//alert( "finished" );
 			});			
 		}
 	});

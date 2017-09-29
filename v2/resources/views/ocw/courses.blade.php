@@ -50,21 +50,21 @@
 		  <li class="active">{{__('OCW Courses Catalog')}}</li>
 		</ol>
         
-        <div class="row">
-        
-        <aside class="col-lg-3 col-md-4 col-sm-3">
-            <div class="box_style_">
-            	<h4>{{__('Subjects')}}</h4>
-				<ul class="submenu-col subject">										
-					<li><a href="#" id="active">{{__('Latest Courses')}}</a></li>
-				</ul>
-            </div>
-        </aside>
-        
-        <div class="col-lg-7 col-md-7 col-sm-9 col-lg-offset-1 col-md-offset-1">
-        	<div class="row" id="course_list">                                               
-       		</div><!-- End row -->
-        </div><!-- End col-lg-9-->                        
+        <div class="row">        
+			<aside class="col-lg-3 col-md-4 col-sm-3">
+				<div class="box_style_">
+					<h4>{{__('Subjects')}}</h4>
+					<ul class="submenu-col subject">										
+						<li><a href="#" class="latest_courses" id="active">{{__('Latest Courses')}}</a></li>
+					</ul>
+				</div>
+			</aside>
+			
+			<div class="col-lg-7 col-md-7 col-sm-9 col-lg-offset-1 col-md-offset-1">
+				<h3 class="title">Latest Courses</h3>
+				<div class="row" id="course_list">                                               
+				</div><!-- End row -->
+			</div><!-- End col-lg-9-->                        
         </div><!-- End row -->
         
         <div class="row">
