@@ -13,34 +13,19 @@
 <div class="notification-container"></div>
  @include('partials/header')
   	
-<section id="sub-header">
-  	<div class="container">
-    
-    	<div class="row">
-        	<div class="col-md-12 text-center" id="course_title">
-                <p class="lead"></p>
+ <section id="sub-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <h2>{{__('OCW Courses Catalog')}}</h2>
+                <p class="lead">
+                   {{__('Explore new interests and career opportunities with courses in Mathematics, Computer Science, Chemistry, Physics, Biology and more...')}}
+                </p>
             </div>
         </div><!-- End row -->
-        
-        <div class="row course_desc" id="sub-header-features-2">
-        	<div class="col-md-12 summary">
-            	<!--<h2>{{__('A brief summary')}}</h2>-->
-            </div> 
-            <div class="col-md-12">
-            	<!--
-                <h2>{{__('What you will learn')}}</h2>
-                <ul class="list_ok">
-                    <li><strong>Certified</strong> and expert teachers</li>
-                    <li><strong>Extensive</strong> doumentation provided</li>
-                    <li><strong>Money back</strong> garantee</li>
-                    <li><strong>Became an exeprt</strong> in only 6 days</li>
-                </ul>
-                -->
-           </div>
-        </div><!-- End row -->		
     </div><!-- End container -->
     <div class="divider_top"></div>
-  </section>
+    </section><!-- End sub-header -->
   
   <section id="main_content">
     	<div class="container-fluid">
