@@ -61,11 +61,11 @@ Route::group(['middleware' => 'web'], function () {
 		return view('instructor.courses.add');
 	});
 	
-	Route::get('/courses/mit', function () {
-		return view('courses.mit');
+	Route::get('/ocw/courses', function () {
+		return view('ocw.courses');
 	});
 	
-	Route::get('/course/{ID}', 'Views\Courses\OverviewController@get')->where('ID', '[a-zA-Z0-9\-]+')->where('ID', '<>', 'mit');
+	Route::get('/course/{ID}', 'Views\Courses\OverviewController@get')->where('ID', '[a-zA-Z0-9\-]+');
         
     Route::get('/course/{ID}/{lessID}', 'Views\Courses\LessonController@get')->where('ID', '[a-zA-Z0-9\-]+')->where('lessID', '[a-zA-Z0-9\-]+');
 	
