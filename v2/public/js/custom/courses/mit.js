@@ -61,7 +61,8 @@
 		//click on a category
 		$('body').delegate('.category', 'click',function(){
 			var category = $(this).data('id');
-			get_course(category);
+			url = "http://data.oeconsortium.org/api/v1/categories/"+category+"/";
+			get_course(url);
 		});
 		
 		function get_categories(){
@@ -103,8 +104,8 @@
 			});			
 		}
 		
-		function get_course(cat){						
-			url =  "http://data.oeconsortium.org/api/v1/categories/"+cat+"/";			
+		function get_course(url){
+			//url =  "http://data.oeconsortium.org/api/v1/categories/"+cat+"/";
 			//console.log(url);			
 			$.get(url, function( data ) {			  
 			  var course_list = data.results;
@@ -119,10 +120,10 @@
 			  console.info(data);
 			  //console.log(data.next_page);
 			  if(data.previous){
-					$('.pagination').append('<li><a href="javascript:void(0)" data-previous="'+data.previous_page+'" id="previous">&laquo; Previous</a></li>');
+					$('.pagination').append('<li><a href="javascript:void(0)" data-previous="'+data.previous+'" id="previous">&laquo; Previous</a></li>');
 				}
 				if(data.next){			
-					$('.pagination').append('<li><a href="javascript:void(0)" data-next="'+data.next_page+'" id="next"> Next &raquo; </a></li>');
+					$('.pagination').append('<li><a href="javascript:void(0)" data-next="'+data.next+'" id="next"> Next &raquo; </a></li>');
 				}			
 			});			
 		}
