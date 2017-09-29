@@ -47,13 +47,14 @@
 		}
 		//click on next page link
 		$('body').delegate('#next', 'click',function(){
-			var page = $(this).data('next');
-			console.info(page);
+			$('html, body').animate({scrollTop: 0}, "smooth");
+			var page = $(this).data('next');			
 			get_course(page);
 		});
 		
 		//clcik on previous page link
 		$('body').delegate('#previous', 'click',function(){
+			$('html, body').animate({scrollTop: 0}, "smooth");
 			var page = $(this).data('previous');
 			get_course(page);
 		});		
@@ -71,6 +72,7 @@
 		});
 		
 		$('.latest_courses').on('click',function(){
+			$(".title").text("Latest Courses");
 			$(this).parent().siblings().each(function( index ) {
 			  $( this ).find('a').removeAttr("id");
 			});

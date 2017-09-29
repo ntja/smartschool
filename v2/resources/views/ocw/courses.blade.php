@@ -61,7 +61,7 @@
 			</aside>
 			
 			<div class="col-lg-7 col-md-7 col-sm-9 col-lg-offset-1 col-md-offset-1">
-				<h3 class="title">Latest Courses</h3>
+				<h3 class="title  text-success">Latest Courses</h3>
 				<div class="row" id="course_list">                                               
 				</div><!-- End row -->
 			</div><!-- End col-lg-9-->                        
