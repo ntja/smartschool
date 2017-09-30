@@ -91,7 +91,7 @@
 					//$('#category_list').empty();				
 					html = '';
 					for(i=0;i < data.length;i++){
-						html +='<li><a href="#" class="category" data-id="'+data[i].category_id+'">'+data[i].name+' ('+data[i].course_count+')</a></li>';
+						html +='<li><a href="javascript:void(0)" class="category" data-id="'+data[i].category_id+'">'+data[i].name+' ('+data[i].course_count+')</a></li>';
 					}
 					$('.subject').append(html);
 				}
@@ -106,13 +106,15 @@
 		
 		function get_latest_course(){
 			url =  "http://data.oeconsortium.org/api/v1/courses/latest/";								
-			$.get(url, function( data ) {			  
+			$.get(url).done(function(data) {
 			  var course_list = data;
 			  $( "#course_list" ).empty();
 			  $('.pagination').empty();
 			  html = '<ul class="list_1">';
 			  for(i=0;i<data.length;i++){
-				html +=  '<li><a href="'+data[i].linkurl+'" target="blank">'+data[i].title +'</a></li>';
+				if(valid_URL(data[i].linkurl)){
+					html +=  '<li><a href="'+data[i].linkurl+'" target="_blank">'+data[i].title +'</a></li>';
+				}
 			  }
 			  html += '</ul>';
 			  $( "#course_list" ).html(html);
@@ -123,27 +125,27 @@
 		function get_course(url){
 			//url =  "http://data.oeconsortium.org/api/v1/categories/"+cat+"/";
 			//console.log(url);			
-			$.get(url, function() {	
-			
-			}).done(function(data) {
+			$.get(url).done(function(data) {
 				var course_list = data.results;
 				$(".title").text(data.title);
-				  $( "#course_list" ).empty();
-				  $('.pagination').empty();
-				  html = '<ul class="list_1">';
-				  for(i=0;i<course_list.length;i++){
-					html +=  '<li><a href="'+course_list[i].linkurl+'" target="blank">'+course_list[i].title +'</a></li>';
-				  }
-				  html += '</ul>';
-				  $( "#course_list" ).html(html);
-				  console.info(data);
-				  //console.log(data.next_page);
-				  if(data.previous){
+				$( "#course_list" ).empty();
+				$('.pagination').empty();
+				html = '<ul class="list_1">';
+				for(i=0;i<course_list.length;i++){
+					if(valid_URL(course_list[i].linkurl)){
+						html +=  '<li><a href="'+course_list[i].linkurl+'" target="_blank">'+course_list[i].title +'</a></li>';
+					}					
+				}
+				html += '</ul>';
+				$( "#course_list" ).html(html);
+				console.info(data);
+				//console.log(data.next_page);
+				if(data.previous){
 					$('.pagination').append('<li><a href="javascript:void(0)" data-previous="'+data.previous+'" id="previous">&laquo; Previous</a></li>');
-				  }
-				  if(data.next){			
+				}
+				if(data.next){			
 					$('.pagination').append('<li><a href="javascript:void(0)" data-next="'+data.next+'" id="next"> Next &raquo; </a></li>');
-				  }			
+				}			
 			})
 			  .fail(function() {
 				//alert( "error" );
@@ -151,6 +153,15 @@
 			  .always(function() {
 				//alert( "finished" );
 			});			
+		}
+		function valid_URL(str) {
+		   var regex = /(?:https?):\/\/(\w+:{:?}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+		  if(!regex .test(str)) {
+			//alert("Please enter valid URL.");
+			return false;
+		  } else {
+			return true;
+		  }
 		}
 	});
 })(jQuery);

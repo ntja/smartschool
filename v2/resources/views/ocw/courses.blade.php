@@ -37,7 +37,7 @@
         
         <div class="row">        
 			<aside class="col-lg-3 col-md-4 col-sm-3">
-				<div class="box_style_">
+				<div class="box_style_2">
 					<h4>{{__('Subjects')}}</h4>
 					<ul class="submenu-col subject">										
 						<li><a href="#" class="latest_courses" id="active">{{__('Latest Courses')}}</a></li>
