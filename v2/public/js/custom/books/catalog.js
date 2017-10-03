@@ -110,7 +110,8 @@
 						html += '<div class="col-lg-4 col-md-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
-						html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed"  data-type="iframe"><img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
+						html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed"  data-type="iframe">';
+						html += '<img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
 						html += '<div class="cat_row">';						
 						html += '<a href="#">'+data.data[i].category_name+'</a>';						
 						html += '<span class="pull-right"><i class=" icon-money"></i>'+settings.i18n.translate('home.3')+'</span></div>';
@@ -158,7 +159,8 @@
 					}
 				}
 				$('html, body').animate({scrollTop: 0}, "smooth");
-				$('#book_list').html(html);				
+				$('#book_list').html(html);
+				
 				// Adjust iframe height according to the contents
 				//parent.jQuery.fancybox.getInstance().update();
 				$(".fancy-box").fancybox({

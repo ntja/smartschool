@@ -6,6 +6,7 @@
 @section('header-styles')
    <!-- CUSTOM STYLES -->
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<link href="{{asset('js/plugins/mediaelement/build/mediaelementplayer.min.css')}}" rel="stylesheet">
 @stop
 @section('content')
 
@@ -37,7 +38,7 @@
         <div class="row">
         
         <aside class="col-lg-2 col-md-3 col-sm-2">
-            <div class="box_style_">
+            <div class="box_style_2">
             	<h4>{{__('Subjects')}}</h4>
 				<ul class="submenu-col subject">										
 					<li><a href="#" id="active">{{__('All Courses')}}</a></li>
@@ -67,6 +68,7 @@
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
+	<script src="{{asset('js/plugins/mediaelement/build/mediaelement-and-player.min.js')}}"></script>
    <script src="{{asset('js/custom/courses/catalog.js')}}"></script>
 @stop
 

@@ -34,8 +34,7 @@
 		$('.breadcrumb').append('<li class="active">'+last_segment+'</li>');
 		
 		// Get lesson detail
-		get_lesson_details(last_segment);
-		
+		get_lesson_details(last_segment);		
 		
 		function get_lesson_details(lesson_id){		
 			var result = null;
@@ -48,19 +47,20 @@
 					"cache-control": "no-cache"
 				}
 			})
-			.done(function (data, textStatus, jqXHR) {				
+			.done(function (data, textStatus, jqXHR) {
 				//console.log(data.valid == false);
 				if(data){
 					$('.lesson_center_title').html(data.title);
 					$('.lesson_content').html(data.content);
 					if(data.lesson_material.length>0){
-						if(data.lesson_material[0].extension == "mp4"){
-								$('.lesson_video').append('<video width="100%" height="100%" controls="controls" class="mejs__player" data-mejsoptions=\'{"alwaysShowControls": "true"}\'><source src="'+base_url+'/'+data.lesson_material[0].link+'" /></video>');
+						if(data.lesson_material[0].extension !== "pdf"){
+							var html = '<video id="player" controls="controls" class="mejs__player" data-mejsoptions=\'{"alwaysShowControls": "true"}\'><source src="'+base_url+'/'+data.lesson_material[0].link+'" /></video>';
+								$('.lesson_video').append(html);
+								mediaelement();
 						}else{
 							$('.lesson_video').addClass('myIframe').append('<iframe scrolling="yes" class="mejs-player" src="'+base_url+'/'+data.lesson_material[0].link+'?rel=0" frameborder="0" allowfullscreen></iframe>');
 						}
-						//$('video').attr('autoplay',false);						
-
+						//$('video').attr('autoplay',false);
 					}
 				}
 			})
@@ -70,6 +70,53 @@
 					window.location.assign(base_url+'/courses/catalog');
 				}
 			});
-		}			
+		}
+
+		function mediaelement(){
+			$('#player').mediaelementplayer({
+				// if the <video width> is not specified, this is the default
+				defaultVideoWidth: '99%',
+				// if the <video height> is not specified, this is the default
+				defaultVideoHeight: 450,
+				// if set, overrides <video width>
+				videoWidth: -1,
+				// if set, overrides <video height>
+				videoHeight: -1,
+				// width of audio player
+				audioWidth: 400,
+				// height of audio player
+				audioHeight: 30,
+				// initial volume when the player starts
+				startVolume: 0.8,
+				// useful for <audio> player loops
+				loop: false,
+				// enables Flash and Silverlight to resize to content size
+				enableAutosize: true,
+				// the order of controls you want on the control bar (and other plugins below)
+				features: ['playpause','progress','current','duration','tracks','volume','fullscreen','backlight','googleanalytics'],
+				// automatically create these translations on load
+				translations:['es','ar','fr'],
+				// Hide controls when playing and mouse is not over the video
+				alwaysShowControls: false,
+				// force iPad's native controls
+				iPadUseNativeControls: false,
+				// force iPhone's native controls
+				iPhoneUseNativeControls: false, 
+				// force Android's native controls
+				AndroidUseNativeControls: false,
+				// forces the hour marker (##:00:00)
+				alwaysShowHours: false,
+				// show framecount in timecode (##:00:00:00)
+				showTimecodeFrameCount: false,
+				// used when showTimecodeFrameCount is set to true
+				framesPerSecond: 25,
+				// turns keyboard support on and off for this instance
+				enableKeyboard: true,
+				// when this player starts, it will pause other players
+				pauseOtherPlayers: true,
+				// array of keyboard commands
+				keyActions: []					 
+			});
+		}
 	});
 })(jQuery);
