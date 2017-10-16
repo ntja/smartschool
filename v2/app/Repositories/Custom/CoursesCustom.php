@@ -5,9 +5,9 @@ namespace App\Repositories\Custom;
 use App\Repositories\Util\LogRepository;
 use Exception;
 use App\Models\Course;
-//use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\SchoolsCustom;
 use App\Repositories\Custom\Courses\CategoriesCustom;
+use Illuminate\Support\Str;
 
 class CoursesCustom {
     
@@ -133,6 +133,7 @@ class CoursesCustom {
                 }else{
                     throw new Exception("Expected 'name' in array as parameter , " . (is_object($param['name']) ? get_class($param['name']) : gettype($param['name'])) . " found.");
                 }
+				/*
                 if (array_key_exists('shortname', $param)) {
                     if (is_null($param['shortname'])) {
                         $result = array("code" => 4000, "description" => "shortname is required ");
@@ -152,6 +153,7 @@ class CoursesCustom {
                 }else{
                     throw new Exception("Expected 'shortname' in array as parameter , " . (is_object($param['shortname']) ? get_class($param['shortname']) : gettype($param['shortname'])) . " found.");
                 }
+				*/
                 if (array_key_exists('language', $param)) {
                     if (is_null($param['language'])) {
                         $result = array("code" => 4000, "description" => "language is required ");
@@ -509,6 +511,7 @@ class CoursesCustom {
 				http_response_code(400);
 				die();
 			}
+			$params["short_name"] = Str::slug($params['short_name'].'-'.Str::random(3));
             $params['date_created'] = date('Y-m-d H:i:s');            
             
 			// save course
@@ -593,6 +596,7 @@ class CoursesCustom {
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
+			die();
         }
     }
 
@@ -620,6 +624,7 @@ class CoursesCustom {
             }           
         }catch(Exception $ex){
             LogRepository::printLog('error', $ex->getMessage());
+			die();
         }
     }    
 }

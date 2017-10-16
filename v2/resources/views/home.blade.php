@@ -101,7 +101,8 @@
                     <i class="fa fa-user"></i>
                     <a href="#"><h3>{{__('Expert teachers')}}</h3></a>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+                        Smartskul.com allows teachers to build online courses on topics of their choosing by uploading video, PowerPoint presentations, PDFs, audio, zip files and live classes. 
+						Smartskul.com allows teachers to create classes, assign practice exercises, videos and articles to students, and track student progress
                     </p>
                 </div>
             </div>
@@ -110,16 +111,17 @@
                     <i class="fa fa-comments"></i>
                    <a href="#"> <h3>{{__('Questions & Answers')}}</h3></a>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+                        Smartskul.com, through Questions & Answers, connects learners and teachers so that learners can get the help they need when they need it. 
+						Users can publicly and anonymously ask questions, answer questions, and post notes. Each question can be answered by any user and other users are allowed to contribute to each answer
                     </p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="feature">
                     <i class="fa fa-book"></i>
-                    <a href="#"><h3>{{__('Thousands of E-Books')}}</h3></a>
+                    <a href="#"><h3>{{__('Thousands of Free E-Books')}}</h3></a>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+                        Smartskul.com offers free e-books in various subjects such as: mathematics, physical sciences, social sciences, computer science, engineering, accounting, finance, economics, and more. 
                     </p>
                 </div>
             </div>
@@ -128,7 +130,8 @@
                     <i class="fa fa-graduation-cap"></i>
                     <a href="#"><h3>{{__('Unlimited Free Courses')}}</h3></a>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+                        For Millions of learners from all over the world, Smartskul.com offers courses taught in world top universities, in PDF and/or video formats. 
+						Some of the courses include lectures, assignments & practice exercises with corrections, and exams with corrections that allow learners to study at their own pace, alone in the comfort of their room or in a group in the comfort of a classroom.
                     </p>
                 </div>
             </div>
@@ -137,7 +140,8 @@
                     <i class="fa fa-laptop "></i>
                     <a href="#"><h3>{{__('Online Tutoring')}}</h3></a>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+                        Millions of students from all over the world who either couldn’t turn to their parents for homework help or couldn't afford a private tutor, now have, through Smartskul.com’ videos, e-books, peers, and expert teachers, 
+						the help they need for their homework and also the opportunity to learn anything they want to learn at their own pace.
                     </p>
                 </div>
             </div>
@@ -146,7 +150,8 @@
                     <i class="fa fa-briefcase"></i>
                     <a href="#"><h3>{{__('Professional Training')}}</h3></a>
                     <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+                        As a means of improving job-related skills, Smartskul.com offers resources for a personalized learning and training for all ages such as videos lectures, PDFs lectures, and e-books, in areas such as: business and entrepreneurship, language, design, management, programming, information technology, digital marketing, and hand on training in MS office suite (Word, Excel, Access, and more). 
+						Smartskul.com also allows instructors and corporate trainers to create coursework for employees.
                     </p>
                 </div>
             </div>

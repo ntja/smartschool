@@ -29,7 +29,7 @@ class CoursesController extends Controller {
             $account = new AccountsCustom($account_token_id);
             $ressource_course = new ResourceCourse();
             if (Gate::forUser($account)->denies('post', $ressource_course)) {
-                $result = array("code" => 403, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 403, "description" => "You do not have permissions for that request.");
                 return response()->json($result);
             }
             $course_info = file_get_contents('php://input');
@@ -41,7 +41,7 @@ class CoursesController extends Controller {
 
             //retrieve user inputs
             $name = array_key_exists("name", $data) ? $data["name"] : null;
-            $shortname = array_key_exists("shortname", $data) ? $data["shortname"] : null;
+            //$shortname = array_key_exists("shortname", $data) ? $data["shortname"] : null;
             $language = array_key_exists("language", $data) ? $data["language"] : null;
             $largeicon = array_key_exists("largeicon", $data) ? $data["largeicon"] : null;			
 			$previewlink = array_key_exists("previewlink", $data) ? $data["previewlink"] : null;
@@ -71,7 +71,7 @@ class CoursesController extends Controller {
 
             $informations = array(
                 'name' => $name,
-                'shortname' => $shortname,
+                //'shortname' => $shortname,
                 'language' => $language,
 				'photo' => $photo,
                 'largeicon' => $largeicon, 
@@ -118,7 +118,7 @@ class CoursesController extends Controller {
             }
             
             if(!$data['limit']){
-                $limit = 16;
+                $limit = 12;
             }else{
                 $limit = $data['limit'];
             }         

@@ -63,10 +63,12 @@ class LessonCustom {
 				}else{
 					$row = $select->where('course_lessons.slug_title', 'LIKE', $id)->select('course_lessons.*')->first();
 				}
-				//var_dump($row);die();
-                if($row){
+				/*				
+				*/
+				//var_dump($row->course_section->course);die();
+                if($row){					
 					LogRepository::printLog('info', "The information of lesson #". $id ." has been retrieved."); 
-					return $row;
+					return $this->prepareResponseAfterGet($row);
 				}else{
 					http_response_code(400);
 					$result = array("code" => 4000, "description" => "lesson not found");
@@ -80,5 +82,13 @@ class LessonCustom {
         }catch(Exception $ex){
             LogRepository::printLog('error', $ex->getMessage());
         }
-    }    	
+    }
+	
+	private function prepareResponseAfterGet($row){
+		$prev_course = $this->_lessonCustom->model()->where('course_lessons.section', '=', $row->section)->where('course_lessons.id', '=', $row->id-1)->select('course_lessons.*')->first(); //$this->getLesson($row->id-1);
+		$next_course = $this->_lessonCustom->model()->where('course_lessons.section', '=', $row->section)->where('course_lessons.id', '=', $row->id+1)->select('course_lessons.*')->first(); //$this->getLesson($row->id+1);
+		$row->prev_course = $prev_course;
+		$row->next_course = $next_course;
+		return $row;
+	}
 }

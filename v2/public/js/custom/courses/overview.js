@@ -13,10 +13,10 @@
         // if token exists and is valid
         if (user_token && valid_token == true) {
             if(user_role == 'LEARNER'){
-                    $(".connect-register").html("<a class='button_top' href='"+base_url+"/learner/dashboard'>Return to Dashboard</a>");
+                $(".connect-register").html("<a class='button_top' href='"+base_url+"/learner/dashboard'>Return to Dashboard</a>");
             }
             if(user_role == 'INSTRUCTOR'){
-                    $(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
+                $(".connect-register").html("<a class='button_top' href='"+base_url+"/instructor/dashboard'>Return to Dashboard</a>");
             }
         }
 		//Get course details
@@ -50,7 +50,9 @@
 			//$('.photo').attr('src', photo);
 		}
 		
+		$('.enroll').addClass("hide");
 		// click on enroll button
+		/*
 		$('.enroll').on('click', function(){
 			if(!valid_token){
 				window.location.assign(base_url + '/login?return_url='+base_url+'/course/'+course_id);
@@ -58,7 +60,7 @@
 			$('.enroll').append('<i class="icon-spin4 animate-spin loader"></i>').attr('disabled','disabled');
 			join_course(user_id, user_token,course_details.id);
 		});
-		
+		*/
 		$('body').delegate('.lesson_title', 'click',function(){
 			console.log($(this).data('lesson_id'));
 			window.localStorage.setItem('sm_lesson_id',$(this).data('lesson_id'))

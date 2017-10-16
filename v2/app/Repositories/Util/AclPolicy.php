@@ -41,6 +41,7 @@ class AclPolicy {
 	const RESOURCE_COURSE_SECTION_LESSON = "App\Repositories\Custom\Resource\Courses\Course\Sections\Lesson";
 	const RESOURCE_COURSE_LESSON_LESSON = "App\Repositories\Custom\Resource\Courses\Lessons\Lesson";
 	const RESOURCE_SEARCH = "App\Repositories\Custom\Resource\Search";
+	const RESOURCE_TAG = "App\Repositories\Custom\Resource\Tag";
 	
 	/*
      * Create a new policy instance.
@@ -190,7 +191,7 @@ class AclPolicy {
                     return false;
                 }
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_QUESTION)) {
-                $role = ["GUEST","LEARNER", "INSTRUCTOR"];
+                $role = ["LEARNER", "INSTRUCTOR"];
                 if (in_array($user->getRole(), $role)) {                    
                     return true;
                 } else {
@@ -228,6 +229,13 @@ class AclPolicy {
                     return false;
                 }
 				
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_TAG)) {
+                $role = ["ADMINISTRATOR"];
+                if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
             } 
 		}
 	}

@@ -23,6 +23,10 @@
 			//get_lesson_details($(this).data('lesson_id'));
 			window.localStorage.setItem('sm_lesson_id',$(this).data('lesson_id'))
 			window.location.assign($(this).data('href'));
+		});		
+		
+		$('.next').on('click',function(){			
+			console.info($("#main_content").data('course_id'));
 		});
 		/* Get Current URL */
         var uri = $.url();
@@ -52,10 +56,29 @@
 				if(data){
 					$('.lesson_center_title').html(data.title);
 					$('.lesson_content').html(data.content);
+					
+					//if next lesson exists for this section
+					if(data.next_course){
+						$('.next').removeClass("hide");
+						$('.next').on('click',function(){
+							course = $("#main_content").data('course_id');
+							console.info(course);							
+							window.location.assign(base_url+'/course/'+course+'/'+data.next_course.slug_title);
+						});
+					}
+					// if previous lesson exists for this section
+					if(data.prev_course){
+						$('.prev').removeClass("hide");
+						$('.prev').on('click',function(){
+							course = $("#main_content").data('course_id');							
+							window.location.assign(base_url+'/course/'+course+'/'+data.prev_course.slug_title);
+						});						
+					}
 					if(data.lesson_material.length>0){
 						if(data.lesson_material[0].extension !== "pdf"){
 							var html = '<video id="player" controls="controls" class="mejs__player" data-mejsoptions=\'{"alwaysShowControls": "true"}\'><source src="'+base_url+'/'+data.lesson_material[0].link+'" /></video>';
 								$('.lesson_video').append(html);
+								//call video lecturer
 								mediaelement();
 						}else{
 							$('.lesson_video').addClass('myIframe').append('<iframe scrolling="yes" class="mejs-player" src="'+base_url+'/'+data.lesson_material[0].link+'?rel=0" frameborder="0" allowfullscreen></iframe>');

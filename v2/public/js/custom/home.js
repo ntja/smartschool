@@ -4,12 +4,12 @@
 
 (function($) {
     $(document).ready(function() {
-		
+		/*
 		$.get( "http://data.oeconsortium.org/api/v1/courses/search/?q=informatique", function( data ) {
 		  $( ".result" ).html( data );
 		  console.info(data);
 		});
-		
+		*/
         var courses = null, data = null,base_url = $('body').attr('data-base-url');      
         
 		//Get courses list
@@ -45,17 +45,17 @@
 				html += "<div class='info'>";
 				html += "<div class='row'>";
 				html += "<div class='course_info col-md-12 col-sm-12'>";
-				html += "<h5><strong>"+data[i].name+"</strong></h5>";
+				html += "<h5><strong><a href='"+base_url + "/course/"+data[i].shortname+"'>"+data[i].name+"</a></strong></h5>";
 				//html += "<p> "+data[i].shortdescription.substr(0,100)+"</p>";
 				html += "<div class='rating'>";
 				html += "<i class='icon-star'></i><i class='icon-star'></i><i class='icon-star'></i><i class='icon-star'></i><i class='icon-star-empty'></i>";
 				html += "</div>";
 				html += "</div>";
 				html += "</div>";
-				html += "<div class='separator clearfix'>";
-				html += "<p class='btn-add'> <a href='"+base_url + "/subscription-plans'><i class='icon-export-4'></i> "+settings.i18n.translate('home.2')+"</a></p>";
-				html += "<p class='btn-details'> <a href='"+base_url + "/course/"+data[i].shortname+"'><i class='icon-eye'></i> "+settings.i18n.translate('home.1')+"</a></p>";
-				html += "</div>";
+				//html += "<div class='separator clearfix'>";
+				//html += "<p class='btn-add'> <a href='"+base_url + "/subscription-plans'><i class='icon-export-4'></i> "+settings.i18n.translate('home.2')+"</a></p>";
+				//html += "<p class='btn-detai'> <a class='btn btn-info' href='"+base_url + "/course/"+data[i].shortname+"'><i class='icon-eye'></i> "+settings.i18n.translate('home.1')+"</a></p>";
+				//html += "</div>";
 				html += "</div>";
 				html += "</div>";
 				html += "</div>";												

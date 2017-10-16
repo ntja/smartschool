@@ -14,7 +14,7 @@ use Exception;
 class QuestionsController extends Controller {
 
     public function __construct() {
-        $this->middleware('jwt.auth', ['except' => ['post']]);
+        $this->middleware('jwt.auth', ['except' => ['']]);
     }    
 
     /**
@@ -29,11 +29,11 @@ class QuestionsController extends Controller {
             $account = new AccountsCustom($account_token_id);
             $resource_question = new ResourceQuestion();
             if (Gate::forUser($account)->denies('post', $resource_question)) {
-                $result = array("code" => 403, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 403, "description" => "You do not have permissions for that request.");
                 return $result;
             }
-            $course_info = file_get_contents('php://input');
-            $data = json_decode($course_info, TRUE);
+            $question_info = file_get_contents('php://input');
+            $data = json_decode($question_info, TRUE);
             if (!is_array($data)) {
                 $result = array("code" => 400, "description" => "invalid request body");
                 return response()->json($result, 400);
@@ -43,6 +43,8 @@ class QuestionsController extends Controller {
             $title = array_key_exists("title", $data) ? $data["title"] : null;
             $description = array_key_exists("description", $data) ? $data["description"] : null;
 			$is_visible = array_key_exists("is_visible", $data) ? $data["is_visible"] : '1';
+			$active_status = array_key_exists("active_status", $data) ? $data["active_status"] : '1';
+			$tags = array_key_exists("tags", $data) ? $data["tags"] : null;
 			
 			$instructor = null;
 			$learner = null;
@@ -55,9 +57,7 @@ class QuestionsController extends Controller {
 			if($user_role === "LEARNER"){
 				//ID of connected user
 				$learner = $account_token_id;
-			}
-			//$learner = array_key_exists("learner", $data) ? $data["learner"] : null;
-			//$instructor = array_key_exists("instructor", $data) ? $data["instructor"] : null;
+			}		
 
             $informations = array(
                 'title' => $title,
@@ -65,13 +65,15 @@ class QuestionsController extends Controller {
 				'is_visible' => $is_visible,
 				'learner' => $learner,
 				'instructor' => $instructor,
+				'active_status' => $active_status,
+				'tags' => $tags,
             );
 			//var_dump($learner);die();
             $custom_question = new questionsCustom();            
             $result = $custom_question->dbSave($informations);            
             return response()->json($result);
         } catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
             die();
         }
     }

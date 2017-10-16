@@ -67,6 +67,7 @@
 				</li>				
 				<li><a href="<?php echo URL::to('/books/catalog'); ?>">{{__('Books')}}</a></li>
 				<li><a href="<?php echo URL::to('/ocw/courses'); ?>">{{__('OCW Courses')}}</a></li>
+				<li><a href="<?php echo URL::to('/questions'); ?>">{{__('Questions')}}</a></li>
 			</ul>                       
 		</div>
 	</div><!-- End row -->

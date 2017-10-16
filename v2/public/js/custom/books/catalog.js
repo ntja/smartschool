@@ -40,6 +40,7 @@
 			get_books(uri);
 		}
 		//var uri = config.api_url + "/books?limit="+limit;
+		/*
 		$('body').delegate('.page', 'click',function(){
 			//console.log($(this).data('page'));
 			var page = $(this).data('page');
@@ -47,7 +48,28 @@
 			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
 			get_books(uri);
 		});
+		*/
+		//click on next page link
+		$('body').delegate('#next', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");
+			var page = $(this).data('page')+1;
+			//uri = config.api_url + "/books?limit="+limit+"&page="+page;
+			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
+			var page_url = $(this).data('next');
+			get_books(page_url);
+		});
 		
+		//click on previous page link
+		$('body').delegate('#previous', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");			
+			var page = $(this).data('page')-1;
+			//uri = config.api_url + "/books?limit="+limit+"&page="+page;
+			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
+			var page_url = $(this).data('previous');
+			get_books(page_url);
+		});
+		
+		/*
 		//click on next page link
 		$('body').delegate('#next', 'click',function(){
 			var page = $(this).data('page')+1;
@@ -63,6 +85,7 @@
 			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
 			get_books(uri);
 		});
+		*/
 		
 		/*
 		$('body').delegate('.read-book', 'click',function(){
@@ -76,7 +99,11 @@
 			var uri = config.api_url + "/books?limit="+limit;
 			uri += '&category='+cat;
 			get_books(uri);
-			$(this).addClass('active');
+			$(this).parent().siblings().each(function( index ) {
+			  $( this ).find('a').removeAttr("id");
+			});
+			//console.info($(this).siblings());
+			$(this).attr('id', 'active');
 		});
 		
 		// Get all course categories
@@ -103,7 +130,7 @@
 				}else{
 					html = "<div class='row'>"
 					for(i=0; i < data.data.length; i++){
-						if(i%3 == 0){
+						if(i%4 == 0){
 							html += "</div>";
 							html += "<div class='row'>";
 						}					
@@ -137,6 +164,13 @@
 						html += '</div>';
 					}
 					$('.pagination').empty();
+					if(data.next_page_url){
+						$('.pagination').append('<li><a href="javascript:void(0)" data-page="'+data.current_page+'" data-next="'+data.next_page_url+'" id="next"> Next &raquo;</a></li>');
+					}
+					if(data.prev_page_url){			
+						$('.pagination').prepend('<li><a href="javascript:void(0)"  data-page="'+data.current_page+'" data-previous="'+data.prev_page_url+'" id="previous"> &laquo; Previous</a></li>');
+					}
+					/*					
 					
 					if(data.last_page>1){					
 						if(data.current_page == 1){
@@ -155,8 +189,10 @@
 							$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">&raquo;</a></li>');
 						}else{
 							$('.pagination').append('<li><a href="javascript:void(0)" id="next" data-page="'+data.current_page+'">&raquo;</a></li>');
-						}					
+						}
+						
 					}
+					*/
 				}
 				$('html, body').animate({scrollTop: 0}, "smooth");
 				$('#book_list').html(html);

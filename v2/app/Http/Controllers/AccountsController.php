@@ -67,12 +67,12 @@ class AccountsController extends Controller {
             $result = $custom_account->dbSave($informations);            
             return $result;
         } catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
     /**
-     * Retrieve all user accounts by ADMIN.
+     * Retrieve all user accounts.
      *
      * @param  Request $request
      * @return \Illuminate\Http\Response
@@ -86,7 +86,7 @@ class AccountsController extends Controller {
             //checking user permission,
             $ressource_account = new ResourceAccount();
             if (Gate::forUser($account)->denies('get', $ressource_account)) {
-                $result = array("code" => 4003, "description" => "You do not have permissions for that request..");
+                $result = array("code" => 4003, "description" => "You do not have permissions for that request.");
                 return response()->json($result,400);
             }                       
             if (!$data['limit']) {
@@ -105,8 +105,8 @@ class AccountsController extends Controller {
             $custom_account = new AccountsCustom($account_token_id);			
 			$result = $custom_account->getList($informations, $account_token_id);
             return response()->json($result);			
-        } catch (Exception $e) {
-            LogRepo::printLog('error', $e->getMessage());
+        } catch (Exception $ex) {
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 

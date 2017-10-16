@@ -1,7 +1,7 @@
 settings.i18n = {
     translations: {
         fr: {
-            'home.1': 'Aperçu',
+            'home.1': 'Voir',
 			'home.2': 'Souscrire',
 			'home.3': 'Gratuit',
 			'activate.1' : 'Si vous n\'êtes pas redirigé à la page de connexion dans 5 sécondes, veuillez cliquer sur le lien ci-après: ',
@@ -40,7 +40,7 @@ settings.i18n = {
 			"book.catalog.2" : "Lire",
         },
         en: {
-            'home.1': 'Overview',
+            'home.1': 'View',
 			'home.2': 'Subscribe',
 			'home.3': 'Free',
 			'activate.1' : 'If you are not redirected to log in page in 5 secondes, Please click on the following link:',

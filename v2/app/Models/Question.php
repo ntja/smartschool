@@ -19,7 +19,7 @@ class Question extends Authenticatable{
     protected $table = 'questions';
     public $timestamps = false;
     protected $fillable = [
-        'title','description','is_visible','learner','instructor'
+        'title','description','is_visible','learner','instructor','post_date','active_status','number_of_views','slug_title'
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -27,7 +27,7 @@ class Question extends Authenticatable{
      * @var array
      */
     protected $hidden = [
-        
+        'delete_status'
     ];
 
     public function __construct() {           
@@ -42,7 +42,7 @@ class Question extends Authenticatable{
      * The tags that belong to the question.
      */
     public function tags(){
-        return $this->belongsToMany('App\Models\Tag');
+        //return $this->belongsToMany('App\Models\Tag');
     }
 	
 	// Persist the data
@@ -60,10 +60,12 @@ class Question extends Authenticatable{
                 $this->title = $params['title'];
             }
 			if (array_key_exists("description", $params)) {
-                if (!is_string($params['description'])) {
-                    throw new Exception("Expected String for key (description), " . (is_object($params['description']) ? get_class($params['description']) : gettype($params['description'])) . ' found.');
-                }
-                $this->description = $params['description'];
+				if (!is_null($params['description'])) {
+					if (!is_string($params['description'])) {
+						throw new Exception("Expected String for key (description), " . (is_object($params['description']) ? get_class($params['description']) : gettype($params['description'])) . ' found.');
+					}
+					$this->description = $params['description'];
+				}                
             }
 			
 			if (array_key_exists("is_visible", $params)) {
@@ -89,9 +91,20 @@ class Question extends Authenticatable{
 						throw new Exception("Expected number for key (instructor), " . (is_object($params['instructor']) ? get_class($params['instructor']) : gettype($params['instructor'])) . ' found.');
 					}
 				}
-                
                 $this->instructor = $params['instructor'];
-            }            
+            }
+			
+			if (array_key_exists("active_status", $params)) {
+				if (!is_null($params['active_status'])) {
+					if (!is_numeric($params['active_status'])) {
+						throw new Exception("Expected numeric for key (active_status), " . (is_object($params['active_status']) ? get_class($params['active_status']) : gettype($params['active_status'])) . ' found.');
+					}
+				}
+                $this->active_status = $params['active_status'];
+            }
+			
+			$this->slug_title = $params['slug_title'];
+			
 			//var_dump($params); die();
             return $this->save();
         } catch (Exception $ex) {

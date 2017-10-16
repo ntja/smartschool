@@ -53,9 +53,9 @@
 			<div class="lesson_video" style="background-color:transparent; overflow:hidden"></div>
 			<hr>
 			<div class="clearfix text-center">
-				<a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a>
+				<a href="#" class="pull-left button_medium_outline prev hide"> <i class="icon-left-open">{{__('Previous')}}</i></a>
 				<!-- <a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   -->
-				<a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a>
+				<a href="#" class="pull-right button_medium_outline next hide">{{__('Next')}}<i class="icon-right-open"></i></a>
 				<ul class="text-center social_team"> {{__('Share on')}} : 
 					<li><a href="#"><i class="icon-facebook"></i></a></li>
 					<li><a href="#"><i class="icon-twitter"></i></a></li>

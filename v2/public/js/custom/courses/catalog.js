@@ -21,13 +21,35 @@
 		}
 		var limit = 12;
 		var uri = config.api_url + "/courses?limit="+limit;
+		/*
 		$('body').delegate('.page', 'click',function(){
 			//console.log($(this).data('page'));
 			var page = $(this).data('page');
 			uri = config.api_url + "/courses?limit="+limit+"&page="+page;
 			get_courses(uri);
 		});
+		*/
 		
+		//click on next page link
+		$('body').delegate('#next', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");
+			var page = $(this).data('page')+1;
+			//uri = config.api_url + "/courses?limit="+limit+"&page="+page;
+			history.pushState({}, '', base_url + '/courses/catalog?page=' + page + '&limit=' + limit);
+			var page_url = $(this).data('next');
+			get_courses(page_url);
+		});		
+		//click on previous page link
+		$('body').delegate('#previous', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");			
+			var page = $(this).data('page')-1;
+			//uri = config.api_url + "/courses?limit="+limit+"&page="+page;
+			history.pushState({}, '', base_url + '/courses/catalog?page=' + page + '&limit=' + limit);
+			var page_url = $(this).data('previous');
+			get_courses(page_url);
+		});
+		
+		/*
 		//click on next page link
 		$('body').delegate('#next', 'click',function(){
 			var page = $(this).data('page')+1;
@@ -41,9 +63,27 @@
 			uri = config.api_url + "/courses?limit="+limit+"&page="+page;
 			get_courses(uri);
 		});
-		
+		*/
 		//Get courses list
-		get_courses(uri);
+		//get_courses(uri);
+		query_params = qs();
+		if(query_params){
+			if(query_params.page){
+				var uri = config.api_url + "/courses?page="+query_params.page;
+				if(query_params.limit){
+					uri += '&limit='+query_params.limit;
+				}else{
+					uri += '&limit='+limit;
+				}
+				get_courses(uri);
+			}else{
+				var uri = config.api_url + "/courses?limit="+limit;
+				get_courses(uri);
+			}		
+		}else{
+			var uri = config.api_url + "/courses?limit="+limit;
+			get_courses(uri);
+		}		
 		
 		// Get all course categories
 		get_course_categories();
@@ -93,7 +133,7 @@
 						html += '<div class="info">';
 						html +=	'<div class="row">'
 						html += '<div class="course_info col-md-12 col-sm-12">';
-						html += '<h5><strong>'+data.data[i].name+'</strong></h5>';
+						html += '<h5><strong><a href="'+base_url+'/course/'+data.data[i].shortname+'">'+data.data[i].name+'</a></strong></h5>';
 						//html += '<p > Lorem ipsum dolor sit amet, no sit sonet corpora indoctum, quo ad fierent insolens. Duo aeterno ancillae ei. </p>';
 						html += '<div class="rating">';
 						html += '<i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i>'
@@ -101,15 +141,22 @@
 						//html += '<div class="price pull-right">Free</div>';
 						html += '</div>';
 						html += '</div>';
-						html += '<div class="separator clearfix">';
-						html += '<p class="btn-add"> <a href="apply_2.html"><i class="icon-export-4"></i> '+settings.i18n.translate('home.2')+'</a></p>';
-						html += '<p class="btn-details"> <a href="'+base_url+'/course/'+data.data[i].shortname+'"><i class=" icon-eye"></i> '+settings.i18n.translate('home.1')+'</a></p>';
-						html += '</div>';
+						//html += '<div class="separator clearfix">';
+						//html += '<p class="btn-add"> <a href="apply_2.html"><i class="icon-export-4"></i> '+settings.i18n.translate('home.2')+'</a></p>';
+						//html += '<p class="btn-details"> <a href="'+base_url+'/course/'+data.data[i].shortname+'"><i class=" icon-eye"></i> '+settings.i18n.translate('home.1')+'</a></p>';
+						//html += '</div>';
 						html += '</div>';
 						html += '</div>';
 						html += '</div>';
 					}
 					$('.pagination').empty();
+					if(data.next_page_url){
+						$('.pagination').append('<li><a href="javascript:void(0)" data-page="'+data.current_page+'" data-next="'+data.next_page_url+'" id="next"> Next &raquo;</a></li>');
+					}
+					if(data.prev_page_url){			
+						$('.pagination').prepend('<li><a href="javascript:void(0)"  data-page="'+data.current_page+'" data-previous="'+data.prev_page_url+'" id="previous"> &laquo; Previous</a></li>');
+					}
+					/*
 					if(data.last_page>1){					
 						if(data.current_page == 1){
 							$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">&laquo;</a></li>');						
@@ -129,6 +176,7 @@
 							$('.pagination').append('<li><a href="javascript:void(0)" id="next" data-page="'+data.current_page+'">&raquo;</a></li>');
 						}					
 					}
+					*/
 				}				
 				$('#course_list').html(html);
 				$('html, body').animate({scrollTop: 0}, "smooth");
