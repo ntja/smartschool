@@ -68,7 +68,7 @@ Route::put('/courses/{courseId}/sections/{sectId}', 'Courses\Course\SectionContr
 Route::post('/courses/sections/{sectId}/lessons', 'Courses\Course\Sections\LessonsController@post')->where('sectId', '[0-9]+');
 Route::post('/questions', 'QuestionsController@post');
 Route::post('/answers', 'AnswersController@post');
-
+Route::get('/categories/{catId}/books', 'Categories\Category\BooksController@get')->where('catId', '[0-9]+');
 
 Route::post('/schools', 'SchoolsController@post');
 

@@ -37,15 +37,53 @@
 		//console.log(query);
 		url = config.api_url + "/search";
 		if(query){
-			search_items(url, query);
-		}		
+			url = url +'?query='+query;
+			search_items(url);
+			//search_items(url, query);
+		}
+
+		//click on next page book link
+		$('body').delegate('#next_book_list', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");
+			var page = $(this).data('book_page')+1;			
+			var page_url = $(this).data('book_next');
+			search_items(page_url, query);
+		});
+		
+		//click on previous page book link
+		$('body').delegate('#previous_book_list', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");			
+			var page = $(this).data('book_page')-1;			
+			var page_url = $(this).data('book_previous');
+			search_items(page_url, query);
+		});
+		
+		
+		//click on next page courses link
+		$('body').delegate('#next_course_list', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");
+			var page = $(this).data('course_page')+1;			
+			var page_url = $(this).data('course_next');
+			search_items(page_url, query);
+		});
+		
+		//click on previous page courses link
+		$('body').delegate('#previous_course_list', 'click',function(){
+			//$('html, body').animate({scrollTop: 0}, "smooth");			
+			var page = $(this).data('course_page')-1;			
+			var page_url = $(this).data('course_previous');
+			search_items(page_url, query);
+		});
 		
 		//search items
         function search_items(url, query) {
             try {
+				if(query){
+					url = url +'&query='+query;
+				}
                 $.ajax({
                     async: true,
-                    url: url+'?query='+query,
+                    url: url,
                     type: "GET",
                     crossDomain: true,
                     //data: JSON.stringify(query),
@@ -58,8 +96,9 @@
                 })
 				.done(function(data, textStatus, jqXHR) {
 					//$("#search").data('query', query);
-					console.log($.isEmptyObject(data.books));
+					//console.log($.isEmptyObject(data.books));
 					var items = null;
+					// courses resutls
 					if(!$.isEmptyObject(data.courses)){
 						items = data.courses.data;
 						if(items.length==0){
@@ -91,15 +130,17 @@
 							html += "</div>";
 							html += "</div>";												
 						}
-						$('#course_list').append('<h4><b>Courses : '+data.courses.total+' results found</b></h4>');
+						$('#course_list').empty().append('<h4><b>Courses : '+data.courses.total+' results found</b></h4>');
 						$('#course_list').append(html);
+						$('.pagination-course').empty();
+						if(data.courses.next_page_url){
+							$('.pagination-course').append('<li><a href="javascript:void(0)" data-course_page="'+data.courses.current_page+'" data-course_next="'+data.courses.next_page_url+'" id="next_course_list"> Next &raquo;</a></li>');
+						}
+						if(data.courses.prev_page_url){			
+							$('.pagination-course').prepend('<li><a href="javascript:void(0)"  data-course_page="'+data.courses.current_page+'" data-course_previous="'+data.courses.prev_page_url+'" id="previous_course_list"> &laquo; Previous</a></li>');
+						}
 					}										
-					/*
-					for(var i=0; i<items.length;i++){
-						$('#result').append('<li><a href="'+base_url+'/course/'+items[i].shortname+'">'+items[i].name+'</a></li>');
-					}
-					*/										
-					
+					//books results
 					if(!$.isEmptyObject(data.books)){
 						var items = data.books.data;
 						if(items.length ==0){
@@ -114,7 +155,7 @@
 								html += '<div class="col-lg-3 col-md-6">';
 								html += '<div class="col-item">';
 								html += '<div class="photo">';
-								html += '<a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+items[i].filepath+'" data-book-title="'+items[i].name+'"><img src="'+base_url+'/'+items[i].cover+'" alt="" /></a>';
+								html += '<a href="'+items[i].filepath+'" class="read-book fancy-box fancybox.iframe embed"  data-type="iframe"><img src="'+base_url+'/'+items[i].cover+'" alt="" /></a>';
 								html += '<div class="cat_row">';						
 								html += '<a href="#">'+items[i].category_name+'</a>';						
 								html += '<span class="pull-right"><i class=" icon-money"></i>'+settings.i18n.translate('home.3')+'</span></div>';
@@ -131,7 +172,7 @@
 								html += '</div>';
 								html += '</div>';
 								html += '<div class="separator clearfix">';
-								html += '<p class="btn-add"> <a href="#" class="read-book" data-toggle="modal" data-target="#myModal" data-book="'+items[i].filepath+'" data-book-title="'+items[i].name+'"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
+								html += '<p class="btn-add"> <a href="'+items[i].filepath+'" class="read-book fancy-box fancybox.iframe embed"  data-type="iframe"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
 								//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 								html += '<p class="btn-details"> <a href="#"><i class=" icon-download"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 								html += '</div>';
@@ -139,31 +180,48 @@
 								html += '</div>';
 								html += '</div>';
 							}
-							$('.pagination').empty();
 							
-							if(data.books.last_page>1){					
-								if(data.books.current_page == 1){
-									$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">&laquo;</a></li>');						
-								}else{
-									$('.pagination').append('<li><a href="javascript:void(0)" id="previous" data-page="'+data.books.current_page+'">&laquo;</a></li>');
-								}													  					  
-								for(i=1; i<=data.books.last_page;i++){
-									if(i==data.books.current_page){
-										$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">'+i+'</a></li>');
-									}else{
-										$('.pagination').append('<li><a href="javascript:void(0)" class="page" data-page="'+i+'">'+i+'</a></li>');
-									}
-								}
-								if(data.books.current_page == data.books.last_page){
-									$('.pagination').append('<li class="disabled"><a href="javascript:void(0)">&raquo;</a></li>');
-								}else{
-									$('.pagination').append('<li><a href="javascript:void(0)" id="next" data-page="'+data.books.current_page+'">&raquo;</a></li>');
-								}					
+							//$('html, body').animate({scrollTop: 20}, "smooth");
+							$('#book_list').empty().append('<h4><b>Books : '+data.books.total+' result(s) found</b></h3>');
+							$('#book_list').append(html);
+							$('.pagination-book').empty();
+							if(data.books.next_page_url){
+								$('.pagination-book').append('<li><a href="javascript:void(0)" data-book_page="'+data.books.current_page+'" data-book_next="'+data.books.next_page_url+'" id="next_book_list"> Next &raquo;</a></li>');
 							}
-						}
-						$('html, body').animate({scrollTop: 0}, "smooth");
-						$('#book_list').append('<h4><b>Books : '+data.books.total+' result(s) found</b></h3>');
-						$('#book_list').append(html);
+							if(data.books.prev_page_url){			
+								$('.pagination-book').prepend('<li><a href="javascript:void(0)"  data-book_page="'+data.books.current_page+'" data-book_previous="'+data.books.prev_page_url+'" id="previous_book_list"> &laquo; Previous</a></li>');
+							}
+							// Adjust iframe height according to the contents
+							//parent.jQuery.fancybox.getInstance().update();
+							$(".fancy-box").fancybox({
+								//maxWidth	: 800,
+								//maxHeight	: 600,
+								fitToView	: true,
+								//width		: '70%',
+								//height		: '100%',
+								autoSize	: false,
+								scrolling   : 'auto',					
+								closeClick	: false,
+								openEffect  : 'elastic',
+								closeEffect : 'elastic',
+								autoSize    : false,
+								type        : 'iframe',
+								toolbar     : true,
+								smallBtn    : false,
+								iframe: {
+									preload: false, // fixes issue with iframe and IE,
+									css : {
+										width : '90%',
+										height : '90%',
+									}
+								},
+								'onComplete' : function() {
+									$('#fancybox-frame').load(function() { // wait for frame to load and then gets it's height
+									$('#fancybox-content').height($(this).contents().find('body').height()+130);
+								});
+							  }
+							});	
+						}						
 					}
 					/*
 					if (data.back != null) {

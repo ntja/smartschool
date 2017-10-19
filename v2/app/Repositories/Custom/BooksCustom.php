@@ -281,7 +281,7 @@ class BooksCustom {
             LogRepository::printLog('error', $ex->getMessage());
         }
     }
-    public function getBookByName($id){
+    public function getBookByName($name){
         try{
             $book = new Book();
             $row = $book::where('name', '=', $name)->first();

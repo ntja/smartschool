@@ -149,21 +149,30 @@ class Book extends Authenticatable{
                 throw new Exception("Expected key (category) in parameter  array.");
             }
 
+			$category = array_key_exists("category", $params)?$params['category']:null;							
             $result = null;          
             $limit = intval($params['limit']);        
             //var_dump($role);die();    
 
-            $category = $params['category'];
-            $select = DB::table('books')
-                    ->leftJoin('book_categories', 'book_categories.id', '=', 'books.category')
-                    ->select('books.*', 'book_categories.name as category_name')
-                    //->skip(0)
-                    ->where('books.delete_status', '=', '0');
-                    //->take($limit);
-            if ($category) {
-                $select = $select
-                        ->where('category', '=', $category);
-            }                                                
+			if(!$category){
+				$category = $params['category'];
+				$select = DB::table('books')
+						->leftJoin('book_categories', 'book_categories.id', '=', 'books.category')
+						->select('books.*', 'book_categories.name as category_name')
+						//->skip(0)
+						->where('books.delete_status', '=', '0');
+						//->take($limit);
+				if ($category) {
+					$select = $select
+							->where('category', '=', $category);
+				}
+			}else{
+				$select = DB::table('books')
+						->leftJoin('book_categories', 'book_categories.id', '=', 'books.category')
+						->select('books.*', 'book_categories.name as category_name')
+						->where('category', '=', $category)
+						->where('books.delete_status', '=', '0');
+			}                                                            
             //var_dump($select);die();       
 
             $rows = $select->orderBy('id','DESC')->paginate($limit);

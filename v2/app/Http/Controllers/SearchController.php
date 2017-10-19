@@ -31,7 +31,7 @@ class SearchController extends Controller {
             }
 			
             if (!$data['limit']) {
-                $data['limit'] = 20; //set default value of limit param 
+                $data['limit'] = 16; //set default value of limit param 
             }
 			
             $limit = $data['limit'];

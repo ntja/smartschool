@@ -4,9 +4,9 @@
     SmartSchool | {{__('Search Results')}}
 @stop
 @section('header-styles')
-   <!-- CUSTOM STYLES -->   
-    <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
+   <!-- CUSTOM STYLES -->       
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+	<link href="{{asset('css/jquery.fancybox.min.css')}}" rel="stylesheet">
 @stop
 
 @section('content')
@@ -47,7 +47,6 @@
   
 	<ol class="breadcrumb">
       <li><a href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
-	  <li><a href="<?php echo URL::to('/courses/catalog'); ?>">{{__('Courses Catalog')}}</a></li>
       <li class="active">{{__('Search Results')}}</li>
     </ol>
 
@@ -74,18 +73,24 @@
 			</div><!-- End row -->
 			<div id="course_list">
 			</div>
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<ul class="pagination pagination-course">                  
+					</ul>
+				</div>
+			</div>
 			<hr>
 			<div class="col-lg-12 col-md-12 col-sm-12">
-			<div class="row" id="book_list">                                               
+			<div class="row" id="book_list"> 				
 			</div><!-- End row -->
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<ul class="pagination pagination-book">                  
+					</ul>
+				</div>
+			</div>
 		</div><!-- End col-lg-12--> 
-     </div><!-- End row -->
-	 <div class="row">
-		<div class="col-md-12 text-right">
-			<ul class="pagination">                  
-			</ul>
-		</div>
-	</div>
+     </div><!-- End row -->	
         </div>   <!-- End container -->
     </section><!-- End section gray -->  
   </div><!-- End container -->
@@ -97,6 +102,7 @@
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
+	<script src="{{asset('js/custom/jquery.fancybox.min.js')}}"></script>
 	<script src="{{asset('js/plugins/purl/purl.js')}}"></script>
    <script src="{{asset('js/custom/search.js')}}"></script>
 @stop

@@ -70,7 +70,7 @@
 				<div class="box_style_1">
 					<h4>{{__('Subjects')}}</h4>
 					<ul class="submenu-col subject">										
-						<li><a href="#" id="active">{{__('All Books')}}</a></li>
+						<li><a class="all_books" href="#" id="active">{{__('All Books')}}</a></li>
 					</ul>
 				</div>
 			</aside>

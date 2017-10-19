@@ -96,8 +96,8 @@
 		*/
 		$('body').delegate('.category', 'click',function(){
 			var cat = $(this).data('category_id');
-			var uri = config.api_url + "/books?limit="+limit;
-			uri += '&category='+cat;
+			var uri = config.api_url + "/categories/"+cat+"/books?limit="+limit;
+			//uri += '&category='+cat;
 			get_books(uri);
 			$(this).parent().siblings().each(function( index ) {
 			  $( this ).find('a').removeAttr("id");
@@ -130,7 +130,7 @@
 				}else{
 					html = "<div class='row'>"
 					for(i=0; i < data.data.length; i++){
-						if(i%4 == 0){
+						if(i%3 == 0){
 							html += "</div>";
 							html += "<div class='row'>";
 						}					
