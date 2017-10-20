@@ -221,9 +221,8 @@ class Book extends Authenticatable{
             if (!count($rows)) {
                 return [];
             }
-            $result = $rows;
-
-            return $result;            
+            $rows->appends(['limit' => $limit])->links();
+            return $rows;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
