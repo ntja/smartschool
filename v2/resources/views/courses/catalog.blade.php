@@ -41,7 +41,7 @@
             <div class="box_style_2">
             	<h4>{{__('Subjects')}}</h4>
 				<ul class="submenu-col subject">										
-					<li><a href="#" id="active">{{__('All Courses')}}</a></li>
+					<li><a href="#" id="active" class='all_courses'>{{__('All Courses')}}</a></li>
 				</ul>
             </div>
         </aside>

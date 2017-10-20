@@ -88,6 +88,18 @@
 		// Get all course categories
 		get_course_categories();
 		
+		// get courses by category
+		$('body').delegate('.category', 'click',function(){
+			var cat = $(this).data('category_id');
+			var uri = config.api_url + "/categories/"+cat+"/courses?limit="+limit;
+			//uri += '&category='+cat;
+			get_courses(uri);
+			$(this).parent().siblings().each(function( index ) {
+			  $( this ).find('a').removeAttr("id");
+			});
+			//console.info($(this).siblings());
+			$(this).attr('id', 'active');
+		});
 		
 		//get all courses
 		function get_courses(uri){		
@@ -206,7 +218,7 @@
 					//$('#category_list').empty();				
 					html = '';
 					for(i=0;i < data.data.length;i++){
-						html +='<li><a href="#">'+data.data[i].name+'</a></li>';
+						html +='<li><a class="category" href="javascript:void(0)" data-category_id="'+data.data[i].id+'">'+data.data[i].name+'</a></li>';
 					}
 					$('.subject').append(html);
 				}

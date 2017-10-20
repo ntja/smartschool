@@ -39,16 +39,7 @@
 			var uri = config.api_url + "/books?limit="+limit;
 			get_books(uri);
 		}
-		//var uri = config.api_url + "/books?limit="+limit;
-		/*
-		$('body').delegate('.page', 'click',function(){
-			//console.log($(this).data('page'));
-			var page = $(this).data('page');
-			uri = config.api_url + "/books?limit="+limit+"&page="+page;
-			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
-			get_books(uri);
-		});
-		*/
+		
 		//click on next page link
 		$('body').delegate('#next', 'click',function(){
 			//$('html, body').animate({scrollTop: 0}, "smooth");
@@ -67,33 +58,9 @@
 			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
 			var page_url = $(this).data('previous');
 			get_books(page_url);
-		});
+		});						
 		
-		/*
-		//click on next page link
-		$('body').delegate('#next', 'click',function(){
-			var page = $(this).data('page')+1;
-			uri = config.api_url + "/books?limit="+limit+"&page="+page;
-			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
-			get_books(uri);
-		});
-		
-		//clcik on previous page link
-		$('body').delegate('#previous', 'click',function(){
-			var page = $(this).data('page')-1;
-			uri = config.api_url + "/books?limit="+limit+"&page="+page;
-			history.pushState({}, '', base_url + '/books/catalog?page=' + page + '&limit=' + limit);
-			get_books(uri);
-		});
-		*/
-		
-		/*
-		$('body').delegate('.read-book', 'click',function(){
-			var src = $(this).data('book');
-			$(".book-title").html($(this).data('book-title'));
-			$('.book-content').empty().addClass('myIframe').append('<object data="'+base_url+'/'+src+'" type="application/pdf" width="100%" height="100%"> <iframe scrolling="yes" src="'+base_url+'/'+src+'" class="embed-responsive-item">This browser does not support PDFs. Please download the PDF to view it: <a href="'+base_url+'/'+src+'">Download PDF</a></iframe></object>');
-		});
-		*/
+		// get books by category
 		$('body').delegate('.category', 'click',function(){
 			var cat = $(this).data('category_id');
 			var uri = config.api_url + "/categories/"+cat+"/books?limit="+limit;
@@ -253,7 +220,7 @@
 					//$('#category_list').empty();				
 					html = '';
 					for(i=0;i < data.data.length;i++){
-						html +='<li><a class="category" href="#" data-category_id="'+data.data[i].id+'">'+data.data[i].name+'</a></li>';
+						html +='<li><a class="category" href="javascript:void(0)" data-category_id="'+data.data[i].id+'">'+data.data[i].name+'</a></li>';
 					}
 					$('.subject').append(html);
 				}
