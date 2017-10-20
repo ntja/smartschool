@@ -53,21 +53,7 @@ class Course extends Authenticatable{
 	public function section(){
         return $this->hasMany('App\Models\CourseSection', 'course');
     }
-	
-	/*
-	//many 2 many relationship with Account table
-	public function manyAccounts(){
-        return $this->belongsToMany('App\Models\Account','join_courses', 'course', 'account')->using('App\Models\JoinCourse');
-    }
-	*/
-	/*
-	public function newPivot(Eloquent $parent, array $attributes, $table, $exists) {
-        if ($parent instanceof App\Models\Account) {
-            return new App\Models\JoinCourse($parent, $attributes, $table, $exists);
-        }
-        return parent::newPivot($parent, $attributes, $table, $exists);
-    }
-	*/
+		
     public function dbSave($params) {
 		//var_dump($params);die();
         try {            
@@ -303,36 +289,30 @@ class Course extends Authenticatable{
 
             $result = null;          
             $limit = intval($params['limit']);
+			$category = array_key_exists("category", $params)?$params['category']:null;
             //var_dump($role);die();  
 			
-            if($connected_user->getRole() == "LEARNER" || $connected_user->getRole() == "PARENT"|| $connected_user->getRole() == "GUEST"){
-                /*
-				$select = DB::table('courses')
-                    ->join('course_categories', 'course_categories.id', '=', 'courses.category')
-                    ->join('accounts', 'accounts.id', '=', 'courses.instructor')
-                    ->select('courses.*', 'course_categories.name as category_name','accounts.first_name','accounts.last_name')
-                    //->skip(0)                        
-                    ->where('courses.delete_status', '=', '0')->where('status', '=', "PUBLISHED"); 
-                    //->take($limit); 
-				*/
-				$select = Course::with(['account'=> function ($query) {
-						$query->select('id','first_name','last_name');
-					},'courseCategory', 'section'])->where('courses.delete_status', '=', '0')->where('courses.status', '=', "PUBLISHED");
+            if($connected_user->getRole() == "LEARNER" || $connected_user->getRole() == "PARENT"|| $connected_user->getRole() == "GUEST"){               
+				$select = Course::with(
+					[
+						'account'=> function ($query) {
+							$query->select('id','first_name','last_name');
+						},
+						'courseCategory', 
+						'section'])
+					->where('courses.delete_status', '=', '0')
+					->where('courses.status', '=', "PUBLISHED");
             }else{
 				//die('here');
-                $status = $params['status'];
-				/*
-                $select = DB::table('courses')
-                        ->join('course_categories', 'course_categories.id', '=', 'courses.category')
-                        ->join('accounts', 'accounts.id', '=', 'courses.instructor')
-                        ->select('courses.*', 'course_categories.name as category_name','accounts.first_name','accounts.last_name')
-                        //->skip(0)
-                        ->where('courses.delete_status', '=', '0');
-                        //->take($limit);
-					*/
-				$select = Course::with(['account'=> function ($query) {
-					$query->select('id','first_name','last_name');
-				},'courseCategory','section'])->where('courses.delete_status', '=', '0');
+                $status = $params['status'];				
+				$select = Course::with(
+				[
+					'account'=> function ($query) {
+						$query->select('id','first_name','last_name');
+					},
+					'courseCategory',
+					'section'])
+				->where('courses.delete_status', '=', '0');
                 if ($status) {
                     $select = $select
                             ->where('status', '=', $status);
@@ -341,7 +321,10 @@ class Course extends Authenticatable{
             if($account){                
                 $select = $select
                 ->where('instructor', '=', $account);
-                //->take($limit);    
+            }
+			if($category){                
+                $select = $select
+                ->where('category', '=', $category);
             }
             
             $rows = $select->orderBy('id','DESC')->paginate($limit);
@@ -349,9 +332,8 @@ class Course extends Authenticatable{
             if (!count($rows)) {
                 return false;
             }
-            $result = $rows;
-
-            return $result;
+			$rows->appends(['limit' => $limit])->links();
+            return $rows;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }

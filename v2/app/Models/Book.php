@@ -149,7 +149,7 @@ class Book extends Authenticatable{
                 throw new Exception("Expected key (category) in parameter  array.");
             }
 
-			$category = array_key_exists("category", $params)?$params['category']:null;							
+			$category = array_key_exists("category", $params)?$params['category']:null;
             $result = null;          
             $limit = intval($params['limit']);        
             //var_dump($role);die();    
@@ -180,6 +180,7 @@ class Book extends Authenticatable{
             if (!count($rows)) {
                 return false;
             }
+			$rows->appends(['limit' => $limit])->links();
             return $rows;
         } catch (Exception $ex) {
 			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());

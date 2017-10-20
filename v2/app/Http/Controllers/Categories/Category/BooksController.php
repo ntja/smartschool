@@ -22,8 +22,8 @@ class BooksController extends Controller {
             $data = $request->only('account_id','limit');
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);
-            $ressource_book = new ResourceBook();
-            if (Gate::forUser($account)->denies('get', $ressource_book)) {
+            $resource_book = new ResourceBook();
+            if (Gate::forUser($account)->denies('get', $resource_book)) {
                 $result = array("code" => 4003, "description" => "You do not have permissions for that request.");
                 return response()->json($result,403);
             }
