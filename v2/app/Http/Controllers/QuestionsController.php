@@ -71,10 +71,41 @@ class QuestionsController extends Controller {
 			//var_dump($learner);die();
             $custom_question = new questionsCustom();            
             $result = $custom_question->dbSave($informations);            
-            return response()->json($result);
+            return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
             die();
+        }
+    }
+	
+	public function get(Request $request) {
+         try {                                       
+             //retrieving user ID based on its token
+            $data = $request->only('limit', 'account_id','visible');
+            $account_token_id = $data['account_id'];
+            $account = new AccountsCustom($account_token_id);			
+            //checking user permission,
+            $resource_question = new ResourceQuestion();
+            if (Gate::forUser($account)->denies('get', $resource_question)) {
+                $result = array("code" => 4003, "description" => "You do not have permissions for that request.");
+                return response()->json($result,400);
+            }                       
+            if (!$data['limit']) {
+                $data['limit'] = 20; //set default value of limit param 
+            }           
+            $limit = $data['limit'];
+            $visible = $data["visible"];
+            
+            $information = array(
+                'limit' => $limit,                
+                'visible' => $visible,
+            );            
+            $custom_question = new questionsCustom();            
+            $result = $custom_question->getList($information);
+			return $result;
+        } catch (Exception $ex) {
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
 }

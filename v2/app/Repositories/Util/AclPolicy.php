@@ -406,7 +406,14 @@ class AclPolicy {
                 } else {
                     return false;
                 }
-            }			
+            }elseif (!strcasecmp(get_class($resource), self::RESOURCE_QUESTION)) {
+                $role = ["LEARNER", "INSTRUCTOR", "ADMINISTRATOR"];
+                if (in_array($user->getRole(), $role)) {                    
+                    return true;
+                } else {
+                    return false;
+                }
+            }
 		}
 	}
 

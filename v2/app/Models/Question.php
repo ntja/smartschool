@@ -101,14 +101,55 @@ class Question extends Authenticatable{
 					}
 				}
                 $this->active_status = $params['active_status'];
-            }
-			
-			$this->slug_title = $params['slug_title'];
-			
+            }			
+			$this->slug_title = $params['slug_title'];			
 			//var_dump($params); die();
             return $this->save();
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+        }
+    }
+	
+	public function getList($params) {
+        try {
+            //var_dump($params);die();
+            if (!is_array($params)){
+                throw new Exception("Expected Array as parameter, " . (is_object($params) ? get_class($params) : gettype($params)) . ' given.');
+            }
+            
+            if (!array_key_exists("limit", $params)){
+                throw new Exception("Expected key (limit) in parameter array.");
+            }
+            
+            if (!array_key_exists("visible", $params)){
+                throw new Exception("Expected key (visible) in parameter  array.");
+            }
+
+			$visible = $params['visible'];
+            $result = null;          
+            $limit = intval($params['limit']);        
+            //var_dump($role);die();    
+			
+			$select = DB::table('questions')					
+					->select('questions.*')
+					//->skip(0)
+					->where('questions.delete_status', '=', '0');
+					//->take($limit);
+			if ($visible) {
+				$select = $select
+						->where('is_visible', '=', $visible);
+			}
+            //var_dump($select);die();       
+
+            $rows = $select->orderBy('id','DESC')->paginate($limit);
+            //var_dump($rows);die();       
+            if (!count($rows)) {
+                return false;
+            }
+			$rows->appends(['limit' => $limit])->links();
+            return $rows;
+        } catch (Exception $ex) {
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 }

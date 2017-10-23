@@ -6,36 +6,7 @@
 @section('header-styles')
    <!-- CUSTOM STYLES -->
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
-	<link href="{{asset('css/jquery.fancybox.min.css')}}" rel="stylesheet">
-	<style>
-		.myIframe {
-			position: relative;
-			padding-bottom: 52.00%;
-			padding-top: 30px;
-			height: 100%;
-			overflow: auto; 
-			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
-			border: solid black 1px;
-		} 
-		.myIframe iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-		
-		.modal-dialog {
-  width: 96%;
-  height: 100%;
-  padding: 0;
-}
-
-.modal-content {
-  height: 100%;
-}
-
-	</style>
+	<link href="{{asset('css/jquery.fancybox.min.css')}}" rel="stylesheet">	
 @stop
 @section('content')
 

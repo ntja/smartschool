@@ -84,8 +84,8 @@ class AccountsController extends Controller {
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);			
             //checking user permission,
-            $ressource_account = new ResourceAccount();
-            if (Gate::forUser($account)->denies('get', $ressource_account)) {
+            $resource_account = new ResourceAccount();
+            if (Gate::forUser($account)->denies('get', $resource_account)) {
                 $result = array("code" => 4003, "description" => "You do not have permissions for that request.");
                 return response()->json($result,400);
             }                       
@@ -101,7 +101,6 @@ class AccountsController extends Controller {
                 'role' => $role,
                 'verified_status' => $verified_status,
             );            
-			
             $custom_account = new AccountsCustom($account_token_id);			
 			$result = $custom_account->getList($informations, $account_token_id);
             return response()->json($result);			

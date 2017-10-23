@@ -119,7 +119,7 @@ class AccountsCustom {
             if (!is_array($param)) {
                 throw new Exception("Expected array as parameter , " . (is_object($level) ? get_class($level) : gettype($level)) . " found.");
             }
-            
+            $errors = [];
             if($get_request){
                 if (array_key_exists('role', $param)) {
                     if(isset($param['role']) && !in_array($param['role'],[self::ROLE_CUSTOMER, self::ROLE_ENTREPRENEUR, self::ROLE_ADVERTISER])){
@@ -140,8 +140,7 @@ class AccountsCustom {
                     throw new Exception("Expected 'verified_status' in array as parameter , " . (is_object($param['verified_status']) ? get_class($param['verified_status']) : gettype($param['verified_status'])) . " found.");
                 }                  
             }
-            else{
-                $errors = [];
+            else{                
                 if (array_key_exists('email', $param)) {
                     if (is_null($param['email'])) {
                         $errors [] = array("code" => 4000, "description" => "Email address is required ");
@@ -379,6 +378,7 @@ class AccountsCustom {
             return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
 
@@ -390,28 +390,31 @@ class AccountsCustom {
      */
     public function getList($params,$admin_id){
         try{            
-            $validate = $this->validate($params,true);            
-            if ($validate) {                
-                //var_dump($params);die();
-                $unencodeArray = [];
-                $result = null;
-                $data = [];
-                //Retrieve a list of item paginated by after and before params
-                $rows = $this->_model->getList($params);                                            
-                //server check if not item found and display response below
-                if (!$rows) {
-                    $result = [
-                        'code' => 200,
-                        'data' => [],
-                        'total' => 0,
-                    ];
-                    return $result;
-                }
-                return $rows;                
+            $error = $this->validate($params,true);
+            if(!empty($error)){
+                //http_response_code(400);
+                //die(); 
+                return response()->json($error, 400);
             }
-            
+			//var_dump($params);die();
+			$unencodeArray = [];
+			$result = null;
+			$data = [];
+			//Retrieve a list of item paginated by after and before params
+			$rows = $this->_model->getList($params);                                            
+			//server check if not item found and display response below
+			if (!$rows) {
+				$result = [
+					'code' => 200,
+					'data' => [],
+					'total' => 0,
+				];
+				return $result;
+			}
+			return $rows;            
         }catch(Exception $ex){
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }    
     
@@ -423,6 +426,7 @@ class AccountsCustom {
             return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
     
@@ -434,6 +438,7 @@ class AccountsCustom {
             return $result;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
 
@@ -446,5 +451,5 @@ class AccountsCustom {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
-    
+	
 }

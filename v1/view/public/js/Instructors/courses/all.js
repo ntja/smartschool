@@ -169,8 +169,7 @@
                     },
                     {
                         data: null,
-                        render: function(data, type, full, meta){
-                                                        
+                        render: function(data, type, full, meta){                                                        
                             var html = '<div class="btn-group">';
                             //var html = '';
                             //html+='<button class="btn btn-success" onclick="delete_row(\'trow_1\');"><i class="fa fa-edit"></i>Edit</button>';                            

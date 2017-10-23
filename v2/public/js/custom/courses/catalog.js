@@ -49,21 +49,16 @@
 			get_courses(page_url);
 		});
 		
-		/*
-		//click on next page link
-		$('body').delegate('#next', 'click',function(){
-			var page = $(this).data('page')+1;
-			uri = config.api_url + "/courses?limit="+limit+"&page="+page;
+		// get all courses
+		$('.all_courses').on('click',function(){			
+			var uri = config.api_url + "/courses?limit="+limit;
 			get_courses(uri);
+			$(this).parent().siblings().each(function( index ) {
+			  $( this ).find('a').removeAttr("id");
+			});
+			$(this).attr('id', 'active');
 		});
 		
-		//clcik on previous page link
-		$('body').delegate('#previous', 'click',function(){
-			var page = $(this).data('page')-1;
-			uri = config.api_url + "/courses?limit="+limit+"&page="+page;
-			get_courses(uri);
-		});
-		*/
 		//Get courses list
 		//get_courses(uri);
 		query_params = qs();

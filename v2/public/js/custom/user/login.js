@@ -178,11 +178,11 @@
             url = config.api_url + '/accounts/authenticate';
             email = $('#email').val();
             password = $('#password').val(); 
-                            human_verification = $('#verify_human').val();
+            human_verification = $('#verify_human').val();
             data = {
                 "email": email,
                 "password": password,
-                                    "human_verification" : human_verification,					
+                "human_verification" : human_verification,					
             };
             console.log(data);
             //console.log(JSON.stringify(data))                
@@ -214,9 +214,7 @@
                     uri = base_url + '/instructor/dashboard';
                 } else if (data.role == "LEARNER"){
                     uri = base_url + '/learner/dashboard';
-                }
-                                    //$('#login-form').slideUp('slow')
-                                    //$('#signin')[0].reset();
+                }                                   
                 setTimeout(function(){
                     window.location.assign(uri);
                 },2000);  
@@ -240,13 +238,13 @@
                         }
 
                 }else{
-                        alertNotify(settings.i18n.translate("error.1"), 'error');
+                    alertNotify(settings.i18n.translate("error.1"), 'error');
                 }                   
             })
-                            .always(function() {
-                                    $('#submit_btn .loader').fadeOut('slow',function(){$(this).remove()});
-                                    $('#submit_btn').removeAttr('disabled');
-                            });
+			.always(function() {
+				$('#submit_btn .loader').fadeOut('slow',function(){$(this).remove()});
+				$('#submit_btn').removeAttr('disabled');
+			});
         }else{
             $('#submit_btn .loader').fadeOut('slow',function(){$(this).remove()});
             $('#submit_btn').removeAttr('disabled');

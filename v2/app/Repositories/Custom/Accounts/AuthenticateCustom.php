@@ -64,21 +64,25 @@ class AuthenticateCustom {
                 throw new Exception("Expected 'password' in array as parameter , " . (is_object($param['password']) ? get_class($param['password']) : gettype($param['password'])) . " found.");
             }
             if (array_key_exists('human_verification', $param)){
+				/*
                 if (is_null($param['human_verification'])) {
                     $errors [] = array("code" => 4000, "field" =>"'human_verification'","description" => "human_verification is required ");
                     //echo json_encode($result, JSON_UNESCAPED_SLASHES);
                     //return false;
                 }
-                if (!is_numeric($param['human_verification'])) {
-                    $errors [] = array("code" => 4000, "description" => "human_verification must be a number");
-                    //echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                    //return false;
-                }
-                if ($param['human_verification'] != 4) {
-                    $errors [] = array("code" => 4000, "field" =>"'human_verification'", "description" => "human_verification value is incorrect");
-                    //echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                    //return false;
-                }
+				*/
+				if (!is_null($param['human_verification'])) {
+					if (!is_numeric($param['human_verification'])) {
+						$errors [] = array("code" => 4000, "description" => "human_verification must be a number");
+						//echo json_encode($result, JSON_UNESCAPED_SLASHES);
+						//return false;
+					}
+					if ($param['human_verification'] != 4) {
+						$errors [] = array("code" => 4000, "field" =>"'human_verification'", "description" => "human_verification value is incorrect");
+						//echo json_encode($result, JSON_UNESCAPED_SLASHES);
+						//return false;
+					}
+				}                
             }else {
                 throw new Exception("Expected 'human_verification' in array as parameter , " . (is_object($param['human_verification']) ? get_class($param['human_verification']) : gettype($param['human_verification'])) . " found.");
             }

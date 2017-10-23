@@ -5,7 +5,7 @@
 (function($) {
     $(document).ready(function() {
 
-        var base_url = $('body').attr('data-base-url');      
+        var base_url = $('body').attr('data-base-url');
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');
         //check if user token is still valid 
 		var valid_token = check_token_validity(user_token);		
@@ -59,6 +59,16 @@
 			var page_url = $(this).data('previous');
 			get_books(page_url);
 		});						
+		
+		// get all books
+		$('.all_books').on('click',function(){			
+			var uri = config.api_url + "/books?limit="+limit;
+			get_books(uri);
+			$(this).parent().siblings().each(function( index ) {
+			  $( this ).find('a').removeAttr("id");
+			});
+			$(this).attr('id', 'active');
+		});
 		
 		// get books by category
 		$('body').delegate('.category', 'click',function(){

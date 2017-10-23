@@ -73,7 +73,7 @@ class QuestionsCustom {
                 throw new Exception("Expected array as parameter , " . (is_object($level) ? get_class($level) : gettype($level)) . " found.");
             }
             
-            if(!$get_request){            
+            if(!$get_request){
                 if (array_key_exists('title', $param)) {
                     if (is_null($param['title'])) {
                         $result = array("code" => 4000, "description" => "title is required ");
@@ -211,8 +211,8 @@ class QuestionsCustom {
                 }else{
                     throw new Exception("Expected numeric for key (instructor), " . (is_object($param['instructor']) ? get_class($param['instructor']) : gettype($param['instructor'])) . ' found.');
                 }
-            }         
-			$this->_information = $param;
+				$this->_information = $param;
+            }         		
             return true;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
@@ -299,12 +299,42 @@ class QuestionsCustom {
         }
     }
     public function generateRandomString($length) {
-        $characters = '0123456789O';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
+		try{
+			$characters = '0123456789O';
+			$charactersLength = strlen($characters);
+			$randomString = '';
+			for ($i = 0; $i < $length; $i++) {
+				$randomString .= $characters[rand(0, $charactersLength - 1)];
+			}
+			return $randomString;
+		}catch(Exception $ex){
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
+        }        
+    }
+	
+	public function getList($params){
+        try{
+            //dd("Here");
+            $validate = $this->validate($params,true);            
+            if ($validate) {                         
+                //Retrieve a list of item paginated by after and before params
+                $rows = $this->_model->getList($params);
+				if($rows){
+					return $rows;
+				}else{
+					$result = [
+                        'code' => 200,
+                        'data' => [],
+                        'total' => 0,
+                    ];
+                    return $result;
+				}
+                
+            }            
+        }catch(Exception $ex){
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
-        return $randomString;
     }
 }
