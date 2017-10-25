@@ -23,8 +23,9 @@ class FromStorageController extends Controller {
      */
 
     public function getNonUploadedCategories($storage) {
-        $course_categories = DB::table('book_categories')->select('name')->get()->toArray();
-		//$books = DB::table('books')->select('name')->get()->toArray();
+		try{
+			$course_categories = DB::table('book_categories')->select('name')->get()->toArray();
+			//$books = DB::table('books')->select('name')->get()->toArray();
 			$category_titles = [];
 			$extract_cat_titles = [];
             foreach ($course_categories as $category) {
@@ -45,6 +46,11 @@ class FromStorageController extends Controller {
             //var_dump($extract_cat_titles);die();
             //end($array);           
             return $extract_cat_titles;
+		} catch (Exception $ex) {
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+            echo $ex->getMessage();
+			die();
+        }        
     }
     
     public function getBooks($path) {
@@ -95,32 +101,40 @@ class FromStorageController extends Controller {
             //var_dump($result);die();            
         } catch (Exception $ex) {
             DB::rollback();
-            echo $ex->getessage();
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+            echo $ex->getMessage();
+			die();
         }
 		
     }
         
 	public function extractCoverFromPdf($filepath, $savepath=__DIR__ . DIRECTORY_SEPARATOR .'cover.jpg'){
-		$imagick = new \Imagick($filepath);
-		$imagick->setResolution(300, 300);
-		//$imagick->readImage($filepath);
-		//reduce the dimensions - scaling will lead to black color in transparent regions
-		$imagick->scaleImage(800,0);
-		$imagick->cropImage(900,850, 0,100);
-		//set new format
-		$imagick->setImageFormat('jpeg');
-		$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
-		$imagick->setCompressionQuality(100);
-		//$imagick->setImageColorspace(4);
-		//$imagick->setImageBackgroundColor('white');		
-		//$imagick = $imagick->flattenImages();
-		$imagick->trimImage(0);
-		$imagick->writeImage($savepath); 
-		//$output = $imagick->getimageblob();
-		//$outputtype = $imagick->getFormat();
-		//header("content-type:$outputtype");
-		//print_r($output);die();		
-		$imagick->destroy();
+		try{
+			$imagick = new \Imagick($filepath);
+			$imagick->setResolution(300, 300);
+			//$imagick->readImage($filepath);
+			//reduce the dimensions - scaling will lead to black color in transparent regions
+			$imagick->scaleImage(800,0);
+			$imagick->cropImage(900,850, 0,100);
+			//set new format
+			$imagick->setImageFormat('jpeg');
+			$imagick->setImageCompression(\Imagick::COMPRESSION_JPEG);
+			$imagick->setCompressionQuality(100);
+			//$imagick->setImageColorspace(4);
+			//$imagick->setImageBackgroundColor('white');		
+			//$imagick = $imagick->flattenImages();
+			$imagick->trimImage(0);
+			$imagick->writeImage($savepath); 
+			//$output = $imagick->getimageblob();
+			//$outputtype = $imagick->getFormat();
+			//header("content-type:$outputtype");
+			//print_r($output);die();		
+			$imagick->destroy();
+		}catch(Exception $ex){
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+            echo $ex->getMessage();
+			die();
+		}		
 	}
 	
     public function post(Request $request) {        
@@ -133,7 +147,8 @@ class FromStorageController extends Controller {
             //$lessons = $this->getVideosOfLessons();            
             //return $lessons;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }         
     }
 }
