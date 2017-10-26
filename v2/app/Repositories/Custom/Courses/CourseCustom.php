@@ -127,11 +127,13 @@ class CourseCustom {
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
                     }
+					/*
                     if (empty(trim($param['shortdescription']))) {
                         $result = array("code" => 4000, "description" => "shortdescription must not be empty ");
                         echo json_encode($result, JSON_UNESCAPED_SLASHES);
                         return false;
-                    }                    
+                    }
+					*/
                 }else{
                     throw new Exception("Expected 'shortdescription' in array as parameter , " . (is_object($param['shortdescription']) ? get_class($param['shortdescription']) : gettype($param['shortdescription'])) . " found.");
                 }
@@ -363,19 +365,19 @@ class CourseCustom {
                     }                                        
                 }
                 if (array_key_exists('category', $param)) {
-                    if (!is_numeric($param['category'])) {
-                        $result = array("code" => 4000, "description" => "category is a number");
-                        echo json_encode($result, JSON_UNESCAPED_SLASHES);
-                        return false;
-                    }                                        
-                }else{
-                    throw new Exception("Expected numeric for key (category), " . (is_object($param['category']) ? get_class($param['category']) : gettype($param['category'])) . ' found.');
+					if (!is_null($param['category'])) {
+						if (!is_numeric($param['category'])) {
+							$result = array("code" => 4000, "description" => "category is a number");
+							echo json_encode($result, JSON_UNESCAPED_SLASHES);
+							return false;
+						} 
+					}
                 }
 				//var_dump($this->_courseCustom->validate($params));die();
 			}
             return true;
         } catch (Exception $ex) {
-            LogRepository::printLog('error', $ex->getMessage());
+            LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
         }
     }
 
@@ -431,7 +433,7 @@ class CourseCustom {
                 return response()->json($result, 400);
             }
         }catch(Exception $e){
-			LogRepository::printLog('error', $e->getMessage());
+			LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
 		}       
     }
 	/**

@@ -42,9 +42,10 @@ Dashboard
                                                     <th>Status</th>
 													<th>Category</th>
 													<th>Format</th>
-													<th>Type</th>
+													<th>Type</th>													
 													<th>Instructor</th>
-													<th>Language</th>
+													<!-- <th>Language</th> -->
+													<th>Cover</th>
                                                     <th></th> 
                                                 </tr>
                                             </thead>                                

@@ -107,9 +107,16 @@
                             }
                             
                         }
-                    },
-                    {                     
-                        data: "language"
+                    },                    
+					{                     
+                        data: "photo",
+						defaultContent: '',
+						render: function(data, type, full, meta){
+							//console.log(base_url+'../../../public/'+data);
+							if(data){
+								return '<img src="'+base_url+'../../../public/'+data+'" alt="" width="100px" height="100px" />';
+							}                            
+                        }
                     },
                     {
                         data: null,

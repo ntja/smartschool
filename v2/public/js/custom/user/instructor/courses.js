@@ -22,7 +22,7 @@
 		  }
 		});
 		var uri = config.api_url + "/accounts/"+user_id+"/courses?limit="+limit;
-		console.log(uri);
+		//console.log(uri);
 		/*
 		var valid_token = check_token_validity(user_token);
 		// if token exists and is valid

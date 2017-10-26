@@ -48,7 +48,7 @@ class CourseController extends Controller {
 			*/
             return response()->json($result);
         } catch (Exception $ex) {
-            LogRepo::printLog('error', $ex->getMessage());
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
             die();
         }
     }
@@ -89,7 +89,8 @@ class CourseController extends Controller {
 			$custom_course = new CourseCustom(); 
 			return $custom_course->updateCourse($info, $id);                               
         } catch (Exception $e) {
-            LogRepo::printLog('error', $e->getMessage());
+            LogRepo::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
 

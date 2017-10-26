@@ -325,7 +325,7 @@ class AclPolicy {
                     return false;
                 }
             }elseif (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE)) {
-                $role = ["INSTRUCTOR", "LEARNER","GUEST"];
+                $role = ["INSTRUCTOR", "LEARNER","GUEST", "ADMINISTRATOR"];
                 if (in_array($user->getRole(), $role)) {
                     return true;
                 } else {
@@ -420,18 +420,22 @@ class AclPolicy {
 	public function put($user, $resource, $owner = false) {
         if (is_object($resource)) {
             if (!strcasecmp(get_class($resource), self::RESOURCE_COURSE_COURSE)) {
-                $role = ["INSTRUCTOR"];
+                $role = ["INSTRUCTOR","ADMINISTRATOR"];
                 //die($user->getRole());
                 if (in_array($user->getRole(), $role)) {
-                    if ($owner) {                                               
-                        if ($user->isCourseOwner($resource)) {                            
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    }else{
-                        return false;
-                    }
+					if($user->getRole() === "INSTRUCTOR"){
+						if ($owner) {
+							if ($user->isCourseOwner($resource)) {                            
+								return true;
+							} else {
+								return false;
+							}
+						}else{
+							return false;
+						}
+					}else{
+						return true;
+					}
                 } else {
                     return false;
                 }
@@ -453,6 +457,5 @@ class AclPolicy {
                 }
             }
 		}
-	}
-	
+	}	
 }
