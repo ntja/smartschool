@@ -22,7 +22,7 @@
 				<li><a href="#">{{__('About Us')}}</a></li>
 				<li><a href="#">{{__('Contact Us')}}</a></li>
 				<li><a href="#">{{__('Terms and conditions')}}</a></li>
-				<li><a href="<?php echo URL::to('/register'); ?>">{{__('Register')}}</a></li>
+				<li><a href="<?php echo URL::to('/register'); ?>">{{__('Sign Up')}}</a></li>
 			</ul>
 		</div><!-- End col-md-4 -->
 		<div class="col-md-3 col-sm-3">

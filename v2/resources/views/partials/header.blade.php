@@ -38,16 +38,24 @@
                 </div>
             </div>
 		</div>
-		<div class="col-md-4 col-sm-3 col-xs-8">
-			<div class="pull-right connect-register"><a href="<?php echo URL::to('/register'); ?>"><i class="fa fa-pencil-square-o"></i> {{__('Register')}}</a>&nbsp;&nbsp;<a href="<?php echo URL::to('/login'); ?>" class="button_top"><i class="fa fa-lock"></i> {{__('Log in')}}</a></div>            
-			 
-			@include('partials/language')			
-			 
+		<div class="col-md-4 col-sm-3 col-xs-8">			
+			<!-- @include('partials/language') -->
+			<div id="google_translate_element">
+			</div>
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,es,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+				}
+				</script>
+			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>					
 		</div>
-	</div>
+		<div class="col-md-4 col-sm-3 col-xs-8">
+			<div class="pull-right connect-register"><a href="<?php echo URL::to('/register'); ?>"><i class="fa fa-pencil-square-o"></i> {{__('Sign Up')}}</a>&nbsp;&nbsp;<a href="<?php echo URL::to('/login'); ?>" class="button_top"><i class="fa fa-lock"></i> {{__('Log in')}}</a></div>			
+		</div>
+	</div>		
 </div>
 </header><!-- End header -->
-<nav>
+<nav style="padding-top:10px">
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
