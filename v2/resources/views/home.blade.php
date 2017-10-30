@@ -164,7 +164,7 @@
         	<div class="row">
 				<div class="col-md-12 text-center">
 					<h2>{{__('Latest Courses')}}</h2>
-					<p class="lead">{{__('Enroll now in the latest courses')}}.</p>
+					<!-- <p class="lead">{{__('Enroll now in the latest courses')}}.</p> -->
 				</div>
 			</div><!-- End row -->
 			<div id="course_list">

@@ -75,6 +75,7 @@ class FromStorageController extends Controller {
 					$cover_rel_link = implode(DIRECTORY_SEPARATOR,$arr_2). DIRECTORY_SEPARATOR .'cover'. DIRECTORY_SEPARATOR .Str::slug(explode('.pdf', $book->getFilename())[0]).'.jpg';
 					//var_dump($cover_rel_link);die();
 					$this->extractCoverFromPdf($book->getRealPath().'[0]',$cover);
+					LogRepository::printLog('info', var_export($book->getFilename())[0],true));					
 					$book_id = DB::table('books')->insertGetId(
 						[
 							'name' =>  explode('.pdf', $book->getFilename())[0],
