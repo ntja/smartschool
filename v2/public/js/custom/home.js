@@ -17,7 +17,7 @@
 		
 		if(courses){
 			data = courses.data;
-			console.info(data);
+			//console.info(data);
 			$('#course_list').empty();
 			html = "<div class='row'>";
 			for(i=0; i<data.length; i++){
@@ -60,8 +60,9 @@
 				html += "</div>";
 				html += "</div>";												
 			}
-			$('#course_list').append(html);                        
-			if(data.length > 12){
+			$('#course_list').append(html);     
+			console.info(courses.total);
+			if(courses.total > 12){
                 $('.view_all').removeClass('hide');
 			}
 		}

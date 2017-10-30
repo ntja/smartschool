@@ -134,7 +134,7 @@
 						html += '<div class="separator clearfix">';
 						html += '<p class="btn-add"><a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed" data-type="iframe"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
-						html += '<p class="btn-details"> <a href="#"><i class=" icon-download"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
+						html += '<p class="btn-details"> <a href="#"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.3')+'</a></p>';
 						html += '</div>';
 						html += '</div>';
 						html += '</div>';

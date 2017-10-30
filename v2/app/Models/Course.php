@@ -410,7 +410,7 @@ class Course extends Authenticatable{
                             ->orWhere('course_categories.description', 'like',  $query);
                 });
             */     
-            $rows = $select->select('courses.id','courses.name','courses.shortname')->orderBy('courses.id','DESC')->paginate($limit);
+            $rows = $select->select('courses.id','courses.name','courses.shortname','courses.photo')->orderBy('courses.id','DESC')->paginate($limit);
             if (!count($rows)) {
                 return [];
             }

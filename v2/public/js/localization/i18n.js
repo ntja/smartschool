@@ -38,6 +38,7 @@ settings.i18n = {
 			"instructor.course.8" : "Voir",
 			"book.catalog.1" : "Télécharger",
 			"book.catalog.2" : "Lire",
+			"book.catalog.3" : "Partager",
         },
         en: {
             'home.1': 'View',
@@ -77,6 +78,7 @@ settings.i18n = {
 			"instructor.course.8" : "View",
 			"book.catalog.1" : "Download",
 			"book.catalog.2" : "Read",
+			"book.catalog.3" : "Share",
         }
     },
     language: 'en',

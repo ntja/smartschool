@@ -113,7 +113,14 @@
 							html += "<div class='col-lg-3 col-md-6 col-sm-6'>";
 							html += "<div class='col-item'>";
 							html += "<div class='photo'>";
-							html += "<a href='"+base_url + "/course/"+items[i].shortname+"'><img src='"+base_url + "/public/img/poetry.jpg' alt='' /></a>";
+							
+							html += "<a href='"+base_url + "/course/"+items[i].shortname+"'>";
+							if(items[i].photo){
+								html += "<img src='"+base_url + "/public/"+items[i].photo+"' alt='' height='200' />";
+							}else{
+								html += "<img src='"+base_url + "/public/img/poetry.jpg' alt='' />";
+							}
+							html += "</a>";
 							html += "<div class='cat_row'>";
 							if(items[i].course_category){
 								html += "<a href='#'>"+items[i].course_category.name+"</a>";
@@ -123,7 +130,7 @@
 							html += "<div class='info'>";
 							html += "<div class='row'>";
 							html += "<div class='course_info col-md-12 col-sm-12'>";
-							html += "<h4><strong><a href='"+base_url + "/course/"+items[i].shortname+"'>"+items[i].name+"</a></strong></h4>";
+							html += "<h5><strong><a href='"+base_url + "/course/"+items[i].shortname+"'>"+items[i].name+"</a></strong></h5>";
 							html += "</div>";
 							html += "</div>";
 							html += "</div>";
