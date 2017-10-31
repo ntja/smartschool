@@ -4,12 +4,25 @@
     SmartSchool | {{__('Books Catalog')}}
 @stop
 @section('header-styles')
+	<meta property="og:url"           content="https://goo.gl/9tKv9Z" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="SmartSchool" />
+    <meta property="og:description"   content="Free e-books in various subjects such as Mathematics, Physical Sciences, Social Sciences, Computer Science, Engineering, Accounting, Finance, Economics, and more. " />
+    <meta property="og:image"         content="{{asset('img/school-1.jpg')}}" />
+
    <!-- CUSTOM STYLES -->
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 	<link href="{{asset('css/jquery.fancybox.min.css')}}" rel="stylesheet">	
 @stop
 @section('content')
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.10&appId=1322688107743985';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 @include('partials/header')
 
     <section id="sub-header">

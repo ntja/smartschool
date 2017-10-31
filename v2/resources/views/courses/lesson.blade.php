@@ -4,6 +4,11 @@
     SmartSchool | {{__('Content of the lesson')}}
 @stop
 @section('header-styles')
+	<meta property="og:url"           content="http://www.smartskul.com/courses/catalog" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="SmartSchool" />
+  <meta property="og:description"   content="Take the best courses from top Universities around the world" />
+  <meta property="og:image"         content="{{asset('http://img/school-1.jpg')}}" />
    <!-- CUSTOM STYLES -->   
     <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
@@ -31,6 +36,14 @@
 @stop
 
 @section('content')
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.10&appId=1322688107743985';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="notification-container"></div>
  @include('partials/header')
 <section id="main_content" data-course_id={{{ $course_id }}}>
@@ -57,7 +70,8 @@
 				<!-- <a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   -->
 				<a href="#" class="pull-right button_medium_outline next hide">{{__('Next')}}<i class="icon-right-open"></i></a>
 				<ul class="text-center social_team"> {{__('Share on')}} : 
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
+					<div class="fb-share-button" data-href="http://www.smartskul.com/v2/courses/catalog" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.smartskul.com%2Fv2%2Fcourses%2Fcatalog&amp;src=sdkpreparse">Partager</a></div>
+					<!-- <li><a href="#"><i class="icon-facebook"></i></a></li> -->
 					<li><a href="#"><i class="icon-twitter"></i></a></li>
 					<li><a href="#"><i class=" icon-google"></i></a></li>
 					<li><a href="#"><i class=" icon-linkedin"></i></a></li>
