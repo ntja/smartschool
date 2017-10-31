@@ -136,7 +136,7 @@
 						//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.3')+'</a></p>';
 						//html += '<p class="fb-share-button btn-details" data-href="https://goo.gl/9tKv9Z" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.smartskul.com%2Fv2%2Fbooks%2Fcatalog&amp;src=sdkpreparse"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
-						html += '<p class="fb-share-button btn-details" data-href="http://www.smartskul.com/v2/books" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.smartskul.com%2Fv2%2Fbooks&amp;src=sdkpreparse"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.1')+'</a></div>';
+						html += '<p class="fb-share-button btn-details" data-href="http://www.smartskul.com/v2/books" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.smartskul.com%2Fv2%2Fbooks&amp;src=sdkpreparse"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.3')+'</a></p>';
 						html += '</div>';
 						html += '</div>';
 						html += '</div>';
