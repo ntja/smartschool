@@ -4,11 +4,11 @@
     SmartSchool | {{__('Books Catalog')}}
 @stop
 @section('header-styles')
-	<meta property="og:url"           content="https://goo.gl/9tKv9Z" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="SmartSchool" />
-    <meta property="og:description"   content="Free e-books in various subjects such as Mathematics, Physical Sciences, Social Sciences, Computer Science, Engineering, Accounting, Finance, Economics, and more. " />
-    <meta property="og:image"         content="{{asset('img/school-1.jpg')}}" />
+	<meta property="og:url"           content="http://www.smartskul.com/v2/books">
+    <meta property="og:type"          content="website">
+    <meta property="og:title"         content="SmartSchool">
+    <meta property="og:description"   content="Free e-books in various subjects such as Mathematics, Physical Sciences, Social Sciences, Computer Science, Engineering, Accounting, Finance, Economics, and more. ">
+    <meta property="og:image"         content="{{asset('img/school-1.jpg')}}">
 
    <!-- CUSTOM STYLES -->
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
