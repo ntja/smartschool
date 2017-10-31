@@ -41,8 +41,7 @@
     
     
     <section id="main_content">
-    	<div class="container-fluid">
-        
+    	<div class="container-fluid">        
 			<ol class="breadcrumb">
 			  <li><a disabled href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
 			  <li class="active">{{__('Books Catalog')}}</li>
