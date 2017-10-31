@@ -15,6 +15,11 @@
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta property="og:url"           content="http://www.smartskul.com">
+    <meta property="og:type"          content="website">
+    <meta property="og:title"         content="SmartSchool - Free Education for all">
+    <meta property="og:description"   content="Free e-books and courses in various subjects such as Mathematics, Physical Sciences, Social Sciences, Computer Science, Engineering, Accounting, Finance, Economics, and more. ">
+    <meta property="og:image"         content="{{asset('img/school-1.jpg')}}">
     <!-- END META SECTION -->
 	@yield('meta')
     <!-- Favicons-->
