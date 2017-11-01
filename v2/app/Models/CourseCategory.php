@@ -95,7 +95,7 @@ class CourseCategory extends Authenticatable{
             }
 			$rows = null;
             $limit = intval($params['limit']);
-			$rows = DB::table('course_categories')->where('delete_status', '=', '0')->orderBy('id','DESC')->paginate($limit);           
+			$rows = DB::table('course_categories')->where('delete_status', '=', '0')->orderBy('name','ASC')->paginate($limit);           
             if (!count($rows)) {
                 return false;
             }
