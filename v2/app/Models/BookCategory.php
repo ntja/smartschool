@@ -58,8 +58,7 @@ class BookCategory extends Authenticatable{
                     throw new Exception("Expected String for key (date_created), " . (is_object($params['date_created']) ? get_class($params['date_created']) : gettype($params['date_created'])) . ' found.');
                 }
                 $this->date_created = $params['date_created'];
-            }            
-						
+            }
 			//var_dump($params);
 			//die();
             return $this->save();
@@ -81,7 +80,7 @@ class BookCategory extends Authenticatable{
 			
             $limit = intval($params['limit']);                
 
-            $rows = DB::table('book_categories')->where('delete_status', '=', '0')->orderBy('id','DESC')->paginate($limit);
+            $rows = DB::table('book_categories')->where('delete_status', '=', '0')->orderBy('name','ASC')->paginate($limit);
             //var_dump($rows);die();
             if (!count($rows)) {
                 return false;
