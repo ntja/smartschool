@@ -20,16 +20,7 @@
                                         <option value="1" >{{__('Books')}}</option>
                                         <option value="2">{{__('Courses')}}</option>
                                     </select>
-                                  </div>
-								  <!--
-                                  <div class="form-group">
-                                    <label for="contain">Author</label>
-                                    <input class="form-control" type="text" />
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="contain">Contains the words</label>
-                                    <input class="form-control" type="text" />
-                                  </div>  -->
+                                  </div>								  
                                 </form>
                             </div>
                         </div>

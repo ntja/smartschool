@@ -92,7 +92,7 @@ a#logo {
 	z-index:999;
 }
 #sub-header{
-	padding:30px 0 60px 0;
+	padding:30px 0 100px 0;
 	color:#fff;
 	position:relative;
 	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
@@ -116,6 +116,9 @@ a#logo {
 	background:#1abc9c url(../img/pattern_2.png) repeat center top;
 }
 
+.home{
+	background:#0cbdaa url(../img/home4.jpg) repeat 0 0!important;
+}
 #main_content{
 	padding:60px 0;
 	background-color:#fff;
@@ -696,7 +699,7 @@ a.button_fullwidth-3:hover, .button_fullwidth-3:hover  {background:#262c2d; colo
 #main-features {
 	background:#1c1c1c url(../img/bg_sub-header_2.png) repeat 0 0;
 	position:relative;
-	color:#8c8c8c;
+	color:#000; /*#0cbdaa*/
 	font-weight:600;
 	padding:60px 0;
 }

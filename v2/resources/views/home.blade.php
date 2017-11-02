@@ -13,6 +13,29 @@
 
 @include('partials/header')
 
+<section id="sub-header" class="home">
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center">
+			<!--<form action="#" method="get"  id="search-form" >
+				<div class="input-group" >
+					<input type="text" placeholder="{{__('What are you looking for ?') }}"  name="autocomplete-ajax" id="autocomplete-ajax"  class="form-control style-2" />
+					<span class="input-group-btn">
+					<button class="btn" type="submit"><i class="icon-search"></i></button>
+					</span>
+				</div> /input-group
+			</form> -->                  
+			<h1>{{__('LEARN EVERYTHING FROM ANYWHERE') }}</h1>
+			<h2 class="hidden-xs">{{__('For free. For everyone. Forever') }}</h2>            
+		</div>
+	</div><!-- End row -->
+</div><!-- End container -->
+<div class="divider_top"></div>
+</section><!-- End sub-header -->
+
+<?php 
+/*
+
 <section id="sub-header" >
   	<div class="container">
     	<div class="row">
@@ -81,7 +104,8 @@
         </div><!-- End row -->
     </div>
   </section><!-- End sub-header -->
-
+*/
+?>
     
     <section id="main-features">
     <div class="divider_top_black"></div>
