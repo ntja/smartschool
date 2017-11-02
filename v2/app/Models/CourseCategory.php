@@ -82,6 +82,7 @@ class CourseCategory extends Authenticatable{
             return $this->save();
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
 
@@ -102,6 +103,7 @@ class CourseCategory extends Authenticatable{
             return $rows;
         } catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage() . " in ". $ex->getFile(). " at line ". $ex->getLine());
+			die();
         }
     }
 }
