@@ -192,6 +192,7 @@
 @section('scripts')
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
+	<script src="{{asset('js/custom/user/instructor/common-tasks.js')}}"></script>
 @stop
 
 @stop

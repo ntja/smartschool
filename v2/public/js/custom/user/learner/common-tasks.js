@@ -3,7 +3,6 @@
  */
 
 (function($) {
-	/*
     $(document).ready(function() {
 		var form, base_url, role, user_detail = null;      
         base_url = $('body').attr('data-base-url');
@@ -26,10 +25,8 @@
 		
 		//Get user details
 		user_detail = get_user_details(user_id, user_token);
-		console.info(user_detail);
 		if(user_detail){
 			$('#user_name').empty().html(user_detail.first_name);
 		}        			
 	});
-	*/
 })(jQuery);

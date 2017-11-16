@@ -3,7 +3,6 @@
  */
 
 (function($) {
-	/*
     $(document).ready(function() {
 		var form, base_url, role, user_detail = null;      
         base_url = $('body').attr('data-base-url');
@@ -15,7 +14,7 @@
         if (!user_token || valid_token == false) {						
 			window.location.assign(base_url + '/login');
 		}
-		if(user_role !== "LEARNER"){
+		if(user_role !== "INSTRUCTOR"){
 			logout();
 		}
 		//When user clcik on logout button
@@ -29,7 +28,6 @@
 		console.info(user_detail);
 		if(user_detail){
 			$('#user_name').empty().html(user_detail.first_name);
-		}        			
+		}
 	});
-	*/
 })(jQuery);

@@ -3,8 +3,8 @@
  */
 
 (function($) {
+	/*
     $(document).ready(function() {
-
         var form, base_url, role, user_detail = null;      
         base_url = $('body').attr('data-base-url');
         var user_role = window.localStorage.getItem('sm_user_role'), user_token = window.localStorage.getItem('sm_user_token'), user_id = window.localStorage.getItem('sm_user_id');
@@ -31,4 +31,5 @@
 			$('#user_name').empty().html(user_detail.first_name);
 		}
 	});
+	*/
 })(jQuery);

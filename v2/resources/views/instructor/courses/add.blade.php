@@ -225,6 +225,7 @@
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
+	<script src="{{asset('js/custom/user/instructor/common-tasks.js')}}"></script>
 	<script src="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.js')}}"></script>
 	<script src="{{asset('js/plugins/dropzone/dropzone.min.js')}}"></script>
 	<script src="{{asset('js/plugins/ckeditor/ckeditor.js')}}"></script>	

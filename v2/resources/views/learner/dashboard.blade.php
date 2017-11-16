@@ -81,6 +81,7 @@
 	<script src="{{asset('js/localization/i18n.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>
 	<script src="{{asset('js/custom/custom.js')}}"></script>
+	<script src="{{asset('js/custom/user/learner/common-tasks.js')}}"></script>
    <script src="{{asset('js/custom/user/learner/dashboard.js')}}"></script>
 @stop
 
