@@ -36,17 +36,27 @@ Edit Course
 					<div class="form-group">
 					  <label for="short_name">Course Short Name</label>
 					  <input type="text" class="form-control" id="short_name" placeholder="Enter Short Name" disabled>
-					</div>					
-					<div class="col-md-4 col-sm-6">
-						<div class="form-group">
-							<label class="control-label">Book Cover</label>
-							<div class="dropzone dz-clickable" id="book_cover">
-								<div class="dz-default dz-message">
-									<span>Drop file here to upload</span>
+					</div>
+					<div class="form-group">
+					  <label>Select Course Category</label>
+					  <select class="form-control" id="course_category_list">
+						<option value=""></option>						
+					  </select>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="form-group">
+								<label class="control-label">Book Cover</label>
+								<div class="dropzone dz-clickable" id="book_cover">
+									<div class="dz-default dz-message">
+										<span>Drop file here to upload</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>					
+					</div>
+					<div class="row clear-fix"><div class="col-md-4 col-sm-6" id="cover_preview"></div>
+					</div>
 				  </div>
 				  <!-- /.box-body -->
 
@@ -95,6 +105,7 @@ Edit Course
                     var response = JSON.parse(file.xhr.responseText);
                     //$('.photo-thumb').html('<img src="' + $('body').attr('data-base-url') + '/public/'+ response["file_name"] + '" width="180px"/>');
                     $('#book_cover').data('cover', response["file_name"]);
+					$("#cover_preview").empty().append('<img src="'+base_url+'/../../public/'+response["file_name"]+'" height="100" width="100" alt="">');
 					//$('#company_logo').addClass("hide");
                 });
            }

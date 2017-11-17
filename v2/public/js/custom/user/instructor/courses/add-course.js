@@ -22,22 +22,6 @@
 		  }
 		});
 		
-		/*
-		var valid_token = check_token_validity(user_token);
-		// if token exists and is valid
-        if (!user_token || valid_token == false) {						
-			window.location.assign(base_url + '/login');
-		}
-		//When user clcik on logout button
-		$('.logout').click(function(e) {
-            e.preventDefault();
-			logout();
-		});				
-		*/
-		if(user_role !== "INSTRUCTOR"){
-			logout();
-		}
-		
 		// get course categories
 		get_course_categories(user_token,'#category_list');
 		
@@ -128,7 +112,7 @@
                 url = config.api_url + '/courses';
                 course_title = $('#course_title').val();
                 short_name = $('#short_name').val();    				
-				course_title = $('#course_title').val();
+				//course_title = $('#course_title').val();
 				expected_duration = $('#expected_duration').val();				
 				start_date = $.datepicker.formatDate('yy-mm-dd', $('#start_date').datepicker("getDate"));
 				course_description = CKEDITOR.instances.course_description.getData(); //= $('#course_description').val();
