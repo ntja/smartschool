@@ -50,6 +50,6 @@ class LessonController extends Controller {
 			}else{
 				$data = [];
 			}			
-        return view('courses.lesson')->with(['course_id' => $course_id, 'sections_with_lessons' => $data]);
+        return view('courses.lesson')->with(['course_id' => $course_id, 'sections_with_lessons' => $data, 'lesson' => $lesson]);
     }
 }

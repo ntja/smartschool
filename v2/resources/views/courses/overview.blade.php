@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('header-title')
-    SmartSchool | {{__('Course Details')}}
+    SmartSchool | {{{ $course_id }}}
 @stop
 @section('header-styles')
    <!-- CUSTOM STYLES -->   

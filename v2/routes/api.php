@@ -28,7 +28,7 @@ Route::group(['middleware' => 'jwt.auth:1'], function () { //bypass ACL because 
 	Route::get('/courses', 'CoursesController@get');
 	Route::get('/courses/search', 'Courses\SearchController@get');
 	Route::get('/books', 'BooksController@get');
-	Route::get('/books/{bookId}', 'Books\BookController@get')->where('bookId', '[0-9]+');
+	Route::get('/books/{bookId}', 'Books\BookController@get')->where('bookId', '[a-zA-Z0-9\-]+');
 	Route::get('/books/categories', 'Books\CategoriesController@get');
 	Route::get('/books/search', 'Books\SearchController@get');
 	Route::get('/courses/{courseId}', 'Courses\CourseController@get')->where('courseId', '[a-zA-Z0-9\-]+');

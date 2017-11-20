@@ -8,13 +8,13 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Util\LogRepository as LogRepo;
 use App\Repositories\Custom\AccountsCustom;
 use App\Repositories\Custom\Books\BookCustom;
-use App\Repositories\Custom\Resource\Books\Category as ResourceCategory;
+use App\Repositories\Custom\Resource\Books\Book as ResourceBook;
 use Exception;
 
 class BookController extends Controller {
 
     public function __construct() {
-        $this->middleware('jwt.auth');
+        $this->middleware('jwt.auth', ['except' => ['get']]);
     }    
 
     /**
@@ -22,6 +22,7 @@ class BookController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
+	 /*
     public function put(Request $request) {
         try {                      
             $data = $request->only('account_id');
@@ -54,26 +55,22 @@ class BookController extends Controller {
             die();
         }
     }
-
+	*/
+	
     public function get(Request $request, $id) {
         try {                      
-            $data = $request->only('account_id','limit');
+            $data = $request->only('account_id');
             $account_token_id = $data['account_id'];
             $account = new AccountsCustom($account_token_id);
-            $ressource_category = new ResourceCategory();
-            if (Gate::forUser($account)->denies('get', $ressource_category)) {
+            $resource_book = new ResourceBook();
+			//var_dump($account->getRole());die();
+            if (Gate::forUser($account)->denies('get', $resource_book)) {
                 $result = array("code" => 4003, "description" => "You do not have permissions for that request..");
                 echo json_encode($result, JSON_UNESCAPED_SLASHES);
                 http_response_code(400);
                die();
             }
-            
-            if(!$data['limit']){
-                $limit = 12;
-            }else{
-                $limit = $data['limit'];
-            }         
-
+			
             $informations = array(
                 'id' => $id,				
             );
@@ -128,5 +125,7 @@ class BookController extends Controller {
             return $custom_product->editBook($info, $id);
         } catch (Exception $e) {
             LogRepo::printLog('error', $e->getMessage());
-      
+			die();
+		}
+	}
 }

@@ -94,6 +94,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/books', function () {
 		return view('books.catalog');
 	});
+	Route::get('/books/{ID}', 'Views\Books\bookController@get')->where('ID', '[a-zA-Z0-9\-]+');
 	
 	Route::get('/subscription-plans', function () {
         return view('subscription-plans');

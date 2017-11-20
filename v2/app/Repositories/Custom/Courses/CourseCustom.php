@@ -395,7 +395,7 @@ class CourseCustom {
 					LogRepository::printLog('info', "The information of course #". $course ." has been retrieve."); 
 					return $result;
 				}else{
-					 http_response_code(400);
+					http_response_code(400);
 					$result = array("code" => 4000, "description" => "Course not found");
 					echo json_encode($result, JSON_UNESCAPED_SLASHES);
 					die(); 

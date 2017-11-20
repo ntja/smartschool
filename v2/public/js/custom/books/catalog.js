@@ -114,7 +114,8 @@
 						html += '<div class="col-lg-4 col-md-6">';
 						html += '<div class="col-item">';
 						html += '<div class="photo">';
-						html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed"  data-type="iframe">';
+						//html += '<a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed"  data-type="iframe">';
+						html += '<a href="'+base_url+'/books/'+data.data[i].slug_name+'">';
 						html += '<img src="'+base_url+'/'+data.data[i].cover+'" alt="" /></a>';
 						html += '<div class="cat_row">';						
 						html += '<a href="#">'+data.data[i].category_name+'</a>';						
@@ -124,7 +125,6 @@
 						html +=	'<div class="row">'
 						html += '<div class="course_info col-md-12 col-sm-12">';
 						html += '<h4>'+data.data[i].name+'</h4>';
-						//html += '<p > Lorem ipsum dolor sit amet, no sit sonet corpora indoctum, quo ad fierent insolens. Duo aeterno ancillae ei. </p>';
 						html += '<div class="rating">';
 						html += '<i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i>'
 						html += '</div>';
@@ -132,7 +132,8 @@
 						html += '</div>';
 						html += '</div>';
 						html += '<div class="separator clearfix">';
-						html += '<p class="btn-add"><a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed" data-type="iframe"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
+						//html += '<p class="btn-add"><a href="'+base_url+'/'+data.data[i].filepath+'" class="read-book fancy-box fancybox.iframe embed" data-type="iframe"><i class="icon-book"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
+						html += '<p class="btn-add"><a href="'+base_url+'/books/'+data.data[i].slug_name+'"><i class="icon-book-o"></i> '+settings.i18n.translate('book.catalog.2')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class=" icon-share"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';
 						//html += '<p class="btn-details"> <a href="#"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.3')+'</a></p>';
 						//html += '<p class="fb-share-button btn-details" data-href="https://goo.gl/9tKv9Z" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.smartskul.com%2Fv2%2Fbooks%2Fcatalog&amp;src=sdkpreparse"><i class="icon-facebook"></i> '+settings.i18n.translate('book.catalog.1')+'</a></p>';

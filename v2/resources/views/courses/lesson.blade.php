@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
 @section('header-title')
-    SmartSchool | {{__('Content of the lesson')}}
+    SmartSchool | {{{ $lesson }}}
 @stop
 @section('header-styles')
-	<meta property="og:url"           content="http://www.smartskul.com/courses/catalog" />
+	<meta property="og:url"         content="http://www.smartskul.com/courses/catalog" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="SmartSchool" />
   <meta property="og:description"   content="Take the best courses from top Universities around the world" />
@@ -12,27 +12,7 @@
    <!-- CUSTOM STYLES -->   
     <link href="{{asset('css/single_course.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('js/plugins/sudo-notify/jquery.sudo-notify.min.css')}}">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.1.1/mediaelementplayer.min.css" integrity="sha256-WXx0FFqRfy9q9IjmwAEJqvBycVIwfemORECxUHP+o0g=" crossorigin="anonymous" />
-	<style>
-		.myIframe {
-			position: relative;
-			padding-bottom: 52.00%;
-			padding-top: 30px;
-			height: 0;
-			overflow: auto; 
-			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
-			border: solid black 1px;
-		} 
-			.myIframe iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-
-	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.1.1/mediaelementplayer.min.css" integrity="sha256-WXx0FFqRfy9q9IjmwAEJqvBycVIwfemORECxUHP+o0g=" crossorigin="anonymous" />	
 @stop
 
 @section('content')
@@ -54,10 +34,7 @@
       <li><a href="<?php echo URL::to('/'); ?>">{{__('Home')}}</a></li>
 	  <li><a href="<?php echo URL::to('/courses/catalog'); ?>">{{__('Courses Catalog')}}</a></li>
 	  <li><a href="<?php echo URL::to('/course/'.$course_id); ?>">{{{ $course_id }}}</a></li>      
-    </ol>
-      <?php 
-        //var_dump($sections_with_lessons);die();
-      ?>
+    </ol>     
 	<div class="row">
 		<div class="col-md-9 col-md-push-3 col-sm-9 col-sm-push-3 col-lg-9 col-lg-push-3 col-xs-12">
 			<!-- <div class="clearfix text-center"><a href="#" class="pull-left button_medium_outline"> <i class="icon-left-open">{{__('Previous')}}</i></a><a href="#" class="button_medium_outline"><small>{{__('Mark as complete')}}</small></a>   <a href="#" class="pull-right button_medium_outline">{{__('Next')}}<i class="icon-right-open"></i></a></div> <hr>-->			

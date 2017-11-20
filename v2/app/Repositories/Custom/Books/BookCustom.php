@@ -42,11 +42,15 @@ class BookCustom {
     
     public function getBook($informations, $user_id){
         try{
-			$book = $this->_booksCustom->getBookByID($informations['id']);
+			if(is_numeric($informations['id'])){
+				$book = $this->_booksCustom->getBookByID($informations['id']);
+			}else{
+				$book = $this->_booksCustom->getBookBySlugName($informations['id']);
+			}			
 		   //var_dump($book);die();
 		   //die();
 			if($book){
-			   LogRepo::printLog('info', "Information of book #" . $book->id . " have just been fetched by account #{" . $user_id . "}.");
+			   //LogRepo::printLog('info', "Information of book #" . $book->id . " have just been fetched by account #{" . $user_id . "}.");
 				$result = $this->prepareReponseAfterGet($book);
 				return $result;
 			}else{
@@ -58,6 +62,7 @@ class BookCustom {
 			}
         }catch(Exception $e){
             LogRepo::printLog('error', $e->getMessage());
+			die();
         }
     }
     
@@ -91,6 +96,9 @@ class BookCustom {
 					return response()->json($result, 400);
 			}
 		} catch (Exception $ex) {
+			LogRepo::printLog('error', $ex->getMessage());
+			die();
+		}
 		
     }
     /**
@@ -105,6 +113,7 @@ class BookCustom {
 			$result = array(				                   
 				'id'=>$book->id,
 				'name'=>$book->name,
+				'slug_name'=>$book->slug_name,
 				'category'=>$book->category,
 				'author'=>$book->author,
 				'size'=>$book->size,                    
@@ -118,6 +127,7 @@ class BookCustom {
             return $my_book;
         } catch (Exception $ex) {
             LogRepo::printLog('error', $ex->getMessage());
+			die();
         }
     }
 }

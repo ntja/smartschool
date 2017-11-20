@@ -279,6 +279,7 @@ class BooksCustom {
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
+			die();
         }
     }
     public function getBookByName($name){
@@ -288,9 +289,19 @@ class BooksCustom {
             return $row;
         }catch (Exception $ex) {
             LogRepository::printLog('error', $ex->getMessage());
+			die();
         }
     }
-    
+    public function getBookBySlugName($name){
+        try{
+            $book = new Book();
+            $row = $book::where('slug_name', 'LIKE', $name)->first();
+            return $row;
+        }catch (Exception $ex) {
+            LogRepository::printLog('error', $ex->getMessage());
+			die();
+        }
+    }
     public function getList($params,$account){
         try{            
             //dd("Here");
