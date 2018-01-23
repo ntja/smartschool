@@ -127,10 +127,12 @@
 				$('#course_title').val(data.name);
 				$('#short_name').val(data.shortname);				
 				$('#course_category_list option').each(function(i,el){
-				if($(this).val() == data.course_category.id){
-					$(this).prop("selected", true);
-					return false;
-				}
+					if(data.course_category){
+						if($(this).val() == data.course_category.id){
+							$(this).prop("selected", true);
+							return false;
+						}
+					}				
 				//console.log(base_url+'/../../public/'+data.photo);
 				if(data.photo){
 					//console.log(data.photo);
@@ -153,9 +155,8 @@
 					"Content-Type": "application/json",
 					"cache-control": "no-cache",
 					"x-access-token" : user_token
-				},
-				crossDomain:false,
-				async:true
+				},				
+				async:false
 			})
 			.done(function (data, textStatus, jqXHR) {			
 				if(data.total>0){
