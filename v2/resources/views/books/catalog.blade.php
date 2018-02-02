@@ -16,13 +16,19 @@
 @stop
 @section('content')
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+
+<script>
+/*
+(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.10&appId=1322688107743985';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+*/
+</script>
+<img src = "share_button.png" id = "share_button">
 @include('partials/header')
 
     <section id="sub-header">
@@ -91,9 +97,37 @@
 	<script src="{{asset('js/custom/config/config.js')}}"></script>
 	<script src="{{asset('js/custom/functions.js')}}"></script>		
 	<script src="{{asset('js/custom/jquery.fancybox.min.js')}}"></script>
-	<script src="{{asset('js/localization/i18n.js')}}"></script>
-	
+	<script src="{{asset('js/localization/i18n.js')}}"></script>	
    <script src="{{asset('js/custom/books/catalog.js')}}"></script>
+   <script>
+window.fbAsyncInit = function() {
+	FB.init({appId: '1322688107743985', status: true, cookie: true,
+	xfbml: true});
+	};
+	(function() {
+	var e = document.createElement('script'); e.async = true;
+	e.src = document.location.protocol +
+	'//connect.facebook.net/en_US/all.js';
+	document.getElementById('fb-root').appendChild(e);
+}());
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#share_button').click(function(e){
+	e.preventDefault();
+	FB.ui(
+	{
+	method: 'feed',
+	name: 'This is the content of the "name" field.',
+	link: 'http://www.smartskul.com/v2/books/professional-audio-and-video',
+	picture: "http://www.groupstudy.in/img/logo3.jpeg",
+	caption: 'Top 3 reasons why you should care about your finance',
+	description: "What happens when you don't take care of your finances? Just look at our country -- you spend irresponsibly, get in debt up to your eyeballs, and stress about how you're going to make ends meet. The difference is that you don't have a glut of taxpayers…'",
+	message: ''
+	});
+	});
+	});
+</script>
 @stop
 
 @stop 

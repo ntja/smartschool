@@ -1,3 +1,14 @@
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+AddType audio/mpeg .mp3
+AddType audio/ogg .ogg
+AddType audio/mp4 .m4a
+AddType audio/wav /wav
+# Adobe PDF
+AddType application/pdf .pdf
+	
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
@@ -20,10 +31,14 @@
 	
 	# redirect non www to www url
 	rewritecond %{http_host} ^smartskul.com [nc]
-	rewriterule ^(.*)$ http://www.smartskul.com/$1 [r=301,nc]
+	rewriterule ^(.*)$ http://www.smartskul.com/$1 [r=301,nc]	
 </IfModule>
 
 <Files ".env">
 Order Allow,Deny
 Deny from all
 </Files>
+
+<FilesMatch "\.(?i:pdf)$">
+    ForceType application/pdf
+</FilesMatch>
