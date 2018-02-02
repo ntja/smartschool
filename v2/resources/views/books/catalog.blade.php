@@ -28,9 +28,7 @@
 }(document, 'script', 'facebook-jssdk'));
 */
 </script>
-<img src = "share_button.png" id = "share_button">
 @include('partials/header')
-
     <section id="sub-header">
     <div class="container">
         <div class="row">
@@ -100,6 +98,7 @@
 	<script src="{{asset('js/localization/i18n.js')}}"></script>	
    <script src="{{asset('js/custom/books/catalog.js')}}"></script>
    <script>
+   /*
 window.fbAsyncInit = function() {
 	FB.init({appId: '1322688107743985', status: true, cookie: true,
 	xfbml: true});
@@ -110,8 +109,10 @@ window.fbAsyncInit = function() {
 	'//connect.facebook.net/en_US/all.js';
 	document.getElementById('fb-root').appendChild(e);
 }());
+*/
 </script>
 <script type="text/javascript">
+/*
 	$(document).ready(function(){
 	$('#share_button').click(function(e){
 	e.preventDefault();
@@ -127,6 +128,7 @@ window.fbAsyncInit = function() {
 	});
 	});
 	});
+	*/
 </script>
 @stop
 
